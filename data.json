@@ -1,7 +1,7 @@
 [
   {
     "name" : "DoodleBot",
-    "url" : "https://gusbus.space/DoodleBot.html",
+    "url" : "https://gusbus.space/doodlebot.html",
     "owner" : "Gus Becker"
   },
   {
@@ -10,19 +10,9 @@
     "owner" : "Jazz"
   },
   {
-    "name" : "Doodles",
-    "url" : "https://art.bymegan.com/doodles.html",
-    "owner" : "Megan Chesterton"
-  },
-  {
     "name" : "my art 2023",
     "url" : "https://uuupah.neocities.org/art/my-art-2023/",
     "owner" : "uuupah"
-  },
-  {
-    "name" : "Art Gallery",
-    "url" : "https://yamasztuka.com/gallery.html",
-    "owner" : "Yama"
   }
 ]
 
