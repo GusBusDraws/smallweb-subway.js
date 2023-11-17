@@ -48,8 +48,8 @@ class WebRing extends HTMLElement {
   connectedCallback() {
     console.log('Webring JSON data:')
     console.log(JSON.stringify(WEBRING_DATA))
-    // thisSite = window.location.href;
-    thisSite = "https://gusbus.space/doodlebot.html"
+    thisSite = window.location.href;
+    // thisSite = "https://gusbus.space/doodlebot.html"
     console.log("This site:")
     console.log(thisSite)
     const matchedSiteIndex = WEBRING_DATA.map(x => x.url).indexOf(thisSite)
