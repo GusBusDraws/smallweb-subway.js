@@ -33,7 +33,7 @@ template.innerHTML = `
   </style>
 
   <div class="webring">
-    <h1>The Smallweb Subway</h1>
+    <h2>The Smallweb Subway</h2>
     <button onclick="goToPrev()">[Prev]</button>
     <button onclick="goToNext()">[Next]</button>
   </div>
@@ -50,7 +50,7 @@ class WebRing extends HTMLElement {
     console.log(JSON.stringify(WEBRING_DATA))
     thisSite = window.location.href;
     // thisSite = "https://gusbus.space/doodlebot.html"
-    thisSite = 'https://uuupah.neocities.org/art/my-art-2023/'
+    // thisSite = 'https://uuupah.neocities.org/art/my-art-2023/'
     console.log("This site:")
     console.log(thisSite)
     const matchedSiteIndex = WEBRING_DATA.map(x => x.url).indexOf(thisSite)
