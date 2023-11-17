@@ -9,6 +9,7 @@ lines and a map to visualize the connectivity of the lines.
 
 ## Change Log
 ### 2023-11-17
-- Updated the `loadJSON()` function to take a URL as an argument
-- Added change log
+- Rename webring data loading functions to have separate names from DoodleBot data loading
+- Update the `loadJSON()` function to take a URL as an argument
+- Add change log
 
