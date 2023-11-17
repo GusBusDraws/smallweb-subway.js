@@ -50,6 +50,7 @@ class WebRing extends HTMLElement {
     console.log(JSON.stringify(WEBRING_DATA))
     thisSite = window.location.href;
     // thisSite = "https://gusbus.space/doodlebot.html"
+    thisSite = 'https://uuupah.neocities.org/art/my-art-2023/'
     console.log("This site:")
     console.log(thisSite)
     const matchedSiteIndex = WEBRING_DATA.map(x => x.url).indexOf(thisSite)
@@ -61,7 +62,7 @@ class WebRing extends HTMLElement {
     console.log("Previous site:")
     console.log(WEBRING_DATA[prevSiteIndex].url)
     nextSiteIndex = matchedSiteIndex + 1;
-    if (nextSiteIndex > WEBRING_DATA.length) nextSiteIndex = 0;
+    if (nextSiteIndex === WEBRING_DATA.length) nextSiteIndex = 0;
     console.log("Next site:")
     console.log(WEBRING_DATA[nextSiteIndex].url)
   }
