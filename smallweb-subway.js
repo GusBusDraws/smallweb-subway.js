@@ -2,7 +2,7 @@ const WEBRING_DATA_URL = `https://gusbus.space/smallweb-subway/data.json`;
 // const WEBRING_DATA_URL = `https://gusbus.space/smallweb-subway/ring.json`;
 
 let WEBRING_DATA;
-loadJSON()
+loadJSON(WEBRING_DATA_URL)
 // async function fetchKeywords() {
 //   const response = await fetch(WEBRING_DATA_URL);
 //   WEBRING_DATA = await response.json();
@@ -14,8 +14,8 @@ let prevSiteIndex;
 let nextSiteIndex;
 
 
-function loadJSON() {
-  fetch(WEBRING_DATA_URL)
+function loadJSON(url) {
+  fetch(url)
     .then(response => response.json())
     .then((json) => {dataReady(json)});
 }
