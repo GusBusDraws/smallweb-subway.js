@@ -48,8 +48,8 @@ template.innerHTML = `
 
   <style>
     .webring {
-      width: 250;
-      height: 100;
+      width: 260;
+      height: auto;
       outline: 1px solid;
       background: white;
     }
@@ -61,57 +61,59 @@ template.innerHTML = `
     }
     h3 {
       text-align: center;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      padding-top: 10px;
     }
     p {
       text-align: center;
-      margin-top: 5px;
+      margin-top: 10px;
       margin-bottom: 10px;
+      padding-bottom: 10px;
     }
     #tri-left {
       width: 0;
       height: 0;
       background: none;
-      border-top: 10px solid transparent;
+      border-top: 20px solid transparent;
       border-left: none;
-      border-right: 20px solid #12f028;
-      border-bottom: 10px solid transparent;
+      border-right: 40px solid #12f028;
+      border-bottom: 20px solid transparent;
       outline: none;
       cursor: pointer;
     }
     #tri-left:hover {
-      border-top: 10px solid transparent;
+      border-top: 20px solid transparent;
       border-left: none;
-      border-right: 20px solid black;
-      border-bottom: 10px solid transparent;
+      border-right: 40px solid black;
+      border-bottom: 20px solid transparent;
     }
     #tri-right {
       width: 0;
       height: 0;
       background: none;
-      border-top: 10px solid transparent;
-      border-left: 20px solid #12f028;
+      border-top: 20px solid transparent;
+      border-left: 40px solid #12f028;
       border-right: none;
-      border-bottom: 10px solid transparent;
+      border-bottom: 20px solid transparent;
       cursor: pointer;
     }
     #tri-right:hover {
-      border-top: 10px solid transparent;
-      border-left: 20px solid black;
+      border-top: 20px solid transparent;
+      border-left: 40px solid black;
       border-right: none;
-      border-bottom: 10px solid transparent;
+      border-bottom: 20px solid transparent;
     }
     #line {
-      width: 60px;
-      height: 10px;
+      width: 120px;
+      height: 20px;
       background: #12f028;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     #outer-circle {
-      width: 20px;
-      height: 20px;
+      width: 40px;
+      height: 40px;
       background: black;
       border-radius: 50%;
       display: flex;
@@ -119,8 +121,8 @@ template.innerHTML = `
       justify-content: center;
     }
     #inner-circle {
-      width: 10px;
-      height: 10px;
+      width: 20px;
+      height: 20px;
       background: white;
       border-radius: 50%;
     }
