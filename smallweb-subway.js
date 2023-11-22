@@ -28,6 +28,24 @@ function goToNext() {
 
 let template = document.createElement("template");
 template.innerHTML = `
+  <div class="webring">
+    <h3>The Smallweb Subway</h3>
+    <div>
+      <button id="tri-left" onclick="goToPrev()"></button>
+      <div id="line">
+        <div id="outer-circle">
+          <div id="inner-circle"></div>
+        </div>
+      </div>
+      <button id="tri-right" onclick="goToNext()"></button>
+    </div>
+    <p>
+      Green line: Art from members of the
+        <a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew</a>
+      Discord server.
+    </p>
+  </div>
+
   <style>
     .webring {
       width: 250;
@@ -107,24 +125,6 @@ template.innerHTML = `
       border-radius: 50%;
     }
   </style>
-
-  <div class="webring">
-    <h3>The Smallweb Subway</h3>
-    <div>
-      <button id="tri-left" onclick="goToPrev()"></button>
-      <div id="line">
-        <div id="outer-circle">
-          <div id="inner-circle"></div>
-        </div>
-      </div>
-      <button id="tri-right" onclick="goToNext()"></button>
-    </div>
-    <p>
-      Green line: Art from members of the
-        <a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew</a>
-      Discord server.
-    </p>
-  </div>
 `;
 
 class WebRing extends HTMLElement {
