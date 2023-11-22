@@ -28,68 +28,8 @@ function goToNext() {
 
 let template = document.createElement("template");
 template.innerHTML = `
-  <style>
-    /* styles */
-    h2{
-      text-align: center;
-    }
-    .webring > div {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      justify-content: center;
-    }
-    #tri-left {
-      width: 0;
-      height: 0;
-      background: none;
-      border-top: 10px solid transparent;
-      border-left: none;
-      border-right: 20px solid #12f028;
-      border-bottom: 10px solid transparent;
-      outline: none;
-      cursor: pointer;
-    }
-    #tri-right {
-      width: 0;
-      height: 0;
-      background: none;
-      border-top: 10px solid transparent;
-      border-left: 20px solid #12f028;
-      border-right: none;
-      border-bottom: 10px solid transparent;
-      cursor: pointer;
-    }
-    #tri-left:focus {
-      // outline: none;
-    }
-    #line {
-      width: 60px;
-      height: 10px;
-      background: #12f028;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #outer-circle {
-      width: 20px;
-      height: 20px;
-      background: black;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #inner-circle {
-      width: 10px;
-      height: 10px;
-      background: white;
-      border-radius: 50%;
-    }
-  </style>
-
   <div class="webring">
-    <h2>The Smallweb Subway</h2>
+    <h3>The Smallweb Subway</h3>
     <div>
       <button id="tri-left" onclick="goToPrev()"></button>
       <div id="line">
@@ -99,7 +39,94 @@ template.innerHTML = `
       </div>
       <button id="tri-right" onclick="goToNext()"></button>
     </div>
+    <p>
+      Green line: Art from members of the
+        <a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew</a>
+      Discord server.
+    </p>
   </div>
+
+  <style>
+    .webring {
+      width: 260;
+      height: auto;
+      outline: 1px solid;
+      background: white;
+    }
+    .webring > div {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      padding-top: 10px;
+    }
+    p {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+    #tri-left {
+      width: 0;
+      height: 0;
+      background: none;
+      border-top: 20px solid transparent;
+      border-left: none;
+      border-right: 40px solid #12f028;
+      border-bottom: 20px solid transparent;
+      outline: none;
+      cursor: pointer;
+    }
+    #tri-left:hover {
+      border-top: 20px solid transparent;
+      border-left: none;
+      border-right: 40px solid black;
+      border-bottom: 20px solid transparent;
+    }
+    #tri-right {
+      width: 0;
+      height: 0;
+      background: none;
+      border-top: 20px solid transparent;
+      border-left: 40px solid #12f028;
+      border-right: none;
+      border-bottom: 20px solid transparent;
+      cursor: pointer;
+    }
+    #tri-right:hover {
+      border-top: 20px solid transparent;
+      border-left: 40px solid black;
+      border-right: none;
+      border-bottom: 20px solid transparent;
+    }
+    #line {
+      width: 120px;
+      height: 20px;
+      background: #12f028;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #outer-circle {
+      width: 40px;
+      height: 40px;
+      background: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #inner-circle {
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+    }
+  </style>
 `;
 
 class WebRing extends HTMLElement {
