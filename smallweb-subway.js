@@ -30,12 +30,75 @@ let template = document.createElement("template");
 template.innerHTML = `
   <style>
     /* styles */
+    h2{
+      text-align: center;
+    }
+    .webring > div {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    #tri-left {
+      width: 0;
+      height: 0;
+      background: none;
+      border-top: 10px solid transparent;
+      border-left: none;
+      border-right: 20px solid #12f028;
+      border-bottom: 10px solid transparent;
+      outline: none;
+      cursor: pointer;
+    }
+    #tri-right {
+      width: 0;
+      height: 0;
+      background: none;
+      border-top: 10px solid transparent;
+      border-left: 20px solid #12f028;
+      border-right: none;
+      border-bottom: 10px solid transparent;
+      cursor: pointer;
+    }
+    #tri-left:focus {
+      // outline: none;
+    }
+    #line {
+      width: 60px;
+      height: 10px;
+      background: #12f028;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #outer-circle {
+      width: 20px;
+      height: 20px;
+      background: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #inner-circle {
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+    }
   </style>
 
   <div class="webring">
     <h2>The Smallweb Subway</h2>
-    <button onclick="goToPrev()">[Prev]</button>
-    <button onclick="goToNext()">[Next]</button>
+    <div>
+      <button id="tri-left" onclick="goToPrev()"></button>
+      <div id="line">
+        <div id="outer-circle">
+          <div id="inner-circle"></div>
+        </div>
+      </div>
+      <button id="tri-right" onclick="goToNext()"></button>
+    </div>
   </div>
 `;
 
