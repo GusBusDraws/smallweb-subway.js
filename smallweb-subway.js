@@ -29,15 +29,26 @@ function goToNext() {
 let template = document.createElement("template");
 template.innerHTML = `
   <style>
-    /* styles */
-    h2{
-      text-align: center;
+    .webring {
+      width: 250;
+      height: 100;
+      outline: 1px solid;
+      background: white;
     }
     .webring > div {
       display: flex;
       gap: 20px;
       align-items: center;
       justify-content: center;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    p {
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 10px;
     }
     #tri-left {
       width: 0;
@@ -50,6 +61,12 @@ template.innerHTML = `
       outline: none;
       cursor: pointer;
     }
+    #tri-left:hover {
+      border-top: 10px solid transparent;
+      border-left: none;
+      border-right: 20px solid black;
+      border-bottom: 10px solid transparent;
+    }
     #tri-right {
       width: 0;
       height: 0;
@@ -60,8 +77,11 @@ template.innerHTML = `
       border-bottom: 10px solid transparent;
       cursor: pointer;
     }
-    #tri-left:focus {
-      // outline: none;
+    #tri-right:hover {
+      border-top: 10px solid transparent;
+      border-left: 20px solid black;
+      border-right: none;
+      border-bottom: 10px solid transparent;
     }
     #line {
       width: 60px;
@@ -89,7 +109,7 @@ template.innerHTML = `
   </style>
 
   <div class="webring">
-    <h2>The Smallweb Subway</h2>
+    <h3>The Smallweb Subway</h3>
     <div>
       <button id="tri-left" onclick="goToPrev()"></button>
       <div id="line">
@@ -99,6 +119,11 @@ template.innerHTML = `
       </div>
       <button id="tri-right" onclick="goToNext()"></button>
     </div>
+    <p>
+      Green line: Art from members of the
+        <a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew</a>
+      Discord server.
+    </p>
   </div>
 `;
 
