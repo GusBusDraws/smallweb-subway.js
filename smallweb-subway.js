@@ -2,7 +2,7 @@ let thisSite;
 let matchedSite;
 let prevSiteIndex;
 let nextSiteIndex;
-const WEBRING_DATA_URL = `https://gusbus.space/smallweb-subway/data.json`;
+const WEBRING_DATA_URL = 'https://raw.githubusercontent.com/GusBusDraws/smallweb-subway/main/data.json';
 let WEBRING_DATA;
 loadWebringJSON(WEBRING_DATA_URL);
 
