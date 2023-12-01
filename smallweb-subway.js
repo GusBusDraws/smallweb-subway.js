@@ -1,9 +1,10 @@
 let thisSite;
-let matchedSite;
 let prevSiteIndex;
 let nextSiteIndex;
-const WEBRING_DATA_URL = 'https://raw.githubusercontent.com/GusBusDraws/smallweb-subway/main/data.json';
 let WEBRING_DATA;
+
+const WEBRING_DATA_URL = 'https://raw.githubusercontent.com/GusBusDraws/smallweb-subway/main/data.json';
+
 loadWebringJSON(WEBRING_DATA_URL);
 
 function loadWebringJSON(url) {
@@ -18,7 +19,6 @@ function webringDataReady(json) {
   WEBRING_DATA = json;
   customElements.get("smallweb-subway") ||
     customElements.define("smallweb-subway", WebRing);
-  // customElements.define('smallweb-subway', WebRing);
 }
 
 function getHostName(url) {
