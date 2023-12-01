@@ -10,15 +10,12 @@ loadWebringJSON(WEBRING_DATA_URL);
 function loadWebringJSON(url) {
   fetch(url)
     .then((response) => response.json())
-    .then((json) => {
-      webringDataReady(json);
-    });
+    .then((json) => {webringDataReady(json)});
 }
 
 function webringDataReady(json) {
   WEBRING_DATA = json;
-  customElements.get("smallweb-subway") ||
-    customElements.define("smallweb-subway", WebRing);
+  customElements.get("smallweb-subway") || customElements.define("smallweb-subway", WebRing);
 }
 
 function getHostName(url) {
