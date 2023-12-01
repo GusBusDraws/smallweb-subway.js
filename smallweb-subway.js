@@ -18,11 +18,6 @@ function webringDataReady(json) {
   customElements.get("smallweb-subway") || customElements.define("smallweb-subway", WebRing);
 }
 
-function getHostName(url) {
-  // this is a bit of a cheat that leverages the URL type to get the hostname automagically
-  return new URL(url).hostname;
-}
-
 function goToPrev() {
   location.href = WEBRING_DATA[prevSiteIndex].url;
 }
@@ -143,9 +138,7 @@ class WebRing extends HTMLElement {
     thisSite = window.location.hostname;
     // thisSite = "https://gusbus.space/doodlebot.html"
 
-    const matchedSiteIndex = WEBRING_DATA.map((x) =>
-      getHostName(x.url)
-    ).indexOf(thisSite);
+    const matchedSiteIndex = WEBRING_DATA.map((x) => x.url).indexOf(thisSite);
     
     prevSiteIndex = matchedSiteIndex - 1 < 0 ? WEBRING_DATA.length - 1 : matchedSiteIndex - 1;
     nextSiteIndex = matchedSiteIndex + 1 >= WEBRING_DATA.length ? 0 : matchedSiteIndex + 1;
