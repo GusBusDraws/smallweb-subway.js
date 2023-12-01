@@ -8,6 +8,10 @@ of a single line (webring), but eventually I plan to add more interest-based
 lines and a map to visualize the connectivity of the lines.
 
 ## Change Log
+### 2023-12-01
+- Add Meg to the Doodle Crew ring
+- Update widget text to exclude Doodle Crew link
+
 ### 2023-11-17
 - Rename webring data loading functions to have separate names from DoodleBot data loading
 - Update the `loadJSON()` function to take a URL as an argument

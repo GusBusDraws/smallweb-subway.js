@@ -40,9 +40,7 @@ template.innerHTML = `
       <button id="tri-right" onclick="goToNext()"></button>
     </div>
     <p>
-      Green line: Art from members of the
-        <a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew</a>
-      Discord server.
+      Green line: Art from the Doodle Crew Discord server.
     </p>
   </div>
 
