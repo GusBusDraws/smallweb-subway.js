@@ -141,27 +141,16 @@ class WebRing extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
+
   connectedCallback() {
-    console.log("Webring JSON data:");
-    console.log(JSON.stringify(WEBRING_DATA));
     thisSite = window.location.hostname;
     // thisSite = "https://gusbus.space/doodlebot.html"
-    // thisSite = 'https://uuupah.neocities.org/art/my-art-2023/'
-    console.log("This site:");
-    console.log(thisSite);
+
     const matchedSiteIndex = WEBRING_DATA.map((x) =>
       getHostName(x.url)
     ).indexOf(thisSite);
-    matchedSite = WEBRING_DATA[matchedSiteIndex];
-    console.log("Matched site:");
-    console.log(matchedSite.url);
-    prevSiteIndex = matchedSiteIndex - 1;
-    if (prevSiteIndex === -1) prevSiteIndex = WEBRING_DATA.length - 1;
-    console.log("Previous site:");
-    console.log(WEBRING_DATA[prevSiteIndex].url);
-    nextSiteIndex = matchedSiteIndex + 1;
-    if (nextSiteIndex === WEBRING_DATA.length) nextSiteIndex = 0;
-    console.log("Next site:");
-    console.log(WEBRING_DATA[nextSiteIndex].url);
+    
+    prevSiteIndex = matchedSiteIndex - 1 < 0 ? WEBRING_DATA.length - 1 : matchedSiteIndex - 1;
+    nextSiteIndex = matchedSiteIndex + 1 >= WEBRING_DATA.length ? 0 : matchedSiteIndex + 1;
   }
 }
