@@ -135,7 +135,7 @@ class WebRing extends HTMLElement {
   }
 
   connectedCallback() {
-    thisSite = window.location.hostname;
+    thisSite = window.location.href;
     // thisSite = "https://gusbus.space/doodlebot.html"
 
     const matchedSiteIndex = WEBRING_DATA.map((x) => x.url).indexOf(thisSite);
