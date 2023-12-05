@@ -18,6 +18,11 @@ function webringDataReady(json) {
   // customElements.define('smallweb-subway', WebRing);
 }
 
+function getHostName(url) {
+  // this is a bit of a cheat that leverages the URL type to get the hostname automagically
+  return new URL(url).hostname;
+}
+
 function goToPrev() {
   location.href = WEBRING_DATA[prevSiteIndex].url
 }
@@ -136,9 +141,8 @@ class WebRing extends HTMLElement {
   connectedCallback() {
     console.log('Webring JSON data:')
     console.log(JSON.stringify(WEBRING_DATA))
-    thisSite = window.location.href;
-    // thisSite = "https://gusbus.space/doodlebot.html"
-    // thisSite = 'https://uuupah.neocities.org/art/my-art-2023/'
+    thisSite = new URL(window.location.href);
+    const thisSite = thisURL.hostname + thisURL.pathname
     console.log("This site:")
     console.log(thisSite)
     const matchedSiteIndex = WEBRING_DATA.map(x => x.url).indexOf(thisSite)
@@ -155,4 +159,3 @@ class WebRing extends HTMLElement {
     console.log(WEBRING_DATA[nextSiteIndex].url)
   }
 }
-
