@@ -8,6 +8,9 @@ of a single line (webring), but eventually I plan to add more interest-based
 lines and a map to visualize the connectivity of the lines.
 
 ## Change Log
+### 2023-12-05
+- Use concatenated hostname + pathname to find ring data JSON
+
 ### 2023-12-01
 - Add Meg to the Doodle Crew ring
 - Update widget text to exclude Doodle Crew link
