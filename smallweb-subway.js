@@ -24,11 +24,13 @@ function getHostName(url) {
 }
 
 function goToPrev() {
-  location.href = WEBRING_DATA[prevSiteIndex].url
+  // Adding '//' treats the link as an external site, even without "https:"
+  location.href = '//' + WEBRING_DATA[prevSiteIndex].url
 }
 
 function goToNext() {
-  location.href = WEBRING_DATA[nextSiteIndex].url
+  // Adding '//' treats the link as an external site, even without "https:"
+  location.href = '//' + WEBRING_DATA[nextSiteIndex].url
 }
 
 let template = document.createElement("template");
@@ -141,7 +143,8 @@ class WebRing extends HTMLElement {
   connectedCallback() {
     console.log('Webring JSON data:')
     console.log(JSON.stringify(WEBRING_DATA))
-    const thisURL = new URL(window.location.href);
+    // const thisURL = new URL(window.location.href);
+    const thisURL = new URL('https://gusbus.space/doodlebot.html');
     const thisSite = thisURL.hostname + thisURL.pathname
     console.log("This site:")
     console.log(thisSite)
