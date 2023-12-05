@@ -143,8 +143,7 @@ class WebRing extends HTMLElement {
   connectedCallback() {
     console.log('Webring JSON data:')
     console.log(JSON.stringify(WEBRING_DATA))
-    // const thisURL = new URL(window.location.href);
-    const thisURL = new URL('https://gusbus.space/doodlebot.html');
+    const thisURL = new URL(window.location.href);
     const thisSite = thisURL.hostname + thisURL.pathname
     console.log("This site:")
     console.log(thisSite)
