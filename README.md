@@ -9,6 +9,7 @@ lines and a map to visualize the connectivity of the lines.
 
 ## Change Log
 ### 2023-12-05
+- Add Yama to the Doodle Crew ring
 - Use concatenated hostname + pathname to find ring data JSON
 
 ### 2023-12-01
