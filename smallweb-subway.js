@@ -81,7 +81,7 @@ template.innerHTML = `
       background: none;
       border-top: 20px solid transparent;
       border-left: none;
-      border-right: 40px solid #12f028;
+      border-right: 40px solid #25b233;
       border-bottom: 20px solid transparent;
       outline: none;
       cursor: pointer;
@@ -97,7 +97,7 @@ template.innerHTML = `
       height: 0;
       background: none;
       border-top: 20px solid transparent;
-      border-left: 40px solid #12f028;
+      border-left: 40px solid #25b233;
       border-right: none;
       border-bottom: 20px solid transparent;
       cursor: pointer;
@@ -111,7 +111,7 @@ template.innerHTML = `
     #line {
       width: 120px;
       height: 20px;
-      background: #12f028;
+      background: #25b233;
       display: flex;
       align-items: center;
       justify-content: center;
