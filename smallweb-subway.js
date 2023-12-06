@@ -53,7 +53,7 @@ template.innerHTML = `
 
   <style>
     .webring {
-      width: 260;
+      width: 100%;
       height: auto;
       outline: 1px solid;
       background: white;
