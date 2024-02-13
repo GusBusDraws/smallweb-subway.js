@@ -8,6 +8,9 @@ of a single line (webring), but eventually I plan to add more interest-based
 lines and a map to visualize the connectivity of the lines.
 
 ## Change Log
+### 2024-02-13
+- Update DoodleBot address to https://gusbus.space/doodlebot/
+
 ### 2023-12-05
 - Add Yama to the Doodle Crew ring
 - Use concatenated hostname + pathname to find ring data JSON
