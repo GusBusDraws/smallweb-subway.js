@@ -1,18 +1,28 @@
 [
   {
     "name" : "DoodleBot",
-    "url" : "https://gusbus.space/doodlebot.html",
+    "url" : "gusbus.space/doodlebot.html",
     "owner" : "Gus Becker"
   },
   {
     "name" : "Doodles",
-    "url" : "https://jazz-dude.com/Portfolio/doodles.html",
+    "url" : "jazz-dude.com/Portfolio/doodles.html",
     "owner" : "Jazz"
   },
   {
-    "name" : "my art 2023",
-    "url" : "https://uuupah.neocities.org/art/my-art-2023/",
+    "name" : "Doodles",
+    "url" : "art.bymegan.com/doodles.html",
+    "owner" : "Megan Chesterton"
+  },
+  {
+    "name" : "my art 2024",
+    "url" : "uuupah.neocities.org/art/my-art-2024/",
     "owner" : "uuupah"
+  },
+  {
+    "name" : "Webring Landing Page",
+    "url" : "yamasztuka.com/artindex.html",
+    "owner" : "Yamasztuka"
   }
 ]
 

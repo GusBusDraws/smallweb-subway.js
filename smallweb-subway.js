@@ -18,12 +18,19 @@ function webringDataReady(json) {
   // customElements.define('smallweb-subway', WebRing);
 }
 
+function getHostName(url) {
+  // this is a bit of a cheat that leverages the URL type to get the hostname automagically
+  return new URL(url).hostname;
+}
+
 function goToPrev() {
-  location.href = WEBRING_DATA[prevSiteIndex].url
+  // Adding '//' treats the link as an external site, even without "https:"
+  location.href = '//' + WEBRING_DATA[prevSiteIndex].url
 }
 
 function goToNext() {
-  location.href = WEBRING_DATA[nextSiteIndex].url
+  // Adding '//' treats the link as an external site, even without "https:"
+  location.href = '//' + WEBRING_DATA[nextSiteIndex].url
 }
 
 let template = document.createElement("template");
@@ -40,15 +47,12 @@ template.innerHTML = `
       <button id="tri-right" onclick="goToNext()"></button>
     </div>
     <p>
-      Green line: Art from members of the
-        <a href="https://discord.gg/2gJYZhmHAz" target="_blank">Doodle Crew</a>
-      Discord server.
+      Green line: Art from the Doodle Crew Discord server.
     </p>
   </div>
 
   <style>
     .webring {
-      // width: 260;
       width: 100%;
       height: auto;
       outline: 1px solid;
@@ -77,7 +81,7 @@ template.innerHTML = `
       background: none;
       border-top: 20px solid transparent;
       border-left: none;
-      border-right: 40px solid #12f028;
+      border-right: 40px solid #25b233;
       border-bottom: 20px solid transparent;
       outline: none;
       cursor: pointer;
@@ -93,7 +97,7 @@ template.innerHTML = `
       height: 0;
       background: none;
       border-top: 20px solid transparent;
-      border-left: 40px solid #12f028;
+      border-left: 40px solid #25b233;
       border-right: none;
       border-bottom: 20px solid transparent;
       cursor: pointer;
@@ -107,7 +111,7 @@ template.innerHTML = `
     #line {
       width: 120px;
       height: 20px;
-      background: #12f028;
+      background: #25b233;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -139,9 +143,8 @@ class WebRing extends HTMLElement {
   connectedCallback() {
     console.log('Webring JSON data:')
     console.log(JSON.stringify(WEBRING_DATA))
-    thisSite = window.location.href;
-    // thisSite = "https://gusbus.space/doodlebot.html"
-    // thisSite = 'https://uuupah.neocities.org/art/my-art-2023/'
+    const thisURL = new URL(window.location.href);
+    const thisSite = thisURL.hostname + thisURL.pathname
     console.log("This site:")
     console.log(thisSite)
     const matchedSiteIndex = WEBRING_DATA.map(x => x.url).indexOf(thisSite)
@@ -158,4 +161,3 @@ class WebRing extends HTMLElement {
     console.log(WEBRING_DATA[nextSiteIndex].url)
   }
 }
-
