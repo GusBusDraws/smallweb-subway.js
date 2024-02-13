@@ -1,7 +1,7 @@
 const ring = [
   {
     "name" : "DoodleBot",
-    "url" : "https://gusbus.space/DoodleBot.html",
+    "url" : "https://gusbus.space/doodlebot/",
     "owner" : "Gus Becker"
   },
   {
