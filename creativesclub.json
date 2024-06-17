@@ -1,0 +1,28 @@
+[
+  {
+    "name" : "DoodleBot",
+    "url" : "127.0.0.1:5501/index.html",
+    "owner" : "Gus Becker"
+  },
+  {
+    "name" : "Creatives Club",
+    "url" : "creativesclub.art",
+    "owner" : "Gus Becker"
+  },
+  {
+    "name" : "Smallweb Subway",
+    "url" : "gusbus.space/smallweb-subway/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "name" : "urlocalcyb.org",
+    "url" : "urlocalcyb.org",
+    "owner" : "cyborgforty"
+  },
+  {
+    "name" : "haystack blog and oddities",
+    "url" : "thatoddhaystack.neocities.org",
+    "owner" : "vita"
+  }
+]
+
