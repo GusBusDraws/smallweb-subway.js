@@ -1,46 +1,11 @@
+let thisURL_doodlecrew;
 let thisSite_doodlecrew;
+let matchedSiteIndex_doodlecrew;
 let matchedSite_doodlecrew;
 let prevSiteIndex_doodlecrew;
 let nextSiteIndex_doodlecrew;
 const WEBRING_DATA_URL_doodlecrew = `https://gusbus.space/smallweb-subway.js/data.json`;
 let DATA_doodlecrew;
-DATA_doodlecrew = [
-  {
-    "name" : "Test",
-    "url" : "127.0.0.1/",
-    "owner" : "Gus Becker"
-  },
-  {
-    "name" : "DoodleBot",
-    "url" : "gusbus.space/doodlebot/",
-    "owner" : "Gus Becker"
-  },
-  {
-    "name" : "jazz-dude.com",
-    "url" : "jazz-dude.com/index.html",
-    "owner" : "Jazz"
-  },
-  {
-    "name" : "Smallweb Subway",
-    "url" : "gusbus.space/smallweb-subway/",
-    "owner" : "Gus Becker"
-  },
-  {
-    "name" : "Doodles",
-    "url" : "art.bymegan.com/doodles.html",
-    "owner" : "Megan Chesterton"
-  },
-  {
-    "name" : "my art 2024",
-    "url" : "uuupah.neocities.org/art/my-art-2024/",
-    "owner" : "uuupah"
-  },
-  {
-    "name" : "Webring Landing Page",
-    "url" : "yamasztuka.com/artindex.html",
-    "owner" : "Yamasztuka"
-  }
-]
 loadWebringJSON_doodlecrew(WEBRING_DATA_URL_doodlecrew);
 
 function loadWebringJSON_doodlecrew(url) {
@@ -50,9 +15,8 @@ function loadWebringJSON_doodlecrew(url) {
 }
 
 function webringDataReady_doodlecrew(json) {
-  // WEBRING_DATA = json;
+  WEBRING_DATA = json;
   customElements.get('smallweb-subway-doodlecrew') || customElements.define('smallweb-subway-doodlecrew', Webring_doodlecrew);
-  // customElements.define('smallweb-subway', WebRing);
 }
 
 function getHostName_doodlecrew(url) {
@@ -183,11 +147,11 @@ class Webring_doodlecrew extends HTMLElement {
     console.log('---------------')
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_doodlecrew))
-    const thisURL_doodlecrew = new URL(window.location.href);
-    const thisSite_doodlecrew = thisURL_doodlecrew.hostname + thisURL_doodlecrew.pathname
+    thisURL_doodlecrew = new URL(window.location.href);
+    thisSite_doodlecrew = thisURL_doodlecrew.hostname + thisURL_doodlecrew.pathname
     console.log("This site:")
     console.log(thisSite_doodlecrew)
-    const matchedSiteIndex_doodlecrew = DATA_doodlecrew.map(x => x.url).indexOf(thisSite_doodlecrew)
+    matchedSiteIndex_doodlecrew = DATA_doodlecrew.map(x => x.url).indexOf(thisSite_doodlecrew)
     matchedSite_doodlecrew = DATA_doodlecrew[matchedSiteIndex_doodlecrew];
     console.log("Matched site:")
     console.log(matchedSite_doodlecrew.url)

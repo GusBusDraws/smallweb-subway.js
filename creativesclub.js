@@ -6,34 +6,7 @@ let prevSiteIndex_creativesclub;
 let nextSiteIndex_creativesclub;
 // const WEBRING_DATA_URL_creativesclub = `https://gusbus.space/smallweb-subway.js/creativesclub.json`;
 const WEBRING_DATA_URL_creativesclub = `https://gusbus.space/smallweb-subway.js/data.json`;
-// let DATA_creativesclub;
-let DATA_creativesclub = [
-      {
-        "name" : "Test",
-        "url" : "127.0.0.1/",
-        "owner" : "Gus Becker"
-      },
-      {
-        "name" : "Creatives Club",
-        "url" : "creativesclub.art",
-        "owner" : "Gus Becker"
-      },
-      {
-        "name" : "Smallweb Subway",
-        "url" : "gusbus.space/smallweb-subway/",
-        "owner" : "Gus Becker"
-      },
-      {
-        "name" : "urlocalcyb.org",
-        "url" : "urlocalcyb.org",
-        "owner" : "cyborgforty"
-      },
-      {
-        "name" : "haystack blog and oddities",
-        "url" : "thatoddhaystack.neocities.org",
-        "owner" : "vita"
-      }
-    ]
+let DATA_creativesclub;
 loadWebringJSON_creativesclub(WEBRING_DATA_URL_creativesclub);
 
 function loadWebringJSON_creativesclub(url) {
@@ -43,7 +16,7 @@ function loadWebringJSON_creativesclub(url) {
 }
 
 function webringDataReady_creativesclub(json) {
-  // DATA_creativesclub = json;
+  DATA_creativesclub = json;
   customElements.get('smallweb-subway-creativesclub') || (
     customElements.define('smallweb-subway-creativesclub', Webring_creativesclub));
 }
