@@ -1,50 +1,51 @@
-let thisSite;
-let matchedSite;
-let prevSiteIndex;
-let nextSiteIndex;
-const WEBRING_DATA_URL = `https://gusbus.space/smallweb-subway.js/data.json`;
-let WEBRING_DATA;
-loadWebringJSON(WEBRING_DATA_URL);
+let thisURL_doodlecrew;
+let thisSite_doodlecrew;
+let matchedSiteIndex_doodlecrew;
+let matchedSite_doodlecrew;
+let prevSiteIndex_doodlecrew;
+let nextSiteIndex_doodlecrew;
+const WEBRING_DATA_URL_doodlecrew = `https://gusbus.space/smallweb-subway.js/data.json`;
+let DATA_doodlecrew;
+loadWebringJSON_doodlecrew(WEBRING_DATA_URL_doodlecrew);
 
-function loadWebringJSON(url) {
+function loadWebringJSON_doodlecrew(url) {
   fetch(url)
     .then(response => response.json())
-    .then((json) => {webringDataReady(json)});
+    .then((json) => {webringDataReady_doodlecrew(json)});
 }
 
-function webringDataReady(json) {
+function webringDataReady_doodlecrew(json) {
   WEBRING_DATA = json;
-  customElements.get('smallweb-subway') || customElements.define('smallweb-subway', WebRing);
-  // customElements.define('smallweb-subway', WebRing);
+  customElements.get('smallweb-subway-doodlecrew') || customElements.define('smallweb-subway-doodlecrew', Webring_doodlecrew);
 }
 
-function getHostName(url) {
+function getHostName_doodlecrew(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically
   return new URL(url).hostname;
 }
 
-function goToPrev() {
+function goToPrev_doodlecrew() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + WEBRING_DATA[prevSiteIndex].url
+  location.href = '//' + DATA_doodlecrew[prevSiteIndex_doodlecrew].url
 }
 
-function goToNext() {
+function goToNext_doodlecrew() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + WEBRING_DATA[nextSiteIndex].url
+  location.href = '//' + DATA_doodlecrew[nextSiteIndex_doodlecrew].url
 }
 
-let template = document.createElement("template");
-template.innerHTML = `
-  <div class="webring">
+let template_doodlecrew = document.createElement("template");
+template_doodlecrew.innerHTML = `
+  <div class="webring_doodlecrew">
     <h3>The Smallweb Subway</h3>
     <div>
-      <button id="tri-left" onclick="goToPrev()"></button>
+      <button id="tri-left" onclick="goToPrev_doodlecrew()"></button>
       <div id="line">
         <div id="outer-circle">
           <div id="inner-circle"></div>
         </div>
       </div>
-      <button id="tri-right" onclick="goToNext()"></button>
+      <button id="tri-right" onclick="goToNext_doodlecrew()"></button>
     </div>
     <p>
       Green line: Art from the Doodle Crew Discord server.
@@ -52,13 +53,13 @@ template.innerHTML = `
   </div>
 
   <style>
-    .webring {
+    .webring_doodlecrew {
       width: 100%;
       height: auto;
       outline: 1px solid;
       background: white;
     }
-    .webring > div {
+    .webring_doodlecrew > div {
       display: flex;
       gap: 20px;
       align-items: center;
@@ -134,30 +135,33 @@ template.innerHTML = `
   </style>
 `;
 
-class WebRing extends HTMLElement {
+class Webring_doodlecrew extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(template_doodlecrew.content.cloneNode(true));
   }
   connectedCallback() {
+    console.log('---------------')
+    console.log('doodlecrew line')
+    console.log('---------------')
     console.log('Webring JSON data:')
-    console.log(JSON.stringify(WEBRING_DATA))
-    const thisURL = new URL(window.location.href);
-    const thisSite = thisURL.hostname + thisURL.pathname
+    console.log(JSON.stringify(DATA_doodlecrew))
+    thisURL_doodlecrew = new URL(window.location.href);
+    thisSite_doodlecrew = thisURL_doodlecrew.hostname + thisURL_doodlecrew.pathname
     console.log("This site:")
-    console.log(thisSite)
-    const matchedSiteIndex = WEBRING_DATA.map(x => x.url).indexOf(thisSite)
-    matchedSite = WEBRING_DATA[matchedSiteIndex];
+    console.log(thisSite_doodlecrew)
+    matchedSiteIndex_doodlecrew = DATA_doodlecrew.map(x => x.url).indexOf(thisSite_doodlecrew)
+    matchedSite_doodlecrew = DATA_doodlecrew[matchedSiteIndex_doodlecrew];
     console.log("Matched site:")
-    console.log(matchedSite.url)
-    prevSiteIndex = matchedSiteIndex - 1;
-    if (prevSiteIndex === -1) prevSiteIndex = WEBRING_DATA.length - 1;
+    console.log(matchedSite_doodlecrew.url)
+    prevSiteIndex_doodlecrew = matchedSiteIndex_doodlecrew - 1;
+    if (prevSiteIndex_doodlecrew === -1) prevSiteIndex_doodlecrew = DATA_doodlecrew.length - 1;
     console.log("Previous site:")
-    console.log(WEBRING_DATA[prevSiteIndex].url)
-    nextSiteIndex = matchedSiteIndex + 1;
-    if (nextSiteIndex === WEBRING_DATA.length) nextSiteIndex = 0;
+    console.log(DATA_doodlecrew[prevSiteIndex_doodlecrew].url)
+    nextSiteIndex_doodlecrew = matchedSiteIndex_doodlecrew + 1;
+    if (nextSiteIndex_doodlecrew === DATA_doodlecrew.length) nextSiteIndex_doodlecrew = 0;
     console.log("Next site:")
-    console.log(WEBRING_DATA[nextSiteIndex].url)
+    console.log(DATA[nextSiteIndex_doodlecrew].url)
   }
 }
