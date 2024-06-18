@@ -8,6 +8,8 @@ of a single line (webring), but eventually I plan to add more interest-based
 lines and a map to visualize the connectivity of the lines.
 
 ## Change Log
+### 2024-06-18
+- Remove background and border style from widgets
 ### 2024-06-17
 - Rename "smallweb-subway.js" -> [doodlecrew.js](doodlecrew.js) and "data.json" -> [doodlecrew.json](doodlecrew.json)
 - Update [smallweb-subway.js](smallweb-subway.js) with "doodlecrew" suffixes for variables

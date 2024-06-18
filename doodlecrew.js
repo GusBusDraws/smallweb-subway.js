@@ -15,7 +15,7 @@ function loadWebringJSON_doodlecrew(url) {
 }
 
 function webringDataReady_doodlecrew(json) {
-  WEBRING_DATA = json;
+  DATA_doodlecrew = json;
   customElements.get('smallweb-subway-doodlecrew') || customElements.define('smallweb-subway-doodlecrew', Webring_doodlecrew);
 }
 
@@ -48,7 +48,7 @@ template_doodlecrew.innerHTML = `
       <button id="tri-right" onclick="goToNext_doodlecrew()"></button>
     </div>
     <p>
-      Green line: Art from the Doodle Crew Discord server.
+      Green Line: Sites from artists of the Doodle Crew Discord server.
     </p>
   </div>
 
@@ -56,8 +56,6 @@ template_doodlecrew.innerHTML = `
     .webring_doodlecrew {
       width: 100%;
       height: auto;
-      outline: 1px solid;
-      background: white;
     }
     .webring_doodlecrew > div {
       display: flex;

@@ -49,7 +49,7 @@ template_creativesclub.innerHTML = `
       <button id="tri-right_creativesclub" onclick="goToNext_creativesclub()"></button>
     </div>
     <p>
-      Creatives Club line: Websites of Creatives Club members.
+      Creatives Club Line: Sites of Creatives Club members.
     </p>
   </div>
 
@@ -57,8 +57,6 @@ template_creativesclub.innerHTML = `
     .webring_creativesclub {
       width: 100%;
       height: auto;
-      outline: 1px solid;
-      background: white;
     }
     .webring_creativesclub > div {
       display: flex;
