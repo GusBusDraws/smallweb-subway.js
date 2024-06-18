@@ -9,6 +9,7 @@ lines and a map to visualize the connectivity of the lines.
 
 ## Change Log
 ### 2024-06-17
+- Update [smallweb-subway.js](smallweb-subway.js) with "doodlecrew" suffixes for variables
 - Add [creativesclub.js](creativesclub.js) and [creativesclub.json](creativesclub.json) with updated variable names to work with [smallweb-subway.js](smallweb-subway.js) on the same page!
 
 ### 2024-02-13
