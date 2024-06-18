@@ -4,7 +4,7 @@ let matchedSiteIndex_doodlecrew;
 let matchedSite_doodlecrew;
 let prevSiteIndex_doodlecrew;
 let nextSiteIndex_doodlecrew;
-const WEBRING_DATA_URL_doodlecrew = `https://gusbus.space/smallweb-subway.js/data.json`;
+const WEBRING_DATA_URL_doodlecrew = `https://gusbus.space/smallweb-subway.js/doodlecrew.json`;
 let DATA_doodlecrew;
 loadWebringJSON_doodlecrew(WEBRING_DATA_URL_doodlecrew);
 

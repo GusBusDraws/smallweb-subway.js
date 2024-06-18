@@ -4,8 +4,7 @@ let matchedSiteIndex_creativesclub;
 let matchedSite_creativesclub;
 let prevSiteIndex_creativesclub;
 let nextSiteIndex_creativesclub;
-// const WEBRING_DATA_URL_creativesclub = `https://gusbus.space/smallweb-subway.js/creativesclub.json`;
-const WEBRING_DATA_URL_creativesclub = `https://gusbus.space/smallweb-subway.js/data.json`;
+const WEBRING_DATA_URL_creativesclub = `https://gusbus.space/smallweb-subway.js/creativesclub.json`;
 let DATA_creativesclub;
 loadWebringJSON_creativesclub(WEBRING_DATA_URL_creativesclub);
 
