@@ -7,6 +7,17 @@ let nextSiteIndex_doodlecrew;
 const WEBRING_DATA_URL_doodlecrew = `https://gusbus.space/smallweb-subway.js/doodlecrew.json`;
 let DATA_doodlecrew;
 loadWebringJSON_doodlecrew(WEBRING_DATA_URL_doodlecrew);
+// Currently out-of-date sites (to add back into JSON):
+  // {
+  //   "name" : "Doodles",
+  //   "url" : "art.bymegan.com/doodles.html",
+  //   "owner" : "Megan Chesterton"
+  // },
+  // {
+  //   "name" : "Webring Landing Page",
+  //   "url" : "yamasztuka.com/artindex.html",
+  //   "owner" : "Yamasztuka"
+  // }
 
 function loadWebringJSON_doodlecrew(url) {
   fetch(url)
