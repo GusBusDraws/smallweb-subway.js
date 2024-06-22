@@ -7,12 +7,6 @@ let nextSiteIndex_creativesclub;
 const WEBRING_DATA_URL_creativesclub = `https://gusbus.space/smallweb-subway.js/creativesclub.json`;
 let DATA_creativesclub;
 loadWebringJSON_creativesclub(WEBRING_DATA_URL_creativesclub);
-// Currently out-of-date sites (to add back into JSON):
-  // {
-  //   "name" : "urlocalcyb.org",
-  //   "url" : "urlocalcyb.org/",
-  //   "owner" : "cyborgforty"
-  // },
 
 function loadWebringJSON_creativesclub(url) {
   fetch(url)
