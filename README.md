@@ -47,6 +47,8 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-06-23
+- Add the zines line
 ### 2024-06-21
 - Update the README with instructions to join a line
 - Add the poetry line with corresponding files!
