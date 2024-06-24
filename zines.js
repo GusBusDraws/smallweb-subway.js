@@ -49,7 +49,7 @@ template_zines.innerHTML = `
       <button id="tri-right_zines" onclick="goToNext_zines()"></button>
     </div>
     <p>
-      zines Line: Sites with original zines.
+      Zines Line: Sites with original zines and zine resources.
     </p>
   </div>
 
