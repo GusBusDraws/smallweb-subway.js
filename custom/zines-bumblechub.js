@@ -27,12 +27,15 @@ function getHostName_zines(url) {
 
 function goToPrev_zines() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_zines[prevSiteIndex_zines].url
+  // location.href = '//' + DATA_zines[prevSiteIndex_zines].url
+  window.open('//' + DATA_zines[prevSiteIndex_zines].url)
 }
 
 function goToNext_zines() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_zines[nextSiteIndex_zines].url
+  // location.href = '//' + DATA_zines[nextSiteIndex_zines].url
+  // window.open('//' + DATA_zines[nextSiteIndex_zines].url, "_self")
+  window.open('//' + DATA_zines[nextSiteIndex_zines].url)
 }
 
 let template_zines = document.createElement("template");
