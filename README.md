@@ -48,6 +48,7 @@ by reaching out to Gus!
 
 ## Change Log
 ### 2024-06-25
+- Reorder CC line to match map
 - Swap colors of poetry and zines lines
 ### 2024-06-24
 - Add Mythical Type to zines line
