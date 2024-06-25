@@ -47,6 +47,8 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-06-25
+- Swap colors of poetry and zines lines
 ### 2024-06-24
 - Add Mythical Type to zines line
 - Add custom/zines-bumblechub.js as workaround for Google Sites
