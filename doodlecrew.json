@@ -1,7 +1,7 @@
 [
   {
-    "name" : "DoodleBot",
-    "url" : "gusbus.space/doodlebot/",
+    "name" : "Smallweb Subway",
+    "url" : "gusbus.space/smallweb-subway/",
     "owner" : "Gus Becker"
   },
   {
@@ -10,14 +10,19 @@
     "owner" : "Jazz"
   },
   {
-    "name" : "Smallweb Subway",
-    "url" : "gusbus.space/smallweb-subway/",
-    "owner" : "Gus Becker"
-  },
-  {
     "name" : "my art 2024",
     "url" : "uuupah.neocities.org/art/my-art-2024/",
     "owner" : "uuupah"
+  },
+  {
+    "name" : "Sunday Comics",
+    "url" : "jazz-dude.com/Portfolio/SundayC.html",
+    "owner" : "Jazz"
+  },
+  {
+    "name" : "DoodleBot",
+    "url" : "gusbus.space/doodlebot/",
+    "owner" : "Gus Becker"
   }
 ]
 
