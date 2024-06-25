@@ -81,7 +81,7 @@ template_poetry.innerHTML = `
       background: none;
       border-top: 20px solid transparent;
       border-left: none;
-      border-right: 40px solid #0077c0;
+      border-right: 40px solid #e51937;
       border-bottom: 20px solid transparent;
       outline: none;
       cursor: pointer;
@@ -97,7 +97,7 @@ template_poetry.innerHTML = `
       height: 0;
       background: none;
       border-top: 20px solid transparent;
-      border-left: 40px solid #0077c0;
+      border-left: 40px solid #e51937;
       border-right: none;
       border-bottom: 20px solid transparent;
       cursor: pointer;
@@ -111,7 +111,7 @@ template_poetry.innerHTML = `
     #line {
       width: 120px;
       height: 20px;
-      background: #0077c0;
+      background: #e51937;
       display: flex;
       align-items: center;
       justify-content: center;

@@ -1,10 +1,5 @@
 [
   {
-    "name" : "Creatives Club",
-    "url" : "creativesclub.art/",
-    "owner" : "Gus Becker"
-  },
-  {
     "name" : "Smallweb Subway",
     "url" : "gusbus.space/smallweb-subway/",
     "owner" : "Gus Becker"
@@ -12,6 +7,11 @@
   {
     "name" : "DoodleBot",
     "url" : "gusbus.space/doodlebot/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "name" : "Creatives Club",
+    "url" : "creativesclub.art/",
     "owner" : "Gus Becker"
   },
   {
