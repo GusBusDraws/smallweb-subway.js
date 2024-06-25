@@ -8,6 +8,11 @@
     "name" : "zines",
     "url" : "bumblechub.com/zines/",
     "owner" : "bumblechub"
+  },
+  {
+    "name" : "Mythical Type Zines",
+    "url" : "mythicaltype.com/zines/",
+    "owner" : "Mythical Type"
   }
 ]
 

@@ -48,6 +48,7 @@ by reaching out to Gus!
 
 ## Change Log
 ### 2024-06-24
+- Add Mythical Type to zines line
 - Add custom/zines-bumblechub.js as workaround for Google Sites
 - Add bumblechub to zines line
 - Add DoodleBot to CC line
