@@ -14,7 +14,7 @@ join the growing network!
 
 ## Instructions to join
 If you have a page of your website that is relevant to a line of the
-Smallweb Subway and you'd like to have your site added, there are four
+Smallweb Subway and you'd like to have your site added, there are three
 things you'll need to do:
 
 1. Identify which line of the Smallweb Subway is most relevant for you to join.
@@ -24,24 +24,20 @@ following steps. Right now there are three keywords:
     - `doodlecrew` (Green Line) : Websites belonging to members of the [Doodle Crew Discord server](https://discord.gg/S3TPjtpPuP).
     - `creativesclub` (Yellow Line) : Websites belonging to member of [Creatives Club](https://creativesclub.art).
 
-2. Get your site info
-(URL of page widget will go, title of page, author name/alias)
+2. Add the following lines of code to the `<body>` of your page's .html
+file where you'd like the widget to appear:
+    ```html
+    <script src="https://gusbus.space/smallweb-subway.js/KEYWORD.js"></script>
+    <smallweb-subway-KEYWORD></smallweb-subway-KEYWORD>
+    ```
+3. Once you see the widget appear on your site, the buttons won't work until
+your site's info is added to the right list. Have this info
+(URL of page with widget, title of page, author name/alias)
 added to the corresponding JSON file in one of the following ways:
     - Send Gus a DM with your info (@GusBusDraws on most sites), or
     - Email smallwebsubway at gmail dot com, or
     - Submit a pull request on [GitHub](https://github.com/GusBusDraws/smallweb-subway.js)
     editing the corresponding JSON directly.
-
-3. Add the following line to the `<head>` of your page's .html file:
-    ```html
-    <script src="https://gusbus.space/smallweb-subway.js/KEYWORD.js"></script>
-    ```
-
-4. Add the following line to the `<body>` of your page's .html file where
-you'd like the widget contained:
-    ```html
-    <smallweb-subway-KEYWORD></smallweb-subway-KEYWORD>
-    ```
 
 If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
