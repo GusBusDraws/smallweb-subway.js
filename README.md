@@ -43,6 +43,8 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-06-26
+- Simplify instructions
 ### 2024-06-25
 - Reorder Doodle Crew line to match map
 - Reorder CC line to match map
