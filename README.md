@@ -44,6 +44,8 @@ by reaching out to Gus!
 
 ## Change Log
 ### 2024-06-27
+- Add custom/creativesclub-yuki.js
+- Add custom/comics-yuki.js
 - Add dead.garden/zines to Zines Line
 - Add dead.garden/poetry to Poetry Line
 ### 2024-06-26
