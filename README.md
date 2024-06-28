@@ -43,6 +43,9 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-06-27
+- Add dead.garden/zines to Zines Line
+- Add dead.garden/poetry to Poetry Line
 ### 2024-06-26
 - Simplify instructions
 ### 2024-06-25
