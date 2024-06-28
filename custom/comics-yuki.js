@@ -150,7 +150,7 @@ class Webring_comics extends HTMLElement {
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_comics))
     thisURL_comics = new URL(window.location.href);
-    thisSite_comics = "yukiclarke.com/home/"
+    thisSite_comics = "www.yukiclarke.com/home/"
     console.log("This site:")
     console.log(thisSite_comics)
     matchedSiteIndex_comics = (

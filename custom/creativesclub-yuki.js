@@ -150,7 +150,7 @@ class Webring_creativesclub extends HTMLElement {
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_creativesclub))
     thisURL_creativesclub = new URL(window.location.href);
-    thisSite_creativesclub = "yukiclarke.com/home/"
+    thisSite_creativesclub = "www.yukiclarke.com/home/"
     console.log("This site:")
     console.log(thisSite_creativesclub)
     matchedSiteIndex_creativesclub = (
