@@ -13,6 +13,11 @@
     "name" : "Mythical Type Zines",
     "url" : "mythicaltype.com/zines/",
     "owner" : "Mythical Type"
+  },
+  {
+    "name" : "dead zines",
+    "url" : "dead.garden/zines/",
+    "owner" : "jo"
   }
 ]
 
