@@ -43,6 +43,8 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-07-01
+- Add MyDogStoleThisWebsite to the Zines Line
 ### 2024-06-27
 - Prefix Yuki's site URL with "www." to handle redirect
 - Add yukiclarke.com to CC & Comics Lines

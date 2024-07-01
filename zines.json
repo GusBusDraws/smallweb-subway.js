@@ -5,9 +5,9 @@
     "owner" : "Gus Becker"
   },
   {
-    "name" : "zines",
-    "url" : "bumblechub.com/zines/",
-    "owner" : "bumblechub"
+    "name" : "dead zines",
+    "url" : "dead.garden/zines/",
+    "owner" : "jo"
   },
   {
     "name" : "Mythical Type Zines",
@@ -15,9 +15,14 @@
     "owner" : "Mythical Type"
   },
   {
-    "name" : "dead zines",
-    "url" : "dead.garden/zines/",
-    "owner" : "jo"
+    "name" : "zines",
+    "url" : "bumblechub.com/zines/",
+    "owner" : "bumblechub"
+  },
+  {
+    "name" : "MyDogStoleThisWebsite",
+    "url" : "metrogoldia.neocities.org/",
+    "owner" : "MyDogStoleMyLiver (Devin Spector)"
   }
 ]
 
