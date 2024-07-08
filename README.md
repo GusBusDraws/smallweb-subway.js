@@ -49,6 +49,7 @@ by reaching out to Gus!
 
 ## Change Log
 ### 2024-07-08
+- Add Clockwork to Scifi Line
 - Add files for new Scifi Line
 ### 2024-07-02
 - Add Ultraviolents to Comics Line
