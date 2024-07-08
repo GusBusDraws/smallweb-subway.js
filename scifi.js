@@ -49,7 +49,7 @@ template_scifi.innerHTML = `
       <button id="tri-right_scifi" onclick="goToNext_scifi()"></button>
     </div>
     <p>
-      scifi Line: Sites with original scifi.
+      Scifi Line: Sites with original science fiction work.
     </p>
   </div>
 
