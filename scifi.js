@@ -81,7 +81,7 @@ template_scifi.innerHTML = `
       background: none;
       border-top: 20px solid transparent;
       border-left: none;
-      border-right: 40px solid #f7941d;
+      border-right: 40px solid #A1A3A1;
       border-bottom: 20px solid transparent;
       outline: none;
       cursor: pointer;
@@ -97,7 +97,7 @@ template_scifi.innerHTML = `
       height: 0;
       background: none;
       border-top: 20px solid transparent;
-      border-left: 40px solid #f7941d;
+      border-left: 40px solid #A1A3A1;
       border-right: none;
       border-bottom: 20px solid transparent;
       cursor: pointer;
@@ -111,7 +111,7 @@ template_scifi.innerHTML = `
     #line {
       width: 120px;
       height: 20px;
-      background: #f7941d;
+      background: #A1A3A1;
       display: flex;
       align-items: center;
       justify-content: center;
