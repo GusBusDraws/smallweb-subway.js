@@ -20,16 +20,21 @@ things you'll need to do:
 1. Identify which line of the Smallweb Subway is most relevant for you to join.
 Each line has a specific `KEYWORD` which is important for the
 following steps. Right now there are three keywords:
-    - `poetry` (Blue Line) : Websites showcasing original poetry.
-    - `doodlecrew` (Green Line) : Websites belonging to members of the [Doodle Crew Discord server](https://discord.gg/S3TPjtpPuP).
+    - `poetry` (Red Line) : Websites showcasing original poetry.
+    - `comics` (Orange Line) : Websites showcasing original comics.
     - `creativesclub` (Yellow Line) : Websites belonging to member of [Creatives Club](https://creativesclub.art).
+    - `doodlecrew` (Green Line) : Websites belonging to members of the [Doodle Crew Discord server](https://discord.gg/S3TPjtpPuP).
+    - `zines` (Blue Line) : Websites with zines and zine resources.
+    - `scifi` (Silver Line) : Websites with original science fiction work.
 
-2. Add the following lines of code to the `<body>` of your page's .html
+2. Substituting `KEYWORD` with one of the keywords above, add the following
+lines of code to the `<body>` of your page's .html
 file where you'd like the widget to appear:
     ```html
     <script src="https://gusbus.space/smallweb-subway.js/KEYWORD.js"></script>
     <smallweb-subway-KEYWORD></smallweb-subway-KEYWORD>
     ```
+
 3. Once you see the widget appear on your site, the buttons won't work until
 your site's info is added to the right list. Have this info
 (URL of page with widget, title of page, author name/alias)
@@ -43,6 +48,8 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-07-08
+- Add files for new Scifi Line
 ### 2024-07-02
 - Add Ultraviolents to Comics Line
 ### 2024-07-01
