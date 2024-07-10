@@ -48,6 +48,8 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-07-09
+- Add Dion Ra to Scifi Line
 ### 2024-07-08
 - Add Varve to Scifi Line
 - Add Clockwork to Scifi Line
