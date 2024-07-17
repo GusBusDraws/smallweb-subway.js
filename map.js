@@ -3,7 +3,7 @@
 let lineWidth;
 let stationDist;
 let stations = [];
-let dcWidth = 7;
+let dcWidth = 9;
 let dcHeight = 7;
 let dcPts = [
   [1, 0], [dcWidth - 2, 0],
@@ -25,27 +25,29 @@ let ccPts = [
 ]
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 6;
+let comicsWidth = 5;
 let comicsHeight = 7;
 let comicsPts = [
-  [1, 0], [comicsWidth - 3, 0],
-  [comicsWidth - 2, 1], [comicsWidth - 2, comicsHeight - 2],
-  [comicsWidth - 3, comicsHeight - 1], [1, comicsHeight - 1],
+  [1, 0], [comicsWidth - 2, 0],
+  [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],
+  [comicsWidth - 2, comicsHeight - 1], [1, comicsHeight - 1],
   [1, comicsHeight - 1], [0, comicsHeight - 2],
   [0, 1], [1, 0]
 ]
 let comicsOffset = [];
 let comicsScale;
+let poetryWidth = 7;
+let poetryHeight = 5;
 let poetryPts = [
-  [1, 0], [3, 0],
-  [4, 1], [4, 3.15],
-  [3.15, 4], [1, 4],
-  [1, 4], [0, 3],
+  [1, 0], [poetryWidth-2, 0],
+  [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],
+  [poetryWidth-2+0.15, poetryHeight-1], [1, poetryHeight-1],
+  [1, poetryHeight-1], [0, poetryHeight-2],
   [0, 1], [1, 0]
 ]
 let poetryOffset = [];
 let poetryScale;
-let zinesWidth = 7;
+let zinesWidth = 9;
 let zinesHeight = 5;
 let zinesPts = [
   [1, 0], [zinesWidth - 2, 0],
@@ -56,7 +58,19 @@ let zinesPts = [
 ]
 let zinesOffset = [];
 let zinesScale;
+// let sfWidth = 9;
+// let sfHeight = 7;
+// let sfPts = [
+//   [1, 0], [sfWidth - 2, 0],
+//   [sfWidth - 1, 1], [sfWidth - 1, sfHeight - 2],
+//   [sfWidth - 2, sfHeight - 1], [1, sfHeight - 1],
+//   [1, sfHeight - 1], [0, sfHeight - 2],
+//   [0, 1], [1, 0]
+// ]
+// let sfOffset = [];
+// let sfScale;
 let DEBUG = false;
+// let DEBUG = true;
 let selection;
 
 function setup() {
@@ -68,7 +82,7 @@ function setup() {
   canvas.parent('map')
   // stationDist = height / 8;
   stationDist = height / 12;
-  dcOffset = [width/6, height/4];
+  dcOffset = [width/10, height/4];
   lineWidth = width * 0.015
 }
 
@@ -83,8 +97,8 @@ function draw() {
    // Orange : Comics Line //
   //////////////////////////
   comicsOffset[0] = (
-    min(dcScaledX)
-    + 4 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    max(dcScaledX)
+    - 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
     // - lineWidth
   )
   comicsOffset[1] = (
@@ -105,6 +119,7 @@ function draw() {
   zinesOffset[1] = (
     min(dcScaledY)
     + 4 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
+    + lineWidth
   );
   zinesScale = [stationDist, stationDist];
   let [zinesScaledX, zinesScaledY] = drawLine(zinesOffset, zinesScale, zinesPts, '#0077c0');
@@ -132,6 +147,19 @@ function draw() {
   ccOffset[1] = dcOffset[1];
   ccScale = [stationDist, stationDist];
   let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
+  //   /////////////////////////
+  //  // Silver : Scifi Line //
+  // /////////////////////////
+  // sfOffset[0] = (
+  //   min(dcScaledX)
+  //   + 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+  // );
+  // sfOffset[1] = (
+  //   min(dcScaledY)
+  //   - 2 * (max(dcScaledY) - min(dcScaledY))/(dcHeight - 1)
+  // );
+  // sfScale = [stationDist, stationDist];
+  // let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
     //////////////
    // Stations //
   //////////////
@@ -141,7 +169,7 @@ function draw() {
       'title' : 'Smallweb Subway',
       'url' : 'gusbus.space/smallweb-subway/',
       'owner' : 'Gus Becker',
-      'pt' : getScaledPt([6, 4], dcOffset, dcScale, [0, -lineWidth/2])
+      'pt' : getScaledPt([dcWidth-1, 4], dcOffset, dcScale, [0, -lineWidth/2])
     },
     // Blue : Zines Line
     {
@@ -155,6 +183,18 @@ function draw() {
       "url" : "mythicaltype.com/zines/",
       "owner" : "Mythical Type",
       "pt" : getScaledPt([4, 4], zinesOffset, zinesScale, [0, 0]),
+    },
+    {
+      "title" : "dead zines",
+      "url" : "dead.garden/zines/",
+      "owner" : "jo",
+      "pt" : getScaledPt([6, poetryHeight-1], zinesOffset, zinesScale, [0, 0])
+    },
+    {
+      "title" : "MyDogStoleThisWebsite",
+      "url" : "metrogoldia.neocities.org/",
+      "owner" : "MyDogStoleMyLiver (Devin Spector)",
+      "pt" : getScaledPt([2, 0], zinesOffset, zinesScale, [0, 0])
     },
     // Yellow : Creatives Club Line
     {
@@ -188,6 +228,18 @@ function draw() {
       "owner" : "Jazz",
       "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [0, lineWidth])
     },
+    {
+      "title" : "Ultraviolents",
+      "url" : "uv.itsnero.com/about/",
+      "owner" : "Nero Villagallos O'Reilly",
+      "pt" : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "yukiclarke.com",
+      "url" : "www.yukiclarke.com/home/",
+      "owner" : "Yuki Clarke",
+      "pt" : getScaledPt([comicsWidth-1, 2], comicsOffset, comicsScale, [0, lineWidth])
+    },
     // Green : Doodle Crew Line
     {
       "title" : "jazz-dude.com",
@@ -209,6 +261,12 @@ function draw() {
       "url" : "columbidaecorner.neocities.org/poetry",
       "owner" : "columbidaecorner",
       "pt" : getScaledPt([0, 2], poetryOffset, poetryScale, [0, 0])
+    },
+    {
+      "title" : "poems",
+      "url" : "dead.garden/poetry/",
+      "owner" : "jo",
+      "pt" : getScaledPt([3, 0], poetryOffset, poetryScale, [0, 0])
     }
   ];
   drawStations(stations);
@@ -330,7 +388,6 @@ function drawInfoBox(selection) {
   stroke(255);
   fill(0, 0);
   circle(x, y, lineWidth * 2.5);
-  fill(255);
   let boxW = 26 * lineWidth;
   let boxH = 5 * lineWidth;
   let boxX;
@@ -351,14 +408,25 @@ function drawInfoBox(selection) {
   selection.boxYMin = boxY;
   selection.boxXMax = boxX + boxW;
   selection.boxYMax = boxY + boxH;
-  rect(boxX, boxY, boxW, boxH);
   noStroke();
-  fill(0);
   textSize(0.017 * width)
   textFont('Consolas')
   textAlign(LEFT, TOP)
-  text(title + ' by ' +owner, boxX + lineWidth, boxY + lineWidth)
-  text(url, boxX + lineWidth, boxY + 3*lineWidth);
+  let desc = title + ' by ' + owner;
+  if (desc.length < 38) {
+    fill(255);
+    rect(boxX, boxY, boxW, boxH);
+    fill(0);
+    text(desc, boxX + lineWidth, boxY + lineWidth)
+    text(url, boxX + lineWidth, boxY + 3*lineWidth);
+  } else {
+    fill(255);
+    rect(boxX, boxY, boxW, boxH+2*lineWidth);
+    fill(0);
+    text(title, boxX + lineWidth, boxY + lineWidth)
+    text("by "+owner, boxX + lineWidth, boxY + 3*lineWidth)
+    text(url, boxX + lineWidth, boxY + 5*lineWidth);
+  }
 }
 
 function touchStarted() {
@@ -370,7 +438,7 @@ function touchStarted() {
         && (mouseY > selection.boxYMin && mouseY < selection.boxYMax)
       ) {
         console.log('Station clicked')
-        window.open('https://'+station.url);
+        window.open('https://'+selection.url);
         isFound = true;
         // Needed to insure only one page is opened
         mouseIsPressed = false;
@@ -400,4 +468,3 @@ function touchStarted() {
     }
   }
 }
-
