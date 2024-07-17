@@ -36,7 +36,7 @@ let comicsPts = [
 ]
 let comicsOffset = [];
 let comicsScale;
-let poetryWidth = 7;
+let poetryWidth = 5;
 let poetryHeight = 5;
 let poetryPts = [
   [1, 0], [poetryWidth-2, 0],
@@ -47,7 +47,7 @@ let poetryPts = [
 ]
 let poetryOffset = [];
 let poetryScale;
-let zinesWidth = 9;
+let zinesWidth = 11;
 let zinesHeight = 5;
 let zinesPts = [
   [1, 0], [zinesWidth - 2, 0],
@@ -58,17 +58,17 @@ let zinesPts = [
 ]
 let zinesOffset = [];
 let zinesScale;
-// let sfWidth = 9;
-// let sfHeight = 7;
-// let sfPts = [
-//   [1, 0], [sfWidth - 2, 0],
-//   [sfWidth - 1, 1], [sfWidth - 1, sfHeight - 2],
-//   [sfWidth - 2, sfHeight - 1], [1, sfHeight - 1],
-//   [1, sfHeight - 1], [0, sfHeight - 2],
-//   [0, 1], [1, 0]
-// ]
-// let sfOffset = [];
-// let sfScale;
+let sfWidth = 10;
+let sfHeight = 6;
+let sfPts = [
+  [1, 0], [sfWidth - 2, 0], // Top side
+  [sfWidth - 1, 1], [sfWidth - 1, sfHeight - 3+0.12], // Right side
+  [sfWidth - 3+0.12, sfHeight - 1], [3, sfHeight - 1], // Bottom side
+  [0, sfHeight - 4], [0, 1], // Left side
+  [1, 0]
+]
+let sfOffset = [];
+let sfScale;
 let DEBUG = false;
 // let DEBUG = true;
 let selection;
@@ -93,6 +93,19 @@ function draw() {
   //////////////////////////////
   dcScale = [stationDist, stationDist];
   let [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
+    /////////////////////////
+   // Silver : Scifi Line //
+  /////////////////////////
+  sfOffset[0] = (
+    min(dcScaledX)
+    + 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+  );
+  sfOffset[1] = (
+    min(dcScaledY)
+    - 1 * (max(dcScaledY) - min(dcScaledY))/(dcHeight - 1)
+  );
+  sfScale = [stationDist, stationDist];
+  let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
     //////////////////////////
    // Orange : Comics Line //
   //////////////////////////
@@ -113,7 +126,7 @@ function draw() {
   ////////////////////////
   zinesOffset[0] = (
     min(dcScaledX)
-    + 3 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
+    + (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
     // - lineWidth
   );
   zinesOffset[1] = (
@@ -127,8 +140,8 @@ function draw() {
    // Red : Poetry Line //
   ////////////////////////
   poetryOffset[0] = (
-    min(dcScaledX)
-    + 2 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
+    max(dcScaledX)
+    - 4 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
     - lineWidth
   );
   poetryOffset[1] = (
@@ -147,19 +160,6 @@ function draw() {
   ccOffset[1] = dcOffset[1];
   ccScale = [stationDist, stationDist];
   let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
-  //   /////////////////////////
-  //  // Silver : Scifi Line //
-  // /////////////////////////
-  // sfOffset[0] = (
-  //   min(dcScaledX)
-  //   + 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
-  // );
-  // sfOffset[1] = (
-  //   min(dcScaledY)
-  //   - 2 * (max(dcScaledY) - min(dcScaledY))/(dcHeight - 1)
-  // );
-  // sfScale = [stationDist, stationDist];
-  // let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
     //////////////
    // Stations //
   //////////////
@@ -169,7 +169,26 @@ function draw() {
       'title' : 'Smallweb Subway',
       'url' : 'gusbus.space/smallweb-subway/',
       'owner' : 'Gus Becker',
-      'pt' : getScaledPt([dcWidth-1, 4], dcOffset, dcScale, [0, -lineWidth/2])
+      'pt' : getScaledPt([dcWidth-1, 4], dcOffset, dcScale, [0, 0])
+    },
+    // Silver : Scifi Line
+    {
+      "title" : "Clockwork's Archive of Tomorrow",
+      "url" : "clockwooork.github.io/future-stop.html",
+      "owner" : "Clockwork",
+      "pt" : getScaledPt([1, 3], sfOffset, sfScale, [0, 0])
+    },
+    {
+      "title" : "Varve's writing bits & pieces",
+      "url" : "www.write-on.org/writing/",
+      "owner" : "Varve",
+      "pt" : getScaledPt([2, 0], sfOffset, sfScale, [0, 0])
+    },
+    {
+      "title" : "Stories",
+      "url" : "dionra.com/stories.php",
+      "owner" : "Dion Ra",
+      "pt" : getScaledPt([6, 0], sfOffset, sfScale, [0, 0])
     },
     // Blue : Zines Line
     {
@@ -194,7 +213,13 @@ function draw() {
       "title" : "MyDogStoleThisWebsite",
       "url" : "metrogoldia.neocities.org/",
       "owner" : "MyDogStoleMyLiver (Devin Spector)",
-      "pt" : getScaledPt([2, 0], zinesOffset, zinesScale, [0, 0])
+      "pt" : getScaledPt([1, 0], zinesOffset, zinesScale, [0, 0])
+    },
+    {
+      "title" : "Ether",
+      "url" : "ethersent.neocities.org/",
+      "owner" : "Emil Aisling",
+      "pt" : getScaledPt([8, poetryHeight-1], zinesOffset, zinesScale, [0, 0])
     },
     // Yellow : Creatives Club Line
     {

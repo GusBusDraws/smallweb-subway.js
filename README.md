@@ -49,6 +49,7 @@ by reaching out to Gus!
 
 ## Change Log
 ### 2024-07-17
+- Add Scifi Line to map
 - Add Ether to Zines Line
 - Update map.js with current state on [GusBus.Space](https://github.com/GusBusDraws/GusBusDraws.github.io)
 - Copy map.js from [subway-map](https://github.com/GusBusDraws/subway-map)
