@@ -25,7 +25,7 @@ let ccPts = [
 ]
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 5;
+let comicsWidth = 7;
 let comicsHeight = 7;
 let comicsPts = [
   [1, 0], [comicsWidth - 2, 0],
@@ -111,7 +111,7 @@ function draw() {
   //////////////////////////
   comicsOffset[0] = (
     max(dcScaledX)
-    - 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    - 4 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
     // - lineWidth
   )
   comicsOffset[1] = (
@@ -188,7 +188,7 @@ function draw() {
       "title" : "Varve's writing bits & pieces",
       "url" : "www.write-on.org/writing/",
       "owner" : "Varve",
-      "pt" : getScaledPt([2, 0], sfOffset, sfScale, [0, 0])
+      "pt" : getScaledPt([4, 0], sfOffset, sfScale, [0, 0])
     },
     {
       "title" : "Stories",
@@ -260,10 +260,16 @@ function draw() {
       "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [0, lineWidth])
     },
     {
+      "title" : "Keeping Time",
+      "url" : "www.keepingtimecomic.com/links/",
+      "owner" : "Kody Okamoto",
+      "pt" : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
       "title" : "Ultraviolents",
       "url" : "uv.itsnero.com/about/",
       "owner" : "Nero Villagallos O'Reilly",
-      "pt" : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
+      "pt" : getScaledPt([4, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "yukiclarke.com",
@@ -303,7 +309,7 @@ function draw() {
       "title" : "poems",
       "url" : "dead.garden/poetry/",
       "owner" : "jo",
-      "pt" : getScaledPt([3, 0], poetryOffset, poetryScale, [0, 0])
+      "pt" : getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
     }
   ];
   drawStations(stations);
