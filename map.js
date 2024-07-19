@@ -179,6 +179,12 @@ function draw() {
       "pt" : getScaledPt([1, 3], sfOffset, sfScale, [0, 0])
     },
     {
+      "title" : "Gus's Scifi Gallery",
+      "url" : "gusbus.space/scifi/",
+      "owner" : "Gus Becker",
+      "pt" : getScaledPt([0, 1], sfOffset, sfScale, [0, 0])
+    },
+    {
       "title" : "Varve's writing bits & pieces",
       "url" : "www.write-on.org/writing/",
       "owner" : "Varve",
