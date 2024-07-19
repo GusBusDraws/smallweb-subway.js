@@ -48,6 +48,8 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-07-18
+- Add Neat Hobby to Comics Line
 ### 2024-07-17
 - Add Scifi Line to map
 - Add Ether to Zines Line
