@@ -27,12 +27,14 @@ function getHostName_scifi(url) {
 
 function goToPrev_scifi() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_scifi[prevSiteIndex_scifi].url
+  // location.href = '//' + DATA_scifi[prevSiteIndex_scifi].url
+  window.open('//' + DATA_scifi[prevSiteIndex_scifi].url)
 }
 
 function goToNext_scifi() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_scifi[nextSiteIndex_scifi].url
+  // location.href = '//' + DATA_scifi[nextSiteIndex_scifi].url
+  window.open('//' + DATA_scifi[nextSiteIndex_scifi].url)
 }
 
 let template_scifi = document.createElement("template");
@@ -147,7 +149,7 @@ class Webring_scifi extends HTMLElement {
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_scifi))
     thisURL_scifi = new URL(window.location.href);
-    thisSite_creativesclub = "www.yukiclarke.com/home/"
+    thisSite_scifi = "www.yukiclarke.com/home/"
     console.log("This site:")
     console.log(thisSite_scifi)
     matchedSiteIndex_scifi = (
