@@ -265,6 +265,12 @@ function draw() {
       "owner" : "Yuki Clarke",
       "pt" : getScaledPt([comicsWidth-1, 2], comicsOffset, comicsScale, [0, lineWidth])
     },
+    {
+      "title" : "Neat Hobby!",
+      "url" : "neathobby.com/",
+      "owner" : "Scott Andrew",
+      "pt" : getScaledPt([comicsWidth-1, 4], comicsOffset, comicsScale, [0, lineWidth])
+    },
     // Green : Doodle Crew Line
     {
       "title" : "jazz-dude.com",
