@@ -48,6 +48,8 @@ If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
 ## Change Log
+### 2024-07-19
+- Add Gus's Scifi Gallery to Scifi Line
 ### 2024-07-18
 - Reroute Scifi Line through Yuki's station
 - Add Yuki to Comics Line
