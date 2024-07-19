@@ -309,7 +309,7 @@ function draw() {
       "title" : "poems",
       "url" : "dead.garden/poetry/",
       "owner" : "jo",
-      "pt" : getScaledPt([3, 0], poetryOffset, poetryScale, [0, 0])
+      "pt" : getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
     }
   ];
   drawStations(stations);
