@@ -61,8 +61,8 @@ let zinesScale;
 let sfWidth = 10;
 let sfHeight = 6;
 let sfPts = [
-  [1, 0], [sfWidth - 2, 0], // Top side
-  [sfWidth - 1, 1], [sfWidth - 1, sfHeight - 3+0.12], // Right side
+  [1, 0], [sfWidth - 3, 0], // Top side
+  [sfWidth - 1, 2], [sfWidth - 1, sfHeight - 3+0.12], // Right side
   [sfWidth - 3+0.12, sfHeight - 1], [3, sfHeight - 1], // Bottom side
   [0, sfHeight - 4], [0, 1], // Left side
   [1, 0]

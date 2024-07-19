@@ -49,6 +49,8 @@ by reaching out to Gus!
 
 ## Change Log
 ### 2024-07-18
+- Reroute Scifi Line through Yuki's station
+- Add Yuki to Comics Line
 - Add Neat Hobby! to map
 - Add Neat Hobby! to Comics Line
 ### 2024-07-17
