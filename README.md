@@ -47,6 +47,22 @@ added to the corresponding JSON file in one of the following ways:
 If there are no relevant lines for you, you're welcome to suggest a new line
 by reaching out to Gus!
 
+## Developer Instructions
+To install the p5 types with Node.js, first check that Node is installed:
+```bash
+node --version
+```
+
+If Node returns the version, make sure you have navigated to the project directory and initialize a new Node package:
+```bash
+npm init -y
+```
+
+Then, download & install the p5 package:
+```bash
+npm install @types/p5
+```
+
 ## Change Log
 ### 2024-07-19
 - Add Keeping Time to Comics Line
