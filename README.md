@@ -64,6 +64,8 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-07-23
+- Add DiabloAfterDark to Comics Line
 ### 2024-07-19
 - Add Keeping Time to Comics Line
 - Add Gus's Scifi Gallery to Scifi Line
