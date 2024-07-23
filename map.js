@@ -263,13 +263,19 @@ function draw() {
       "title" : "Keeping Time",
       "url" : "www.keepingtimecomic.com/links/",
       "owner" : "Kody Okamoto",
-      "pt" : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
+      "pt" : getScaledPt([1, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title"  : "Links",
+      "url"   : "diabloafterdark.nekoweb.org/links.html",
+      "owner" : "DiabloAfterDark",
+      "pt" : getScaledPt([3, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "Ultraviolents",
       "url" : "uv.itsnero.com/about/",
       "owner" : "Nero Villagallos O'Reilly",
-      "pt" : getScaledPt([4, 0], comicsOffset, comicsScale, [0, 0])
+      "pt" : getScaledPt([5, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "yukiclarke.com",
