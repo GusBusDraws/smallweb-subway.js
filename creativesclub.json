@@ -33,6 +33,11 @@
     "name" : "marcinek.tech",
     "url" : "marcinek.tech/",
     "owner" : "Kristen"
+  },
+  {
+    "name" : "michi.foo",
+    "url" : "michi.foo/0",
+    "owner" : "Sara"
   }
 ]
 

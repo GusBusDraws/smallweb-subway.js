@@ -49,6 +49,7 @@ by reaching out to Gus!
 
 ## Change Log
 ### 2024-07-30
+- Add granmichi to CC line
 - Rearrange CC line to match map
 ### 2024-07-19
 - Add Gus's Scifi Gallery to Doodle Crew Line
