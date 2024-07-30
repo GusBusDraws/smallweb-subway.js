@@ -238,18 +238,30 @@ function draw() {
       "title" : "Creatives Club",
       "url" : "creativesclub.art/",
       "owner" : "Gus Becker",
-      "pt" : getScaledPt([4, 2], ccOffset, ccScale, [0, 0])
+      "pt" : getScaledPt([0.5, 0.5], ccOffset, ccScale, [0, 0])
     },
     {
       "title" : "haystack blog and oddities",
       "url" : "thatoddhaystack.neocities.org/",
       "owner" : "vita",
-      "pt" : getScaledPt([4, 4], ccOffset, ccScale, [0, -lineWidth/2])
+      "pt" : getScaledPt([4, 1], ccOffset, ccScale, [0, 0])
     },
     {
       "title" : "UR LOCAL CYBORG",
       "url" : "urlocalcyb.org/",
       "owner" : "cyborgforty",
+      "pt" : getScaledPt([4, 3], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "marcinek.tech",
+      "url" : "marcinek.tech/",
+      "owner" : "Kristen",
+      "pt" : getScaledPt([4, 5], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "michi.foo",
+      "url" : "michi.foo/0",
+      "owner" : "Sara",
       "pt" : getScaledPt([2, 6], ccOffset, ccScale, [-lineWidth/2, 0])
     },
     // Orange : Comics Line

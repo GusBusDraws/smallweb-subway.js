@@ -64,9 +64,13 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-07-30
+- Add granmichi to CC line
+- Rearrange CC line to match map
 ### 2024-07-23
 - Add DiabloAfterDark to Comics Line
 ### 2024-07-19
+- Add Gus's Scifi Gallery to Doodle Crew Line
 - Add Keeping Time to Comics Line
 - Add Gus's Scifi Gallery to Scifi Line
 ### 2024-07-18

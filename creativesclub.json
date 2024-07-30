@@ -5,14 +5,14 @@
     "owner" : "Gus Becker"
   },
   {
-    "name" : "yukiclarke.com",
-    "url" : "www.yukiclarke.com/home/",
-    "owner" : "Yuki Clarke"
-  },
-  {
     "name" : "DoodleBot",
     "url" : "gusbus.space/doodlebot/",
     "owner" : "Gus Becker"
+  },
+  {
+    "name" : "yukiclarke.com",
+    "url" : "www.yukiclarke.com/home/",
+    "owner" : "Yuki Clarke"
   },
   {
     "name" : "Creatives Club",
@@ -33,6 +33,11 @@
     "name" : "marcinek.tech",
     "url" : "marcinek.tech/",
     "owner" : "Kristen"
+  },
+  {
+    "name" : "michi.foo",
+    "url" : "michi.foo/0",
+    "owner" : "Sara"
   }
 ]
 
