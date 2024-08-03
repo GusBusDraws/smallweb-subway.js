@@ -156,8 +156,15 @@ class Webring_doodlecrew extends HTMLElement {
     console.log('---------------')
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_doodlecrew))
-    thisURL_doodlecrew = new URL(window.location.href);
-    thisSite_doodlecrew = thisURL_doodlecrew.hostname + thisURL_doodlecrew.pathname
+    if (typeof forceURL_doodlecrew !== 'undefined') {
+      console.log('forceURL_doodlecrew: ', forceURL_doodlecrew)
+      thisSite_doodlecrew = forceURL_doodlecrew
+    } else {
+      thisURL_doodlecrew = new URL(window.location.href);
+      thisSite_doodlecrew = (
+        thisURL_doodlecrew.hostname + thisURL_doodlecrew.pathname
+      )
+    }
     console.log("This site:")
     console.log(thisSite_doodlecrew)
     matchedSiteIndex_doodlecrew = DATA_doodlecrew.map(x => x.url).indexOf(thisSite_doodlecrew)
@@ -171,6 +178,6 @@ class Webring_doodlecrew extends HTMLElement {
     nextSiteIndex_doodlecrew = matchedSiteIndex_doodlecrew + 1;
     if (nextSiteIndex_doodlecrew === DATA_doodlecrew.length) nextSiteIndex_doodlecrew = 0;
     console.log("Next site:")
-    console.log(DATA[nextSiteIndex_doodlecrew].url)
+    console.log(DATA_doodlecrew[nextSiteIndex_doodlecrew].url)
   }
 }
