@@ -314,8 +314,12 @@ function draw() {
       "owner" : "uuupah",
       "pt" : getScaledPt([0, 3], dcOffset, dcScale, [0, 0])
     },
-    // getScaledPt([0, 2], dcOffset, dcScale, extraOffsets=[0, 0]),
-    // getScaledPt([0, 4], dcOffset, dcScale, extraOffsets=[0, 0]),
+    {
+      "title" : "slime pond comics",
+      "url" : "abslimeware.neocities.org/comic/",
+      "owner" : "candycanearter07",
+      "pt" : getScaledPt([6, 0], dcOffset, dcScale, [0, 0])
+    },
     // Red : Poetry Line
     {
       "title" : "poetry!",
