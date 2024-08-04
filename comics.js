@@ -146,9 +146,15 @@ class Webring_comics extends HTMLElement {
     console.log('-----------')
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_comics))
-    thisURL_comics = new URL(window.location.href);
-    thisSite_comics = (
-      thisURL_comics.hostname + thisURL_comics.pathname)
+    if (typeof forceURL_comics !== 'undefined') {
+      console.log('forceURL_comics: ', forceURL_comics)
+      thisSite_comics = forceURL_comics
+    } else {
+      thisURL_comics = new URL(window.location.href);
+      thisSite_comics = (
+        thisURL_comics.hostname + thisURL_comics.pathname
+      )
+    }
     console.log("This site:")
     console.log(thisSite_comics)
     matchedSiteIndex_comics = (
