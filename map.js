@@ -84,7 +84,7 @@ function setup() {
   canvas.parent('map')
   // stationDist = height / 8;
   stationDist = height / 12;
-  dcOffset = [width/10, height/3];
+  dcOffset = [width/7 , height/3];
   lineWidth = width * 0.015
 }
 
@@ -217,26 +217,25 @@ function drawStation(x, y) {
 }
 
 function drawLegend() {
-  let lineColors = ['#0077c0', '#25b233', '#fad447', '#f7941d', '#e51937'];
-  let lineNames = ['Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
+  let lineColors = [
+    '#a1a3a1', '#0077c0', '#25b233', '#fad447', '#f7941d', '#e51937'];
+  let lineNames = [
+    'Scifi', 'Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
   let nLines = lineColors.length;
-  textSize(0.017 * width)
-  textFont('Consolas')
-  textAlign(LEFT, TOP);
+  let spacing = width / (2*nLines + 1);
+  rectMode(CENTER);
+  textSize(0.017 * width);
+  textFont('Consolas');
+  textAlign(CENTER, CENTER);
   noStroke();
-  fill(255);
-  let legendWidth = 0.21*width
-  let legendHeight = (2*nLines+1)*lineWidth
-  let legendX = width - legendWidth - lineWidth;
-  let legendY = height - legendHeight - lineWidth;
-  rect(legendX, legendY, legendWidth, legendHeight);
+  let legendY = height / 20;
   for (let i = 0; i < nLines; i++) {
-    let itemX = legendX + lineWidth;
-    let itemY = legendY+(2*i+1)*lineWidth;
+    let itemX = (2*i+1.5)*spacing;
+    let itemY = legendY;
     fill(lineColors[i]);
-    rect(itemX, itemY, 2*lineWidth, lineWidth);
+    rect(itemX, itemY, 10*lineWidth, 2*lineWidth, 20);
     fill(0);
-    text(lineNames[i], itemX+3*lineWidth, itemY)
+    text(lineNames[i], (2*i+1.5)*spacing, itemY)
   }
 }
 
@@ -276,6 +275,8 @@ function checkStationHover() {
 function drawInfoBox(selection) {
   // let selectedStation = selectedLine.getStationBytitle(stationtitle)
   // let [x, y] = selectedStation.location
+  textAlign(LEFT, TOP);
+  rectMode(CORNER);
   let x = selection.pt[0]
   let y = selection.pt[1]
   let title = selection.title
@@ -308,7 +309,6 @@ function drawInfoBox(selection) {
   noStroke();
   textSize(0.017 * width)
   textFont('Consolas')
-  textAlign(LEFT, TOP)
   let desc = title + ' by ' + owner;
   if (desc.length < 38) {
     fill(255);
