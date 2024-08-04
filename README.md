@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2024-08-04
+- Add candycaneeater07 to doodlecrew line
 - Make the main station bigger
 - Update legend to bubbles at the top (including scifi)
 - Move stations declarations in [map.js](map.js) into `addStations`
@@ -72,7 +73,6 @@ npm install @types/p5
 - Shorten poetry line
 - Make section of comics and doodlecrew lines co-linear
 - Adjust top of doodlecrew line to have two levels
-- Add candycaneeater07 to doodlecrew line
 ### 2024-08-03
 - Add force new tab option to comics line
 - Add force URL option to comics line
