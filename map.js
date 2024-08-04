@@ -165,177 +165,7 @@ function draw() {
     //////////////
    // Stations //
   //////////////
-  stations = [
-    // Map
-    {
-      'title' : 'Smallweb Subway',
-      'url' : 'gusbus.space/smallweb-subway/',
-      'owner' : 'Gus Becker',
-      'pt' : getScaledPt([dcWidth-1, 4], dcOffset, dcScale, [0, 0])
-    },
-    // Silver : Scifi Line
-    {
-      "title" : "Clockwork's Archive of Tomorrow",
-      "url" : "clockwooork.github.io/future-stop.html",
-      "owner" : "Clockwork",
-      "pt" : getScaledPt([0, 3], sfOffset, sfScale, [0, 0])
-    },
-    {
-      "title" : "Gus's Scifi Gallery",
-      "url" : "gusbus.space/scifi/",
-      "owner" : "Gus Becker",
-      "pt" : getScaledPt([0, 1], sfOffset, sfScale, [0, 0])
-    },
-    {
-      "title" : "Varve's writing bits & pieces",
-      "url" : "www.write-on.org/writing/",
-      "owner" : "Varve",
-      "pt" : getScaledPt([4, 0], sfOffset, sfScale, [0, 0])
-    },
-    {
-      "title" : "Stories",
-      "url" : "dionra.com/stories.php",
-      "owner" : "Dion Ra",
-      "pt" : getScaledPt([6, 0], sfOffset, sfScale, [0, 0])
-    },
-    // Blue : Zines Line
-    {
-      "title" : "zines",
-      "url" : "bumblechub.com/zines/",
-      "owner" : "bumblechub",
-      "pt" : getScaledPt([2, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
-    },
-    {
-      "title" : "Mythical Type Zines",
-      "url" : "mythicaltype.com/zines/",
-      "owner" : "Mythical Type",
-      "pt" : getScaledPt([4, zinesHeight-1], zinesOffset, zinesScale, [0, 0]),
-    },
-    {
-      "title" : "dead zines",
-      "url" : "dead.garden/zines/",
-      "owner" : "jo",
-      "pt" : getScaledPt([6, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
-    },
-    {
-      "title" : "MyDogStoleThisWebsite",
-      "url" : "metrogoldia.neocities.org/",
-      "owner" : "MyDogStoleMyLiver (Devin Spector)",
-      "pt" : getScaledPt([1, 0], zinesOffset, zinesScale, [0, 0])
-    },
-    {
-      "title" : "Ether",
-      "url" : "ethersent.neocities.org/",
-      "owner" : "Emil Aisling",
-      "pt" : getScaledPt([8, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
-    },
-    // Yellow : Creatives Club Line
-    {
-      "title" : "DoodleBot",
-      "url" : "gusbus.space/doodlebot/",
-      "owner" : "Gus Becker",
-      "pt" : getScaledPt([0, 2], ccOffset, ccScale, [-lineWidth/2, 0])
-    },
-    {
-      "title" : "Creatives Club",
-      "url" : "creativesclub.art/",
-      "owner" : "Gus Becker",
-      "pt" : getScaledPt([0.5, 0.5], ccOffset, ccScale, [0, 0])
-    },
-    {
-      "title" : "haystack blog and oddities",
-      "url" : "thatoddhaystack.neocities.org/",
-      "owner" : "vita",
-      "pt" : getScaledPt([4, 1], ccOffset, ccScale, [0, 0])
-    },
-    {
-      "title" : "UR LOCAL CYBORG",
-      "url" : "urlocalcyb.org/",
-      "owner" : "cyborgforty",
-      "pt" : getScaledPt([4, 3], ccOffset, ccScale, [0, 0])
-    },
-    {
-      "title" : "marcinek.tech",
-      "url" : "marcinek.tech/",
-      "owner" : "Kristen",
-      "pt" : getScaledPt([4, 5], ccOffset, ccScale, [0, 0])
-    },
-    {
-      "title" : "michi.foo",
-      "url" : "michi.foo/0",
-      "owner" : "Sara",
-      "pt" : getScaledPt([2, 6], ccOffset, ccScale, [-lineWidth/2, 0])
-    },
-    // Orange : Comics Line
-    {
-      "title" : "Sunday Comics",
-      "url" : "jazz-dude.com/Portfolio/SundayC.html",
-      "owner" : "Jazz",
-      "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [2/3*lineWidth, lineWidth])
-    },
-    {
-      "title" : "Keeping Time",
-      "url" : "www.keepingtimecomic.com/links/",
-      "owner" : "Kody Okamoto",
-      "pt" : getScaledPt([1, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title"  : "Links",
-      "url"   : "diabloafterdark.nekoweb.org/links.html",
-      "owner" : "DiabloAfterDark",
-      "pt" : getScaledPt([3, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title" : "Ultraviolents",
-      "url" : "uv.itsnero.com/about/",
-      "owner" : "Nero Villagallos O'Reilly",
-      "pt" : getScaledPt([5, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title" : "yukiclarke.com",
-      "url" : "www.yukiclarke.com/home/",
-      "owner" : "Yuki Clarke",
-      "pt" : getScaledPt([comicsWidth-1, 2], comicsOffset, comicsScale, [0, lineWidth])
-    },
-    {
-      "title" : "Neat Hobby!",
-      "url" : "neathobby.com/",
-      "owner" : "Scott Andrew",
-      "pt" : getScaledPt([comicsWidth-1, 4], comicsOffset, comicsScale, [0, lineWidth])
-    },
-    // Green : Doodle Crew Line
-    {
-      "title" : "jazz-dude.com",
-      "url" : "jazz-dude.com/",
-      "owner" : "Jazz",
-      "pt" : getScaledPt([2, 6], dcOffset, dcScale, [0, 0])
-    },
-    {
-      "title" : "my art 2024",
-      "url" : "uuupah.neocities.org/art/my-art-2024/",
-      "owner" : "uuupah",
-      "pt" : getScaledPt([0, 3], dcOffset, dcScale, [0, 0])
-    },
-    {
-      "title" : "slime pond comics",
-      "url" : "abslimeware.neocities.org/comic/",
-      "owner" : "candycanearter07",
-      "pt" : getScaledPt([4, 1], dcOffset, dcScale, [1/3*lineWidth, -1/3*lineWidth])
-    },
-    // Red : Poetry Line
-    {
-      "title" : "poetry!",
-      "url" : "columbidaecorner.neocities.org/poetry",
-      "owner" : "columbidaecorner",
-      "pt" : getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
-    },
-    {
-      "title" : "poems",
-      "url" : "dead.garden/poetry/",
-      "owner" : "jo",
-      "pt" : getScaledPt([0.5, 2.5], poetryOffset, poetryScale, [0, 0])
-    }
-  ];
+  stations = addStations()
   drawStations(stations);
   drawLegend();
   checkStationHover();
@@ -534,4 +364,179 @@ function touchStarted() {
       selection = undefined;
     }
   }
+}
+
+function addStations() {
+  let stations = [
+    // Map
+    {
+      'title' : 'Smallweb Subway',
+      'url' : 'gusbus.space/smallweb-subway/',
+      'owner' : 'Gus Becker',
+      'pt' : getScaledPt([dcWidth-1, 4], dcOffset, dcScale, [0, 0])
+    },
+    // Silver : Scifi Line
+    {
+      "title" : "Clockwork's Archive of Tomorrow",
+      "url" : "clockwooork.github.io/future-stop.html",
+      "owner" : "Clockwork",
+      "pt" : getScaledPt([0, 3], sfOffset, sfScale, [0, 0])
+    },
+    {
+      "title" : "Gus's Scifi Gallery",
+      "url" : "gusbus.space/scifi/",
+      "owner" : "Gus Becker",
+      "pt" : getScaledPt([0, 1], sfOffset, sfScale, [0, 0])
+    },
+    {
+      "title" : "Varve's writing bits & pieces",
+      "url" : "www.write-on.org/writing/",
+      "owner" : "Varve",
+      "pt" : getScaledPt([4, 0], sfOffset, sfScale, [0, 0])
+    },
+    {
+      "title" : "Stories",
+      "url" : "dionra.com/stories.php",
+      "owner" : "Dion Ra",
+      "pt" : getScaledPt([6, 0], sfOffset, sfScale, [0, 0])
+    },
+    // Blue : Zines Line
+    {
+      "title" : "zines",
+      "url" : "bumblechub.com/zines/",
+      "owner" : "bumblechub",
+      "pt" : getScaledPt([2, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
+    },
+    {
+      "title" : "Mythical Type Zines",
+      "url" : "mythicaltype.com/zines/",
+      "owner" : "Mythical Type",
+      "pt" : getScaledPt([4, zinesHeight-1], zinesOffset, zinesScale, [0, 0]),
+    },
+    {
+      "title" : "dead zines",
+      "url" : "dead.garden/zines/",
+      "owner" : "jo",
+      "pt" : getScaledPt([6, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
+    },
+    {
+      "title" : "MyDogStoleThisWebsite",
+      "url" : "metrogoldia.neocities.org/",
+      "owner" : "MyDogStoleMyLiver (Devin Spector)",
+      "pt" : getScaledPt([1, 0], zinesOffset, zinesScale, [0, 0])
+    },
+    {
+      "title" : "Ether",
+      "url" : "ethersent.neocities.org/",
+      "owner" : "Emil Aisling",
+      "pt" : getScaledPt([8, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
+    },
+    // Yellow : Creatives Club Line
+    {
+      "title" : "DoodleBot",
+      "url" : "gusbus.space/doodlebot/",
+      "owner" : "Gus Becker",
+      "pt" : getScaledPt([0, 2], ccOffset, ccScale, [-lineWidth/2, 0])
+    },
+    {
+      "title" : "Creatives Club",
+      "url" : "creativesclub.art/",
+      "owner" : "Gus Becker",
+      "pt" : getScaledPt([0.5, 0.5], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "haystack blog and oddities",
+      "url" : "thatoddhaystack.neocities.org/",
+      "owner" : "vita",
+      "pt" : getScaledPt([4, 1], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "UR LOCAL CYBORG",
+      "url" : "urlocalcyb.org/",
+      "owner" : "cyborgforty",
+      "pt" : getScaledPt([4, 3], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "marcinek.tech",
+      "url" : "marcinek.tech/",
+      "owner" : "Kristen",
+      "pt" : getScaledPt([4, 5], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "michi.foo",
+      "url" : "michi.foo/0",
+      "owner" : "Sara",
+      "pt" : getScaledPt([2, 6], ccOffset, ccScale, [-lineWidth/2, 0])
+    },
+    // Orange : Comics Line
+    {
+      "title" : "Sunday Comics",
+      "url" : "jazz-dude.com/Portfolio/SundayC.html",
+      "owner" : "Jazz",
+      "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [2/3*lineWidth, lineWidth])
+    },
+    {
+      "title" : "Keeping Time",
+      "url" : "www.keepingtimecomic.com/links/",
+      "owner" : "Kody Okamoto",
+      "pt" : getScaledPt([1, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title"  : "Links",
+      "url"   : "diabloafterdark.nekoweb.org/links.html",
+      "owner" : "DiabloAfterDark",
+      "pt" : getScaledPt([3, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "Ultraviolents",
+      "url" : "uv.itsnero.com/about/",
+      "owner" : "Nero Villagallos O'Reilly",
+      "pt" : getScaledPt([5, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "yukiclarke.com",
+      "url" : "www.yukiclarke.com/home/",
+      "owner" : "Yuki Clarke",
+      "pt" : getScaledPt([comicsWidth-1, 2], comicsOffset, comicsScale, [0, lineWidth])
+    },
+    {
+      "title" : "Neat Hobby!",
+      "url" : "neathobby.com/",
+      "owner" : "Scott Andrew",
+      "pt" : getScaledPt([comicsWidth-1, 4], comicsOffset, comicsScale, [0, lineWidth])
+    },
+    // Green : Doodle Crew Line
+    {
+      "title" : "jazz-dude.com",
+      "url" : "jazz-dude.com/",
+      "owner" : "Jazz",
+      "pt" : getScaledPt([2, 6], dcOffset, dcScale, [0, 0])
+    },
+    {
+      "title" : "my art 2024",
+      "url" : "uuupah.neocities.org/art/my-art-2024/",
+      "owner" : "uuupah",
+      "pt" : getScaledPt([0, 3], dcOffset, dcScale, [0, 0])
+    },
+    {
+      "title" : "slime pond comics",
+      "url" : "abslimeware.neocities.org/comic/",
+      "owner" : "candycanearter07",
+      "pt" : getScaledPt([4, 1], dcOffset, dcScale, [1/3*lineWidth, -1/3*lineWidth])
+    },
+    // Red : Poetry Line
+    {
+      "title" : "poetry!",
+      "url" : "columbidaecorner.neocities.org/poetry",
+      "owner" : "columbidaecorner",
+      "pt" : getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
+    },
+    {
+      "title" : "poems",
+      "url" : "dead.garden/poetry/",
+      "owner" : "jo",
+      "pt" : getScaledPt([0.5, 2.5], poetryOffset, poetryScale, [0, 0])
+    }
+  ];
+  return stations
 }

@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2024-08-04
+- Move stations declarations in [map.js](map.js) into `addStations`
 - Stretch width of scifi line
 - Shorten poetry line
 - Make section of comics and doodlecrew lines co-linear
