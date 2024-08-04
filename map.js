@@ -6,8 +6,11 @@ let stations = [];
 let dcWidth = 9;
 let dcHeight = 7;
 let dcPts = [
-  [1, 0], [dcWidth - 2, 0],
-  [dcWidth - 1, 1], [dcWidth - 1, dcHeight - 2],
+  [1, 0], [4, 0], // Top (higher)
+  [4, 0], [5, 1],
+  [5, 1], [dcWidth - 2, 1], // Top (lower)
+  [dcWidth - 2, 1], [dcWidth - 1, 2],
+  [dcWidth - 1, 2], [dcWidth - 1, dcHeight - 2], // Right
   [dcWidth - 2, dcHeight - 1], [1, dcHeight - 1],
   [1, dcHeight - 1], [0, dcHeight - 2],
   [0, 1], [1, 0]
@@ -31,7 +34,8 @@ let comicsPts = [
   [1, 0], [comicsWidth - 2, 0],
   [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],
   [comicsWidth - 2, comicsHeight - 1], [1, comicsHeight - 1],
-  [1, comicsHeight - 1], [0, comicsHeight - 2],
+  [1, comicsHeight - 1], [0, comicsHeight - 2], // Left
+  // [0, 5], [0, 1],
   [0, 1], [1, 0]
 ]
 let comicsOffset = [];
@@ -69,8 +73,8 @@ let sfPts = [
 ]
 let sfOffset = [];
 let sfScale;
-let DEBUG = false;
-// let DEBUG = true;
+// let DEBUG = false;
+let DEBUG = true;
 let selection;
 
 function setup() {
