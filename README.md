@@ -74,6 +74,8 @@ npm install @types/p5
 - Adjust top of doodlecrew line to have two levels
 - Add candycaneeater07 to doodlecrew line
 ### 2024-08-03
+- Add force new tab option to comics line
+- Add force URL option to comics line
 - Add logic to doodlecrew.js to test ability to force a URL from the HTML
 ### 2024-07-30
 - Add granmichi to CC line
