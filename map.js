@@ -408,13 +408,13 @@ function addStations() {
       "title" : "Varve's writing bits & pieces",
       "url" : "www.write-on.org/writing/",
       "owner" : "Varve",
-      "pt" : getScaledPt([4, 0], sfOffset, sfScale, [0, 0])
+      "pt" : getScaledPt([3, 0], sfOffset, sfScale, [0, 0])
     },
     {
       "title" : "Stories",
       "url" : "dionra.com/stories.php",
       "owner" : "Dion Ra",
-      "pt" : getScaledPt([6, 0], sfOffset, sfScale, [0, 0])
+      "pt" : getScaledPt([5, 0], sfOffset, sfScale, [0, 0])
     },
     // Blue : Zines Line
     {
