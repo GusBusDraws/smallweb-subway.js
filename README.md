@@ -64,9 +64,13 @@ npm install @types/p5
 ```
 
 ## Change Log
-### 2024-08-03
+### 2024-08-04
+- Stretch width of scifi line
+- Shorten poetry line
+- Make section of comics and doodlecrew lines co-linear
 - Adjust top of doodlecrew line to have two levels
 - Add candycaneeater07 to doodlecrew line
+### 2024-08-03
 - Add logic to doodlecrew.js to test ability to force a URL from the HTML
 ### 2024-07-30
 - Add granmichi to CC line

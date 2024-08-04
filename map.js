@@ -6,14 +6,12 @@ let stations = [];
 let dcWidth = 9;
 let dcHeight = 7;
 let dcPts = [
-  [1, 0], [4, 0], // Top (higher)
-  [4, 0], [5, 1],
-  [5, 1], [dcWidth - 2, 1], // Top (lower)
-  [dcWidth - 2, 1], [dcWidth - 1, 2],
+  [1, 0], [3, 0], // Top (higher)
+  [4, 1], [dcWidth - 2, 1], // Top (lower)
   [dcWidth - 1, 2], [dcWidth - 1, dcHeight - 2], // Right
-  [dcWidth - 2, dcHeight - 1], [1, dcHeight - 1],
-  [1, dcHeight - 1], [0, dcHeight - 2],
-  [0, 1], [1, 0]
+  [dcWidth - 2, dcHeight - 1], [1, dcHeight - 1],  // Bottom
+  [0, dcHeight - 2], [0, 1],  // Left
+  [1, 0]
 ]
 let dcOffset = [];
 let dcScale;
@@ -28,20 +26,20 @@ let ccPts = [
 ]
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 7;
+let comicsWidth = 8;
 let comicsHeight = 7;
 let comicsPts = [
-  [1, 0], [comicsWidth - 2, 0],
-  [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],
-  [comicsWidth - 2, comicsHeight - 1], [1, comicsHeight - 1],
-  [1, comicsHeight - 1], [0, comicsHeight - 2], // Left
-  // [0, 5], [0, 1],
-  [0, 1], [1, 0]
+  [1, 0], [comicsWidth - 2, 0],  // Top
+  [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],  // Right
+  [comicsWidth - 2, comicsHeight - 1], [comicsWidth - 5+0.1, comicsHeight - 1],  // Bottom
+  [2, comicsWidth - 3], [2, comicsWidth - 4.1], // Left (inside)
+  [0, 2-0.1], [0, 1], // Left
+  [1, 0]
 ]
 let comicsOffset = [];
 let comicsScale;
 let poetryWidth = 5;
-let poetryHeight = 5;
+let poetryHeight = 4;
 let poetryPts = [
   [1, 0], [poetryWidth-2, 0],
   [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],
@@ -52,7 +50,7 @@ let poetryPts = [
 let poetryOffset = [];
 let poetryScale;
 let zinesWidth = 11;
-let zinesHeight = 5;
+let zinesHeight = 4;
 let zinesPts = [
   [1, 0], [zinesWidth - 2, 0],
   [zinesWidth - 1, 1], [zinesWidth - 1, zinesHeight - 2],
@@ -67,14 +65,14 @@ let sfHeight = 6;
 let sfPts = [
   [1, 0], [sfWidth - 3, 0], // Top side
   [sfWidth - 1, 2], [sfWidth - 1, sfHeight - 3+0.12], // Right side
-  [sfWidth - 3+0.12, sfHeight - 1], [3, sfHeight - 1], // Bottom side
-  [0, sfHeight - 4], [0, 1], // Left side
+  [sfWidth - 3+0.12, sfHeight - 1], [1, sfHeight - 1], // Bottom side
+  [0, sfHeight - 2], [0, 1], // Left side
   [1, 0]
 ]
 let sfOffset = [];
 let sfScale;
-// let DEBUG = false;
-let DEBUG = true;
+let DEBUG = false;
+// let DEBUG = true;
 let selection;
 
 function setup() {
@@ -86,7 +84,7 @@ function setup() {
   canvas.parent('map')
   // stationDist = height / 8;
   stationDist = height / 12;
-  dcOffset = [width/10, height/4];
+  dcOffset = [width/10, height/3];
   lineWidth = width * 0.015
 }
 
@@ -115,7 +113,7 @@ function draw() {
   //////////////////////////
   comicsOffset[0] = (
     max(dcScaledX)
-    - 4 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    - 5 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
     // - lineWidth
   )
   comicsOffset[1] = (
@@ -144,13 +142,13 @@ function draw() {
    // Red : Poetry Line //
   ////////////////////////
   poetryOffset[0] = (
-    max(dcScaledX)
-    - 4 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
+    min(dcScaledX)
+    + 4 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
     - lineWidth
   );
   poetryOffset[1] = (
     min(dcScaledY)
-    + 2 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
+    + 3 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
     - lineWidth
   );
   poetryScale = [stationDist, stationDist];
@@ -180,7 +178,7 @@ function draw() {
       "title" : "Clockwork's Archive of Tomorrow",
       "url" : "clockwooork.github.io/future-stop.html",
       "owner" : "Clockwork",
-      "pt" : getScaledPt([1, 3], sfOffset, sfScale, [0, 0])
+      "pt" : getScaledPt([0, 3], sfOffset, sfScale, [0, 0])
     },
     {
       "title" : "Gus's Scifi Gallery",
@@ -205,19 +203,19 @@ function draw() {
       "title" : "zines",
       "url" : "bumblechub.com/zines/",
       "owner" : "bumblechub",
-      "pt" : getScaledPt([2, 4], zinesOffset, zinesScale, [0, 0])
+      "pt" : getScaledPt([2, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
     },
     {
       "title" : "Mythical Type Zines",
       "url" : "mythicaltype.com/zines/",
       "owner" : "Mythical Type",
-      "pt" : getScaledPt([4, 4], zinesOffset, zinesScale, [0, 0]),
+      "pt" : getScaledPt([4, zinesHeight-1], zinesOffset, zinesScale, [0, 0]),
     },
     {
       "title" : "dead zines",
       "url" : "dead.garden/zines/",
       "owner" : "jo",
-      "pt" : getScaledPt([6, poetryHeight-1], zinesOffset, zinesScale, [0, 0])
+      "pt" : getScaledPt([6, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
     },
     {
       "title" : "MyDogStoleThisWebsite",
@@ -229,7 +227,7 @@ function draw() {
       "title" : "Ether",
       "url" : "ethersent.neocities.org/",
       "owner" : "Emil Aisling",
-      "pt" : getScaledPt([8, poetryHeight-1], zinesOffset, zinesScale, [0, 0])
+      "pt" : getScaledPt([8, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
     },
     // Yellow : Creatives Club Line
     {
@@ -273,7 +271,7 @@ function draw() {
       "title" : "Sunday Comics",
       "url" : "jazz-dude.com/Portfolio/SundayC.html",
       "owner" : "Jazz",
-      "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [0, lineWidth])
+      "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [2/3*lineWidth, lineWidth])
     },
     {
       "title" : "Keeping Time",
@@ -322,20 +320,20 @@ function draw() {
       "title" : "slime pond comics",
       "url" : "abslimeware.neocities.org/comic/",
       "owner" : "candycanearter07",
-      "pt" : getScaledPt([6, 0], dcOffset, dcScale, [0, 0])
+      "pt" : getScaledPt([4, 1], dcOffset, dcScale, [1/3*lineWidth, -1/3*lineWidth])
     },
     // Red : Poetry Line
     {
       "title" : "poetry!",
       "url" : "columbidaecorner.neocities.org/poetry",
       "owner" : "columbidaecorner",
-      "pt" : getScaledPt([0, 2], poetryOffset, poetryScale, [0, 0])
+      "pt" : getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
     },
     {
       "title" : "poems",
       "url" : "dead.garden/poetry/",
       "owner" : "jo",
-      "pt" : getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
+      "pt" : getScaledPt([0.5, 2.5], poetryOffset, poetryScale, [0, 0])
     }
   ];
   drawStations(stations);
