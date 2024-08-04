@@ -204,12 +204,28 @@ function drawLine(offsets, scales, linePts, lineColor) {
 
 function drawStations(stations) {
   for (let station of stations) {
-    drawStation(station.pt[0], station.pt[1])
+    if (station.title == "Smallweb Subway") {
+      drawMainStation(station.pt[0], station.pt[1])
+    } else {
+      drawStation(station.pt[0], station.pt[1])
+    }
   }
 }
 
 function drawStation(x, y) {
   noStroke();
+  fill(0);
+  circle(x, y, lineWidth * 2);
+  fill(255);
+  circle(x, y, lineWidth);
+}
+
+function drawMainStation(x, y) {
+  noStroke();
+  fill(0);
+  circle(x, y, lineWidth * 4);
+  fill(255);
+  circle(x, y, lineWidth * 3);
   fill(0);
   circle(x, y, lineWidth * 2);
   fill(255);

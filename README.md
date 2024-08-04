@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2024-08-04
+- Make the main station bigger
 - Update legend to bubbles at the top (including scifi)
 - Move stations declarations in [map.js](map.js) into `addStations`
 - Stretch width of scifi line
