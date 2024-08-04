@@ -6,11 +6,12 @@ let stations = [];
 let dcWidth = 9;
 let dcHeight = 7;
 let dcPts = [
-  [1, 0], [dcWidth - 2, 0],
-  [dcWidth - 1, 1], [dcWidth - 1, dcHeight - 2],
-  [dcWidth - 2, dcHeight - 1], [1, dcHeight - 1],
-  [1, dcHeight - 1], [0, dcHeight - 2],
-  [0, 1], [1, 0]
+  [1, 0], [3, 0], // Top (higher)
+  [4, 1], [dcWidth - 2, 1], // Top (lower)
+  [dcWidth - 1, 2], [dcWidth - 1, dcHeight - 2], // Right
+  [dcWidth - 2, dcHeight - 1], [1, dcHeight - 1],  // Bottom
+  [0, dcHeight - 2], [0, 1],  // Left
+  [1, 0]
 ]
 let dcOffset = [];
 let dcScale;
@@ -25,19 +26,20 @@ let ccPts = [
 ]
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 7;
+let comicsWidth = 8;
 let comicsHeight = 7;
 let comicsPts = [
-  [1, 0], [comicsWidth - 2, 0],
-  [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],
-  [comicsWidth - 2, comicsHeight - 1], [1, comicsHeight - 1],
-  [1, comicsHeight - 1], [0, comicsHeight - 2],
-  [0, 1], [1, 0]
+  [1, 0], [comicsWidth - 2, 0],  // Top
+  [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],  // Right
+  [comicsWidth - 2, comicsHeight - 1], [comicsWidth - 5+0.1, comicsHeight - 1],  // Bottom
+  [2, comicsWidth - 3], [2, comicsWidth - 4.1], // Left (inside)
+  [0, 2-0.1], [0, 1], // Left
+  [1, 0]
 ]
 let comicsOffset = [];
 let comicsScale;
 let poetryWidth = 5;
-let poetryHeight = 5;
+let poetryHeight = 4;
 let poetryPts = [
   [1, 0], [poetryWidth-2, 0],
   [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],
@@ -48,7 +50,7 @@ let poetryPts = [
 let poetryOffset = [];
 let poetryScale;
 let zinesWidth = 11;
-let zinesHeight = 5;
+let zinesHeight = 4;
 let zinesPts = [
   [1, 0], [zinesWidth - 2, 0],
   [zinesWidth - 1, 1], [zinesWidth - 1, zinesHeight - 2],
@@ -63,8 +65,8 @@ let sfHeight = 6;
 let sfPts = [
   [1, 0], [sfWidth - 3, 0], // Top side
   [sfWidth - 1, 2], [sfWidth - 1, sfHeight - 3+0.12], // Right side
-  [sfWidth - 3+0.12, sfHeight - 1], [3, sfHeight - 1], // Bottom side
-  [0, sfHeight - 4], [0, 1], // Left side
+  [sfWidth - 3+0.12, sfHeight - 1], [1, sfHeight - 1], // Bottom side
+  [0, sfHeight - 2], [0, 1], // Left side
   [1, 0]
 ]
 let sfOffset = [];
@@ -82,7 +84,7 @@ function setup() {
   canvas.parent('map')
   // stationDist = height / 8;
   stationDist = height / 12;
-  dcOffset = [width/10, height/4];
+  dcOffset = [width/7 , height/3];
   lineWidth = width * 0.015
 }
 
@@ -111,7 +113,7 @@ function draw() {
   //////////////////////////
   comicsOffset[0] = (
     max(dcScaledX)
-    - 4 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    - 5 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
     // - lineWidth
   )
   comicsOffset[1] = (
@@ -140,13 +142,13 @@ function draw() {
    // Red : Poetry Line //
   ////////////////////////
   poetryOffset[0] = (
-    max(dcScaledX)
-    - 4 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
+    min(dcScaledX)
+    + 4 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
     - lineWidth
   );
   poetryOffset[1] = (
     min(dcScaledY)
-    + 2 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
+    + 3 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
     - lineWidth
   );
   poetryScale = [stationDist, stationDist];
@@ -163,177 +165,7 @@ function draw() {
     //////////////
    // Stations //
   //////////////
-  stations = [
-    // Map
-    {
-      'title' : 'Smallweb Subway',
-      'url' : 'gusbus.space/smallweb-subway/',
-      'owner' : 'Gus Becker',
-      'pt' : getScaledPt([dcWidth-1, 4], dcOffset, dcScale, [0, 0])
-    },
-    // Silver : Scifi Line
-    {
-      "title" : "Clockwork's Archive of Tomorrow",
-      "url" : "clockwooork.github.io/future-stop.html",
-      "owner" : "Clockwork",
-      "pt" : getScaledPt([1, 3], sfOffset, sfScale, [0, 0])
-    },
-    {
-      "title" : "Gus's Scifi Gallery",
-      "url" : "gusbus.space/scifi/",
-      "owner" : "Gus Becker",
-      "pt" : getScaledPt([0, 1], sfOffset, sfScale, [0, 0])
-    },
-    {
-      "title" : "Varve's writing bits & pieces",
-      "url" : "www.write-on.org/writing/",
-      "owner" : "Varve",
-      "pt" : getScaledPt([4, 0], sfOffset, sfScale, [0, 0])
-    },
-    {
-      "title" : "Stories",
-      "url" : "dionra.com/stories.php",
-      "owner" : "Dion Ra",
-      "pt" : getScaledPt([6, 0], sfOffset, sfScale, [0, 0])
-    },
-    // Blue : Zines Line
-    {
-      "title" : "zines",
-      "url" : "bumblechub.com/zines/",
-      "owner" : "bumblechub",
-      "pt" : getScaledPt([2, 4], zinesOffset, zinesScale, [0, 0])
-    },
-    {
-      "title" : "Mythical Type Zines",
-      "url" : "mythicaltype.com/zines/",
-      "owner" : "Mythical Type",
-      "pt" : getScaledPt([4, 4], zinesOffset, zinesScale, [0, 0]),
-    },
-    {
-      "title" : "dead zines",
-      "url" : "dead.garden/zines/",
-      "owner" : "jo",
-      "pt" : getScaledPt([6, poetryHeight-1], zinesOffset, zinesScale, [0, 0])
-    },
-    {
-      "title" : "MyDogStoleThisWebsite",
-      "url" : "metrogoldia.neocities.org/",
-      "owner" : "MyDogStoleMyLiver (Devin Spector)",
-      "pt" : getScaledPt([1, 0], zinesOffset, zinesScale, [0, 0])
-    },
-    {
-      "title" : "Ether",
-      "url" : "ethersent.neocities.org/",
-      "owner" : "Emil Aisling",
-      "pt" : getScaledPt([8, poetryHeight-1], zinesOffset, zinesScale, [0, 0])
-    },
-    // Yellow : Creatives Club Line
-    {
-      "title" : "DoodleBot",
-      "url" : "gusbus.space/doodlebot/",
-      "owner" : "Gus Becker",
-      "pt" : getScaledPt([0, 2], ccOffset, ccScale, [-lineWidth/2, 0])
-    },
-    {
-      "title" : "Creatives Club",
-      "url" : "creativesclub.art/",
-      "owner" : "Gus Becker",
-      "pt" : getScaledPt([0.5, 0.5], ccOffset, ccScale, [0, 0])
-    },
-    {
-      "title" : "haystack blog and oddities",
-      "url" : "thatoddhaystack.neocities.org/",
-      "owner" : "vita",
-      "pt" : getScaledPt([4, 1], ccOffset, ccScale, [0, 0])
-    },
-    {
-      "title" : "UR LOCAL CYBORG",
-      "url" : "urlocalcyb.org/",
-      "owner" : "cyborgforty",
-      "pt" : getScaledPt([4, 3], ccOffset, ccScale, [0, 0])
-    },
-    {
-      "title" : "marcinek.tech",
-      "url" : "marcinek.tech/",
-      "owner" : "Kristen",
-      "pt" : getScaledPt([4, 5], ccOffset, ccScale, [0, 0])
-    },
-    {
-      "title" : "michi.foo",
-      "url" : "michi.foo/0",
-      "owner" : "Sara",
-      "pt" : getScaledPt([2, 6], ccOffset, ccScale, [-lineWidth/2, 0])
-    },
-    // Orange : Comics Line
-    {
-      "title" : "Sunday Comics",
-      "url" : "jazz-dude.com/Portfolio/SundayC.html",
-      "owner" : "Jazz",
-      "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [0, lineWidth])
-    },
-    {
-      "title" : "Keeping Time",
-      "url" : "www.keepingtimecomic.com/links/",
-      "owner" : "Kody Okamoto",
-      "pt" : getScaledPt([1, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title"  : "Links",
-      "url"   : "diabloafterdark.nekoweb.org/links.html",
-      "owner" : "DiabloAfterDark",
-      "pt" : getScaledPt([3, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title" : "Ultraviolents",
-      "url" : "uv.itsnero.com/about/",
-      "owner" : "Nero Villagallos O'Reilly",
-      "pt" : getScaledPt([5, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title" : "yukiclarke.com",
-      "url" : "www.yukiclarke.com/home/",
-      "owner" : "Yuki Clarke",
-      "pt" : getScaledPt([comicsWidth-1, 2], comicsOffset, comicsScale, [0, lineWidth])
-    },
-    {
-      "title" : "Neat Hobby!",
-      "url" : "neathobby.com/",
-      "owner" : "Scott Andrew",
-      "pt" : getScaledPt([comicsWidth-1, 4], comicsOffset, comicsScale, [0, lineWidth])
-    },
-    // Green : Doodle Crew Line
-    {
-      "title" : "jazz-dude.com",
-      "url" : "jazz-dude.com/",
-      "owner" : "Jazz",
-      "pt" : getScaledPt([2, 6], dcOffset, dcScale, [0, 0])
-    },
-    {
-      "title" : "my art 2024",
-      "url" : "uuupah.neocities.org/art/my-art-2024/",
-      "owner" : "uuupah",
-      "pt" : getScaledPt([0, 3], dcOffset, dcScale, [0, 0])
-    },
-    {
-      "title" : "slime pond comics",
-      "url" : "abslimeware.neocities.org/comic/",
-      "owner" : "candycanearter07",
-      "pt" : getScaledPt([6, 0], dcOffset, dcScale, [0, 0])
-    },
-    // Red : Poetry Line
-    {
-      "title" : "poetry!",
-      "url" : "columbidaecorner.neocities.org/poetry",
-      "owner" : "columbidaecorner",
-      "pt" : getScaledPt([0, 2], poetryOffset, poetryScale, [0, 0])
-    },
-    {
-      "title" : "poems",
-      "url" : "dead.garden/poetry/",
-      "owner" : "jo",
-      "pt" : getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
-    }
-  ];
+  stations = addStations()
   drawStations(stations);
   drawLegend();
   checkStationHover();
@@ -372,7 +204,11 @@ function drawLine(offsets, scales, linePts, lineColor) {
 
 function drawStations(stations) {
   for (let station of stations) {
-    drawStation(station.pt[0], station.pt[1])
+    if (station.title == "Smallweb Subway") {
+      drawMainStation(station.pt[0], station.pt[1])
+    } else {
+      drawStation(station.pt[0], station.pt[1])
+    }
   }
 }
 
@@ -384,27 +220,38 @@ function drawStation(x, y) {
   circle(x, y, lineWidth);
 }
 
-function drawLegend() {
-  let lineColors = ['#0077c0', '#25b233', '#fad447', '#f7941d', '#e51937'];
-  let lineNames = ['Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
-  let nLines = lineColors.length;
-  textSize(0.017 * width)
-  textFont('Consolas')
-  textAlign(LEFT, TOP);
+function drawMainStation(x, y) {
   noStroke();
+  fill(0);
+  circle(x, y, lineWidth * 4);
   fill(255);
-  let legendWidth = 0.21*width
-  let legendHeight = (2*nLines+1)*lineWidth
-  let legendX = width - legendWidth - lineWidth;
-  let legendY = height - legendHeight - lineWidth;
-  rect(legendX, legendY, legendWidth, legendHeight);
+  circle(x, y, lineWidth * 3);
+  fill(0);
+  circle(x, y, lineWidth * 2);
+  fill(255);
+  circle(x, y, lineWidth);
+}
+
+function drawLegend() {
+  let lineColors = [
+    '#a1a3a1', '#0077c0', '#25b233', '#fad447', '#f7941d', '#e51937'];
+  let lineNames = [
+    'Scifi', 'Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
+  let nLines = lineColors.length;
+  let spacing = width / (2*nLines + 1);
+  rectMode(CENTER);
+  textSize(0.017 * width);
+  textFont('Consolas');
+  textAlign(CENTER, CENTER);
+  noStroke();
+  let legendY = height / 20;
   for (let i = 0; i < nLines; i++) {
-    let itemX = legendX + lineWidth;
-    let itemY = legendY+(2*i+1)*lineWidth;
+    let itemX = (2*i+1.5)*spacing;
+    let itemY = legendY;
     fill(lineColors[i]);
-    rect(itemX, itemY, 2*lineWidth, lineWidth);
+    rect(itemX, itemY, 10*lineWidth, 2*lineWidth, 20);
     fill(0);
-    text(lineNames[i], itemX+3*lineWidth, itemY)
+    text(lineNames[i], (2*i+1.5)*spacing, itemY)
   }
 }
 
@@ -444,6 +291,8 @@ function checkStationHover() {
 function drawInfoBox(selection) {
   // let selectedStation = selectedLine.getStationBytitle(stationtitle)
   // let [x, y] = selectedStation.location
+  textAlign(LEFT, TOP);
+  rectMode(CORNER);
   let x = selection.pt[0]
   let y = selection.pt[1]
   let title = selection.title
@@ -476,7 +325,6 @@ function drawInfoBox(selection) {
   noStroke();
   textSize(0.017 * width)
   textFont('Consolas')
-  textAlign(LEFT, TOP)
   let desc = title + ' by ' + owner;
   if (desc.length < 38) {
     fill(255);
@@ -532,4 +380,179 @@ function touchStarted() {
       selection = undefined;
     }
   }
+}
+
+function addStations() {
+  let stations = [
+    // Map
+    {
+      'title' : 'Smallweb Subway',
+      'url' : 'gusbus.space/smallweb-subway/',
+      'owner' : 'Gus Becker',
+      'pt' : getScaledPt([dcWidth-1, 4], dcOffset, dcScale, [0, 0])
+    },
+    // Silver : Scifi Line
+    {
+      "title" : "Clockwork's Archive of Tomorrow",
+      "url" : "clockwooork.github.io/future-stop.html",
+      "owner" : "Clockwork",
+      "pt" : getScaledPt([0, 3], sfOffset, sfScale, [0, 0])
+    },
+    {
+      "title" : "Gus's Scifi Gallery",
+      "url" : "gusbus.space/scifi/",
+      "owner" : "Gus Becker",
+      "pt" : getScaledPt([0, 1], sfOffset, sfScale, [0, 0])
+    },
+    {
+      "title" : "Varve's writing bits & pieces",
+      "url" : "www.write-on.org/writing/",
+      "owner" : "Varve",
+      "pt" : getScaledPt([3, 0], sfOffset, sfScale, [0, 0])
+    },
+    {
+      "title" : "Stories",
+      "url" : "dionra.com/stories.php",
+      "owner" : "Dion Ra",
+      "pt" : getScaledPt([5, 0], sfOffset, sfScale, [0, 0])
+    },
+    // Blue : Zines Line
+    {
+      "title" : "zines",
+      "url" : "bumblechub.com/zines/",
+      "owner" : "bumblechub",
+      "pt" : getScaledPt([2, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
+    },
+    {
+      "title" : "Mythical Type Zines",
+      "url" : "mythicaltype.com/zines/",
+      "owner" : "Mythical Type",
+      "pt" : getScaledPt([4, zinesHeight-1], zinesOffset, zinesScale, [0, 0]),
+    },
+    {
+      "title" : "dead zines",
+      "url" : "dead.garden/zines/",
+      "owner" : "jo",
+      "pt" : getScaledPt([6, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
+    },
+    {
+      "title" : "MyDogStoleThisWebsite",
+      "url" : "metrogoldia.neocities.org/",
+      "owner" : "MyDogStoleMyLiver (Devin Spector)",
+      "pt" : getScaledPt([1, 0], zinesOffset, zinesScale, [0, 0])
+    },
+    {
+      "title" : "Ether",
+      "url" : "ethersent.neocities.org/",
+      "owner" : "Emil Aisling",
+      "pt" : getScaledPt([8, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
+    },
+    // Yellow : Creatives Club Line
+    {
+      "title" : "DoodleBot",
+      "url" : "gusbus.space/doodlebot/",
+      "owner" : "Gus Becker",
+      "pt" : getScaledPt([0, 2], ccOffset, ccScale, [-lineWidth/2, 0])
+    },
+    {
+      "title" : "Creatives Club",
+      "url" : "creativesclub.art/",
+      "owner" : "Gus Becker",
+      "pt" : getScaledPt([0.5, 0.5], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "haystack blog and oddities",
+      "url" : "thatoddhaystack.neocities.org/",
+      "owner" : "vita",
+      "pt" : getScaledPt([4, 1], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "UR LOCAL CYBORG",
+      "url" : "urlocalcyb.org/",
+      "owner" : "cyborgforty",
+      "pt" : getScaledPt([4, 3], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "marcinek.tech",
+      "url" : "marcinek.tech/",
+      "owner" : "Kristen",
+      "pt" : getScaledPt([4, 5], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "michi.foo",
+      "url" : "michi.foo/0",
+      "owner" : "Sara",
+      "pt" : getScaledPt([2, 6], ccOffset, ccScale, [-lineWidth/2, 0])
+    },
+    // Orange : Comics Line
+    {
+      "title" : "Sunday Comics",
+      "url" : "jazz-dude.com/Portfolio/SundayC.html",
+      "owner" : "Jazz",
+      "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [2/3*lineWidth, lineWidth])
+    },
+    {
+      "title" : "Keeping Time",
+      "url" : "www.keepingtimecomic.com/links/",
+      "owner" : "Kody Okamoto",
+      "pt" : getScaledPt([1, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title"  : "Links",
+      "url"   : "diabloafterdark.nekoweb.org/links.html",
+      "owner" : "DiabloAfterDark",
+      "pt" : getScaledPt([3, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "Ultraviolents",
+      "url" : "uv.itsnero.com/about/",
+      "owner" : "Nero Villagallos O'Reilly",
+      "pt" : getScaledPt([5, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "yukiclarke.com",
+      "url" : "www.yukiclarke.com/home/",
+      "owner" : "Yuki Clarke",
+      "pt" : getScaledPt([comicsWidth-1, 2], comicsOffset, comicsScale, [0, lineWidth])
+    },
+    {
+      "title" : "Neat Hobby!",
+      "url" : "neathobby.com/",
+      "owner" : "Scott Andrew",
+      "pt" : getScaledPt([comicsWidth-1, 4], comicsOffset, comicsScale, [0, lineWidth])
+    },
+    // Green : Doodle Crew Line
+    {
+      "title" : "jazz-dude.com",
+      "url" : "jazz-dude.com/",
+      "owner" : "Jazz",
+      "pt" : getScaledPt([2, 6], dcOffset, dcScale, [0, 0])
+    },
+    {
+      "title" : "my art 2024",
+      "url" : "uuupah.neocities.org/art/my-art-2024/",
+      "owner" : "uuupah",
+      "pt" : getScaledPt([0, 3], dcOffset, dcScale, [0, 0])
+    },
+    {
+      "title" : "slime pond comics",
+      "url" : "abslimeware.neocities.org/comic/",
+      "owner" : "candycanearter07",
+      "pt" : getScaledPt([4, 1], dcOffset, dcScale, [1/3*lineWidth, -1/3*lineWidth])
+    },
+    // Red : Poetry Line
+    {
+      "title" : "poetry!",
+      "url" : "columbidaecorner.neocities.org/poetry",
+      "owner" : "columbidaecorner",
+      "pt" : getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
+    },
+    {
+      "title" : "poems",
+      "url" : "dead.garden/poetry/",
+      "owner" : "jo",
+      "pt" : getScaledPt([0.5, 2.5], poetryOffset, poetryScale, [0, 0])
+    }
+  ];
+  return stations
 }
