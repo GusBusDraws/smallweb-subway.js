@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2024-08-03
+- Add force new tab option to comics line
 - Add force URL option to comics line
 - Add candycaneeater07 to doodlecrew line
 - Add logic to doodlecrew.js to test ability to force a URL from the HTML

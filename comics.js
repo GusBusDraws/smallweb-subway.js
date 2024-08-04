@@ -26,13 +26,21 @@ function getHostName_comics(url) {
 }
 
 function goToPrev_comics() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_comics[prevSiteIndex_comics].url
+  if (typeof forceNewTab_comics !== 'undefined' && forceNewTab_comics) {
+    window.open('//' + DATA_comics[prevSiteIndex_comics].url)
+  } else {
+    // Adding '//' treats the link as an external site, even without "https:"
+    location.href = '//' + DATA_comics[prevSiteIndex_comics].url
+  }
 }
 
 function goToNext_comics() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_comics[nextSiteIndex_comics].url
+  if (typeof forceNewTab_comics !== 'undefined' && forceNewTab_comics) {
+    window.open('//' + DATA_comics[nextSiteIndex_comics].url)
+  } else {
+    // Adding '//' treats the link as an external site, even without "https:"
+    location.href = '//' + DATA_comics[nextSiteIndex_comics].url
+  }
 }
 
 let template_comics = document.createElement("template");
@@ -146,6 +154,9 @@ class Webring_comics extends HTMLElement {
     console.log('-----------')
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_comics))
+    if (typeof forceNewTab_comics !== 'undefined' && forceNewTab_comics) {
+      console.log('forceNewTab_comics: ', forceNewTab_comics)
+    }
     if (typeof forceURL_comics !== 'undefined') {
       console.log('forceURL_comics: ', forceURL_comics)
       thisSite_comics = forceURL_comics
