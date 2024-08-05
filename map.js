@@ -31,8 +31,8 @@ let comicsHeight = 7;
 let comicsPts = [
   [1, 0], [comicsWidth - 2, 0],  // Top
   [comicsWidth - 1, 1], [comicsWidth - 1, 2],  // Right (outside)
-  [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 3],  // Right (inside)
-  [comicsWidth - 4, comicsHeight - 1], [3.1, comicsHeight - 1],  // Bottom
+  [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 2.85],  // Right (inside)
+  [comicsWidth - 3.85, comicsHeight - 1], [3.1, comicsHeight - 1],  // Bottom
   [2, comicsWidth - 5], [2, comicsWidth - 6.1], // Left (inside)
   [0, 2-0.1], [0, 1], // Left
   [1, 0]
