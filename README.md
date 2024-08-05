@@ -64,6 +64,8 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-08-05
+- Make more space on comics line
 ### 2024-08-04
 - Add candycaneeater07 to doodlecrew line
 - Make the main station bigger
