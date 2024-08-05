@@ -27,12 +27,12 @@ function getHostName_creativesclub(url) {
 
 function goToPrev_creativesclub() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_creativesclub[prevSiteIndex_creativesclub].url
+  window.top.location.href = '//' + DATA_creativesclub[prevSiteIndex_creativesclub].url
 }
 
 function goToNext_creativesclub() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_creativesclub[nextSiteIndex_creativesclub].url
+  window.top.location.href = '//' + DATA_creativesclub[nextSiteIndex_creativesclub].url
 }
 
 let template_creativesclub = document.createElement("template");

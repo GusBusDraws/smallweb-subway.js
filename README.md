@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2024-08-05
+- Add "window.top" to [creativesclub.js](creativesclub.js) test iframe exiting
 - Add force URL option to creativesclub line
 - Add The Fuzzy Slug to the comics line
 - Make more space on comics line
