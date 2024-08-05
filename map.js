@@ -15,8 +15,8 @@ let dcPts = [
 ]
 let dcOffset = [];
 let dcScale;
-let ccWidth = 5;
-let ccHeight = 7;
+let ccWidth = 6;
+let ccHeight = 6;
 let ccPts = [
   [1, 0], [ccWidth - 2, 0],
   [ccWidth - 1, 1], [ccWidth - 1, ccHeight - 2],
@@ -26,13 +26,14 @@ let ccPts = [
 ]
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 8;
+let comicsWidth = 10;
 let comicsHeight = 7;
 let comicsPts = [
   [1, 0], [comicsWidth - 2, 0],  // Top
-  [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],  // Right
-  [comicsWidth - 2, comicsHeight - 1], [comicsWidth - 5+0.1, comicsHeight - 1],  // Bottom
-  [2, comicsWidth - 3], [2, comicsWidth - 4.1], // Left (inside)
+  [comicsWidth - 1, 1], [comicsWidth - 1, 2],  // Right (outside)
+  [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 2.85],  // Right (inside)
+  [comicsWidth - 3.85, comicsHeight - 1], [3.1, comicsHeight - 1],  // Bottom
+  [2, comicsWidth - 5], [2, comicsWidth - 6.1], // Left (inside)
   [0, 2-0.1], [0, 1], // Left
   [1, 0]
 ]
@@ -63,9 +64,9 @@ let zinesScale;
 let sfWidth = 10;
 let sfHeight = 6;
 let sfPts = [
-  [1, 0], [sfWidth - 3, 0], // Top side
-  [sfWidth - 1, 2], [sfWidth - 1, sfHeight - 3+0.12], // Right side
-  [sfWidth - 3+0.12, sfHeight - 1], [1, sfHeight - 1], // Bottom side
+  [1, 0], [sfWidth - 2, 0], // Top side
+  [sfWidth - 1, 1], [sfWidth - 1, sfHeight - 3], // Right side
+  [sfWidth - 3, sfHeight - 1], [1, sfHeight - 1], // Bottom side
   [0, sfHeight - 2], [0, 1], // Left side
   [1, 0]
 ]
@@ -101,6 +102,7 @@ function draw() {
   sfOffset[0] = (
     min(dcScaledX)
     + 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    + lineWidth
   );
   sfOffset[1] = (
     min(dcScaledY)
@@ -159,7 +161,10 @@ function draw() {
    // Yellow : Creatives Club Line //
   //////////////////////////////////
   ccOffset[0] = max(dcScaledX) + lineWidth;
-  ccOffset[1] = dcOffset[1];
+  ccOffset[1] = (
+    min(dcScaledY)
+    + 1 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
+  )
   ccScale = [stationDist, stationDist];
   let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
     //////////////
@@ -464,25 +469,25 @@ function addStations() {
       "title" : "haystack blog and oddities",
       "url" : "thatoddhaystack.neocities.org/",
       "owner" : "vita",
-      "pt" : getScaledPt([4, 1], ccOffset, ccScale, [0, 0])
+      "pt" : getScaledPt([ccWidth-1, 1], ccOffset, ccScale, [0, 0])
     },
     {
       "title" : "UR LOCAL CYBORG",
       "url" : "urlocalcyb.org/",
       "owner" : "cyborgforty",
-      "pt" : getScaledPt([4, 3], ccOffset, ccScale, [0, 0])
+      "pt" : getScaledPt([ccWidth-1, 2.5], ccOffset, ccScale, [0, 0])
     },
     {
       "title" : "marcinek.tech",
       "url" : "marcinek.tech/",
       "owner" : "Kristen",
-      "pt" : getScaledPt([4, 5], ccOffset, ccScale, [0, 0])
+      "pt" : getScaledPt([ccWidth-1, 4], ccOffset, ccScale, [0, 0])
     },
     {
       "title" : "michi.foo",
       "url" : "michi.foo/0",
       "owner" : "Sara",
-      "pt" : getScaledPt([2, 6], ccOffset, ccScale, [-lineWidth/2, 0])
+      "pt" : getScaledPt([2, ccHeight-1], ccOffset, ccScale, [-lineWidth/2, 0])
     },
     // Orange : Comics Line
     {
@@ -492,34 +497,40 @@ function addStations() {
       "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [2/3*lineWidth, lineWidth])
     },
     {
-      "title" : "Keeping Time",
-      "url" : "www.keepingtimecomic.com/links/",
-      "owner" : "Kody Okamoto",
-      "pt" : getScaledPt([1, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title"  : "Links",
-      "url"   : "diabloafterdark.nekoweb.org/links.html",
-      "owner" : "DiabloAfterDark",
-      "pt" : getScaledPt([3, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title" : "Ultraviolents",
-      "url" : "uv.itsnero.com/about/",
-      "owner" : "Nero Villagallos O'Reilly",
-      "pt" : getScaledPt([5, 0], comicsOffset, comicsScale, [0, 0])
-    },
-    {
-      "title" : "yukiclarke.com",
-      "url" : "www.yukiclarke.com/home/",
-      "owner" : "Yuki Clarke",
-      "pt" : getScaledPt([comicsWidth-1, 2], comicsOffset, comicsScale, [0, lineWidth])
+      "title" : "The Fuzzy Slug's Webcomic Hub",
+      "url"   : "thefuzzyslug.neocities.org/",
+      "owner" : "thefuzzyslug",
+      "pt"    : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "Neat Hobby!",
       "url" : "neathobby.com/",
       "owner" : "Scott Andrew",
-      "pt" : getScaledPt([comicsWidth-1, 4], comicsOffset, comicsScale, [0, lineWidth])
+      "pt" : getScaledPt([3.66, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "Keeping Time",
+      "url" : "www.keepingtimecomic.com/links/",
+      "owner" : "Kody Okamoto",
+      "pt" : getScaledPt([comicsWidth-4.66, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title"  : "Links",
+      "url"   : "diabloafterdark.nekoweb.org/links.html",
+      "owner" : "DiabloAfterDark",
+      "pt" : getScaledPt([comicsWidth-3, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "Ultraviolents",
+      "url" : "uv.itsnero.com/about/",
+      "owner" : "Nero Villagallos O'Reilly",
+      "pt" : getScaledPt([comicsWidth-1, 1.5], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "yukiclarke.com",
+      "url" : "www.yukiclarke.com/home/",
+      "owner" : "Yuki Clarke",
+      "pt" : getScaledPt([comicsWidth-2, 3], comicsOffset, comicsScale, [lineWidth/2, lineWidth])
     },
     // Green : Doodle Crew Line
     {
