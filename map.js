@@ -26,13 +26,14 @@ let ccPts = [
 ]
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 8;
+let comicsWidth = 9;
 let comicsHeight = 7;
 let comicsPts = [
   [1, 0], [comicsWidth - 2, 0],  // Top
-  [comicsWidth - 1, 1], [comicsWidth - 1, comicsHeight - 2],  // Right
-  [comicsWidth - 2, comicsHeight - 1], [comicsWidth - 5+0.1, comicsHeight - 1],  // Bottom
-  [2, comicsWidth - 3], [2, comicsWidth - 4.1], // Left (inside)
+  [comicsWidth - 1, 1], [comicsWidth - 1, 2],
+  [comicsWidth - 2, 3], [comicsWidth - 2, comicsHeight - 2],  // Right
+  [comicsWidth - 3, comicsHeight - 1], [3.1, comicsHeight - 1],  // Bottom
+  [2, comicsWidth - 4], [2, comicsWidth - 5.1], // Left (inside)
   [0, 2-0.1], [0, 1], // Left
   [1, 0]
 ]
