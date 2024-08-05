@@ -15,6 +15,11 @@
     "owner" : "Jazz"
   },
   {
+    "name" : "Neat Hobby!",
+    "url" : "neathobby.com/",
+    "owner" : "Scott Andrew"
+  },
+  {
     "name"  : "Keeping Time",
     "url"   : "www.keepingtimecomic.com/links/",
     "owner" : "Kody Okamoto"
@@ -33,11 +38,6 @@
     "name" : "yukiclarke.com",
     "url" : "www.yukiclarke.com/home/",
     "owner" : "Yuki Clarke"
-  },
-  {
-    "name" : "Neat Hobby!",
-    "url" : "neathobby.com/",
-    "owner" : "Scott Andrew"
   }
 ]
 
