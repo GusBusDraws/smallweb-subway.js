@@ -497,22 +497,28 @@ function addStations() {
       "pt" : getScaledPt([0, 2], comicsOffset, comicsScale, [2/3*lineWidth, lineWidth])
     },
     {
+      "title" : "The Fuzzy Slug's Webcomic Hub",
+      "url"   : "thefuzzyslug.neocities.org/",
+      "owner" : "thefuzzyslug",
+      "pt"    : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
       "title" : "Neat Hobby!",
       "url" : "neathobby.com/",
       "owner" : "Scott Andrew",
-      "pt" : getScaledPt([comicsWidth-6, 0], comicsOffset, comicsScale, [0, 0])
+      "pt" : getScaledPt([3.66, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "Keeping Time",
       "url" : "www.keepingtimecomic.com/links/",
       "owner" : "Kody Okamoto",
-      "pt" : getScaledPt([comicsWidth-4, 0], comicsOffset, comicsScale, [0, 0])
+      "pt" : getScaledPt([comicsWidth-4.66, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title"  : "Links",
       "url"   : "diabloafterdark.nekoweb.org/links.html",
       "owner" : "DiabloAfterDark",
-      "pt" : getScaledPt([comicsWidth-2, 0], comicsOffset, comicsScale, [0, 0])
+      "pt" : getScaledPt([comicsWidth-3, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "Ultraviolents",
