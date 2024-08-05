@@ -146,9 +146,14 @@ class Webring_creativesclub extends HTMLElement {
     console.log('------------------')
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_creativesclub))
-    thisURL_creativesclub = new URL(window.location.href);
-    thisSite_creativesclub = (
-      thisURL_creativesclub.hostname + thisURL_creativesclub.pathname)
+    if (typeof forceURL_creativesclub !== 'undefined') {
+      console.log('forceURL_creativesclub: ', forceURL_creativesclub)
+      thisSite_creativesclub = forceURL_creativesclub
+    } else {
+      thisURL_creativesclub = new URL(window.location.href);
+      thisSite_creativesclub = (
+        thisURL_creativesclub.hostname + thisURL_creativesclub.pathname)
+    }
     console.log("This site:")
     console.log(thisSite_creativesclub)
     matchedSiteIndex_creativesclub = (
