@@ -26,13 +26,21 @@ function getHostName_scifi(url) {
 }
 
 function goToPrev_scifi() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_scifi[prevSiteIndex_scifi].url
+  // The leading '//' treats the link as an external site, even without "https:"
+  if (typeof forceNewTab_scifi !== 'undefined' && forceNewTab_scifi) {
+    window.open('//' + DATA_scifi[prevSiteIndex_scifi].url)
+  } else {
+    location.href = '//' + DATA_scifi[prevSiteIndex_scifi].url
+  }
 }
 
 function goToNext_scifi() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_scifi[nextSiteIndex_scifi].url
+  // The leading '//' treats the link as an external site, even without "https:"
+  if (typeof forceNewTab_scifi !== 'undefined' && forceNewTab_scifi) {
+    window.open('//' + DATA_scifi[prevSiteIndex_scifi].url)
+  } else {
+    location.href = '//' + DATA_scifi[nextSiteIndex_scifi].url
+  }
 }
 
 let template_scifi = document.createElement("template");

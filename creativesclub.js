@@ -26,13 +26,21 @@ function getHostName_creativesclub(url) {
 }
 
 function goToPrev_creativesclub() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  window.top.location.href = '//' + DATA_creativesclub[prevSiteIndex_creativesclub].url
+  // The leading '//' treats the link as an external site, even without "https:"
+  if (typeof forceNewTab_creativesclub !== 'undefined' && forceNewTab_creativesclub) {
+    window.open('//' + DATA_creativesclub[prevSiteIndex_creativesclub].url)
+  } else {
+    window.top.location.href = '//' + DATA_creativesclub[prevSiteIndex_creativesclub].url
+  }
 }
 
 function goToNext_creativesclub() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  window.top.location.href = '//' + DATA_creativesclub[nextSiteIndex_creativesclub].url
+  // The leading '//' treats the link as an external site, even without "https:"
+  if (typeof forceNewTab_creativesclub !== 'undefined' && forceNewTab_creativesclub) {
+    window.open('//' + DATA_creativesclub[prevSiteIndex_creativesclub].url)
+  } else {
+    window.top.location.href = '//' + DATA_creativesclub[nextSiteIndex_creativesclub].url
+  }
 }
 
 let template_creativesclub = document.createElement("template");
