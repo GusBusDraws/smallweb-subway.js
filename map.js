@@ -3,73 +3,34 @@
 let lineWidth;
 let stationDist;
 let stations = [];
-let dcWidth = 9;
-let dcHeight = 7;
-let dcPts = [
-  [1, 0], [3, 0], // Top (higher)
-  [4, 1], [dcWidth - 2, 1], // Top (lower)
-  [dcWidth - 1, 2], [dcWidth - 1, dcHeight - 2], // Right
-  [dcWidth - 2, dcHeight - 1], [1, dcHeight - 1],  // Bottom
-  [0, dcHeight - 2], [0, 1],  // Left
-  [1, 0]
-]
+let dcWidth
+let dcHeight
+let dcPts
 let dcOffset = [];
 let dcScale;
-let ccWidth = 6;
-let ccHeight = 6;
-let ccPts = [
-  [1, 0], [ccWidth - 2, 0],
-  [ccWidth - 1, 1], [ccWidth - 1, ccHeight - 2],
-  [ccWidth - 2, ccHeight - 1], [1, ccHeight - 1],
-  [1, ccHeight - 1], [0, ccHeight - 2],
-  [0, 1], [1, 0]
-]
+let ccWidth
+let ccHeight
+let ccPts
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 10;
-let comicsHeight = 7;
-let comicsPts = [
-  [1, 0], [comicsWidth - 2, 0],  // Top
-  [comicsWidth - 1, 1], [comicsWidth - 1, 2],  // Right (outside)
-  [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 2.85],  // Right (inside)
-  [comicsWidth - 3.85, comicsHeight - 1], [3.1, comicsHeight - 1],  // Bottom
-  [2, comicsWidth - 5], [2, comicsWidth - 6.1], // Left (inside)
-  [0, 2-0.1], [0, 1], // Left
-  [1, 0]
-]
+let comicsWidth
+let comicsHeight
+let comicsPts
 let comicsOffset = [];
 let comicsScale;
-let poetryWidth = 5;
-let poetryHeight = 4;
-let poetryPts = [
-  [1, 0], [poetryWidth-2, 0],
-  [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],
-  [poetryWidth-2+0.15, poetryHeight-1], [1, poetryHeight-1],
-  [1, poetryHeight-1], [0, poetryHeight-2],
-  [0, 1], [1, 0]
-]
+let poetryWidth
+let poetryHeight
+let poetryPts
 let poetryOffset = [];
 let poetryScale;
-let zinesWidth = 11;
-let zinesHeight = 4;
-let zinesPts = [
-  [1, 0], [zinesWidth - 2, 0],
-  [zinesWidth - 1, 1], [zinesWidth - 1, zinesHeight - 2],
-  [zinesWidth - 2, zinesHeight - 1], [1, zinesHeight - 1],
-  [1, zinesHeight - 1], [0, zinesHeight - 2],
-  [0, 1], [1, 0]
-]
+let zinesWidth
+let zinesHeight
+let zinesPts
 let zinesOffset = [];
 let zinesScale;
-let sfWidth = 10;
-let sfHeight = 6;
-let sfPts = [
-  [1, 0], [sfWidth - 2, 0], // Top side
-  [sfWidth - 1, 1], [sfWidth - 1, sfHeight - 3], // Right side
-  [sfWidth - 3, sfHeight - 1], [1, sfHeight - 1], // Bottom side
-  [0, sfHeight - 2], [0, 1], // Left side
-  [1, 0]
-]
+let sfWidth
+let sfHeight
+let sfPts
 let sfOffset = [];
 let sfScale;
 let DEBUG = false;
@@ -91,14 +52,47 @@ function setup() {
 
 function draw() {
   background(225);
+  drawLines();
+    //////////////
+   // Stations //
+  //////////////
+  stations = addStations()
+  drawStations(stations);
+  drawLegend();
+  checkStationHover();
+  if (selection != null) {
+    drawInfoBox(selection);
+  }
+}
+
+function drawLines() {
     //////////////////////////////
    // Green : Doodle Crew Line //
   //////////////////////////////
+  dcWidth = 9;
+  dcHeight = 7;
+  dcPts = [
+    [1, 0], [3, 0], // Top (higher)
+    [4, 1], [dcWidth - 2, 1], // Top (lower)
+    [dcWidth - 1, 2], [dcWidth - 1, dcHeight - 2], // Right
+    [dcWidth - 2, dcHeight - 1], [1, dcHeight - 1],  // Bottom
+    [0, dcHeight - 2], [0, 1],  // Left
+    [1, 0]
+  ]
   dcScale = [stationDist, stationDist];
   let [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
     /////////////////////////
    // Silver : Scifi Line //
   /////////////////////////
+  sfWidth = 10;
+  sfHeight = 6;
+  sfPts = [
+    [1, 0], [sfWidth - 2, 0], // Top side
+    [sfWidth - 1, 1], [sfWidth - 1, sfHeight - 3], // Right side
+    [sfWidth - 3, sfHeight - 1], [1, sfHeight - 1], // Bottom side
+    [0, sfHeight - 2], [0, 1], // Left side
+    [1, 0]
+  ]
   sfOffset[0] = (
     min(dcScaledX)
     + 2 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
@@ -110,24 +104,18 @@ function draw() {
   );
   sfScale = [stationDist, stationDist];
   let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
-    //////////////////////////
-   // Orange : Comics Line //
-  //////////////////////////
-  comicsOffset[0] = (
-    max(dcScaledX)
-    - 5 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
-    // - lineWidth
-  )
-  comicsOffset[1] = (
-    min(dcScaledY)
-    - 2 * (max(dcScaledY) - min(dcScaledY))/(dcHeight - 1)
-    - lineWidth
-  );
-  comicsScale = [stationDist, stationDist];
-  let [comicsScaledX, comicsScaledY] = drawLine(comicsOffset, comicsScale, comicsPts, '#f7941d');
     ////////////////////////
    // Blue : Zines Line //
   ////////////////////////
+  zinesWidth = 11;
+  zinesHeight = 4;
+  zinesPts = [
+    [1, 0], [zinesWidth - 2, 0],
+    [zinesWidth - 1, 1], [zinesWidth - 1, zinesHeight - 2],
+    [zinesWidth - 2, zinesHeight - 1], [1, zinesHeight - 1],
+    [1, zinesHeight - 1], [0, zinesHeight - 2],
+    [0, 1], [1, 0]
+  ]
   zinesOffset[0] = (
     min(dcScaledX)
     + (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
@@ -140,9 +128,65 @@ function draw() {
   );
   zinesScale = [stationDist, stationDist];
   let [zinesScaledX, zinesScaledY] = drawLine(zinesOffset, zinesScale, zinesPts, '#0077c0');
+  // Redraw green to put it over blue
+  [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
+    //////////////////////////
+   // Orange : Comics Line //
+  //////////////////////////
+  comicsWidth = 10;
+  comicsHeight = 7;
+  comicsPts = [
+    [1, 0], [comicsWidth - 2, 0],  // Top
+    [comicsWidth - 1, 1], [comicsWidth - 1, 2],  // Right (outside)
+    [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 2.85],  // Right (inside)
+    [comicsWidth - 3.85, comicsHeight - 1], [3.1, comicsHeight - 1],  // Bottom
+    [2, comicsWidth - 5], [2, comicsWidth - 6.1], // Left (inside)
+    [0, 2-0.1], [0, 1], // Left
+    [1, 0]
+  ]
+  comicsOffset[0] = (
+    max(dcScaledX)
+    - 5 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    // - lineWidth
+  )
+  comicsOffset[1] = (
+    min(dcScaledY)
+    - 2 * (max(dcScaledY) - min(dcScaledY))/(dcHeight - 1)
+    - lineWidth
+  );
+  comicsScale = [stationDist, stationDist];
+  let [comicsScaledX, comicsScaledY] = drawLine(comicsOffset, comicsScale, comicsPts, '#f7941d');
+    //////////////////////////////////
+   // Yellow : Creatives Club Line //
+  //////////////////////////////////
+  ccWidth = 6;
+  ccHeight = 6;
+  ccPts = [
+    [1, 0], [ccWidth - 2, 0],
+    [ccWidth - 1, 1], [ccWidth - 1, ccHeight - 2],
+    [ccWidth - 2, ccHeight - 1], [1, ccHeight - 1],
+    [1, ccHeight - 1], [0, ccHeight - 2],
+    [0, 1], [1, 0]
+  ]
+  ccOffset[0] = max(dcScaledX) + lineWidth;
+  ccOffset[1] = (
+    min(dcScaledY)
+    + 1 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
+  )
+  ccScale = [stationDist, stationDist];
+  let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
     ////////////////////////
    // Red : Poetry Line //
   ////////////////////////
+  poetryWidth = 5;
+  poetryHeight = 4;
+  poetryPts = [
+    [1, 0], [poetryWidth-2, 0],
+    [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],
+    [poetryWidth-2+0.15, poetryHeight-1], [1, poetryHeight-1],
+    [1, poetryHeight-1], [0, poetryHeight-2],
+    [0, 1], [1, 0]
+  ]
   poetryOffset[0] = (
     min(dcScaledX)
     + 4 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
@@ -155,28 +199,6 @@ function draw() {
   );
   poetryScale = [stationDist, stationDist];
   let [poetryScaledX, poetryScaledY] = drawLine(poetryOffset, poetryScale, poetryPts, '#e51937');
-  // Redraw green to put it over blue
-  [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
-    //////////////////////////////////
-   // Yellow : Creatives Club Line //
-  //////////////////////////////////
-  ccOffset[0] = max(dcScaledX) + lineWidth;
-  ccOffset[1] = (
-    min(dcScaledY)
-    + 1 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
-  )
-  ccScale = [stationDist, stationDist];
-  let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
-    //////////////
-   // Stations //
-  //////////////
-  stations = addStations()
-  drawStations(stations);
-  drawLegend();
-  checkStationHover();
-  if (selection != null) {
-    drawInfoBox(selection);
-  }
 }
 
 function getScaledPt(pt, offsets, scales, extraOffsets=[0, 0]) {
@@ -210,6 +232,7 @@ function drawLine(offsets, scales, linePts, lineColor) {
 function drawStations(stations) {
   for (let station of stations) {
     if (station.title == "Smallweb Subway") {
+      // Draw the main map station with an extra outline!
       drawMainStation(station.pt[0], station.pt[1])
     } else {
       drawStation(station.pt[0], station.pt[1])
