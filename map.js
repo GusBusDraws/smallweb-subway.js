@@ -59,6 +59,7 @@ function draw() {
   stations = addStations()
   drawStations(stations);
   drawLegend();
+  drawMarker("Smallweb Subway");
   checkStationHover();
   if (selection != null) {
     drawInfoBox(selection);
@@ -264,12 +265,15 @@ function drawLegend() {
   let lineColors = [
     '#a1a3a1', '#0077c0', '#25b233', '#fad447', '#f7941d', '#e51937'];
   let lineNames = [
-    'Scifi', 'Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
+    'SCIFI', 'ZINES', 'DOODLE CREW', 'CREATIVES CLUB', 'COMICS', 'POETRY'];
+  let textColors = [
+    '#000000', '#ffffff', '#000000', '#000000', '#000000', '#000000'];
   let nLines = lineColors.length;
   let spacing = width / (2*nLines + 1);
   rectMode(CENTER);
   textSize(0.017 * width);
   textFont('Consolas');
+  textStyle(BOLD);
   textAlign(CENTER, CENTER);
   noStroke();
   let legendY = height / 20;
@@ -278,9 +282,35 @@ function drawLegend() {
     let itemY = legendY;
     fill(lineColors[i]);
     rect(itemX, itemY, 10*lineWidth, 2*lineWidth, 20);
-    fill(0);
+    fill(textColors[i]);
     text(lineNames[i], (2*i+1.5)*spacing, itemY)
   }
+}
+
+function drawMarker(stationTitle) {
+  rectMode(CENTER);
+  textSize(0.017 * width);
+  textFont('Consolas');
+  textStyle(BOLD);
+  textAlign(CENTER, CENTER);
+  noStroke();
+  fill('#e51937');
+  let stationX, stationY;
+  for (let station of stations) {
+    if (station.title == stationTitle) {
+      [stationX, stationY] = station.pt;
+      rect(stationX + 10*lineWidth, stationY, 10*lineWidth, 2*lineWidth)
+    }
+  }
+  let x1 = stationX + 3*lineWidth;
+  let y1 = stationY;
+  let x2 = stationX + 5*lineWidth;
+  let y2 = stationY - lineWidth;
+  let x3 = stationX + 5*lineWidth;
+  let y3 = stationY + lineWidth;
+  triangle(x1, y1, x2, y2, x3, y3);
+  fill(255);
+  text("YOU ARE HERE", stationX + 10*lineWidth, stationY)
 }
 
 function checkStationHover() {

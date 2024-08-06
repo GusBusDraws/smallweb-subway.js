@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2024-08-06
+- Begin prototyping "you are here" marker
 - Refactor map file to group line drawing in separate function
 - Add force URL option to scifi lines
 - Add force new tab option to creativesclub and scifi lines
