@@ -64,6 +64,9 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-08-06
+- Add force URL option to scifi lines
+- Add force new tab option to creativesclub and scifi lines
 ### 2024-08-05
 - Add "window.top" to [creativesclub.js](creativesclub.js) test iframe exiting
 - Add force URL option to creativesclub line
