@@ -27,12 +27,20 @@ function getHostName_poetry(url) {
 
 function goToPrev_poetry() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_poetry[prevSiteIndex_poetry].url
+  if (typeof forceNewTab_poetry !== 'undefined' && forceNewTab_poetry) {
+    window.open('//' + DATA_poetry[prevSiteIndex_poetry].url)
+  } else {
+    location.href = '//' + DATA_poetry[prevSiteIndex_poetry].url
+  }
 }
 
 function goToNext_poetry() {
   // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_poetry[nextSiteIndex_poetry].url
+  if (typeof forceNewTab_poetry !== 'undefined' && forceNewTab_poetry) {
+    window.open('//' + DATA_poetry[nextSiteIndex_poetry].url)
+  } else {
+    location.href = '//' + DATA_poetry[nextSiteIndex_poetry].url
+  }
 }
 
 let template_poetry = document.createElement("template");
@@ -146,9 +154,18 @@ class Webring_poetry extends HTMLElement {
     console.log('-----------')
     console.log('Webring JSON data:')
     console.log(JSON.stringify(DATA_poetry))
-    thisURL_poetry = new URL(window.location.href);
-    thisSite_poetry = (
-      thisURL_poetry.hostname + thisURL_poetry.pathname)
+    if (typeof forceNewTab_poetry !== 'undefined' && forceNewTab_poetry) {
+      console.log('forceNewTab_poetry: ', forceNewTab_poetry)
+    }
+    if (typeof forceURL_poetry !== 'undefined') {
+      console.log('forceURL_poetry: ', forceURL_poetry)
+      thisSite_poetry = forceURL_poetry
+    } else {
+      thisURL_poetry = new URL(window.location.href);
+      thisSite_poetry = (
+        thisURL_poetry.hostname + thisURL_poetry.pathname
+      )
+    }
     console.log("This site:")
     console.log(thisSite_poetry)
     matchedSiteIndex_poetry = (
