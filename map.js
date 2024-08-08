@@ -59,7 +59,8 @@ function draw() {
   stations = addStations()
   drawStations(stations);
   drawLegend();
-  drawMarker("Smallweb Subway");
+  drawMarker('DoodleBot');
+  drawCurrentStation('DoodleBot');
   checkStationHover();
   if (selection != null) {
     drawInfoBox(selection);
@@ -276,6 +277,7 @@ function drawLegend() {
   textStyle(BOLD);
   textAlign(CENTER, CENTER);
   noStroke();
+  // Draw line labels
   let legendY = height / 20;
   for (let i = 0; i < nLines; i++) {
     let itemX = (2*i+1.5)*spacing;
@@ -285,6 +287,30 @@ function drawLegend() {
     fill(textColors[i]);
     text(lineNames[i], (2*i+1.5)*spacing, itemY)
   }
+  textAlign(LEFT, CENTER);
+  // Draw union station label
+  let itemX = 4*lineWidth;
+  let itemY = 6*lineWidth;
+  drawMainStation(itemX, itemY);
+  fill(0);
+  text('Union Station', itemX + 3*lineWidth, itemY);
+  // Draw website label
+  itemX = 4*lineWidth;
+  itemY = 9.5*lineWidth;
+  drawStation(itemX, itemY);
+  fill(0);
+  text('Website', itemX + 3*lineWidth, itemY);
+  // Draw current station label
+  // itemX = 4*lineWidth;
+  // itemY = 12.5*lineWidth;
+  // drawStation(itemX, itemY);
+  // strokeWeight(lineWidth / 2);
+  // stroke('#e51937');
+  // fill(0, 0);
+  // circle(itemX, itemY, lineWidth * 2.5);
+  // noStroke();
+  // fill(0);
+  // text('Current website', itemX + 3*lineWidth, itemY);
 }
 
 function drawMarker(stationTitle) {
@@ -295,22 +321,54 @@ function drawMarker(stationTitle) {
   textAlign(CENTER, CENTER);
   noStroke();
   fill('#e51937');
+  let stationX = 0;
+  let stationY = 0;
+  let orientation = 'right';
+  let xOffset = 0;
+  let yOffset = 0;
+  let x1Offset = 0;
+  let y1Offset = 0;
+  let x2Offset = 0;
+  let y2Offset = 0;
+  let x3Offset = 0;
+  let y3Offset = 0;
+  if (orientation === 'right') {
+    xOffset = 9*lineWidth
+    yOffset = 0
+    x1Offset = stationX + 2*lineWidth;
+    y1Offset = stationY;
+    x2Offset = stationX + 4*lineWidth;
+    y2Offset = stationY - lineWidth;
+    x3Offset = stationX + 4*lineWidth;
+    y3Offset = stationY + lineWidth;
+  }
+  for (let station of stations) {
+    if (station.title == stationTitle) {
+      [stationX, stationY] = station.pt;
+      rect(stationX + xOffset, stationY + yOffset, 10*lineWidth, 2*lineWidth)
+    }
+  }
+  triangle(x1Offset, y1Offset, x2Offset, y2Offset, x3Offset, y3Offset);
+  fill(255);
+  text("YOU ARE HERE", stationX + 9*lineWidth, stationY)
+}
+
+function drawCurrentStation(stationTitle) {
+  rectMode(CENTER);
+  textSize(0.017 * width);
+  textFont('Consolas');
+  textStyle(BOLD);
+  textAlign(CENTER, CENTER);
   let stationX, stationY;
   for (let station of stations) {
     if (station.title == stationTitle) {
       [stationX, stationY] = station.pt;
-      rect(stationX + 10*lineWidth, stationY, 10*lineWidth, 2*lineWidth)
     }
   }
-  let x1 = stationX + 3*lineWidth;
-  let y1 = stationY;
-  let x2 = stationX + 5*lineWidth;
-  let y2 = stationY - lineWidth;
-  let x3 = stationX + 5*lineWidth;
-  let y3 = stationY + lineWidth;
-  triangle(x1, y1, x2, y2, x3, y3);
-  fill(255);
-  text("YOU ARE HERE", stationX + 10*lineWidth, stationY)
+  strokeWeight(lineWidth / 2);
+  stroke('#e51937');
+  fill(0, 0);
+  circle(stationX, stationY, lineWidth * 2.5);
 }
 
 function checkStationHover() {

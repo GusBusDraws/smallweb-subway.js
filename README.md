@@ -64,6 +64,8 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-08-07
+- Begin adding orientation element to `drawMarker`
 ### 2024-08-06
 - Begin prototyping "you are here" marker
 - Refactor map file to group line drawing in separate function
