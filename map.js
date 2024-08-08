@@ -553,16 +553,22 @@ function addStations() {
     },
     // Red : Poetry Line
     {
+      "title" : "poems",
+      "url" : "dead.garden/poetry/",
+      "owner" : "jo",
+      "pt" : getScaledPt([0.5, 2.5], poetryOffset, poetryScale, [0, 0])
+    },
+    {
       "title" : "poetry!",
       "url" : "columbidaecorner.neocities.org/poetry",
       "owner" : "columbidaecorner",
       "pt" : getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
     },
     {
-      "title" : "poems",
-      "url" : "dead.garden/poetry/",
-      "owner" : "jo",
-      "pt" : getScaledPt([0.5, 2.5], poetryOffset, poetryScale, [0, 0])
+      "title" : "flower in binary",
+      "url" : "flowerinbinary.neocities.org/home/poetry",
+      "owner" : "tim flower",
+      "pt" : getScaledPt([3, 0], poetryOffset, poetryScale, [0, 0])
     }
   ];
   return stations
