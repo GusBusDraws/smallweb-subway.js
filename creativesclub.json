@@ -1,4 +1,4 @@
-[
+webringDataReady_creativesclub(`[
   {
     "name" : "Smallweb Subway",
     "url" : "gusbus.space/smallweb-subway/",
@@ -39,5 +39,5 @@
     "url" : "michi.foo/0",
     "owner" : "Sara"
   }
-]
+]`);
 

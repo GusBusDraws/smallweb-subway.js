@@ -20,9 +20,8 @@ loadWebringJSON_doodlecrew(WEBRING_DATA_URL_doodlecrew);
   // }
 
 function loadWebringJSON_doodlecrew(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_doodlecrew(json)});
+  document.write('<script src="'+url+'"></script>');
+  document.close();
 }
 
 function webringDataReady_doodlecrew(json) {

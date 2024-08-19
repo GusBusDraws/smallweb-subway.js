@@ -9,9 +9,8 @@ let DATA_scifi;
 loadWebringJSON_scifi(WEBRING_DATA_URL_scifi);
 
 function loadWebringJSON_scifi(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_scifi(json)});
+  document.write('<script src="'+url+'"></script>');
+  document.close();
 }
 
 function webringDataReady_scifi(json) {

@@ -1,4 +1,4 @@
-[
+webringDataReady_poetry(`[
   {
     "name" : "Smallweb Subway",
     "url" : "gusbus.space/smallweb-subway/",
@@ -19,5 +19,5 @@
     "url" : "flowerinbinary.neocities.org/home/poetry",
     "owner" : "tim flower"
   }
-]
+]`);
 

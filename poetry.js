@@ -9,9 +9,8 @@ let DATA_poetry;
 loadWebringJSON_poetry(WEBRING_DATA_URL_poetry);
 
 function loadWebringJSON_poetry(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_poetry(json)});
+  document.write('<script src="'+url+'"></script>');
+  document.close();
 }
 
 function webringDataReady_poetry(json) {

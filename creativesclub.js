@@ -9,9 +9,8 @@ let DATA_creativesclub;
 loadWebringJSON_creativesclub(WEBRING_DATA_URL_creativesclub);
 
 function loadWebringJSON_creativesclub(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_creativesclub(json)});
+  document.write('<script src="'+url+'"></script>');
+  document.close();
 }
 
 function webringDataReady_creativesclub(json) {

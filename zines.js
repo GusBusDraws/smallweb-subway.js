@@ -9,9 +9,8 @@ let DATA_zines;
 loadWebringJSON_zines(WEBRING_DATA_URL_zines);
 
 function loadWebringJSON_zines(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_zines(json)});
+  document.write('<script src="'+url+'"></script>');
+  document.close();
 }
 
 function webringDataReady_zines(json) {

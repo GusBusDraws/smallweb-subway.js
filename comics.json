@@ -1,4 +1,4 @@
-[
+webringDataReady_comics(`[
   {
     "name" : "Smallweb Subway",
     "url" : "gusbus.space/smallweb-subway/",
@@ -44,5 +44,5 @@
     "url" : "www.yukiclarke.com/home/",
     "owner" : "Yuki Clarke"
   }
-]
+]`);
 

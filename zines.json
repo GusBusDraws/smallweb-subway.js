@@ -1,4 +1,4 @@
-[
+webringDataReady_zines(`[
   {
     "name" : "Smallweb Subway",
     "url" : "gusbus.space/smallweb-subway/",
@@ -29,5 +29,5 @@
     "url" : "ethersent.neocities.org/",
     "owner" : "Emil Aisling"
   }
-]
+]`);
 
