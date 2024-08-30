@@ -36,7 +36,7 @@ function goToPrev_scifi() {
 function goToNext_scifi() {
   // The leading '//' treats the link as an external site, even without "https:"
   if (typeof forceNewTab_scifi !== 'undefined' && forceNewTab_scifi) {
-    window.open('//' + DATA_scifi[prevSiteIndex_scifi].url)
+    window.open('//' + DATA_scifi[nextSiteIndex_scifi].url)
   } else {
     location.href = '//' + DATA_scifi[nextSiteIndex_scifi].url
   }
