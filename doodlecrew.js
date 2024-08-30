@@ -25,7 +25,7 @@ function loadWebringJSON_doodlecrew(url) {
 }
 
 function webringDataReady_doodlecrew(json) {
-  DATA_doodlecrew = json;
+  DATA_doodlecrew = JSON.parse(json);
   customElements.get('smallweb-subway-doodlecrew') || customElements.define('smallweb-subway-doodlecrew', Webring_doodlecrew);
 }
 

@@ -14,7 +14,7 @@ function loadWebringJSON_zines(url) {
 }
 
 function webringDataReady_zines(json) {
-  DATA_zines = json;
+  DATA_zines = JSON.parse(json);
   customElements.get('smallweb-subway-zines') || (
     customElements.define('smallweb-subway-zines', Webring_zines));
 }

@@ -14,7 +14,7 @@ function loadWebringJSON_scifi(url) {
 }
 
 function webringDataReady_scifi(json) {
-  DATA_scifi = json;
+  DATA_scifi = JSON.parse(json);
   customElements.get('smallweb-subway-scifi') || (
     customElements.define('smallweb-subway-scifi', Webring_scifi));
 }

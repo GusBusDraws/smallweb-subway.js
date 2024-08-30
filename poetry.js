@@ -14,7 +14,7 @@ function loadWebringJSON_poetry(url) {
 }
 
 function webringDataReady_poetry(json) {
-  DATA_poetry = json;
+  DATA_poetry = JSON.parse(json);
   customElements.get('smallweb-subway-poetry') || (
     customElements.define('smallweb-subway-poetry', Webring_poetry));
 }

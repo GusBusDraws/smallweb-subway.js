@@ -14,7 +14,7 @@ function loadWebringJSON_creativesclub(url) {
 }
 
 function webringDataReady_creativesclub(json) {
-  DATA_creativesclub = json;
+  DATA_creativesclub = JSON.parse(json);
   customElements.get('smallweb-subway-creativesclub') || (
     customElements.define('smallweb-subway-creativesclub', Webring_creativesclub));
 }

@@ -14,7 +14,7 @@ function loadWebringJSON_comics(url) {
 }
 
 function webringDataReady_comics(json) {
-  DATA_comics = json;
+  DATA_comics = JSON.parse(json);
   customElements.get('smallweb-subway-comics') || (
     customElements.define('smallweb-subway-comics', Webring_comics));
 }
