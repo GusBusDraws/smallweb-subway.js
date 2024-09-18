@@ -500,7 +500,13 @@ function addStations() {
       "title" : "The Fuzzy Slug's Webcomic Hub",
       "url"   : "thefuzzyslug.neocities.org/",
       "owner" : "thefuzzyslug",
-      "pt"    : getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
+      "pt"    : getScaledPt([0.5, 0.5], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "White Noise",
+      "url"   : "www.white-noise-comic.com/",
+      "owner" : "Adrien Lee (thephooka)",
+      "pt"    : getScaledPt([comicsWidth-8, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "Neat Hobby!",
