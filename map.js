@@ -521,10 +521,16 @@ function addStations() {
       "pt" : getScaledPt([comicsWidth-4.66, 0], comicsOffset, comicsScale, [0, 0])
     },
     {
+      "title" : "BrittHub",
+      "url"   : "britthub.co.uk/",
+      "owner" : "Britt Coxon",
+      "pt" : getScaledPt([comicsWidth-3, 0], comicsOffset, comicsScale, [0, 0])
+    },
+    {
       "title"  : "Links",
       "url"   : "diabloafterdark.nekoweb.org/links.html",
       "owner" : "DiabloAfterDark",
-      "pt" : getScaledPt([comicsWidth-3, 0], comicsOffset, comicsScale, [0, 0])
+      "pt" : getScaledPt([comicsWidth-1.5, 0.5], comicsOffset, comicsScale, [0, 0])
     },
     {
       "title" : "Ultraviolents",
