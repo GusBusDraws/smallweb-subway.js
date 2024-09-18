@@ -568,19 +568,31 @@ function addStations() {
       "title" : "poems",
       "url" : "dead.garden/poetry/",
       "owner" : "jo",
-      "pt" : getScaledPt([0.5, poetryHeight-1.5], poetryOffset, poetryScale, [0, 0])
+      "pt" : getScaledPt([2, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     },
     {
       "title" : "poetry!",
       "url" : "columbidaecorner.neocities.org/poetry",
       "owner" : "columbidaecorner",
-      "pt" : getScaledPt([0, poetryHeight-2.5], poetryOffset, poetryScale, [0, 0])
+      "pt" : getScaledPt([0.5, poetryHeight-1.5], poetryOffset, poetryScale, [0, 0])
     },
     {
       "title" : "flower in binary",
       "url" : "flowerinbinary.neocities.org/home/poetry",
       "owner" : "tim flower",
-      "pt" : getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
+      "pt" : getScaledPt([0, poetryHeight-2.5], poetryOffset, poetryScale, [0, 0])
+    },
+    {
+      "title" : "delovely's poetry",
+      "url"   : "delovely.neocities.org/poetry/",
+      "owner" : "delovely",
+      "pt"    : getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
+    },
+    {
+      "title" : "manyface world",
+      "url"   : "manyface.neocities.org/",
+      "owner" : "jáščer",
+      "pt"    : getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
     }
   ];
   return stations

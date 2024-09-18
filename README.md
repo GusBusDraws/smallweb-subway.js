@@ -65,6 +65,8 @@ npm install @types/p5
 
 ## Change Log
 ### 2024-09-18
+- Add delovely and manyface to Poetry line
+- Rearrange lines to better accommodate new stations
 - Add Britt Coxon to Comics line
 - Add Adrien Lee to Comics line
 ### 2024-08-07
