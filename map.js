@@ -555,13 +555,13 @@ function addStations() {
       "title" : "Sunday Comics",
       "url" : "jazz-dude.com/Portfolio/SundayC.html",
       "owner" : "Jazz",
-      "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
+      "pt" : getScaledPt([1.5, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
     {
       "title" : "slime pond comics",
       "url" : "abslimeware.neocities.org/comic/",
       "owner" : "candycanearter07",
-      "pt" : getScaledPt([1.5, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
+      "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
     // Red : Poetry Line
     {
