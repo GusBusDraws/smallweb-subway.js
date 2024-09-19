@@ -15,11 +15,6 @@
     "owner" : "uuupah"
   },
   {
-    "name"  : "Gus's Scifi Gallery",
-    "url"   : "gusbus.space/scifi/",
-    "owner" : "Gus Becker"
-  },
-  {
     "name" : "Sunday Comics",
     "url" : "jazz-dude.com/Portfolio/SundayC.html",
     "owner" : "Jazz"
@@ -28,6 +23,11 @@
       "name" : "slime pond comics",
       "url" : "abslimeware.neocities.org/comic/",
       "owner" : "candycanearter07"
+  },
+  {
+    "name"  : "Gus's Scifi Gallery",
+    "url"   : "gusbus.space/scifi/",
+    "owner" : "Gus Becker"
   },
   {
     "name" : "DoodleBot",

@@ -469,19 +469,25 @@ function addStations() {
       "title" : "haystack blog and oddities",
       "url" : "thatoddhaystack.neocities.org/",
       "owner" : "vita",
-      "pt" : getScaledPt([ccWidth-1, 1], ccOffset, ccScale, [0, 0])
+      "pt" : getScaledPt([ccWidth-1.5, 0.5], ccOffset, ccScale, [0, 0])
     },
     {
       "title" : "UR LOCAL CYBORG",
       "url" : "urlocalcyb.org/",
       "owner" : "cyborgforty",
-      "pt" : getScaledPt([ccWidth-1, 2.5], ccOffset, ccScale, [0, 0])
+      "pt" : getScaledPt([ccWidth-1, 1.75], ccOffset, ccScale, [0, 0])
     },
     {
       "title" : "marcinek.tech",
       "url" : "marcinek.tech/",
       "owner" : "Kristen",
-      "pt" : getScaledPt([ccWidth-1, 4], ccOffset, ccScale, [0, 0])
+      "pt" : getScaledPt([ccWidth-1, ccHeight - 2.75], ccOffset, ccScale, [0, 0])
+    },
+    {
+      "title" : "community - Justbestvisuals",
+      "url"   : "justbestvisuals.com/community/",
+      "owner" : "Justin",
+      "pt" : getScaledPt([ccWidth-1.5, ccHeight-1.5], ccOffset, ccScale, [0, 0])
     },
     {
       "title" : "michi.foo",
@@ -555,13 +561,13 @@ function addStations() {
       "title" : "Sunday Comics",
       "url" : "jazz-dude.com/Portfolio/SundayC.html",
       "owner" : "Jazz",
-      "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
+      "pt" : getScaledPt([1.5, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
     {
       "title" : "slime pond comics",
       "url" : "abslimeware.neocities.org/comic/",
       "owner" : "candycanearter07",
-      "pt" : getScaledPt([1.5, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
+      "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
     // Red : Poetry Line
     {
