@@ -64,10 +64,12 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-10-01
+- Add Beyond the End and Long Gone Legends to Comics Line
 ### 2024-09-19
 - Add Justbestvisuals to CC line
 ### 2024-09-18
-- Add delovely and manyface to Poetry line
+- Add Delovely and Manyface to Poetry line
 - Rearrange lines to better accommodate new stations
 - Add Britt Coxon to Comics line
 - Add Adrien Lee to Comics line

@@ -503,6 +503,12 @@ function addStations() {
       "pt"    : getScaledPt([0, 1.5], comicsOffset, comicsScale, [0, 0])
     },
     {
+      "title" : "Long Gone Legend",
+      "url"   : "tertiaryapocalypse.neocities.org/lgl/",
+      "owner" : "hal",
+      "pt"    : getScaledPt([0.5, 0.5], comicsOffset, comicsScale, [0, 0])
+    },
+    {
       "title" : "White Noise",
       "url"   : "www.white-noise-comic.com/",
       "owner" : "Adrien Lee (thephooka)",
@@ -536,6 +542,12 @@ function addStations() {
       "title" : "Ultraviolents",
       "url" : "uv.itsnero.com/about/",
       "owner" : "Nero Villagallos O'Reilly",
+      "pt" : getScaledPt([comicsWidth-1.5, 0.5], comicsOffset, comicsScale, [0, 0])
+    },
+    {
+      "title" : "Beyond the End",
+      "url"   : "beyondtheend.gay/",
+      "owner" : "Dusk Pendragon (DuskDragonXIII)",
       "pt" : getScaledPt([comicsWidth-1, 1.5], comicsOffset, comicsScale, [0, 0])
     },
     {
