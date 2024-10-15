@@ -423,12 +423,6 @@ function addStations() {
     },
     // Blue : Zines Line
     {
-      "title" : "dead zines",
-      "url" : "dead.garden/zines/",
-      "owner" : "jo",
-      "pt" : getScaledPt([zinesWidth-1.5, 0.5], zinesOffset, zinesScale, [0, 0])
-    },
-    {
       "title" : "Mythical Type Zines",
       "url" : "mythicaltype.com/zines/",
       "owner" : "Mythical Type",
@@ -556,6 +550,12 @@ function addStations() {
       "owner" : "Yuki Clarke",
       "pt" : getScaledPt([comicsWidth-2, 3], comicsOffset, comicsScale, [lineWidth/2, lineWidth])
     },
+    {
+      "title" : "Friction Comic",
+      "url"   : "frictioncomic.com/home",
+      "owner" : "Jack",
+      "pt" : getScaledPt([comicsWidth-3, 5], comicsOffset, comicsScale, [lineWidth/4, lineWidth])
+    },
     // Green : Doodle Crew Line
     {
       "title" : "jazz-dude.com",
@@ -582,6 +582,12 @@ function addStations() {
       "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
     // Red : Poetry Line
+    {
+      "title" : "Olólùfè Collective",
+      "url"   : "ololufe-collective.ghost.io/about/",
+      "owner" : "Olólùfè Collective",
+      "pt" : getScaledPt([3.5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
+    },
     {
       "title" : "poems",
       "url" : "dead.garden/poetry/",
