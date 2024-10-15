@@ -423,12 +423,6 @@ function addStations() {
     },
     // Blue : Zines Line
     {
-      "title" : "dead zines",
-      "url" : "dead.garden/zines/",
-      "owner" : "jo",
-      "pt" : getScaledPt([zinesWidth-1.5, 0.5], zinesOffset, zinesScale, [0, 0])
-    },
-    {
       "title" : "Mythical Type Zines",
       "url" : "mythicaltype.com/zines/",
       "owner" : "Mythical Type",
