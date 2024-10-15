@@ -64,6 +64,8 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-10-15
+- Add Friction Comic to Scifi and Comics Lines
 ### 2024-10-01
 - Add Beyond the End and Long Gone Legends to Comics Line
 ### 2024-09-19

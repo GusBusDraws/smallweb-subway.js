@@ -556,6 +556,12 @@ function addStations() {
       "owner" : "Yuki Clarke",
       "pt" : getScaledPt([comicsWidth-2, 3], comicsOffset, comicsScale, [lineWidth/2, lineWidth])
     },
+    {
+      "title" : "Friction Comic",
+      "url"   : "frictioncomic.com/home",
+      "owner" : "Jack",
+      "pt" : getScaledPt([comicsWidth-3, 5], comicsOffset, comicsScale, [lineWidth/4, lineWidth])
+    },
     // Green : Doodle Crew Line
     {
       "title" : "jazz-dude.com",
