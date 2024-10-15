@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2024-10-15
+- Add Olólùfè Collective to the Poetry Line
 - Add Friction Comic to Scifi and Comics Lines
 ### 2024-10-01
 - Add Beyond the End and Long Gone Legends to Comics Line
