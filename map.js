@@ -307,7 +307,7 @@ function drawInfoBox(selection) {
   stroke(255);
   fill(0, 0);
   circle(x, y, lineWidth * 2.5);
-  let boxW = 26 * lineWidth;
+  let boxW = 28 * lineWidth;
   let boxH = 5 * lineWidth;
   let boxX;
   let boxY;
@@ -498,7 +498,7 @@ function addStations() {
     },
     {
       "title" : "The Iron Ragdoll",
-      "url"   : "tofutush.github.io/The-Iron-Ragdoll",
+      "url"   : "tofutush.github.io/The-Iron-Ragdoll/about/",
       "owner" : "Tofutush",
       "pt"    : getScaledPt([0.5, 2.5], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/4])
     },
