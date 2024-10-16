@@ -64,6 +64,9 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-10-16
+- Adjust spacing in comics.json
+- Rearrange Comics Line
 ### 2024-10-15
 - Remove Dead Garden from Zines Line
 - Add Olólùfè Collective to the Poetry Line
