@@ -494,7 +494,8 @@ function addStations() {
       "title" : "The Fuzzy Slug's Webcomic Hub",
       "url"   : "thefuzzyslug.neocities.org/",
       "owner" : "thefuzzyslug",
-      "pt"    : getScaledPt([0, 1.5], comicsOffset, comicsScale, [0, 0])
+      // "pt"    : getScaledPt([0, 1.5], comicsOffset, comicsScale, [0, 0])
+      "pt"    : getScaledPt([4.5, comicsHeight-3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/4])
     },
     {
       "title" : "Long Gone Legend",
@@ -573,13 +574,13 @@ function addStations() {
       "title" : "Sunday Comics",
       "url" : "jazz-dude.com/Portfolio/SundayC.html",
       "owner" : "Jazz",
-      "pt" : getScaledPt([1.5, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
+      "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
     {
       "title" : "slime pond comics",
       "url" : "abslimeware.neocities.org/comic/",
       "owner" : "candycanearter07",
-      "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
+      "pt" : getScaledPt([1.5, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
     // Red : Poetry Line
     {
