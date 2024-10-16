@@ -494,8 +494,13 @@ function addStations() {
       "title" : "The Fuzzy Slug's Webcomic Hub",
       "url"   : "thefuzzyslug.neocities.org/",
       "owner" : "thefuzzyslug",
-      // "pt"    : getScaledPt([0, 1.5], comicsOffset, comicsScale, [0, 0])
       "pt"    : getScaledPt([4.5, comicsHeight-3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/4])
+    },
+    {
+      "title" : "The Iron Ragdoll",
+      "url"   : "tofutush.github.io/The-Iron-Ragdoll",
+      "owner" : "Tofutush",
+      "pt"    : getScaledPt([0.5, 2.5], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/4])
     },
     {
       "title" : "Long Gone Legend",
