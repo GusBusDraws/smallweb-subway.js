@@ -9,13 +9,12 @@ let DATA_comics;
 loadWebringJSON_comics(WEBRING_DATA_URL_comics);
 
 function loadWebringJSON_comics(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_comics(json)});
+  document.write('<script src="'+url+'"></script>');
+  document.close();
 }
 
 function webringDataReady_comics(json) {
-  DATA_comics = json;
+  DATA_comics = JSON.parse(json);
   customElements.get('smallweb-subway-comics') || (
     customElements.define('smallweb-subway-comics', Webring_comics));
 }

@@ -9,13 +9,12 @@ let DATA_creativesclub;
 loadWebringJSON_creativesclub(WEBRING_DATA_URL_creativesclub);
 
 function loadWebringJSON_creativesclub(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_creativesclub(json)});
+  document.write('<script src="'+url+'"></script>');
+  document.close();
 }
 
 function webringDataReady_creativesclub(json) {
-  DATA_creativesclub = json;
+  DATA_creativesclub = JSON.parse(json);
   customElements.get('smallweb-subway-creativesclub') || (
     customElements.define('smallweb-subway-creativesclub', Webring_creativesclub));
 }
@@ -37,7 +36,7 @@ function goToPrev_creativesclub() {
 function goToNext_creativesclub() {
   // The leading '//' treats the link as an external site, even without "https:"
   if (typeof forceNewTab_creativesclub !== 'undefined' && forceNewTab_creativesclub) {
-    window.open('//' + DATA_creativesclub[prevSiteIndex_creativesclub].url)
+    window.open('//' + DATA_creativesclub[nextSiteIndex_creativesclub].url)
   } else {
     window.top.location.href = '//' + DATA_creativesclub[nextSiteIndex_creativesclub].url
   }

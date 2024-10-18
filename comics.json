@@ -1,4 +1,4 @@
-[
+webringDataReady_comics(`[
   {
     "name" : "Smallweb Subway",
     "url" : "gusbus.space/smallweb-subway/",
@@ -74,5 +74,5 @@
     "url" : "frictioncomic.com/home",
     "owner" : "Jack"
   }
-]
+]`);
 

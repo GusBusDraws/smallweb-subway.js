@@ -9,13 +9,12 @@ let DATA_scifi;
 loadWebringJSON_scifi(WEBRING_DATA_URL_scifi);
 
 function loadWebringJSON_scifi(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_scifi(json)});
+  document.write('<script src="'+url+'"></script>');
+  document.close();
 }
 
 function webringDataReady_scifi(json) {
-  DATA_scifi = json;
+  DATA_scifi = JSON.parse(json);
   customElements.get('smallweb-subway-scifi') || (
     customElements.define('smallweb-subway-scifi', Webring_scifi));
 }
@@ -37,7 +36,7 @@ function goToPrev_scifi() {
 function goToNext_scifi() {
   // The leading '//' treats the link as an external site, even without "https:"
   if (typeof forceNewTab_scifi !== 'undefined' && forceNewTab_scifi) {
-    window.open('//' + DATA_scifi[prevSiteIndex_scifi].url)
+    window.open('//' + DATA_scifi[nextSiteIndex_scifi].url)
   } else {
     location.href = '//' + DATA_scifi[nextSiteIndex_scifi].url
   }

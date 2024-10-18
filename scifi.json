@@ -1,4 +1,4 @@
-[
+webringDataReady_scifi(`[
   {
     "name" : "Smallweb Subway",
     "url" : "gusbus.space/smallweb-subway/",
@@ -25,6 +25,11 @@
     "owner" : "Dion Ra"
   },
   {
+    "name" : "Codex Archonic",
+    "url" : "lerariemann.neocities.org/",
+    "owner" : "Lera Riemann"
+  },
+  {
     "name" : "yukiclarke.com",
     "url" : "www.yukiclarke.com/home/",
     "owner" : "Yuki Clarke"
@@ -34,5 +39,5 @@
     "url" : "frictioncomic.com/home",
     "owner" : "Jack"
   }
-]
+]`);
 
