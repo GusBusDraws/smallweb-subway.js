@@ -37,7 +37,7 @@ function goToPrev_creativesclub() {
 function goToNext_creativesclub() {
   // The leading '//' treats the link as an external site, even without "https:"
   if (typeof forceNewTab_creativesclub !== 'undefined' && forceNewTab_creativesclub) {
-    window.open('//' + DATA_creativesclub[prevSiteIndex_creativesclub].url)
+    window.open('//' + DATA_creativesclub[nextSiteIndex_creativesclub].url)
   } else {
     window.top.location.href = '//' + DATA_creativesclub[nextSiteIndex_creativesclub].url
   }

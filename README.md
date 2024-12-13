@@ -64,6 +64,10 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2024-12-13
+- Fix bug in `goToNext_scifi` sending to previous
+- Fix bug in `goToNext_creativesclub` sending to previous
+- Update Soho's domain
 ### 2024-10-16
 - Add The Iron Ragdoll to Comics Line
 - Adjust spacing in comics.json
