@@ -564,9 +564,9 @@ function addStations() {
     },
     // Green : Doodle Crew Line
     {
-      "title" : "jazz-dude.com",
-      "url" : "jazz-dude.com/",
-      "owner" : "Jazz",
+      "title" : "feuer-in-soho.art",
+      "url"   : "feuer-in-soho.art/",
+      "owner" : "Soho",
       "pt" : getScaledPt([dcWidth-5, dcHeight-1], dcOffset, dcScale, [0, 0])
     },
     {
@@ -577,8 +577,8 @@ function addStations() {
     },
     {
       "title" : "Sunday Comics",
-      "url" : "jazz-dude.com/Portfolio/SundayC.html",
-      "owner" : "Jazz",
+      "url"   : "feuer-in-soho.art/Portfolio/SundayC.html",
+      "owner" : "Soho",
       "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
     {
@@ -623,6 +623,12 @@ function addStations() {
       "url"   : "manyface.neocities.org/",
       "owner" : "jáščer",
       "pt"    : getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
+    },
+    {
+      "title" : "Doug's Poetry Shack",
+      "url" : "dsserv.net/poetry/",
+      "owner" : "Doug's Shack",
+      "pt"    : getScaledPt([poetryWidth-2, 0], poetryOffset, poetryScale, [0, 0])
     }
   ];
   return stations
