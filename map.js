@@ -623,6 +623,12 @@ function addStations() {
       "url"   : "manyface.neocities.org/",
       "owner" : "jáščer",
       "pt"    : getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
+    },
+    {
+      "title" : "Doug's Poetry Shack",
+      "url" : "dsserv.net/poetry/",
+      "owner" : "Doug's Shack",
+      "pt"    : getScaledPt([poetryWidth-2, 0], poetryOffset, poetryScale, [0, 0])
     }
   ];
   return stations

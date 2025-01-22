@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2025-01-22
+- Add Doug's Poetry Shack to map
 - Update Soho's pages on map
 - Add Doug's Poetry Shack to Poetry line
 ### 2024-12-13
