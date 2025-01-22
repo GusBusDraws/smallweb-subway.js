@@ -577,7 +577,7 @@ function addStations() {
     },
     {
       "title" : "Sunday Comics",
-      "url"   : "feuer-in-soho.art/Portfolio/SundayC.html",
+      "url"   : "feuer-in-soho.art/Portfolio/Sunday%20Comics/sunday_current.html",
       "owner" : "Soho",
       "pt" : getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     },
