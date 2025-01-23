@@ -1,24 +1,104 @@
+let DATA_comics = [
+  {
+    "title" : "Smallweb Subway",
+    "url"   : "gusbus.space/smallweb-subway/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "title" : "The Fuzzy Slug's Webcomic Hub",
+    "url"   : "thefuzzyslug.neocities.org/",
+    "owner" : "thefuzzyslug"
+  },
+  {
+    "title" : "Sunday Comics",
+    "url"   : "feuer-in-soho.art/Portfolio/Sunday%20Comics/sunday_current.html",
+    "owner" : "Soho"
+  },
+  {
+    "title" : "slime pond comics",
+    "url"   : "abslimeware.neocities.org/comic/",
+    "owner" : "candycanearter07"
+  },
+  {
+    "title" : "The Iron Ragdoll",
+    "url"   : "tofutush.github.io/The-Iron-Ragdoll/about/",
+    "owner" : "Tofutush"
+  },
+  {
+    "title" : "Long Gone Legend",
+    "url"   : "tertiaryapocalypse.neocities.org/lgl/",
+    "owner" : "hal"
+  },
+  {
+    "title" : "White Noise",
+    "url"   : "www.white-noise-comic.com/",
+    "owner" : "Adrien Lee (thephooka)"
+  },
+  {
+    "title" : "Neat Hobby!",
+    "url"   : "neathobby.com/",
+    "owner" : "Scott Andrew"
+  },
+  {
+    "title" : "Keeping Time",
+    "url"   : "www.keepingtimecomic.com/links/",
+    "owner" : "Kody Okamoto"
+  },
+  {
+    "title" : "BrittHub",
+    "url"   : "britthub.co.uk/",
+    "owner" : "Britt Coxon"
+  },
+  {
+    "title" : "Links",
+    "url"   : "diabloafterdark.nekoweb.org/links.html",
+    "owner" : "DiabloAfterDark"
+  },
+  {
+    "title" : "Ultraviolents",
+    "url"   : "uv.itsnero.com/about/",
+    "owner" : "Nero Villagallos O'Reilly"
+  },
+  {
+    "title" : "Beyond the End",
+    "url"   : "beyondtheend.gay/",
+    "owner" : "Dusk Pendragon (DuskDragonXIII)"
+  },
+  {
+    "title" : "yukiclarke.com",
+    "url"   : "www.yukiclarke.com/home/",
+    "owner" : "Yuki Clarke"
+  },
+  {
+    "title" : "Friction Comic",
+    "url"   : "frictioncomic.com/home",
+    "owner" : "Jack"
+  }
+]
+
 let thisURL_comics;
 let thisSite_comics;
 let matchedSiteIndex_comics;
 let matchedSite_comics;
 let prevSiteIndex_comics;
 let nextSiteIndex_comics;
-const WEBRING_DATA_URL_comics = `https://gusbus.space/smallweb-subway.js/comics.json`;
-let DATA_comics;
-loadWebringJSON_comics(WEBRING_DATA_URL_comics);
 
-function loadWebringJSON_comics(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_comics(json)});
-}
+// const WEBRING_DATA_URL_comics = `https://gusbus.space/smallweb-subway.js/comics.json`;
+// let DATA_comics;
+// loadWebringJSON_comics(WEBRING_DATA_URL_comics);
+// makeWidget_comics()
 
-function webringDataReady_comics(json) {
-  DATA_comics = json;
-  customElements.get('smallweb-subway-comics') || (
-    customElements.define('smallweb-subway-comics', Webring_comics));
-}
+// function loadWebringJSON_comics(url) {
+//   fetch(url)
+//     .then(response => response.json())
+//     .then((json) => {webringDataReady_comics(json)});
+// }
+
+// function webringDataReady_comics(json) {
+//   DATA_comics = json;
+//   customElements.get('smallweb-subway-comics') || (
+//     customElements.define('smallweb-subway-comics', Webring_comics));
+// }
 
 function getHostName_comics(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically
@@ -44,6 +124,56 @@ function goToNext_comics() {
 }
 
 let template_comics = document.createElement("template");
+class Webring_comics extends HTMLElement {
+  constructor() {
+    super()
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.appendChild(template_comics.content.cloneNode(true));
+  // }
+  // connectedCallback() {
+    console.log('-----------')
+    console.log('comics line')
+    console.log('-----------')
+    // console.log('Webring JSON data:')
+    // console.log(JSON.stringify(DATA_comics))
+    // console.log(DATA_comics)
+    if (typeof forceNewTab_comics !== 'undefined' && forceNewTab_comics) {
+      console.log('forceNewTab_comics: ', forceNewTab_comics)
+    }
+    if (typeof forceURL_comics !== 'undefined') {
+      console.log('forceURL_comics: ', forceURL_comics)
+      thisSite_comics = forceURL_comics
+    } else {
+      thisURL_comics = new URL(window.location.href);
+      thisSite_comics = (
+        thisURL_comics.hostname + thisURL_comics.pathname
+      )
+    }
+    console.log("This site:")
+    console.log(thisSite_comics)
+    matchedSiteIndex_comics = (
+      DATA_comics.map(x => x.url).indexOf(thisSite_comics))
+    matchedSite_comics = (
+      DATA_comics[matchedSiteIndex_comics]);
+    console.log("Matched site:")
+    console.log(matchedSite_comics.url)
+    prevSiteIndex_comics = matchedSiteIndex_comics - 1;
+    if (prevSiteIndex_comics === -1) {
+      prevSiteIndex_comics = DATA_comics.length - 1};
+    console.log("Previous site:")
+    console.log(DATA_comics[prevSiteIndex_comics].url)
+    nextSiteIndex_comics = matchedSiteIndex_comics + 1;
+    if (nextSiteIndex_comics === DATA_comics.length) {
+      nextSiteIndex_comics = 0};
+    console.log("Next site:")
+    console.log(DATA_comics[nextSiteIndex_comics].url)
+  }
+}
+
+customElements.define('smallweb-subway-comics', Webring_comics);
+// customElements.get('smallweb-subway-comics') || (
+//   customElements.define('smallweb-subway-comics', Webring_comics));
+
 template_comics.innerHTML = `
   <div class="webring_comics">
     <h3>The Smallweb Subway</h3>
@@ -142,47 +272,3 @@ template_comics.innerHTML = `
   </style>
 `;
 
-class Webring_comics extends HTMLElement {
-  constructor() {
-    super()
-    this.attachShadow({ mode: "open" })
-    this.shadowRoot.appendChild(template_comics.content.cloneNode(true));
-  }
-  connectedCallback() {
-    console.log('-----------')
-    console.log('comics line')
-    console.log('-----------')
-    console.log('Webring JSON data:')
-    console.log(JSON.stringify(DATA_comics))
-    if (typeof forceNewTab_comics !== 'undefined' && forceNewTab_comics) {
-      console.log('forceNewTab_comics: ', forceNewTab_comics)
-    }
-    if (typeof forceURL_comics !== 'undefined') {
-      console.log('forceURL_comics: ', forceURL_comics)
-      thisSite_comics = forceURL_comics
-    } else {
-      thisURL_comics = new URL(window.location.href);
-      thisSite_comics = (
-        thisURL_comics.hostname + thisURL_comics.pathname
-      )
-    }
-    console.log("This site:")
-    console.log(thisSite_comics)
-    matchedSiteIndex_comics = (
-      DATA_comics.map(x => x.url).indexOf(thisSite_comics))
-    matchedSite_comics = (
-      DATA_comics[matchedSiteIndex_comics]);
-    console.log("Matched site:")
-    console.log(matchedSite_comics.url)
-    prevSiteIndex_comics = matchedSiteIndex_comics - 1;
-    if (prevSiteIndex_comics === -1) {
-      prevSiteIndex_comics = DATA_comics.length - 1};
-    console.log("Previous site:")
-    console.log(DATA_comics[prevSiteIndex_comics].url)
-    nextSiteIndex_comics = matchedSiteIndex_comics + 1;
-    if (nextSiteIndex_comics === DATA_comics.length) {
-      nextSiteIndex_comics = 0};
-    console.log("Next site:")
-    console.log(DATA_comics[nextSiteIndex_comics].url)
-  }
-}
