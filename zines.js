@@ -60,9 +60,17 @@ class Webring_zines extends HTMLElement {
     console.log('----------')
     // console.log('Webring JSON data:')
     // console.log(DATA_zines)
-    thisURL_zines = new URL(window.location.href);
-    thisSite_zines = (
-      thisURL_zines.hostname + thisURL_zines.pathname)
+    if (typeof forceNewTab_zines !== 'undefined' && forceNewTab_zines) {
+      console.log('forceNewTab_zines: ', forceNewTab_zines)
+    }
+    if (typeof forceURL_zines !== 'undefined') {
+      console.log('forceURL_zines: ', forceURL_zines)
+      thisSite_zines = forceURL_zines
+    } else {
+      thisURL_zines = new URL(window.location.href);
+      thisSite_zines = (
+        thisURL_zines.hostname + thisURL_zines.pathname)
+    }
     console.log("This site:")
     console.log(thisSite_zines)
     matchedSiteIndex_zines = (
