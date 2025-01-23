@@ -387,6 +387,21 @@ function touchStarted() {
   }
 }
 
+function getProp(data_array, title, prop) {
+  let arrayElem = data_array.find(x => x.title === title);
+  // @ts-ignore
+  return arrayElem[prop]
+}
+
+function populateObj(data_array, title, pt) {
+  return {
+    "title" : title,
+    "url"   : getProp(data_array, "The Fuzzy Slug's Webcomic Hub", 'url'),
+    "owner" : getProp(data_array, "The Fuzzy Slug's Webcomic Hub", 'owner'),
+    "pt"    : pt
+  }
+}
+
 function addStations() {
   let stations = [
     // Map
@@ -490,12 +505,19 @@ function addStations() {
       "pt" : getScaledPt([2, ccHeight-1], ccOffset, ccScale, [-lineWidth/2, 0])
     },
     // Orange : Comics Line
-    {
-      "title" : "The Fuzzy Slug's Webcomic Hub",
-      "url"   : "thefuzzyslug.neocities.org/",
-      "owner" : "thefuzzyslug",
-      "pt"    : getScaledPt([4.5, comicsHeight-3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/4])
-    },
+    // {
+    //   "title" : "The Fuzzy Slug's Webcomic Hub",
+    //   // "url"   : "thefuzzyslug.neocities.org/",
+    //   // "owner" : "thefuzzyslug",
+    //   "url"   : getProp(DATA_comics, "The Fuzzy Slug's Webcomic Hub", 'url'),
+    //   "owner" : "thefuzzyslug",
+    //   "pt"    : getScaledPt([4.5, comicsHeight-3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/4])
+    // },
+    populateObj(
+      DATA_comics,
+      "The Fuzzy Slug's Webcomic Hub",
+      getScaledPt([4.5, comicsHeight-3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/4])
+    ),
     {
       "title" : "The Iron Ragdoll",
       "url"   : "tofutush.github.io/The-Iron-Ragdoll/about/",
