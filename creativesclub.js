@@ -1,24 +1,57 @@
+let DATA_creativesclub = [
+  {
+    "title" : "Smallweb Subway",
+    "url"   : "gusbus.space/smallweb-subway/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "title" : "DoodleBot",
+    "url"   : "gusbus.space/doodlebot/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "title" : "Creatives Club",
+    "url"   : "creativesclub.art/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "title" : "yukiclarke.com",
+    "url"   : "www.yukiclarke.com/home/",
+    "owner" : "Yuki Clarke"
+  },
+  {
+    "title" : "haystack blog and oddities",
+    "url"   : "thatoddhaystack.neocities.org/",
+    "owner" : "vita"
+  },
+  {
+    "title" : "UR LOCAL CYBORG",
+    "url"   : "urlocalcyb.org/",
+    "owner" : "cyborgforty"
+  },
+  {
+    "title" : "marcinek.tech",
+    "url"   : "marcinek.tech/",
+    "owner" : "Kristen"
+  },
+  {
+    "title" : "community - Justbestvisuals",
+    "url"   : "justbestvisuals.com/community/",
+    "owner" : "Justin"
+  },
+  {
+    "title" : "michi.foo",
+    "url"   : "michi.foo/0",
+    "owner" : "Sara"
+  }
+]
+
 let thisURL_creativesclub;
 let thisSite_creativesclub;
 let matchedSiteIndex_creativesclub;
 let matchedSite_creativesclub;
 let prevSiteIndex_creativesclub;
 let nextSiteIndex_creativesclub;
-const WEBRING_DATA_URL_creativesclub = `https://gusbus.space/smallweb-subway.js/creativesclub.json`;
-let DATA_creativesclub;
-loadWebringJSON_creativesclub(WEBRING_DATA_URL_creativesclub);
-
-function loadWebringJSON_creativesclub(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_creativesclub(json)});
-}
-
-function webringDataReady_creativesclub(json) {
-  DATA_creativesclub = json;
-  customElements.get('smallweb-subway-creativesclub') || (
-    customElements.define('smallweb-subway-creativesclub', Webring_creativesclub));
-}
 
 function getHostName_creativesclub(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically
@@ -44,6 +77,47 @@ function goToNext_creativesclub() {
 }
 
 let template_creativesclub = document.createElement("template");
+class Webring_creativesclub extends HTMLElement {
+  constructor() {
+    super()
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.appendChild(template_creativesclub.content.cloneNode(true));
+    console.log('------------------')
+    console.log('creativesclub line')
+    console.log('------------------')
+    // console.log('Webring JSON data:')
+    // console.log(DATA_creativesclub)
+    if (typeof forceURL_creativesclub !== 'undefined') {
+      console.log('forceURL_creativesclub: ', forceURL_creativesclub)
+      thisSite_creativesclub = forceURL_creativesclub
+    } else {
+      thisURL_creativesclub = new URL(window.location.href);
+      thisSite_creativesclub = (
+        thisURL_creativesclub.hostname + thisURL_creativesclub.pathname)
+    }
+    console.log("This site:")
+    console.log(thisSite_creativesclub)
+    matchedSiteIndex_creativesclub = (
+      DATA_creativesclub.map(x => x.url).indexOf(thisSite_creativesclub))
+    matchedSite_creativesclub = (
+      DATA_creativesclub[matchedSiteIndex_creativesclub]);
+    console.log("Matched site:")
+    console.log(matchedSite_creativesclub.url)
+    prevSiteIndex_creativesclub = matchedSiteIndex_creativesclub - 1;
+    if (prevSiteIndex_creativesclub === -1) {
+      prevSiteIndex_creativesclub = DATA_creativesclub.length - 1};
+    console.log("Previous site:")
+    console.log(DATA_creativesclub[prevSiteIndex_creativesclub].url)
+    nextSiteIndex_creativesclub = matchedSiteIndex_creativesclub + 1;
+    if (nextSiteIndex_creativesclub === DATA_creativesclub.length) {
+      nextSiteIndex_creativesclub = 0};
+    console.log("Next site:")
+    console.log(DATA_creativesclub[nextSiteIndex_creativesclub].url)
+  }
+}
+
+customElements.define('smallweb-subway-creativesclub', Webring_creativesclub);
+
 template_creativesclub.innerHTML = `
   <div class="webring_creativesclub">
     <h3>The Smallweb Subway</h3>
@@ -141,44 +215,3 @@ template_creativesclub.innerHTML = `
     }
   </style>
 `;
-
-class Webring_creativesclub extends HTMLElement {
-  constructor() {
-    super()
-    this.attachShadow({ mode: "open" })
-    this.shadowRoot.appendChild(template_creativesclub.content.cloneNode(true));
-  }
-  connectedCallback() {
-    console.log('------------------')
-    console.log('creativesclub line')
-    console.log('------------------')
-    console.log('Webring JSON data:')
-    console.log(JSON.stringify(DATA_creativesclub))
-    if (typeof forceURL_creativesclub !== 'undefined') {
-      console.log('forceURL_creativesclub: ', forceURL_creativesclub)
-      thisSite_creativesclub = forceURL_creativesclub
-    } else {
-      thisURL_creativesclub = new URL(window.location.href);
-      thisSite_creativesclub = (
-        thisURL_creativesclub.hostname + thisURL_creativesclub.pathname)
-    }
-    console.log("This site:")
-    console.log(thisSite_creativesclub)
-    matchedSiteIndex_creativesclub = (
-      DATA_creativesclub.map(x => x.url).indexOf(thisSite_creativesclub))
-    matchedSite_creativesclub = (
-      DATA_creativesclub[matchedSiteIndex_creativesclub]);
-    console.log("Matched site:")
-    console.log(matchedSite_creativesclub.url)
-    prevSiteIndex_creativesclub = matchedSiteIndex_creativesclub - 1;
-    if (prevSiteIndex_creativesclub === -1) {
-      prevSiteIndex_creativesclub = DATA_creativesclub.length - 1};
-    console.log("Previous site:")
-    console.log(DATA_creativesclub[prevSiteIndex_creativesclub].url)
-    nextSiteIndex_creativesclub = matchedSiteIndex_creativesclub + 1;
-    if (nextSiteIndex_creativesclub === DATA_creativesclub.length) {
-      nextSiteIndex_creativesclub = 0};
-    console.log("Next site:")
-    console.log(DATA_creativesclub[nextSiteIndex_creativesclub].url)
-  }
-}
