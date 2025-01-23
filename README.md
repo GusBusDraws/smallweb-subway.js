@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2025-01-22
+- Replace poetry.json with object in poetry.js
 - Replace doodlecrew.json with object in doodlecrew.js
 - Replace creativesclub.json with object in creativesclub.js
 - Remove comments of old JSON load structure from comics.js
