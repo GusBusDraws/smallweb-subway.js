@@ -1,24 +1,53 @@
+let DATA_poetry = [
+  {
+    "title" : "Smallweb Subway",
+    "url"   : "gusbus.space/smallweb-subway/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "title" : "Poems",
+    "url"   : "ololufe-collective.ghost.io/tag/poems/",
+    "owner" : "Olólùfè Collective"
+  },
+  {
+    "title" : "poems",
+    "url"   : "dead.garden/poetry/",
+    "owner" : "jo"
+  },
+  {
+    "title" : "poetry!",
+    "url"   : "columbidaecorner.neocities.org/poetry",
+    "owner" : "columbidaecorner"
+  },
+  {
+    "title" : "flower in binary",
+    "url"   : "flowerinbinary.neocities.org/home/poetry",
+    "owner" : "tim flower"
+  },
+  {
+    "title" : "delovely's poetry",
+    "url"   : "delovely.neocities.org/poetry/",
+    "owner" : "delovely"
+  },
+  {
+    "title" : "manyface world",
+    "url"   : "manyface.neocities.org/",
+    "owner" : "Manyface"
+  },
+  {
+    "title" : "Doug's Poetry Shack",
+    "url"   : "dsserv.net/poetry/",
+    "owner" : "Doug's Shack"
+  }
+]
+
+
 let thisURL_poetry;
 let thisSite_poetry;
 let matchedSiteIndex_poetry;
 let matchedSite_poetry;
 let prevSiteIndex_poetry;
 let nextSiteIndex_poetry;
-const WEBRING_DATA_URL_poetry = `https://gusbus.space/smallweb-subway.js/poetry.json`;
-let DATA_poetry;
-loadWebringJSON_poetry(WEBRING_DATA_URL_poetry);
-
-function loadWebringJSON_poetry(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_poetry(json)});
-}
-
-function webringDataReady_poetry(json) {
-  DATA_poetry = json;
-  customElements.get('smallweb-subway-poetry') || (
-    customElements.define('smallweb-subway-poetry', Webring_poetry));
-}
 
 function getHostName_poetry(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically
@@ -44,6 +73,51 @@ function goToNext_poetry() {
 }
 
 let template_poetry = document.createElement("template");
+class Webring_poetry extends HTMLElement {
+  constructor() {
+    super()
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.appendChild(template_poetry.content.cloneNode(true));
+    console.log('-----------')
+    console.log('poetry line')
+    console.log('-----------')
+    // console.log('Webring JSON data:')
+    // console.log(DATA_poetry);
+    if (typeof forceNewTab_poetry !== 'undefined' && forceNewTab_poetry) {
+      console.log('forceNewTab_poetry: ', forceNewTab_poetry)
+    }
+    if (typeof forceURL_poetry !== 'undefined') {
+      console.log('forceURL_poetry: ', forceURL_poetry)
+      thisSite_poetry = forceURL_poetry
+    } else {
+      thisURL_poetry = new URL(window.location.href);
+      thisSite_poetry = (
+        thisURL_poetry.hostname + thisURL_poetry.pathname
+      )
+    }
+    console.log("This site:")
+    console.log(thisSite_poetry)
+    matchedSiteIndex_poetry = (
+      DATA_poetry.map(x => x.url).indexOf(thisSite_poetry))
+    matchedSite_poetry = (
+      DATA_poetry[matchedSiteIndex_poetry]);
+    console.log("Matched site:")
+    console.log(matchedSite_poetry.url)
+    prevSiteIndex_poetry = matchedSiteIndex_poetry - 1;
+    if (prevSiteIndex_poetry === -1) {
+      prevSiteIndex_poetry = DATA_poetry.length - 1};
+    console.log("Previous site:")
+    console.log(DATA_poetry[prevSiteIndex_poetry].url)
+    nextSiteIndex_poetry = matchedSiteIndex_poetry + 1;
+    if (nextSiteIndex_poetry === DATA_poetry.length) {
+      nextSiteIndex_poetry = 0};
+    console.log("Next site:")
+    console.log(DATA_poetry[nextSiteIndex_poetry].url)
+  }
+}
+
+customElements.define('smallweb-subway-poetry', Webring_poetry);
+
 template_poetry.innerHTML = `
   <div class="webring_poetry">
     <h3>The Smallweb Subway</h3>
@@ -142,47 +216,3 @@ template_poetry.innerHTML = `
   </style>
 `;
 
-class Webring_poetry extends HTMLElement {
-  constructor() {
-    super()
-    this.attachShadow({ mode: "open" })
-    this.shadowRoot.appendChild(template_poetry.content.cloneNode(true));
-  }
-  connectedCallback() {
-    console.log('-----------')
-    console.log('poetry line')
-    console.log('-----------')
-    console.log('Webring JSON data:')
-    console.log(JSON.stringify(DATA_poetry))
-    if (typeof forceNewTab_poetry !== 'undefined' && forceNewTab_poetry) {
-      console.log('forceNewTab_poetry: ', forceNewTab_poetry)
-    }
-    if (typeof forceURL_poetry !== 'undefined') {
-      console.log('forceURL_poetry: ', forceURL_poetry)
-      thisSite_poetry = forceURL_poetry
-    } else {
-      thisURL_poetry = new URL(window.location.href);
-      thisSite_poetry = (
-        thisURL_poetry.hostname + thisURL_poetry.pathname
-      )
-    }
-    console.log("This site:")
-    console.log(thisSite_poetry)
-    matchedSiteIndex_poetry = (
-      DATA_poetry.map(x => x.url).indexOf(thisSite_poetry))
-    matchedSite_poetry = (
-      DATA_poetry[matchedSiteIndex_poetry]);
-    console.log("Matched site:")
-    console.log(matchedSite_poetry.url)
-    prevSiteIndex_poetry = matchedSiteIndex_poetry - 1;
-    if (prevSiteIndex_poetry === -1) {
-      prevSiteIndex_poetry = DATA_poetry.length - 1};
-    console.log("Previous site:")
-    console.log(DATA_poetry[prevSiteIndex_poetry].url)
-    nextSiteIndex_poetry = matchedSiteIndex_poetry + 1;
-    if (nextSiteIndex_poetry === DATA_poetry.length) {
-      nextSiteIndex_poetry = 0};
-    console.log("Next site:")
-    console.log(DATA_poetry[nextSiteIndex_poetry].url)
-  }
-}

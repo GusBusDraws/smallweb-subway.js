@@ -1,24 +1,38 @@
+let DATA_zines = [
+  {
+    "title" : "Smallweb Subway",
+    "url"   : "gusbus.space/smallweb-subway/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "title" : "Mythical Type Zines",
+    "url"   : "mythicaltype.com/zines/",
+    "owner" : "Mythical Type"
+  },
+  {
+    "title" : "zines",
+    "url"   : "bumblechub.com/zines/",
+    "owner" : "bumblechub"
+  },
+  {
+    "title" : "MyDogStoleThisWebsite",
+    "url"   : "metrogoldia.neocities.org/",
+    "owner" : "MyDogStoleMyLiver (Devin Spector)"
+  },
+  {
+    "title" : "Ether",
+    "url"   : "ethersent.neocities.org/",
+    "owner" : "Emil Aisling"
+  }
+]
+
+
 let thisURL_zines;
 let thisSite_zines;
 let matchedSiteIndex_zines;
 let matchedSite_zines;
 let prevSiteIndex_zines;
 let nextSiteIndex_zines;
-const WEBRING_DATA_URL_zines = `https://gusbus.space/smallweb-subway.js/zines.json`;
-let DATA_zines;
-loadWebringJSON_zines(WEBRING_DATA_URL_zines);
-
-function loadWebringJSON_zines(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_zines(json)});
-}
-
-function webringDataReady_zines(json) {
-  DATA_zines = json;
-  customElements.get('smallweb-subway-zines') || (
-    customElements.define('smallweb-subway-zines', Webring_zines));
-}
 
 function getHostName_zines(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically
@@ -36,6 +50,50 @@ function goToNext_zines() {
 }
 
 let template_zines = document.createElement("template");
+class Webring_zines extends HTMLElement {
+  constructor() {
+    super()
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.appendChild(template_zines.content.cloneNode(true));
+    console.log('----------')
+    console.log('zines line')
+    console.log('----------')
+    // console.log('Webring JSON data:')
+    // console.log(DATA_zines)
+    if (typeof forceNewTab_zines !== 'undefined' && forceNewTab_zines) {
+      console.log('forceNewTab_zines: ', forceNewTab_zines)
+    }
+    if (typeof forceURL_zines !== 'undefined') {
+      console.log('forceURL_zines: ', forceURL_zines)
+      thisSite_zines = forceURL_zines
+    } else {
+      thisURL_zines = new URL(window.location.href);
+      thisSite_zines = (
+        thisURL_zines.hostname + thisURL_zines.pathname)
+    }
+    console.log("This site:")
+    console.log(thisSite_zines)
+    matchedSiteIndex_zines = (
+      DATA_zines.map(x => x.url).indexOf(thisSite_zines))
+    matchedSite_zines = (
+      DATA_zines[matchedSiteIndex_zines]);
+    console.log("Matched site:")
+    console.log(matchedSite_zines.url)
+    prevSiteIndex_zines = matchedSiteIndex_zines - 1;
+    if (prevSiteIndex_zines === -1) {
+      prevSiteIndex_zines = DATA_zines.length - 1};
+    console.log("Previous site:")
+    console.log(DATA_zines[prevSiteIndex_zines].url)
+    nextSiteIndex_zines = matchedSiteIndex_zines + 1;
+    if (nextSiteIndex_zines === DATA_zines.length) {
+      nextSiteIndex_zines = 0};
+    console.log("Next site:")
+    console.log(DATA_zines[nextSiteIndex_zines].url)
+  }
+}
+
+customElements.define('smallweb-subway-zines', Webring_zines);
+
 template_zines.innerHTML = `
   <div class="webring_zines">
     <h3>The Smallweb Subway</h3>
@@ -133,39 +191,3 @@ template_zines.innerHTML = `
     }
   </style>
 `;
-
-class Webring_zines extends HTMLElement {
-  constructor() {
-    super()
-    this.attachShadow({ mode: "open" })
-    this.shadowRoot.appendChild(template_zines.content.cloneNode(true));
-  }
-  connectedCallback() {
-    console.log('----------')
-    console.log('zines line')
-    console.log('----------')
-    console.log('Webring JSON data:')
-    console.log(JSON.stringify(DATA_zines))
-    thisURL_zines = new URL(window.location.href);
-    thisSite_zines = (
-      thisURL_zines.hostname + thisURL_zines.pathname)
-    console.log("This site:")
-    console.log(thisSite_zines)
-    matchedSiteIndex_zines = (
-      DATA_zines.map(x => x.url).indexOf(thisSite_zines))
-    matchedSite_zines = (
-      DATA_zines[matchedSiteIndex_zines]);
-    console.log("Matched site:")
-    console.log(matchedSite_zines.url)
-    prevSiteIndex_zines = matchedSiteIndex_zines - 1;
-    if (prevSiteIndex_zines === -1) {
-      prevSiteIndex_zines = DATA_zines.length - 1};
-    console.log("Previous site:")
-    console.log(DATA_zines[prevSiteIndex_zines].url)
-    nextSiteIndex_zines = matchedSiteIndex_zines + 1;
-    if (nextSiteIndex_zines === DATA_zines.length) {
-      nextSiteIndex_zines = 0};
-    console.log("Next site:")
-    console.log(DATA_zines[nextSiteIndex_zines].url)
-  }
-}

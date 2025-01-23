@@ -65,6 +65,14 @@ npm install @types/p5
 
 ## Change Log
 ### 2025-01-22
+- Load station info using data stored arrays for map
+- Add `forceNewTab` and `forceURL` options to zines.js
+- Replace zines.json with object in zines.js
+- Replace scifi.json with object in scifi.js
+- Replace poetry.json with object in poetry.js
+- Replace doodlecrew.json with object in doodlecrew.js
+- Replace creativesclub.json with object in creativesclub.js
+- Remove comments of old JSON load structure from comics.js
 - Test new structure (no JSON file) with comics line
 - Add Doug's Poetry Shack to map
 - Update Soho's pages on map
