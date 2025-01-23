@@ -1,24 +1,48 @@
+let DATA_scifi = [
+  {
+    "title" : "Smallweb Subway",
+    "url"   : "gusbus.space/smallweb-subway/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "title" : "Clockwork's Archive of Tomorrow",
+    "url"   : "clockwooork.github.io/future-stop.html",
+    "owner" : "Clockwork"
+  },
+  {
+    "title" : "Gus's Scifi Gallery",
+    "url"   : "gusbus.space/scifi/",
+    "owner" : "Gus Becker"
+  },
+  {
+    "title" : "Varve's writing bits & pieces",
+    "url"   : "www.write-on.org/writing/",
+    "owner" : "Varve"
+  },
+  {
+    "title" : "Stories",
+    "url"   : "dionra.com/stories.php",
+    "owner" : "Dion Ra"
+  },
+  {
+    "title" : "yukiclarke.com",
+    "url"   : "www.yukiclarke.com/home/",
+    "owner" : "Yuki Clarke"
+  },
+  {
+    "title" : "Friction Comic",
+    "url"   : "frictioncomic.com/home",
+    "owner" : "Jack"
+  }
+]
+
+
 let thisURL_scifi;
 let thisSite_scifi;
 let matchedSiteIndex_scifi;
 let matchedSite_scifi;
 let prevSiteIndex_scifi;
 let nextSiteIndex_scifi;
-const WEBRING_DATA_URL_scifi = `https://gusbus.space/smallweb-subway.js/scifi.json`;
-let DATA_scifi;
-loadWebringJSON_scifi(WEBRING_DATA_URL_scifi);
-
-function loadWebringJSON_scifi(url) {
-  fetch(url)
-    .then(response => response.json())
-    .then((json) => {webringDataReady_scifi(json)});
-}
-
-function webringDataReady_scifi(json) {
-  DATA_scifi = json;
-  customElements.get('smallweb-subway-scifi') || (
-    customElements.define('smallweb-subway-scifi', Webring_scifi));
-}
 
 function getHostName_scifi(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically
@@ -44,6 +68,52 @@ function goToNext_scifi() {
 }
 
 let template_scifi = document.createElement("template");
+class Webring_scifi extends HTMLElement {
+  constructor() {
+    super()
+    this.attachShadow({ mode: "open" })
+    this.shadowRoot.appendChild(template_scifi.content.cloneNode(true));
+  }
+  connectedCallback() {
+    console.log('-----------')
+    console.log('scifi line')
+    console.log('-----------')
+    // console.log('Webring JSON data:')
+    // console.log(DATA_scifi)
+    if (typeof forceNewTab_scifi !== 'undefined' && forceNewTab_scifi) {
+      console.log('forceNewTab_scifi: ', forceNewTab_scifi)
+    }
+    if (typeof forceURL_scifi !== 'undefined') {
+      console.log('forceURL_scifi: ', forceURL_scifi)
+      thisSite_scifi = forceURL_scifi
+    } else {
+      thisURL_scifi = new URL(window.location.href);
+      thisSite_scifi = (
+        thisURL_scifi.hostname + thisURL_scifi.pathname)
+    }
+    console.log("This site:")
+    console.log(thisSite_scifi)
+    matchedSiteIndex_scifi = (
+      DATA_scifi.map(x => x.url).indexOf(thisSite_scifi))
+    matchedSite_scifi = (
+      DATA_scifi[matchedSiteIndex_scifi]);
+    console.log("Matched site:")
+    console.log(matchedSite_scifi.url)
+    prevSiteIndex_scifi = matchedSiteIndex_scifi - 1;
+    if (prevSiteIndex_scifi === -1) {
+      prevSiteIndex_scifi = DATA_scifi.length - 1};
+    console.log("Previous site:")
+    console.log(DATA_scifi[prevSiteIndex_scifi].url)
+    nextSiteIndex_scifi = matchedSiteIndex_scifi + 1;
+    if (nextSiteIndex_scifi === DATA_scifi.length) {
+      nextSiteIndex_scifi = 0};
+    console.log("Next site:")
+    console.log(DATA_scifi[nextSiteIndex_scifi].url)
+  }
+}
+
+customElements.define('smallweb-subway-scifi', Webring_scifi);
+
 template_scifi.innerHTML = `
   <div class="webring_scifi">
     <h3>The Smallweb Subway</h3>
@@ -141,47 +211,3 @@ template_scifi.innerHTML = `
     }
   </style>
 `;
-
-class Webring_scifi extends HTMLElement {
-  constructor() {
-    super()
-    this.attachShadow({ mode: "open" })
-    this.shadowRoot.appendChild(template_scifi.content.cloneNode(true));
-  }
-  connectedCallback() {
-    console.log('-----------')
-    console.log('scifi line')
-    console.log('-----------')
-    console.log('Webring JSON data:')
-    console.log(JSON.stringify(DATA_scifi))
-    if (typeof forceNewTab_scifi !== 'undefined' && forceNewTab_scifi) {
-      console.log('forceNewTab_scifi: ', forceNewTab_scifi)
-    }
-    if (typeof forceURL_scifi !== 'undefined') {
-      console.log('forceURL_scifi: ', forceURL_scifi)
-      thisSite_scifi = forceURL_scifi
-    } else {
-      thisURL_scifi = new URL(window.location.href);
-      thisSite_scifi = (
-        thisURL_scifi.hostname + thisURL_scifi.pathname)
-    }
-    console.log("This site:")
-    console.log(thisSite_scifi)
-    matchedSiteIndex_scifi = (
-      DATA_scifi.map(x => x.url).indexOf(thisSite_scifi))
-    matchedSite_scifi = (
-      DATA_scifi[matchedSiteIndex_scifi]);
-    console.log("Matched site:")
-    console.log(matchedSite_scifi.url)
-    prevSiteIndex_scifi = matchedSiteIndex_scifi - 1;
-    if (prevSiteIndex_scifi === -1) {
-      prevSiteIndex_scifi = DATA_scifi.length - 1};
-    console.log("Previous site:")
-    console.log(DATA_scifi[prevSiteIndex_scifi].url)
-    nextSiteIndex_scifi = matchedSiteIndex_scifi + 1;
-    if (nextSiteIndex_scifi === DATA_scifi.length) {
-      nextSiteIndex_scifi = 0};
-    console.log("Next site:")
-    console.log(DATA_scifi[nextSiteIndex_scifi].url)
-  }
-}
