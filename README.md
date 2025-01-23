@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2025-01-22
+- Replace zines.json with object in zines.js
 - Replace scifi.json with object in scifi.js
 - Replace poetry.json with object in poetry.js
 - Replace doodlecrew.json with object in doodlecrew.js

@@ -73,8 +73,6 @@ class Webring_scifi extends HTMLElement {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_scifi.content.cloneNode(true));
-  }
-  connectedCallback() {
     console.log('-----------')
     console.log('scifi line')
     console.log('-----------')

@@ -78,8 +78,6 @@ class Webring_poetry extends HTMLElement {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_poetry.content.cloneNode(true));
-  }
-  connectedCallback() {
     console.log('-----------')
     console.log('poetry line')
     console.log('-----------')

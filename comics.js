@@ -112,8 +112,6 @@ class Webring_comics extends HTMLElement {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_comics.content.cloneNode(true));
-  // }
-  // connectedCallback() {
     console.log('-----------')
     console.log('comics line')
     console.log('-----------')
