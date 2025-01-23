@@ -65,6 +65,7 @@ npm install @types/p5
 
 ## Change Log
 ### 2025-01-22
+- Remove comments of old JSON load structure from comics.js
 - Test new structure (no JSON file) with comics line
 - Add Doug's Poetry Shack to map
 - Update Soho's pages on map

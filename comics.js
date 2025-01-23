@@ -83,23 +83,6 @@ let matchedSite_comics;
 let prevSiteIndex_comics;
 let nextSiteIndex_comics;
 
-// const WEBRING_DATA_URL_comics = `https://gusbus.space/smallweb-subway.js/comics.json`;
-// let DATA_comics;
-// loadWebringJSON_comics(WEBRING_DATA_URL_comics);
-// makeWidget_comics()
-
-// function loadWebringJSON_comics(url) {
-//   fetch(url)
-//     .then(response => response.json())
-//     .then((json) => {webringDataReady_comics(json)});
-// }
-
-// function webringDataReady_comics(json) {
-//   DATA_comics = json;
-//   customElements.get('smallweb-subway-comics') || (
-//     customElements.define('smallweb-subway-comics', Webring_comics));
-// }
-
 function getHostName_comics(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically
   return new URL(url).hostname;
@@ -135,7 +118,6 @@ class Webring_comics extends HTMLElement {
     console.log('comics line')
     console.log('-----------')
     // console.log('Webring JSON data:')
-    // console.log(JSON.stringify(DATA_comics))
     // console.log(DATA_comics)
     if (typeof forceNewTab_comics !== 'undefined' && forceNewTab_comics) {
       console.log('forceNewTab_comics: ', forceNewTab_comics)
