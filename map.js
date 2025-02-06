@@ -186,8 +186,8 @@ function draw() {
   drawLegend();
   checkLegendHover();
   checkStationHover();
-  if (selection != null && selection.type == 'station') {
-    drawInfoBox(selection);
+  if (selection != null) {
+    drawSelection(selection);
   }
 }
 
@@ -279,36 +279,36 @@ function drawLegend() {
 }
 
 function checkStationHover() {
-  // Check for station hover
-  for (let station of stations) {
-    let stationX = station.pt[0];
-    let stationY = station.pt[1];
-    let mouseDist = dist(mouseX, mouseY, stationX, stationY);
-    if ((mouseDist < 2*lineWidth)) {
-      console.log('Station hover detected.')
-      selection = {
-        'type' : 'station',
-        'title' : station.title,
-        'owner' : station.owner,
-        'url' : station.url,
-        'pt' : station.pt,
-        'mode' : 'hover',
-        'boxXMin' : undefined,
-        'boxYMin' : undefined,
-        'boxXMax' : undefined,
-        'boxYMax' : undefined,
+  if (selection == null) {
+    // Check for station hover
+    for (let station of stations) {
+      let stationX = station.pt[0];
+      let stationY = station.pt[1];
+      let mouseDist = dist(mouseX, mouseY, stationX, stationY);
+      if ((mouseDist < 2*lineWidth)) {
+        selection = {
+          'type' : 'station',
+          'title' : station.title,
+          'owner' : station.owner,
+          'url' : station.url,
+          'pt' : station.pt,
+          'mode' : 'hover',
+          'boxXMin' : undefined,
+          'boxYMin' : undefined,
+          'boxXMax' : undefined,
+          'boxYMax' : undefined,
+        }
+        // If mouse is clicked while hovering, open the corresponding url
+        if (mouseIsPressed && touches.length == 0) {
+          console.log('Station clicked')
+          window.open('https://'+station.url);
+          // Needed to insure only one page is opened
+          mouseIsPressed = false;
+        }
+        break;
+      } else {
+        selection = undefined;
       }
-      drawSelection(selection)
-      // If mouse is clicked while hovering, open the corresponding url
-      if (mouseIsPressed && touches.length == 0) {
-        console.log('Station clicked')
-        window.open('https://'+station.url);
-        // Needed to insure only one page is opened
-        mouseIsPressed = false;
-      }
-      break;
-    } else {
-      selection = undefined;
     }
   }
 }
@@ -338,7 +338,6 @@ function checkLegendHover() {
         'boxXMax' : undefined,
         'boxYMax' : undefined
       }
-      drawSelection(selection);
       // If mouse is clicked while hovering, open the corresponding url
       if (mouseIsPressed && touches.length == 0) {
         console.log('Legend clicked')

@@ -64,6 +64,8 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2025-02-06
+- Add legend selection for hover/mouse
 ### 2025-01-22
 - Load station info using data stored arrays for map
 - Add `forceNewTab` and `forceURL` options to zines.js
