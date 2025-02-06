@@ -98,18 +98,27 @@ function setup() {
   lineWidth = width * 0.015
   legendWidth = 10*lineWidth;
   legendHeight = 2*lineWidth;
+  let nLines = lineColors.length;
+  let spacing = width / (2*nLines + 1);
+  for (let i = 0; i < nLines; i++) {
+    legendArr.push(
+      {
+        'x' : (2*i+1.5)*spacing,
+        'y' : height / 20,
+        'name' : lineNames[i],
+        'color' : lineColors[i],
+        'code' : lineCodes[i]
+      }
+    )
+  }
 }
 
 function draw() {
   background(225);
-    //////////////////////////////
-   // Green : Doodle Crew Line //
-  //////////////////////////////
+  // Green : Doodle Crew Line
   dcScale = [stationDist, stationDist];
   let [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
-    /////////////////////////
-   // Silver : Scifi Line //
-  /////////////////////////
+  // Silver : Scifi Line
   sfOffset[0] = (
     max(dcScaledX)
     - 3 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
@@ -121,9 +130,7 @@ function draw() {
   );
   sfScale = [stationDist, stationDist];
   let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
-    //////////////////////////
-   // Orange : Comics Line //
-  //////////////////////////
+  // Orange : Comics Line
   comicsOffset[0] = (
     max(dcScaledX)
     - 8 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
@@ -136,9 +143,7 @@ function draw() {
   );
   comicsScale = [stationDist, stationDist];
   let [comicsScaledX, comicsScaledY] = drawLine(comicsOffset, comicsScale, comicsPts, '#f7941d');
-    ////////////////////////
-   // Blue : Zines Line //
-  ////////////////////////
+  // Blue : Zines Line
   zinesOffset[0] = (
     max(dcScaledX)
     - 2 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
@@ -151,9 +156,7 @@ function draw() {
   );
   zinesScale = [stationDist, stationDist];
   let [zinesScaledX, zinesScaledY] = drawLine(zinesOffset, zinesScale, zinesPts, '#0077c0');
-    ////////////////////////
-   // Red : Poetry Line //
-  ////////////////////////
+  // Red : Poetry Line
   poetryOffset[0] = (
     max(dcScaledX)
     - 6 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
@@ -168,9 +171,7 @@ function draw() {
   let [poetryScaledX, poetryScaledY] = drawLine(poetryOffset, poetryScale, poetryPts, '#e51937');
   // Redraw green to put it over blue
   [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
-    //////////////////////////////////
-   // Yellow : Creatives Club Line //
-  //////////////////////////////////
+  // Yellow : Creatives Club Line
   ccOffset[0] = max(dcScaledX) + lineWidth;
   ccOffset[1] = (
     min(dcScaledY)
@@ -178,14 +179,12 @@ function draw() {
   )
   ccScale = [stationDist, stationDist];
   let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
-    //////////////
-   // Stations //
-  //////////////
+  // Stations
   stations = addStations()
   drawStations(stations);
   drawLegend();
-  checkLegendHover();
-  checkStationHover();
+  checkLegendSelect();
+  checkStationSelect();
   if (selection != null) {
     drawSelection(selection);
   }
@@ -250,24 +249,11 @@ function drawMainStation(x, y) {
 }
 
 function drawLegend() {
-  let nLines = lineColors.length;
-  let spacing = width / (2*nLines + 1);
   rectMode(CENTER);
   textSize(0.017 * width);
   textFont('Consolas');
   textAlign(CENTER, CENTER);
   noStroke();
-  for (let i = 0; i < nLines; i++) {
-    legendArr.push(
-      {
-        'x' : (2*i+1.5)*spacing,
-        'y' : height / 20,
-        'name' : lineNames[i],
-        'color' : lineColors[i],
-        'code' : lineCodes[i]
-      }
-    )
-  }
   for (let legend of legendArr) {
     let itemX = legend.x;
     let itemY = legend.y;
@@ -278,21 +264,29 @@ function drawLegend() {
   }
 }
 
-function checkStationHover() {
+function checkStationSelect(mode = 'hover') {
+  let selectRadius;
+  if (mode == 'hover') {
+    selectRadius = 2*lineWidth
+  } else if (mode == 'touch') {
+    selectRadius = 4*lineWidth
+  } else {
+    selectRadius = 0
+  }
   if (selection == null) {
     // Check for station hover
     for (let station of stations) {
       let stationX = station.pt[0];
       let stationY = station.pt[1];
       let mouseDist = dist(mouseX, mouseY, stationX, stationY);
-      if ((mouseDist < 2*lineWidth)) {
+      if ((mouseDist < selectRadius)) {
         selection = {
           'type' : 'station',
           'title' : station.title,
           'owner' : station.owner,
           'url' : station.url,
           'pt' : station.pt,
-          'mode' : 'hover',
+          'mode' : mode,
           'boxXMin' : undefined,
           'boxYMin' : undefined,
           'boxXMax' : undefined,
@@ -313,7 +307,7 @@ function checkStationHover() {
   }
 }
 
-function checkLegendHover() {
+function checkLegendSelect() {
   // Check for legend hover
   for (let leg of legendArr) {
     // Shift by 1/2*height (or width) to account for rectangle center
@@ -339,7 +333,8 @@ function checkLegendHover() {
         'boxYMax' : undefined
       }
       // If mouse is clicked while hovering, open the corresponding url
-      if (mouseIsPressed && touches.length == 0) {
+      // if (mouseIsPressed && touches.length == 0) {
+      if (mouseIsPressed) {
         console.log('Legend clicked')
         window.open('/smallweb-smallway/'+leg.code);
         // Needed to insure only one page is opened
@@ -444,27 +439,28 @@ function touchStarted() {
       }
     }
   } else if (selection === undefined || selection.mode != 'hover') {
-    for (let station of stations) {
-      let stationX = station.pt[0];
-      let stationY = station.pt[1];
-      let mouseDist = dist(mouseX, mouseY, stationX, stationY);
-      if ((mouseDist < 4*lineWidth)) {
-        selection = {
-          'title' : station.title,
-          'owner' : station.owner,
-          'url' : station.url,
-          'pt' : station.pt,
-          'mode' : 'touch'
-        }
-        drawSelection(selection)
-        drawInfoBox(selection)
-        isFound = true;
-        break;
-      }
-    }
-    if (!isFound) {
-      selection = undefined;
-    }
+    checkStationSelect('touch');
+    // for (let station of stations) {
+    //   let stationX = station.pt[0];
+    //   let stationY = station.pt[1];
+    //   let mouseDist = dist(mouseX, mouseY, stationX, stationY);
+    //   if ((mouseDist < 4*lineWidth)) {
+    //     selection = {
+    //       'title' : station.title,
+    //       'owner' : station.owner,
+    //       'url' : station.url,
+    //       'pt' : station.pt,
+    //       'mode' : 'touch'
+    //     }
+    //     drawSelection(selection)
+    //     drawInfoBox(selection)
+    //     isFound = true;
+    //     break;
+    //   }
+    // }
+    // if (!isFound) {
+    //   selection = undefined;
+    // }
   }
 }
 
