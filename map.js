@@ -1,6 +1,15 @@
 // @ts-check
 /// <reference path="./node_modules/@types/p5/global.d.ts" />
 let lineWidth;
+let lineColors = [
+  '#a1a3a1', '#0077c0', '#25b233', '#fad447', '#f7941d', '#e51937'];
+let lineNames = [
+  'Scifi', 'Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
+let lineCodes = [
+  'scifi', 'zines', 'doodlecrew', 'creativesclub', 'comics', 'poetry'];
+let legendArr = [];
+let legendWidth;
+let legendHeight;
 let stationDist;
 let stations = [];
 let dcWidth = 9;
@@ -87,6 +96,8 @@ function setup() {
   stationDist = height / 12;
   dcOffset = [width/7 , 2*height/5];
   lineWidth = width * 0.015
+  legendWidth = 10*lineWidth;
+  legendHeight = 2*lineWidth;
 }
 
 function draw() {
@@ -173,8 +184,9 @@ function draw() {
   stations = addStations()
   drawStations(stations);
   drawLegend();
+  checkLegendHover();
   checkStationHover();
-  if (selection != null) {
+  if (selection != null && selection.type == 'station') {
     drawInfoBox(selection);
   }
 }
@@ -238,10 +250,6 @@ function drawMainStation(x, y) {
 }
 
 function drawLegend() {
-  let lineColors = [
-    '#a1a3a1', '#0077c0', '#25b233', '#fad447', '#f7941d', '#e51937'];
-  let lineNames = [
-    'Scifi', 'Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
   let nLines = lineColors.length;
   let spacing = width / (2*nLines + 1);
   rectMode(CENTER);
@@ -249,36 +257,48 @@ function drawLegend() {
   textFont('Consolas');
   textAlign(CENTER, CENTER);
   noStroke();
-  let legendY = height / 20;
   for (let i = 0; i < nLines; i++) {
-    let itemX = (2*i+1.5)*spacing;
-    let itemY = legendY;
-    fill(lineColors[i]);
-    rect(itemX, itemY, 10*lineWidth, 2*lineWidth, 20);
+    legendArr.push(
+      {
+        'x' : (2*i+1.5)*spacing,
+        'y' : height / 20,
+        'name' : lineNames[i],
+        'color' : lineColors[i],
+        'code' : lineCodes[i]
+      }
+    )
+  }
+  for (let legend of legendArr) {
+    let itemX = legend.x;
+    let itemY = legend.y;
+    fill(legend.color);
+    rect(itemX, itemY, legendWidth, legendHeight, 20);
     fill(0);
-    text(lineNames[i], (2*i+1.5)*spacing, itemY)
+    text(legend.name, itemX, itemY)
   }
 }
 
 function checkStationHover() {
-  // for (let stationIdx = 0; stationIdx < stations.length; stationIdx++) {
+  // Check for station hover
   for (let station of stations) {
     let stationX = station.pt[0];
     let stationY = station.pt[1];
     let mouseDist = dist(mouseX, mouseY, stationX, stationY);
     if ((mouseDist < 2*lineWidth)) {
+      console.log('Station hover detected.')
       selection = {
+        'type' : 'station',
         'title' : station.title,
         'owner' : station.owner,
         'url' : station.url,
         'pt' : station.pt,
-        'type' : 'hover',
+        'mode' : 'hover',
         'boxXMin' : undefined,
         'boxYMin' : undefined,
         'boxXMax' : undefined,
         'boxYMax' : undefined,
       }
-      drawInfoBox(selection)
+      drawSelection(selection)
       // If mouse is clicked while hovering, open the corresponding url
       if (mouseIsPressed && touches.length == 0) {
         console.log('Station clicked')
@@ -293,6 +313,70 @@ function checkStationHover() {
   }
 }
 
+function checkLegendHover() {
+  // Check for legend hover
+  for (let leg of legendArr) {
+    // Shift by 1/2*height (or width) to account for rectangle center
+    if (
+      (
+        mouseX > leg.x - legendWidth/2
+        && mouseX <= leg.x + legendWidth/2)
+      && (
+        mouseY > leg.y -legendHeight/2
+        && mouseY <= leg.y + legendHeight/2
+      )
+    ) {
+      selection = {
+        'type' : 'legend',
+        'title' : undefined,
+        'owner' : undefined,
+        'url' : undefined,
+        'pt' : undefined,
+        'mode' : 'hover',
+        'boxXMin' : leg.x,
+        'boxYMin' : leg.y,
+        'boxXMax' : undefined,
+        'boxYMax' : undefined
+      }
+      drawSelection(selection);
+      // If mouse is clicked while hovering, open the corresponding url
+      if (mouseIsPressed && touches.length == 0) {
+        console.log('Legend clicked')
+        window.open('/smallweb-smallway/'+leg.code);
+        // Needed to insure only one page is opened
+        mouseIsPressed = false;
+      }
+      break;
+    } else {
+      selection = undefined;
+    }
+  }
+}
+
+function drawSelection(selection) {
+  if (selection.type == 'station') {
+    let x = selection.pt[0]
+    let y = selection.pt[1]
+    strokeWeight(lineWidth / 2);
+    stroke(255);
+    fill(0, 0);
+    circle(x, y, lineWidth * 2.5);
+    drawInfoBox(selection);
+  } else if (selection.type == 'legend') {
+    rectMode(CENTER)
+    strokeWeight(lineWidth / 2);
+    stroke(255);
+    noFill();
+    rect(
+      selection.boxXMin-lineWidth/16,
+      selection.boxYMin-lineWidth/16,
+      legendWidth+lineWidth/4,
+      legendHeight+lineWidth/2,
+      20
+    );
+  }
+}
+
 function drawInfoBox(selection) {
   // let selectedStation = selectedLine.getStationBytitle(stationtitle)
   // let [x, y] = selectedStation.location
@@ -304,9 +388,6 @@ function drawInfoBox(selection) {
   let owner = selection.owner
   let url = selection.url
   strokeWeight(lineWidth / 2);
-  stroke(255);
-  fill(0, 0);
-  circle(x, y, lineWidth * 2.5);
   let boxW = 28 * lineWidth;
   let boxH = 5 * lineWidth;
   let boxX;
@@ -363,7 +444,7 @@ function touchStarted() {
         break;
       }
     }
-  } else if (selection === undefined || selection.type != 'hover') {
+  } else if (selection === undefined || selection.mode != 'hover') {
     for (let station of stations) {
       let stationX = station.pt[0];
       let stationY = station.pt[1];
@@ -374,8 +455,9 @@ function touchStarted() {
           'owner' : station.owner,
           'url' : station.url,
           'pt' : station.pt,
-          'type' : 'touch'
+          'mode' : 'touch'
         }
+        drawSelection(selection)
         drawInfoBox(selection)
         isFound = true;
         break;
