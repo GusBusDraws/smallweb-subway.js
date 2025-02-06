@@ -336,7 +336,7 @@ function checkLegendSelect() {
       // if (mouseIsPressed && touches.length == 0) {
       if (mouseIsPressed) {
         console.log('Legend clicked')
-        window.open('/smallweb-smallway/'+leg.code);
+        window.open('/smallweb-subway/'+leg.code);
         // Needed to insure only one page is opened
         mouseIsPressed = false;
       }
