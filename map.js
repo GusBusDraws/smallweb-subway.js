@@ -184,6 +184,9 @@ function draw() {
   drawStations(stations);
   drawLegend();
   checkLegendSelect();
+  if (selection != null) {
+    drawSelection(selection);
+  }
   checkStationSelect();
   if (selection != null) {
     drawSelection(selection);
