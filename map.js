@@ -575,6 +575,11 @@ function addStations() {
     ),
     populateObj(
       DATA_comics,
+      "Bruno and Friends",
+      getScaledPt([0, 1.5], comicsOffset, comicsScale, [0, -lineWidth/4])
+    ),
+    populateObj(
+      DATA_comics,
       "Long Gone Legend",
       getScaledPt([0.5, 0.5], comicsOffset, comicsScale, [0, 0])
     ),

@@ -64,6 +64,8 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2025-02-07
+- Add Bruno and Friends to Comics Line
 ### 2025-02-06
 - Allow widget to render even when site not yet in webring data
 - Add legend selection for hover/mouse
