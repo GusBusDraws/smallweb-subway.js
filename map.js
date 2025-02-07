@@ -184,9 +184,6 @@ function draw() {
   drawStations(stations);
   drawLegend();
   checkLegendSelect();
-  if (selection != null) {
-    drawSelection(selection);
-  }
   checkStationSelect();
   if (selection != null) {
     drawSelection(selection);
@@ -294,6 +291,7 @@ function checkStationSelect(mode = 'hover') {
           'boxYMin' : undefined,
           'boxXMax' : undefined,
           'boxYMax' : undefined,
+          'code' : undefined
         }
         // If mouse is clicked while hovering, open the corresponding url
         if (mouseIsPressed && touches.length == 0) {
@@ -328,7 +326,8 @@ function checkLegendSelect() {
         'boxXMin' : leg.x,
         'boxYMin' : leg.y,
         'boxXMax' : undefined,
-        'boxYMax' : undefined
+        'boxYMax' : undefined,
+        'code' : leg.code
       }
       // If mouse is clicked while hovering, open the corresponding url
       if (mouseIsPressed && touches.length == 0) {
@@ -430,7 +429,7 @@ function touchStarted() {
       if (
         (mouseX > leg.x - legendWidth/2 && mouseX <= leg.x + legendWidth/2)
         && (mouseY > leg.y -legendHeight/2 && mouseY <= leg.y + legendHeight/2)
-        && (selection.code == leg.code)
+        && (selection.code != null && selection.code == leg.code)
       ) {
         console.log('Legend clicked')
         window.open('/smallweb-subway/'+leg.code);
@@ -454,29 +453,6 @@ function touchStarted() {
         break;
       }
     }
-  } else if (selection === undefined || selection.mode != 'hover') {
-    checkStationSelect('touch');
-    // for (let station of stations) {
-    //   let stationX = station.pt[0];
-    //   let stationY = station.pt[1];
-    //   let mouseDist = dist(mouseX, mouseY, stationX, stationY);
-    //   if ((mouseDist < 4*lineWidth)) {
-    //     selection = {
-    //       'title' : station.title,
-    //       'owner' : station.owner,
-    //       'url' : station.url,
-    //       'pt' : station.pt,
-    //       'mode' : 'touch'
-    //     }
-    //     drawSelection(selection)
-    //     drawInfoBox(selection)
-    //     isFound = true;
-    //     break;
-    //   }
-    // }
-    // if (!isFound) {
-    //   selection = undefined;
-    // }
   }
 }
 
