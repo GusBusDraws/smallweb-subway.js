@@ -312,13 +312,8 @@ function checkLegendSelect() {
   for (let leg of legendArr) {
     // Shift by 1/2*height (or width) to account for rectangle center
     if (
-      (
-        mouseX > leg.x - legendWidth/2
-        && mouseX <= leg.x + legendWidth/2)
-      && (
-        mouseY > leg.y -legendHeight/2
-        && mouseY <= leg.y + legendHeight/2
-      )
+      (mouseX > leg.x - legendWidth/2 && mouseX <= leg.x + legendWidth/2)
+      && (mouseY > leg.y -legendHeight/2 && mouseY <= leg.y + legendHeight/2)
     ) {
       selection = {
         'type' : 'legend',
@@ -333,8 +328,8 @@ function checkLegendSelect() {
         'boxYMax' : undefined
       }
       // If mouse is clicked while hovering, open the corresponding url
-      // if (mouseIsPressed && touches.length == 0) {
-      if (mouseIsPressed) {
+      if (mouseIsPressed && touches.length == 0) {
+      // if (mouseIsPressed) {
         console.log('Legend clicked')
         window.open('/smallweb-subway/'+leg.code);
         // Needed to insure only one page is opened
@@ -424,7 +419,24 @@ function drawInfoBox(selection) {
 
 function touchStarted() {
   let isFound = false;
+  // Check if legend or station highlighted by touch
   if (selection != undefined && touches.length > 0) {
+    // If legend highlighted by touch, follow link to index page
+    for (let leg of legendArr) {
+      // Shift by 1/2*height (or width) to account for rectangle center
+      if (
+        (mouseX > leg.x - legendWidth/2 && mouseX <= leg.x + legendWidth/2)
+        && (mouseY > leg.y -legendHeight/2 && mouseY <= leg.y + legendHeight/2)
+      ) {
+        console.log('Legend clicked')
+        window.open('/smallweb-subway/'+leg.code);
+        isFound = true;
+        // Needed to insure only one page is opened
+        mouseIsPressed = false;
+        break;
+      }
+    }
+    // If station highlighted by touch, follow link to webring site
     for (let station of stations) {
       if (
         (mouseX > selection.boxXMin && mouseX < selection.boxXMax)
