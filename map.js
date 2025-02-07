@@ -6,7 +6,7 @@ let lineColors = [
 let lineNames = [
   'Scifi', 'Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
 let lineCodes = [
-  'scifi', 'zines', 'doodlecrew', 'creativesclub', 'comics', 'poetry'];
+  'scifi', 'zines', 'doodle-crew', 'creatives-club', 'comics', 'poetry'];
 let legendArr = [];
 let legendWidth;
 let legendHeight;
