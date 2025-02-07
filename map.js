@@ -430,6 +430,7 @@ function touchStarted() {
       if (
         (mouseX > leg.x - legendWidth/2 && mouseX <= leg.x + legendWidth/2)
         && (mouseY > leg.y -legendHeight/2 && mouseY <= leg.y + legendHeight/2)
+        && (selection.code == leg.code)
       ) {
         console.log('Legend clicked')
         window.open('/smallweb-subway/'+leg.code);
