@@ -25,6 +25,11 @@ let DATA_comics = [
     "owner" : "Tofutush"
   },
   {
+    "title" : "Bruno and Friends",
+    "url"   : "brunoandfriends.nekoweb.org/",
+    "owner" : "Yoylecake420"
+  },
+  {
     "title" : "Long Gone Legend",
     "url"   : "tertiaryapocalypse.neocities.org/lgl/",
     "owner" : "hal"
