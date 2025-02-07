@@ -6,7 +6,7 @@ let lineColors = [
 let lineNames = [
   'Scifi', 'Zines', 'Doodle Crew', 'Creatives Club', 'Comics', 'Poetry'];
 let lineCodes = [
-  'scifi', 'zines', 'doodlecrew', 'creativesclub', 'comics', 'poetry'];
+  'scifi', 'zines', 'doodle-crew', 'creatives-club', 'comics', 'poetry'];
 let legendArr = [];
 let legendWidth;
 let legendHeight;
@@ -184,6 +184,9 @@ function draw() {
   drawStations(stations);
   drawLegend();
   checkLegendSelect();
+  if (selection != null) {
+    drawSelection(selection);
+  }
   checkStationSelect();
   if (selection != null) {
     drawSelection(selection);
