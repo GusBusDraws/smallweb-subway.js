@@ -20,6 +20,11 @@ let DATA_comics = [
     "owner" : "candycanearter07"
   },
   {
+    "title" : "Redux",
+    "url"   : "thel3tterm.com/redux/about",
+    "owner" : "TheL3tterM"
+  },
+  {
     "title" : "The Iron Ragdoll",
     "url"   : "tofutush.github.io/The-Iron-Ragdoll/about/",
     "owner" : "Tofutush"

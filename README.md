@@ -64,6 +64,9 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2025-02-08
+- Add Redux to Comics Line (still need to add to map)
+- Update Hollis's site to 2025 art page
 ### 2025-02-07
 - Add Bruno and Friends to Comics Line
 ### 2025-02-06
