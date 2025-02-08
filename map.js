@@ -34,13 +34,13 @@ let ccPts = [
 ]
 let ccOffset = [];
 let ccScale;
-let comicsWidth = 13;
+let comicsWidth = 15;
 let comicsHeight = 7;
 let comicsPts = [
   [1, 0], [comicsWidth - 2, 0],  // Top
   [comicsWidth - 1, 1], [comicsWidth - 1, 2],  // Right (outside)
-  [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 2.85],  // Right (inside)
-  [comicsWidth - 3.85, comicsHeight - 1], [comicsWidth - 6.65, comicsHeight - 1],  // Bottom
+  [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 2.84],  // Right (inside)
+  [comicsWidth - 3.84, comicsHeight - 1], [comicsWidth - 6.65, comicsHeight - 1],  // Bottom
   // [comicsWidth - 9, comicsHeight - 2], [comicsWidth - 9, comicsHeight - 3], // Left (inside vertical)
   [comicsWidth - 9.65, comicsHeight - 4], [1, comicsHeight - 4], // Left (inside horizontal)
   [0, 2-0.1], [0, 1], // Left
@@ -133,7 +133,7 @@ function draw() {
   // Orange : Comics Line
   comicsOffset[0] = (
     max(dcScaledX)
-    - 8 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    - 10 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
     // - lineWidth
   )
   comicsOffset[1] = (
@@ -566,22 +566,27 @@ function addStations() {
     populateObj(
       DATA_comics,
       "The Fuzzy Slug's Webcomic Hub",
-      getScaledPt([4.5, comicsHeight-3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/4])
+      getScaledPt([2, 3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/16])
     ),
     populateObj(
       DATA_comics,
       "The Iron Ragdoll",
-      getScaledPt([0.5, 2.5], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/4])
+      getScaledPt([0.5, 2.5], comicsOffset, comicsScale, [-lineWidth/16, -lineWidth/4])
     ),
     populateObj(
       DATA_comics,
-      "Bruno and Friends",
+      "Redux",
       getScaledPt([0, 1.5], comicsOffset, comicsScale, [0, -lineWidth/4])
     ),
     populateObj(
       DATA_comics,
       "Long Gone Legend",
       getScaledPt([0.5, 0.5], comicsOffset, comicsScale, [0, 0])
+    ),
+    populateObj(
+      DATA_comics,
+      "Bruno and Friends",
+      getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
     ),
     populateObj(
       DATA_comics,
