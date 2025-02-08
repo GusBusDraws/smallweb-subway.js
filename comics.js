@@ -20,24 +20,24 @@ let DATA_comics = [
     "owner" : "candycanearter07"
   },
   {
-    "title" : "Redux",
-    "url"   : "thel3tterm.com/redux/about",
-    "owner" : "TheL3tterM"
-  },
-  {
     "title" : "The Iron Ragdoll",
     "url"   : "tofutush.github.io/The-Iron-Ragdoll/about/",
     "owner" : "Tofutush"
   },
   {
-    "title" : "Bruno and Friends",
-    "url"   : "brunoandfriends.nekoweb.org/",
-    "owner" : "Yoylecake420"
+    "title" : "Redux",
+    "url"   : "thel3tterm.com/redux/about",
+    "owner" : "TheL3tterM"
   },
   {
     "title" : "Long Gone Legend",
     "url"   : "tertiaryapocalypse.neocities.org/lgl/",
     "owner" : "hal"
+  },
+  {
+    "title" : "Bruno and Friends",
+    "url"   : "brunoandfriends.nekoweb.org/",
+    "owner" : "Yoylecake420"
   },
   {
     "title" : "White Noise",
