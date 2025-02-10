@@ -5,14 +5,19 @@ let DATA_scifi = [
     "owner" : "Gus Becker"
   },
   {
-    "title" : "Clockwork's Archive of Tomorrow",
-    "url"   : "clockwooork.github.io/future-stop.html",
-    "owner" : "Clockwork"
-  },
-  {
     "title" : "Gus's Scifi Gallery",
     "url"   : "gusbus.space/scifi/",
     "owner" : "Gus Becker"
+  },
+  {
+    "title" : "Codex Archonic",
+    "url"   : "lerariemann.nekoweb.org/index.html",
+    "owner" : "Lera Riemann"
+  },
+  {
+    "title" : "Clockwork's Archive of Tomorrow",
+    "url"   : "clockwooork.github.io/future-stop.html",
+    "owner" : "Clockwork"
   },
   {
     "title" : "Varve's writing bits & pieces",
