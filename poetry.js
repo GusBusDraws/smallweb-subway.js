@@ -21,7 +21,7 @@ let DATA_poetry = [
   },
   {
     "title" : "flower in binary",
-    "url"   : "flowerinbinary.neocities.org/home/poetry",
+    "url"   : "flowerinbinary.neocities.org/poetry",
     "owner" : "tim flower"
   },
   {
