@@ -484,7 +484,9 @@ function addStations() {
       'owner' : 'Gus Becker',
       'pt' : getScaledPt([dcWidth-1, 3], dcOffset, dcScale, [0, 0])
     },
-    // Silver : Scifi Line
+    /////////////////////////
+    // Silver : Scifi Line //
+    /////////////////////////
     populateObj(
       DATA_scifi,
       "Gus's Scifi Gallery",
@@ -493,6 +495,11 @@ function addStations() {
     populateObj(
       DATA_scifi,
       "Clockwork's Archive of Tomorrow",
+      getScaledPt([sfWidth-1.5, 0.5], sfOffset, sfScale, [0, 0])
+    ),
+    populateObj(
+      DATA_scifi,
+      "Codex Archonic",
       getScaledPt([0.5, 0.5], sfOffset, sfScale, [0, 0])
     ),
     populateObj(
@@ -526,7 +533,9 @@ function addStations() {
       "Ether",
       getScaledPt([0.5, 0.5], zinesOffset, zinesScale, [0, 0])
     ),
-    // Yellow : Creatives Club Line
+    //////////////////////////////////
+    // Yellow : Creatives Club Line //
+    //////////////////////////////////
     populateObj(
       DATA_creativesclub,
       "DoodleBot",
@@ -562,7 +571,9 @@ function addStations() {
       "michi.foo",
       getScaledPt([2, ccHeight-1], ccOffset, ccScale, [-lineWidth/2, 0])
     ),
-    // Orange : Comics Line
+    //////////////////////////
+    // Orange : Comics Line //
+    //////////////////////////
     populateObj(
       DATA_comics,
       "The Fuzzy Slug's Webcomic Hub",
@@ -633,7 +644,9 @@ function addStations() {
       "Friction Comic",
       getScaledPt([comicsWidth-3, 5], comicsOffset, comicsScale, [lineWidth/4, lineWidth])
     ),
-    // Green : Doodle Crew Line
+    //////////////////////////////
+    // Green : Doodle Crew Line //
+    //////////////////////////////
     populateObj(
       DATA_doodlecrew,
       "feuer-in-soho.art",

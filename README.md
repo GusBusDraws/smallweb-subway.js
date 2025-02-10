@@ -64,6 +64,8 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2025-02-10
+- Add Lera to scifi line
 ### 2025-02-08
 - Add Redux to Comics Line and map
 - Update Hollis's site to 2025 art page
