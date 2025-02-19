@@ -64,6 +64,8 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2025-02-19
+- Add Honora to Doodle Crew line
 ### 2025-02-10
 - Add Lera to scifi line
 ### 2025-02-08

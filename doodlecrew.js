@@ -15,14 +15,19 @@ let DATA_doodlecrew = [
     "owner" : "uuupah"
   },
   {
-    "title" : "Sunday Comics",
-    "url"   : "feuer-in-soho.art/Portfolio/Sunday%20Comics/sunday_current.html",
-    "owner" : "Soho"
+    "title" : "Honora's web garden",
+    "url"   : "honora.neocities.org/",
+    "owner" : "Honora"
   },
   {
     "title" : "slime pond comics",
     "url"   : "abslimeware.neocities.org/comic/",
     "owner" : "candycanearter07"
+  },
+  {
+    "title" : "Sunday Comics",
+    "url"   : "feuer-in-soho.art/Portfolio/Sunday%20Comics/sunday_current.html",
+    "owner" : "Soho"
   },
   {
     "title" : "Gus's Scifi Gallery",
