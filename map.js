@@ -650,7 +650,12 @@ function addStations() {
     populateObj(
       DATA_doodlecrew,
       "feuer-in-soho.art",
-      getScaledPt([dcWidth-5, dcHeight-1], dcOffset, dcScale, [0, 0])
+      getScaledPt([dcWidth-4, dcHeight-1], dcOffset, dcScale, [0, 0])
+    ),
+    populateObj(
+      DATA_doodlecrew,
+      "my art 2025",
+      getScaledPt([dcWidth-6, dcHeight-1], dcOffset, dcScale, [0, 0])
     ),
     populateObj(
       DATA_doodlecrew,
@@ -659,18 +664,13 @@ function addStations() {
     ),
     populateObj(
       DATA_doodlecrew,
-      "my art 2025",
+      "varve's art gallery",
       getScaledPt([0, dcHeight-4.5], dcOffset, dcScale, [0, 0])
     ),
     populateObj(
       DATA_doodlecrew,
-      "Sunday Comics",
-      getScaledPt([3, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
-    ),
-    populateObj(
-      DATA_doodlecrew,
       "slime pond comics",
-      getScaledPt([1.5, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
+      getScaledPt([2.25, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
     ),
     // Red : Poetry Line
     populateObj(

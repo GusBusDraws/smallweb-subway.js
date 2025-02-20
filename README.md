@@ -64,6 +64,10 @@ npm install @types/p5
 ```
 
 ## Change Log
+### 2025-02-20
+- Update Iron Ragdoll link on Comics line
+- Add varve to Doodle Crew line
+- Remove Soho from Comics line
 ### 2025-02-19
 - Add Honora to Doodle Crew line
 ### 2025-02-10
