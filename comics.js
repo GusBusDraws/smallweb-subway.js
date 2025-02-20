@@ -5,23 +5,18 @@ let DATA_comics = [
     "owner" : "Gus Becker"
   },
   {
-    "title" : "The Fuzzy Slug's Webcomic Hub",
-    "url"   : "thefuzzyslug.neocities.org/",
-    "owner" : "thefuzzyslug"
-  },
-  {
-    "title" : "Sunday Comics",
-    "url"   : "feuer-in-soho.art/Portfolio/Sunday%20Comics/sunday_current.html",
-    "owner" : "Soho"
-  },
-  {
     "title" : "slime pond comics",
     "url"   : "abslimeware.neocities.org/comic/",
     "owner" : "candycanearter07"
   },
   {
+    "title" : "The Fuzzy Slug's Webcomic Hub",
+    "url"   : "thefuzzyslug.neocities.org/",
+    "owner" : "thefuzzyslug"
+  },
+  {
     "title" : "The Iron Ragdoll",
-    "url"   : "tofutush.github.io/The-Iron-Ragdoll/about/",
+    "url"   : "tofutush.github.io/The-Iron-Ragdoll/misc/links/",
     "owner" : "Tofutush"
   },
   {
