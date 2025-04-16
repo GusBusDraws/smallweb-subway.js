@@ -26,8 +26,8 @@ let DATA_creativesclub = [
   },
   {
     "title" : "UR LOCAL CYBORG",
-    "url"   : "urlocalcyb.org/",
-    "owner" : "cyborgforty"
+    "url"   : "seenby.urlocalcyb.org/",
+    "owner" : "Caroline"
   },
   {
     "title" : "marcinek.tech",
