@@ -79,6 +79,7 @@ the following information:
 ## Change Log
 ### 2025-08-27
 - Add greycloak and teeth.dog to Poetry Line
+- Add the Stardustverse to Scifi Line
 - Widen Poetry line, make Comics line extend to lower left, and shrink DC line
 ### 2025-02-20
 - Update Iron Ragdoll link on Comics line
