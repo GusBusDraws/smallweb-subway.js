@@ -12,7 +12,7 @@ let legendWidth;
 let legendHeight;
 let stationDist;
 let stations = [];
-let dcWidth = 9;
+let dcWidth = 8;
 let dcHeight = 7;
 let dcPts = [
   [1, 0], [dcWidth - 2, 0], // Top
@@ -40,15 +40,13 @@ let comicsPts = [
   [1, 0], [comicsWidth - 2, 0],  // Top
   [comicsWidth - 1, 1], [comicsWidth - 1, 2],  // Right (outside)
   [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 2.84],  // Right (inside)
-  [comicsWidth - 3.84, comicsHeight - 1], [comicsWidth - 6.65, comicsHeight - 1],  // Bottom
-  // [comicsWidth - 9, comicsHeight - 2], [comicsWidth - 9, comicsHeight - 3], // Left (inside vertical)
-  [comicsWidth - 9.65, comicsHeight - 4], [1, comicsHeight - 4], // Left (inside horizontal)
-  [0, 2-0.1], [0, 1], // Left
+  [comicsWidth - 3.84, comicsHeight - 1], [1, comicsHeight - 1],  // Bottom
+  [0, comicsHeight - 2], [0, 1], // Left
   [1, 0]
 ]
 let comicsOffset = [];
 let comicsScale;
-let poetryWidth = 7;
+let poetryWidth = 10;
 let poetryHeight = 4;
 let poetryPts = [
   [1, 0], [poetryWidth-2, 0],
@@ -70,7 +68,7 @@ let zinesPts = [
 ]
 let zinesOffset = [];
 let zinesScale;
-let sfWidth = 7;
+let sfWidth = 8;
 let sfHeight = 6;
 let sfPts = [
   [1, 0], [sfWidth - 2, 0], // Top side
@@ -94,7 +92,8 @@ function setup() {
   canvas.parent('map')
   // stationDist = height / 8;
   stationDist = height / 12;
-  dcOffset = [width/7 , 2*height/5];
+  // Set the dcOffset based on the width & height of the canvas
+  dcOffset = [2  * width/8 , 2*height/5];
   lineWidth = width * 0.015
   legendWidth = 10*lineWidth;
   legendHeight = 2*lineWidth;
@@ -121,7 +120,7 @@ function draw() {
   // Silver : Scifi Line
   sfOffset[0] = (
     max(dcScaledX)
-    - 3 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    - 4 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
     + lineWidth
   );
   sfOffset[1] = (
@@ -159,7 +158,7 @@ function draw() {
   // Red : Poetry Line
   poetryOffset[0] = (
     max(dcScaledX)
-    - 6 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
+    - 9 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
     - lineWidth
   );
   poetryOffset[1] = (
