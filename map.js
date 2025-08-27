@@ -508,8 +508,13 @@ function addStations() {
     ),
     populateObj(
       DATA_scifi,
+      "The Stardustverse",
+      getScaledPt([3.5, 0], sfOffset, sfScale, [0, 0])
+    ),
+    populateObj(
+      DATA_scifi,
       "Stories",
-      getScaledPt([4, 0], sfOffset, sfScale, [0, 0])
+      getScaledPt([5, 0], sfOffset, sfScale, [0, 0])
     ),
     // Blue : Zines Line
     populateObj(
