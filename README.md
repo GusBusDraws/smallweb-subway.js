@@ -63,7 +63,24 @@ Then, download & install the p5 package:
 npm install @types/p5
 ```
 
+### Important info about the map
+For anyone interested in adding their own station to the map, keep in mind
+the following information:
+
+- The lines are drawn in coordinates relative to `(0, 0)` (top left corner)
+  of the Green line. This to simplifies
+  the process of adding stations to the lines, but makes it tricky to resize
+  the Green line. In the future, this should be changed to Central Station.
+- The x and y offset for each line are defined at the beginning of
+  the `draw()` loop
+- The offset for the Green line (`dcOffset`) is determined by the size of
+  the canvas in the `setup()` loop
+
 ## Change Log
+### 2025-08-27
+- Add greycloak and teeth.dog to Poetry Line
+- Add the Stardustverse to Scifi Line
+- Widen Poetry line, make Comics line extend to lower left, and shrink DC line
 ### 2025-02-20
 - Update Iron Ragdoll link on Comics line
 - Add varve to Doodle Crew line

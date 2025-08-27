@@ -5,14 +5,14 @@ let DATA_comics = [
     "owner" : "Gus Becker"
   },
   {
-    "title" : "slime pond comics",
-    "url"   : "abslimeware.neocities.org/comic/",
-    "owner" : "candycanearter07"
-  },
-  {
     "title" : "The Fuzzy Slug's Webcomic Hub",
     "url"   : "thefuzzyslug.neocities.org/",
     "owner" : "thefuzzyslug"
+  },
+  {
+    "title" : "slime pond comics",
+    "url"   : "abslimeware.neocities.org/comic/",
+    "owner" : "candycanearter07"
   },
   {
     "title" : "The Iron Ragdoll",

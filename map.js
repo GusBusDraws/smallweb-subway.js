@@ -12,7 +12,7 @@ let legendWidth;
 let legendHeight;
 let stationDist;
 let stations = [];
-let dcWidth = 9;
+let dcWidth = 8;
 let dcHeight = 7;
 let dcPts = [
   [1, 0], [dcWidth - 2, 0], // Top
@@ -40,21 +40,20 @@ let comicsPts = [
   [1, 0], [comicsWidth - 2, 0],  // Top
   [comicsWidth - 1, 1], [comicsWidth - 1, 2],  // Right (outside)
   [comicsWidth - 2, comicsHeight - 4], [comicsWidth - 2, comicsHeight - 2.84],  // Right (inside)
-  [comicsWidth - 3.84, comicsHeight - 1], [comicsWidth - 6.65, comicsHeight - 1],  // Bottom
-  // [comicsWidth - 9, comicsHeight - 2], [comicsWidth - 9, comicsHeight - 3], // Left (inside vertical)
-  [comicsWidth - 9.65, comicsHeight - 4], [1, comicsHeight - 4], // Left (inside horizontal)
-  [0, 2-0.1], [0, 1], // Left
+  [comicsWidth - 3.84, comicsHeight - 1], [1, comicsHeight - 1],  // Bottom
+  [0, comicsHeight - 2], [0, 1], // Left
   [1, 0]
 ]
 let comicsOffset = [];
 let comicsScale;
-let poetryWidth = 7;
-let poetryHeight = 4;
+let poetryWidth = 10;
+let poetryHeight = 5;
 let poetryPts = [
-  [1, 0], [poetryWidth-2, 0],
-  [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],
-  [poetryWidth-2+0.15, poetryHeight-1], [1, poetryHeight-1],
-  [1, poetryHeight-1], [0, poetryHeight-2],
+  [1, 0], [poetryWidth-2, 0], // Top
+  [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],  // Right
+  [poetryWidth-2+0.15, poetryHeight-1], [4, poetryHeight-1], // Bottom (right)
+  [3, poetryHeight], [1, poetryHeight], // Bottom (left)
+  [1, poetryHeight], [0, poetryHeight-1], // Left
   [0, 1], [1, 0]
 ]
 let poetryOffset = [];
@@ -70,7 +69,7 @@ let zinesPts = [
 ]
 let zinesOffset = [];
 let zinesScale;
-let sfWidth = 7;
+let sfWidth = 8;
 let sfHeight = 6;
 let sfPts = [
   [1, 0], [sfWidth - 2, 0], // Top side
@@ -94,7 +93,8 @@ function setup() {
   canvas.parent('map')
   // stationDist = height / 8;
   stationDist = height / 12;
-  dcOffset = [width/7 , 2*height/5];
+  // Set the dcOffset based on the width & height of the canvas
+  dcOffset = [2  * width/8 , 2*height/5];
   lineWidth = width * 0.015
   legendWidth = 10*lineWidth;
   legendHeight = 2*lineWidth;
@@ -121,7 +121,7 @@ function draw() {
   // Silver : Scifi Line
   sfOffset[0] = (
     max(dcScaledX)
-    - 3 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
+    - 4 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
     + lineWidth
   );
   sfOffset[1] = (
@@ -159,12 +159,12 @@ function draw() {
   // Red : Poetry Line
   poetryOffset[0] = (
     max(dcScaledX)
-    - 6 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
+    - 9 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
     - lineWidth
   );
   poetryOffset[1] = (
     min(dcScaledY)
-    + 2 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
+    + 1 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
     - lineWidth
   );
   poetryScale = [stationDist, stationDist];
@@ -509,8 +509,13 @@ function addStations() {
     ),
     populateObj(
       DATA_scifi,
+      "The Stardustverse",
+      getScaledPt([3.5, 0], sfOffset, sfScale, [0, 0])
+    ),
+    populateObj(
+      DATA_scifi,
       "Stories",
-      getScaledPt([4, 0], sfOffset, sfScale, [0, 0])
+      getScaledPt([5, 0], sfOffset, sfScale, [0, 0])
     ),
     // Blue : Zines Line
     populateObj(
@@ -577,22 +582,27 @@ function addStations() {
     populateObj(
       DATA_comics,
       "The Fuzzy Slug's Webcomic Hub",
-      getScaledPt([2, 3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/16])
+      getScaledPt([6, comicsHeight-1], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/16])
     ),
     populateObj(
       DATA_comics,
       "The Iron Ragdoll",
-      getScaledPt([0.5, 2.5], comicsOffset, comicsScale, [-lineWidth/16, -lineWidth/4])
+      getScaledPt([4.5, comicsHeight-1], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/16])
+    ),
+    populateObj(
+      DATA_comics,
+      "slime pond comics",
+      getScaledPt([3, comicsHeight-1], comicsOffset, comicsScale, [0, -lineWidth/16])
     ),
     populateObj(
       DATA_comics,
       "Redux",
-      getScaledPt([0, 1.5], comicsOffset, comicsScale, [0, -lineWidth/4])
+      getScaledPt([0, comicsHeight-3], comicsOffset, comicsScale, [0, -lineWidth/4])
     ),
     populateObj(
       DATA_comics,
       "Long Gone Legend",
-      getScaledPt([0.5, 0.5], comicsOffset, comicsScale, [0, 0])
+      getScaledPt([0, 2], comicsOffset, comicsScale, [0, 0])
     ),
     populateObj(
       DATA_comics,
@@ -660,48 +670,57 @@ function addStations() {
     populateObj(
       DATA_doodlecrew,
       "Honora's web garden",
-      getScaledPt([1, dcHeight-2], dcOffset, dcScale, [0, 0])
+      getScaledPt([0, dcHeight-3], dcOffset, dcScale, [0, 0])
     ),
     populateObj(
       DATA_doodlecrew,
       "varve's art gallery",
-      getScaledPt([0, dcHeight-4.5], dcOffset, dcScale, [0, 0])
+      getScaledPt([0.5, 0.5], dcOffset, dcScale, [0, 0])
     ),
-    populateObj(
-      DATA_doodlecrew,
-      "slime pond comics",
-      getScaledPt([2.25, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
-    ),
-    // Red : Poetry Line
+    // slime pond comics (Orange Line)
+    // Gus's Scifi Gallery (Silver Line)
+    ///////////////////////
+    // Red : Poetry Line //
+    ///////////////////////
     populateObj(
       DATA_poetry,
       "Poems",
-      getScaledPt([3.5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([poetryWidth-3.5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "poems",
-      getScaledPt([2, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([poetryWidth-5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "poetry!",
-      getScaledPt([0.5, poetryHeight-1.5], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([2, poetryHeight], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "flower in binary",
-      getScaledPt([0, poetryHeight-2.5], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([0.5, poetryHeight-0.5], poetryOffset, poetryScale, [0, 0])
+    ),
+    populateObj(
+      DATA_poetry,
+      "greycloak's website",
+      getScaledPt([0, poetryHeight-2], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "delovely's poetry",
-      getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([1, 0], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "manyface world",
-      getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([4, 0], poetryOffset, poetryScale, [0, 0])
+    ),
+    populateObj(
+      DATA_poetry,
+      "teeth.dog",
+      getScaledPt([poetryWidth-3.5, 0], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
