@@ -581,22 +581,27 @@ function addStations() {
     populateObj(
       DATA_comics,
       "The Fuzzy Slug's Webcomic Hub",
-      getScaledPt([2, 3], comicsOffset, comicsScale, [-lineWidth/4, lineWidth/16])
+      getScaledPt([6, comicsHeight-1], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/16])
     ),
     populateObj(
       DATA_comics,
       "The Iron Ragdoll",
-      getScaledPt([0.5, 2.5], comicsOffset, comicsScale, [-lineWidth/16, -lineWidth/4])
+      getScaledPt([4.5, comicsHeight-1], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/16])
+    ),
+    populateObj(
+      DATA_comics,
+      "slime pond comics",
+      getScaledPt([3, comicsHeight-1], comicsOffset, comicsScale, [0, -lineWidth/16])
     ),
     populateObj(
       DATA_comics,
       "Redux",
-      getScaledPt([0, 1.5], comicsOffset, comicsScale, [0, -lineWidth/4])
+      getScaledPt([0, comicsHeight-3], comicsOffset, comicsScale, [0, -lineWidth/4])
     ),
     populateObj(
       DATA_comics,
       "Long Gone Legend",
-      getScaledPt([0.5, 0.5], comicsOffset, comicsScale, [0, 0])
+      getScaledPt([0, 2], comicsOffset, comicsScale, [0, 0])
     ),
     populateObj(
       DATA_comics,
@@ -664,33 +669,32 @@ function addStations() {
     populateObj(
       DATA_doodlecrew,
       "Honora's web garden",
-      getScaledPt([1, dcHeight-2], dcOffset, dcScale, [0, 0])
+      getScaledPt([0, dcHeight-3], dcOffset, dcScale, [0, 0])
     ),
     populateObj(
       DATA_doodlecrew,
       "varve's art gallery",
-      getScaledPt([0, dcHeight-4.5], dcOffset, dcScale, [0, 0])
+      getScaledPt([0.5, 0.5], dcOffset, dcScale, [0, 0])
     ),
-    populateObj(
-      DATA_doodlecrew,
-      "slime pond comics",
-      getScaledPt([2.25, 0], dcOffset, dcScale, [0, -1/2*lineWidth])
-    ),
-    // Red : Poetry Line
+    // slime pond comics (Orange Line)
+    // Gus's Scifi Gallery (Silver Line)
+    ///////////////////////
+    // Red : Poetry Line //
+    ///////////////////////
     populateObj(
       DATA_poetry,
       "Poems",
-      getScaledPt([3.5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([poetryWidth-4, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "poems",
-      getScaledPt([2, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([poetryWidth-6, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "poetry!",
-      getScaledPt([0.5, poetryHeight-1.5], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([1, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
@@ -700,12 +704,12 @@ function addStations() {
     populateObj(
       DATA_poetry,
       "delovely's poetry",
-      getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([1, 0], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "manyface world",
-      getScaledPt([2, 0], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([4, 0], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
