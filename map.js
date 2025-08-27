@@ -47,12 +47,13 @@ let comicsPts = [
 let comicsOffset = [];
 let comicsScale;
 let poetryWidth = 10;
-let poetryHeight = 4;
+let poetryHeight = 5;
 let poetryPts = [
-  [1, 0], [poetryWidth-2, 0],
-  [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],
-  [poetryWidth-2+0.15, poetryHeight-1], [1, poetryHeight-1],
-  [1, poetryHeight-1], [0, poetryHeight-2],
+  [1, 0], [poetryWidth-2, 0], // Top
+  [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],  // Right
+  [poetryWidth-2+0.15, poetryHeight-1], [4, poetryHeight-1], // Bottom (right)
+  [3, poetryHeight], [1, poetryHeight], // Bottom (left)
+  [1, poetryHeight], [0, poetryHeight-1], // Left
   [0, 1], [1, 0]
 ]
 let poetryOffset = [];
@@ -163,7 +164,7 @@ function draw() {
   );
   poetryOffset[1] = (
     min(dcScaledY)
-    + 2 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
+    + 1 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
     - lineWidth
   );
   poetryScale = [stationDist, stationDist];
@@ -684,22 +685,27 @@ function addStations() {
     populateObj(
       DATA_poetry,
       "Poems",
-      getScaledPt([poetryWidth-4, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([poetryWidth-3.5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "poems",
-      getScaledPt([poetryWidth-6, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([poetryWidth-5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "poetry!",
-      getScaledPt([1, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([2, poetryHeight], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "flower in binary",
-      getScaledPt([0, poetryHeight-2.5], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([0.5, poetryHeight-0.5], poetryOffset, poetryScale, [0, 0])
+    ),
+    populateObj(
+      DATA_poetry,
+      "greycloak's website",
+      getScaledPt([0, poetryHeight-2], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
@@ -710,6 +716,11 @@ function addStations() {
       DATA_poetry,
       "manyface world",
       getScaledPt([4, 0], poetryOffset, poetryScale, [0, 0])
+    ),
+    populateObj(
+      DATA_poetry,
+      "teeth.dog",
+      getScaledPt([poetryWidth-3.5, 0], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,

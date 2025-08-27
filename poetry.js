@@ -25,6 +25,11 @@ let DATA_poetry = [
     "owner" : "tim flower"
   },
   {
+    "title" : "greycloak's website",
+    "url"   : "greycloak.neocities.org/writings",
+    "owner" : "greycloak"
+  },
+  {
     "title" : "delovely's poetry",
     "url"   : "delovely.neocities.org/poetry/",
     "owner" : "delovely"
@@ -33,6 +38,11 @@ let DATA_poetry = [
     "title" : "manyface world",
     "url"   : "manyface.neocities.org/",
     "owner" : "Manyface"
+  },
+  {
+    "title" : "teeth.dog",
+    "url"   : "teeth.dog/mywork",
+    "owner" : "Agnes"
   },
   {
     "title" : "Doug's Poetry Shack",
