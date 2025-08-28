@@ -1,6 +1,7 @@
 // @ts-check
 /// <reference path="./node_modules/@types/p5/global.d.ts" />
 let lineWidth;
+let refPt;
 let lineColors = [
   '#a1a3a1', '#0077c0', '#25b233', '#fad447', '#f7941d', '#e51937'];
 let lineNames = [
@@ -47,10 +48,11 @@ let comicsPts = [
 let comicsOffset = [];
 let comicsScale;
 let poetryWidth = 10;
-let poetryHeight = 5;
+let poetryHeight = 7;
 let poetryPts = [
-  [1, 0], [poetryWidth-2, 0], // Top
-  [poetryWidth-1, 1], [poetryWidth-1, poetryHeight-2+0.15],  // Right
+  [1, 0], [2, 0], // Top (left)
+  [5, 3], [poetryWidth-2, 3], // Top (right)
+  [poetryWidth-1, 4], [poetryWidth-1, poetryHeight-2+0.15],  // Right
   [poetryWidth-2+0.15, poetryHeight-1], [4, poetryHeight-1], // Bottom (right)
   [3, poetryHeight], [1, poetryHeight], // Bottom (left)
   [1, poetryHeight], [0, poetryHeight-1], // Left
@@ -91,10 +93,9 @@ function setup() {
   let mapDivWidth = canvasDiv.offsetWidth;
 	let canvas = createCanvas(mapDivWidth, mapDivWidth * 2/3);
   canvas.parent('map')
-  // stationDist = height / 8;
   stationDist = height / 12;
-  // Set the dcOffset based on the width & height of the canvas
-  dcOffset = [2  * width/8 , 2*height/5];
+  // The location of the SMallweb Subway Central Station
+  refPt = [7 * width/11 , 4 * height/6];
   lineWidth = width * 0.015
   legendWidth = 10*lineWidth;
   legendHeight = 2*lineWidth;
@@ -115,71 +116,9 @@ function setup() {
 
 function draw() {
   background(225);
-  // Green : Doodle Crew Line
-  dcScale = [stationDist, stationDist];
-  let [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
-  // Silver : Scifi Line
-  sfOffset[0] = (
-    max(dcScaledX)
-    - 4 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
-    + lineWidth
-  );
-  sfOffset[1] = (
-    min(dcScaledY)
-    - 2 * (max(dcScaledY) - min(dcScaledY))/(dcHeight - 1)
-  );
-  sfScale = [stationDist, stationDist];
-  let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
-  // Orange : Comics Line
-  comicsOffset[0] = (
-    max(dcScaledX)
-    - 10 * (max(dcScaledX) - min(dcScaledX))/(dcWidth - 1)
-    // - lineWidth
-  )
-  comicsOffset[1] = (
-    min(dcScaledY)
-    - 3 * (max(dcScaledY) - min(dcScaledY))/(dcHeight - 1)
-    - lineWidth
-  );
-  comicsScale = [stationDist, stationDist];
-  let [comicsScaledX, comicsScaledY] = drawLine(comicsOffset, comicsScale, comicsPts, '#f7941d');
-  // Blue : Zines Line
-  zinesOffset[0] = (
-    max(dcScaledX)
-    - 2 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
-    // - lineWidth
-  );
-  zinesOffset[1] = (
-    min(dcScaledY)
-    + 3 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
-    + lineWidth
-  );
-  zinesScale = [stationDist, stationDist];
-  let [zinesScaledX, zinesScaledY] = drawLine(zinesOffset, zinesScale, zinesPts, '#0077c0');
-  // Red : Poetry Line
-  poetryOffset[0] = (
-    max(dcScaledX)
-    - 9 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
-    - lineWidth
-  );
-  poetryOffset[1] = (
-    min(dcScaledY)
-    + 1 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
-    - lineWidth
-  );
-  poetryScale = [stationDist, stationDist];
-  let [poetryScaledX, poetryScaledY] = drawLine(poetryOffset, poetryScale, poetryPts, '#e51937');
-  // Redraw green to put it over blue
-  [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
-  // Yellow : Creatives Club Line
-  ccOffset[0] = max(dcScaledX) + lineWidth;
-  ccOffset[1] = (
-    min(dcScaledY)
-    // + 1 * (max(dcScaledY)-min(dcScaledY)) / (dcHeight-1)
-  )
-  ccScale = [stationDist, stationDist];
-  let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
-  // Stations
+  // Draw Smallway lines
+  drawAllLines();
+  // Draw Smallway stations
   stations = addStations()
   drawStations(stations);
   drawLegend();
@@ -194,6 +133,46 @@ function getScaledPt(pt, offsets, scales, extraOffsets=[0, 0]) {
   let x = offsets[0] + pt[0] * scales[0] + extraOffsets[0];
   let y = offsets[1] + pt[1] * scales[1] + extraOffsets[1];
   return [x, y];
+}
+
+function drawAllLines() {
+  // Green : Doodle Crew Line
+  dcScale = [stationDist, stationDist];
+  dcOffset[0] = refPt[0] - (dcWidth - 1) * stationDist
+  dcOffset[1] = refPt[1] - (3) * stationDist
+  let [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
+  // Silver : Scifi Line
+  sfOffset[0] = refPt[0] - (4) * stationDist + lineWidth
+  sfOffset[1] = refPt[1] - (sfHeight - 1) * stationDist
+  sfScale = [stationDist, stationDist];
+  let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
+  // Orange : Comics Line
+  comicsOffset[0] = refPt[0] - (comicsWidth - 1 - 4) * stationDist
+  comicsOffset[1] = refPt[1] - (comicsHeight - 1) * stationDist - lineWidth
+  comicsScale = [stationDist, stationDist];
+  let [comicsScaledX, comicsScaledY] = drawLine(comicsOffset, comicsScale, comicsPts, '#f7941d');
+  // Blue : Zines Line
+  zinesOffset[0] = (
+    max(dcScaledX)
+    - 2 * (max(dcScaledX)-min(dcScaledX)) / (dcWidth-1)
+    // - lineWidth
+  );
+  zinesOffset[0] = refPt[0] - 2 * stationDist
+  zinesOffset[1] = refPt[1] + lineWidth
+  zinesScale = [stationDist, stationDist];
+  let [zinesScaledX, zinesScaledY] = drawLine(zinesOffset, zinesScale, zinesPts, '#0077c0');
+  // Red : Poetry Line
+  poetryOffset[0] = refPt[0] - (poetryWidth - 1) * stationDist - lineWidth
+  poetryOffset[1] = refPt[1] - (poetryHeight - 1 - 2) * stationDist - lineWidth
+  poetryScale = [stationDist, stationDist];
+  let [poetryScaledX, poetryScaledY] = drawLine(poetryOffset, poetryScale, poetryPts, '#e51937');
+  // Redraw Green to put it over Blue and Red
+  [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
+  // Yellow : Creatives Club Line
+  ccOffset[0] = refPt[0] + lineWidth;
+  ccOffset[1] = refPt[1] - 3 * stationDist;
+  ccScale = [stationDist, stationDist];
+  let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
 }
 
 function drawLine(offsets, scales, linePts, lineColor) {
@@ -482,7 +461,7 @@ function addStations() {
       'title' : 'Smallweb Subway',
       'url' : 'gusbus.space/smallweb-subway/',
       'owner' : 'Gus Becker',
-      'pt' : getScaledPt([dcWidth-1, 3], dcOffset, dcScale, [0, 0])
+      'pt' : getScaledPt(refPt, [0, 0], [1, 1], [0, 0])
     },
     /////////////////////////
     // Silver : Scifi Line //
@@ -710,22 +689,22 @@ function addStations() {
     populateObj(
       DATA_poetry,
       "delovely's poetry",
-      getScaledPt([1, 0], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([0, 2.5], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "manyface world",
-      getScaledPt([4, 0], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "teeth.dog",
-      getScaledPt([poetryWidth-3.5, 0], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([2.5, 0.5], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
       "Doug's Poetry Shack",
-      getScaledPt([poetryWidth-2, 0], poetryOffset, poetryScale, [0, 0])
+      getScaledPt([poetryWidth - 3, poetryHeight - 4], poetryOffset, poetryScale, [0, 0])
     )
   ];
   return stations
