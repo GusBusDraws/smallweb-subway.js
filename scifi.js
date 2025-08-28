@@ -20,14 +20,14 @@ let DATA_scifi = [
     "owner" : "Clockwork"
   },
   {
-    "title" : "Varve's writing bits & pieces",
+    "title" : "The Stardustverse",
     "url"   : "stardustverse.neocities.org/",
-    "owner" : "Varve"
+    "owner" : "MaxTheFox"
   },
   {
-    "title" : "The Stardustverse",
+    "title" : "Varve's writing bits & pieces",
     "url"   : "www.write-on.org/writing/",
-    "owner" : "MaxTheFox"
+    "owner" : "Varve"
   },
   {
     "title" : "Stories",
