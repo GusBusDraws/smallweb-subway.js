@@ -77,6 +77,8 @@ the following information:
   the canvas in the `setup()` loop
 
 ## Change Log
+### 2025-08-28
+- Restructure map logic around a single reference point (Central Station)
 ### 2025-08-27
 - Add greycloak and teeth.dog to Poetry Line
 - Add the Stardustverse to Scifi Line
