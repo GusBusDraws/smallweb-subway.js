@@ -80,6 +80,7 @@ the following information:
 
 ## Change Log
 ### 2025-08-28
+- Begin work on a condensed transfer widget ([central.js](central.js))
 - Restructure map logic around a single reference point (Central Station)
 ### 2025-08-27
 - Add greycloak and teeth.dog to Poetry Line
