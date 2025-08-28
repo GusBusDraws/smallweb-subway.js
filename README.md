@@ -67,14 +67,16 @@ npm install @types/p5
 For anyone interested in adding their own station to the map, keep in mind
 the following information:
 
-- The lines are drawn in coordinates relative to `(0, 0)` (top left corner)
-  of the Green line. This to simplifies
-  the process of adding stations to the lines, but makes it tricky to resize
-  the Green line. In the future, this should be changed to Central Station.
+- The lines are drawn in coordinates relative to a single reference point:
+  Central Station (the Smallweb Subway page).
 - The x and y offset for each line are defined at the beginning of
-  the `draw()` loop
-- The offset for the Green line (`dcOffset`) is determined by the size of
-  the canvas in the `setup()` loop
+  the `draw()` loop in `drawAllLines()`
+- The coordinates for each line are defined at the beginning of
+  the `map.js` file, and are relative to the top left corner of that
+  particular line in the scale of the distance between each station
+  (`stationDist`)
+- The coordinates of the reference point (`refPt`) are determined by the
+  size of the canvas and defined in the `setup()` loop
 
 ## Change Log
 ### 2025-08-28
