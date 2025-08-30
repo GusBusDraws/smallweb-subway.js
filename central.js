@@ -13,43 +13,45 @@ insertWidget_central();
 function insertWidget_central() {
   template_central.innerHTML = `
     <div class="webring_central">
-      <div>
-        <button id="tri-left_scifi" onclick="goToPrev_scifi()"></button>
-        <div id="line_scifi">
+      <div class="lines">
+        <div>
+          <button id="tri-left_scifi" onclick="goToPrev_scifi()"></button>
+          <div id="line_scifi">
+          </div>
+          <button id="tri-right_scifi" onclick="goToNext_scifi()"></button>
         </div>
-        <button id="tri-right_scifi" onclick="goToNext_scifi()"></button>
-      </div>
-      <div>
-        <button id="tri-left_zines" onclick="goToPrev_zines()"></button>
-        <div id="line_zines">
+        <div>
+          <button id="tri-left_zines" onclick="goToPrev_zines()"></button>
+          <div id="line_zines">
+          </div>
+          <button id="tri-right_zines" onclick="goToNext_zines()"></button>
         </div>
-        <button id="tri-right_zines" onclick="goToNext_zines()"></button>
-      </div>
-      <div>
-        <button id="tri-left_doodlecrew" onclick="goToPre_doodlecrew()"></button>
-        <div id="line_doodlecrew">
+        <div>
+          <button id="tri-left_doodlecrew" onclick="goToPre_doodlecrew()"></button>
+          <div id="line_doodlecrew">
+          </div>
+          <button id="tri-right_doodlecrew" onclick="goToNext_doodlecrew()"></button>
         </div>
-        <button id="tri-right_doodlecrew" onclick="goToNext_doodlecrew()"></button>
-      </div>
-      <div>
-        <button id="tri-left_creativesclub" onclick="goToPrev_creativesclub()"></button>
-        <div id="line_creativesclub">
+        <div>
+          <button id="tri-left_creativesclub" onclick="goToPrev_creativesclub()"></button>
+          <div id="line_creativesclub">
+          </div>
+          <button id="tri-right_creativesclub" onclick="goToNext_creativesclub()"></button>
         </div>
-        <button id="tri-right_creativesclub" onclick="goToNext_creativesclub()"></button>
-      </div>
-      <div>
-        <button id="tri-left_comics" onclick="goToPrev_comics()"></button>
-        <div id="line_comics">
+        <div>
+          <button id="tri-left_comics" onclick="goToPrev_comics()"></button>
+          <div id="line_comics">
+          </div>
+          <button id="tri-right_comics" onclick="goToNext_comics()"></button>
         </div>
-        <button id="tri-right_comics" onclick="goToNext_comics()"></button>
-      </div>
-      <div>
-        <button id="tri-left_poetry" onclick="goToPrev_poetry()"></button>
-        <div id="line_poetry">
+        <div>
+          <button id="tri-left_poetry" onclick="goToPrev_poetry()"></button>
+          <div id="line_poetry">
+          </div>
+          <button id="tri-right_poetry" onclick="goToNext_poetry()"></button>
         </div>
-        <button id="tri-right_poetry" onclick="goToNext_poetry()"></button>
       </div>
-      <div>
+      <div class="station">
         <div id="outer-circle">
           <div id="inner-circle"></div>
         </div>
@@ -58,14 +60,24 @@ function insertWidget_central() {
 
     <style>
       .webring_central {
+        display: flex;
         width: 100%;
         height: auto;
+        align-items: center;
+        justify-content: center;
+        position: relative;
       }
-      .webring_central > div {
+      .lines {
+        position: absolute;
+      }
+      .lines > div {
         display: flex;
         gap: 20px;
         align-items: center;
         justify-content: center;
+      }
+      .station {
+        z-index: 1;
       }
       h3 {
         text-align: center;

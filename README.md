@@ -79,6 +79,8 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2025-08-29
+- Position lines and station relatively in central widget
 ### 2025-08-28
 - Begin work on a condensed transfer widget ([central.js](central.js))
 - Restructure map logic around a single reference point (Central Station)
