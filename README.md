@@ -79,6 +79,8 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2025-08-31
+- Set webring data after document loading regardless of widget creation (fix for central widget)
 ### 2025-08-30
 - Update colors and add station to central widget
 ### 2025-08-29

@@ -54,49 +54,57 @@ let matchedSite_creativesclub;
 let prevSiteIndex_creativesclub;
 let nextSiteIndex_creativesclub;
 
+// Set site data regardless of widget creation;
+document.addEventListener('DOMContentLoaded', function() {
+  setData_creativesclub();
+}, false);
+
 class Webring_creativesclub extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_creativesclub.content.cloneNode(true));
-    console.log('------------------')
-    console.log('creativesclub line')
-    console.log('------------------')
-    if (typeof forceURL_creativesclub !== 'undefined') {
-      console.log('forceURL_creativesclub: ', forceURL_creativesclub)
-      thisSite_creativesclub = forceURL_creativesclub
-    } else {
-      thisURL_creativesclub = new URL(window.location.href);
-      thisSite_creativesclub = (
-        thisURL_creativesclub.hostname + thisURL_creativesclub.pathname)
-    }
-    console.log("This site: "+thisSite_creativesclub)
-    matchedSiteIndex_creativesclub = (
-      DATA_creativesclub.map(x => x.url).indexOf(thisSite_creativesclub))
-    matchedSite_creativesclub = (
-      DATA_creativesclub[matchedSiteIndex_creativesclub]);
-    if (matchedSite_creativesclub != null) {
-      console.log("Matched site: "+matchedSite_creativesclub.url)
-      prevSiteIndex_creativesclub = matchedSiteIndex_creativesclub - 1;
-      if (prevSiteIndex_creativesclub === -1) {
-        prevSiteIndex_creativesclub = DATA_creativesclub.length - 1
-      };
-      console.log(
-        "Previous site: "+DATA_creativesclub[prevSiteIndex_creativesclub].url)
-      nextSiteIndex_creativesclub = matchedSiteIndex_creativesclub + 1;
-      if (nextSiteIndex_creativesclub === DATA_creativesclub.length) {
-        nextSiteIndex_creativesclub = 0
-      };
-      console.log("Next site: "+DATA_creativesclub[nextSiteIndex_creativesclub].url)
-    } else {
-      console.log("Matched site: Not found.")
-    }
   }
 }
 
 let template_creativesclub = document.createElement("template");
 customElements.define('smallweb-subway-creativesclub', Webring_creativesclub);
 insertWidget_creativesclub();
+
+function setData_creativesclub() {
+  console.log('------------------')
+  console.log('creativesclub line')
+  console.log('------------------')
+  if (typeof forceURL_creativesclub !== 'undefined') {
+    console.log('forceURL_creativesclub: ', forceURL_creativesclub)
+    thisSite_creativesclub = forceURL_creativesclub
+  } else {
+    thisURL_creativesclub = new URL(window.location.href);
+    thisSite_creativesclub = (
+      thisURL_creativesclub.hostname + thisURL_creativesclub.pathname)
+  }
+  console.log("This site: "+thisSite_creativesclub)
+  matchedSiteIndex_creativesclub = (
+    DATA_creativesclub.map(x => x.url).indexOf(thisSite_creativesclub))
+  matchedSite_creativesclub = (
+    DATA_creativesclub[matchedSiteIndex_creativesclub]);
+  if (matchedSite_creativesclub != null) {
+    console.log("Site successfully matched!")
+    prevSiteIndex_creativesclub = matchedSiteIndex_creativesclub - 1;
+    if (prevSiteIndex_creativesclub === -1) {
+      prevSiteIndex_creativesclub = DATA_creativesclub.length - 1
+    };
+    console.log(
+      "Previous site: "+DATA_creativesclub[prevSiteIndex_creativesclub].url)
+    nextSiteIndex_creativesclub = matchedSiteIndex_creativesclub + 1;
+    if (nextSiteIndex_creativesclub === DATA_creativesclub.length) {
+      nextSiteIndex_creativesclub = 0
+    };
+    console.log("Next site: "+DATA_creativesclub[nextSiteIndex_creativesclub].url)
+  } else {
+    console.log("Matched site: Not found.")
+  }
+}
 
 function getHostName_creativesclub(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically

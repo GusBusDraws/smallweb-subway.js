@@ -60,44 +60,50 @@ let matchedSite_doodlecrew;
 let prevSiteIndex_doodlecrew;
 let nextSiteIndex_doodlecrew;
 
+// Set site data regardless of widget creation;
+document.addEventListener('DOMContentLoaded', function() {
+  setData_doodlecrew();
+}, false);
+
 class Webring_doodlecrew extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_doodlecrew.content.cloneNode(true));
-    console.log('---------------')
-    console.log('doodlecrew line')
-    console.log('---------------')
-    // console.log('Webring JSON data:')
-    // console.log(DATA_doodlecrew)
-    if (typeof forceURL_doodlecrew !== 'undefined') {
-      console.log('forceURL_doodlecrew: ', forceURL_doodlecrew)
-      thisSite_doodlecrew = forceURL_doodlecrew
-    } else {
-      thisURL_doodlecrew = new URL(window.location.href);
-      thisSite_doodlecrew = (
-        thisURL_doodlecrew.hostname + thisURL_doodlecrew.pathname
-      )
+  }
+}
+
+function setData_doodlecrew() {
+  console.log('---------------')
+  console.log('doodlecrew line')
+  console.log('---------------')
+  if (typeof forceURL_doodlecrew !== 'undefined') {
+    console.log('forceURL_doodlecrew: ', forceURL_doodlecrew)
+    thisSite_doodlecrew = forceURL_doodlecrew
+  } else {
+    thisURL_doodlecrew = new URL(window.location.href);
+    thisSite_doodlecrew = (
+      thisURL_doodlecrew.hostname + thisURL_doodlecrew.pathname
+    )
+  }
+  console.log("This site: "+thisSite_doodlecrew)
+  matchedSiteIndex_doodlecrew = DATA_doodlecrew.map(x => x.url).indexOf(thisSite_doodlecrew)
+  matchedSite_doodlecrew = DATA_doodlecrew[matchedSiteIndex_doodlecrew];
+  if (matchedSite_doodlecrew != null) {
+    console.log("Site successfully matched!")
+    prevSiteIndex_doodlecrew = matchedSiteIndex_doodlecrew - 1;
+    if (prevSiteIndex_doodlecrew === -1) {
+      prevSiteIndex_doodlecrew = DATA_doodlecrew.length - 1;
     }
-    console.log("This site: "+thisSite_doodlecrew)
-    matchedSiteIndex_doodlecrew = DATA_doodlecrew.map(x => x.url).indexOf(thisSite_doodlecrew)
-    matchedSite_doodlecrew = DATA_doodlecrew[matchedSiteIndex_doodlecrew];
-    if (matchedSite_doodlecrew != null) {
-      console.log("Matched site: "+matchedSite_doodlecrew.url)
-      prevSiteIndex_doodlecrew = matchedSiteIndex_doodlecrew - 1;
-      if (prevSiteIndex_doodlecrew === -1) {
-        prevSiteIndex_doodlecrew = DATA_doodlecrew.length - 1;
-      }
-      console.log(
-        "Previous site: "+DATA_doodlecrew[prevSiteIndex_doodlecrew].url)
-      nextSiteIndex_doodlecrew = matchedSiteIndex_doodlecrew + 1;
-      if (nextSiteIndex_doodlecrew === DATA_doodlecrew.length) {
-        nextSiteIndex_doodlecrew = 0;
-      }
-      console.log("Next site: "+DATA_doodlecrew[nextSiteIndex_doodlecrew].url)
-    } else {
-      console.log("Matched site: Not found.")
+    console.log(
+      "Previous site: "+DATA_doodlecrew[prevSiteIndex_doodlecrew].url)
+    nextSiteIndex_doodlecrew = matchedSiteIndex_doodlecrew + 1;
+    if (nextSiteIndex_doodlecrew === DATA_doodlecrew.length) {
+      nextSiteIndex_doodlecrew = 0;
     }
+    console.log("Next site: "+DATA_doodlecrew[nextSiteIndex_doodlecrew].url)
+  } else {
+    console.log("Matched site: Not found.")
   }
 }
 

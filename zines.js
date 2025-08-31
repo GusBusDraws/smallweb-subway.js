@@ -34,45 +34,53 @@ let matchedSite_zines;
 let prevSiteIndex_zines;
 let nextSiteIndex_zines;
 
+// Set site data regardless of widget creation;
+document.addEventListener('DOMContentLoaded', function() {
+  setData_zines();
+}, false);
+
 class Webring_zines extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_zines.content.cloneNode(true));
-    console.log('----------')
-    console.log('zines line')
-    console.log('----------')
-    if (typeof forceNewTab_zines !== 'undefined' && forceNewTab_zines) {
-      console.log('forceNewTab_zines: ', forceNewTab_zines)
-    }
-    if (typeof forceURL_zines !== 'undefined') {
-      console.log('forceURL_zines: ', forceURL_zines)
-      thisSite_zines = forceURL_zines
-    } else {
-      thisURL_zines = new URL(window.location.href);
-      thisSite_zines = (
-        thisURL_zines.hostname + thisURL_zines.pathname)
-    }
-    console.log("This site: "+thisSite_zines)
-    matchedSiteIndex_zines = (
-      DATA_zines.map(x => x.url).indexOf(thisSite_zines))
-    matchedSite_zines = (
-      DATA_zines[matchedSiteIndex_zines]);
-    if (matchedSite_zines != null) {
-      console.log("Matched site: "+matchedSite_zines.url)
-      prevSiteIndex_zines = matchedSiteIndex_zines - 1;
-      if (prevSiteIndex_zines === -1) {
-        prevSiteIndex_zines = DATA_zines.length - 1
-      };
-      console.log("Previous site: "+DATA_zines[prevSiteIndex_zines].url)
-      nextSiteIndex_zines = matchedSiteIndex_zines + 1;
-      if (nextSiteIndex_zines === DATA_zines.length) {
-        nextSiteIndex_zines = 0
-      };
-      console.log("Next site: "+DATA_zines[nextSiteIndex_zines].url)
-    } else {
-      console.log("Matched site: Not found.")
-    }
+  }
+}
+
+function setData_zines() {
+  console.log('----------')
+  console.log('zines line')
+  console.log('----------')
+  if (typeof forceNewTab_zines !== 'undefined' && forceNewTab_zines) {
+    console.log('forceNewTab_zines: ', forceNewTab_zines)
+  }
+  if (typeof forceURL_zines !== 'undefined') {
+    console.log('forceURL_zines: ', forceURL_zines)
+    thisSite_zines = forceURL_zines
+  } else {
+    thisURL_zines = new URL(window.location.href);
+    thisSite_zines = (
+      thisURL_zines.hostname + thisURL_zines.pathname)
+  }
+  console.log("This site: "+thisSite_zines)
+  matchedSiteIndex_zines = (
+    DATA_zines.map(x => x.url).indexOf(thisSite_zines))
+  matchedSite_zines = (
+    DATA_zines[matchedSiteIndex_zines]);
+  if (matchedSite_zines != null) {
+    console.log("Site successfully matched!")
+    prevSiteIndex_zines = matchedSiteIndex_zines - 1;
+    if (prevSiteIndex_zines === -1) {
+      prevSiteIndex_zines = DATA_zines.length - 1
+    };
+    console.log("Previous site: "+DATA_zines[prevSiteIndex_zines].url)
+    nextSiteIndex_zines = matchedSiteIndex_zines + 1;
+    if (nextSiteIndex_zines === DATA_zines.length) {
+      nextSiteIndex_zines = 0
+    };
+    console.log("Next site: "+DATA_zines[nextSiteIndex_zines].url)
+  } else {
+    console.log("Matched site: Not found.")
   }
 }
 
