@@ -59,54 +59,60 @@ let matchedSite_poetry;
 let prevSiteIndex_poetry;
 let nextSiteIndex_poetry;
 
+// Set site data regardless of widget creation;
+document.addEventListener('DOMContentLoaded', function() {
+  setData_poetry();
+}, false);
+
 class Webring_poetry extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_poetry.content.cloneNode(true));
-    console.log('-----------')
-    console.log('poetry line')
-    console.log('-----------')
-    // console.log('Webring JSON data:')
-    // console.log(DATA_poetry);
-    if (typeof forceNewTab_poetry !== 'undefined' && forceNewTab_poetry) {
-      console.log('forceNewTab_poetry: ', forceNewTab_poetry)
-    }
-    if (typeof forceURL_poetry !== 'undefined') {
-      console.log('forceURL_poetry: ', forceURL_poetry)
-      thisSite_poetry = forceURL_poetry
-    } else {
-      thisURL_poetry = new URL(window.location.href);
-      thisSite_poetry = (
-        thisURL_poetry.hostname + thisURL_poetry.pathname
-      )
-    }
-    console.log("This site: "+thisSite_poetry)
-    matchedSiteIndex_poetry = (
-      DATA_poetry.map(x => x.url).indexOf(thisSite_poetry))
-    matchedSite_poetry = (
-      DATA_poetry[matchedSiteIndex_poetry]);
-    if (matchedSite_poetry != null) {
-      console.log("Matched site: "+matchedSite_poetry.url)
-      prevSiteIndex_poetry = matchedSiteIndex_poetry - 1;
-      if (prevSiteIndex_poetry === -1) {
-        prevSiteIndex_poetry = DATA_poetry.length - 1
-      };
-      console.log("Previous site: "+DATA_poetry[prevSiteIndex_poetry].url)
-      nextSiteIndex_poetry = matchedSiteIndex_poetry + 1;
-      if (nextSiteIndex_poetry === DATA_poetry.length) {
-        nextSiteIndex_poetry = 0
-      };
-      console.log("Next site: "+DATA_poetry[nextSiteIndex_poetry].url)
-    } else {
-      console.log("Matched site: Not found.")
-    }
   }
 }
 
 let template_poetry = document.createElement("template");
 customElements.define('smallweb-subway-poetry', Webring_poetry);
 insertWidget_poetry();
+
+function setData_poetry() {
+  console.log('-----------')
+  console.log('poetry line')
+  console.log('-----------')
+  if (typeof forceNewTab_poetry !== 'undefined' && forceNewTab_poetry) {
+    console.log('forceNewTab_poetry: ', forceNewTab_poetry)
+  }
+  if (typeof forceURL_poetry !== 'undefined') {
+    console.log('forceURL_poetry: ', forceURL_poetry)
+    thisSite_poetry = forceURL_poetry
+  } else {
+    thisURL_poetry = new URL(window.location.href);
+    thisSite_poetry = (
+      thisURL_poetry.hostname + thisURL_poetry.pathname
+    )
+  }
+  console.log("This site: "+thisSite_poetry)
+  matchedSiteIndex_poetry = (
+    DATA_poetry.map(x => x.url).indexOf(thisSite_poetry))
+  matchedSite_poetry = (
+    DATA_poetry[matchedSiteIndex_poetry]);
+  if (matchedSite_poetry != null) {
+    console.log("Site successfully matched!")
+    prevSiteIndex_poetry = matchedSiteIndex_poetry - 1;
+    if (prevSiteIndex_poetry === -1) {
+      prevSiteIndex_poetry = DATA_poetry.length - 1
+    };
+    console.log("Previous site: "+DATA_poetry[prevSiteIndex_poetry].url)
+    nextSiteIndex_poetry = matchedSiteIndex_poetry + 1;
+    if (nextSiteIndex_poetry === DATA_poetry.length) {
+      nextSiteIndex_poetry = 0
+    };
+    console.log("Next site: "+DATA_poetry[nextSiteIndex_poetry].url)
+  } else {
+    console.log("Matched site: Not found.")
+  }
+}
 
 function getHostName_poetry(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically

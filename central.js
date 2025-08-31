@@ -27,7 +27,7 @@ function insertWidget_central() {
           <button id="tri-right_zines" onclick="goToNext_zines()"></button>
         </div>
         <div>
-          <button id="tri-left_doodlecrew" onclick="goToPre_doodlecrew()"></button>
+          <button id="tri-left_doodlecrew" onclick="goToPrev_doodlecrew()"></button>
           <div id="line_doodlecrew">
           </div>
           <button id="tri-right_doodlecrew" onclick="goToNext_doodlecrew()"></button>
