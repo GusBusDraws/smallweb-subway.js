@@ -237,7 +237,7 @@ function insertWidget_central() {
         background: none;
         border-top: 10px solid transparent;
         border-left: none;
-        border-right: 20px solid #25b233;
+        border-right: 20px solid #fad447;
         border-bottom: 10px solid transparent;
         outline: none;
         cursor: pointer;
@@ -253,7 +253,7 @@ function insertWidget_central() {
         height: 0;
         background: none;
         border-top: 10px solid transparent;
-        border-left: 20px solid #25b233;
+        border-left: 20px solid #fad447;
         border-right: none;
         border-bottom: 10px solid transparent;
         cursor: pointer;
@@ -267,7 +267,7 @@ function insertWidget_central() {
       #line_creativesclub {
         width: 120px;
         height: 20px;
-        background: #25b233;
+        background: #fad447;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -283,7 +283,7 @@ function insertWidget_central() {
         background: none;
         border-top: 10px solid transparent;
         border-left: none;
-        border-right: 20px solid #25b233;
+        border-right: 20px solid #f7941d;
         border-bottom: 10px solid transparent;
         outline: none;
         cursor: pointer;
@@ -299,7 +299,7 @@ function insertWidget_central() {
         height: 0;
         background: none;
         border-top: 10px solid transparent;
-        border-left: 20px solid #25b233;
+        border-left: 20px solid #f7941d;
         border-right: none;
         border-bottom: 10px solid transparent;
         cursor: pointer;
@@ -313,7 +313,7 @@ function insertWidget_central() {
       #line_comics {
         width: 120px;
         height: 20px;
-        background: #25b233;
+        background: #f7941d;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -329,7 +329,7 @@ function insertWidget_central() {
         background: none;
         border-top: 10px solid transparent;
         border-left: none;
-        border-right: 20px solid #25b233;
+        border-right: 20px solid #e51937;
         border-bottom: 10px solid transparent;
         outline: none;
         cursor: pointer;
@@ -345,7 +345,7 @@ function insertWidget_central() {
         height: 0;
         background: none;
         border-top: 10px solid transparent;
-        border-left: 20px solid #25b233;
+        border-left: 20px solid #e51937;
         border-right: none;
         border-bottom: 10px solid transparent;
         cursor: pointer;
@@ -359,7 +359,7 @@ function insertWidget_central() {
       #line_poetry {
         width: 120px;
         height: 20px;
-        background: #25b233;
+        background: #e51937;
         display: flex;
         align-items: center;
         justify-content: center;
