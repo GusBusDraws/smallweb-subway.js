@@ -26,7 +26,7 @@ let DATA_zines = [
   },
   {
     "title" : "Lunaseeker Press",
-    "url"   : "lunaseeker.com/catalog/",
+    "url"   : "lunaseeker.com/",
     "owner" : "Zachary Kai"
   }
 ]
