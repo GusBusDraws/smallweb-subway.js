@@ -89,45 +89,16 @@ let matchedSite_comics;
 let prevSiteIndex_comics;
 let nextSiteIndex_comics;
 
-class Webring_comics extends HTMLElement {
+// Set site data regardless of widget creation;
+document.addEventListener('DOMContentLoaded', function() {
+  setData_comics();
+}, false);
+
+class webring_comics extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_comics.content.cloneNode(true));
-    console.log('-----------')
-    console.log('comics line')
-    console.log('-----------')
-    if (typeof forceNewTab_comics !== 'undefined' && forceNewTab_comics) {
-      console.log('forceNewTab_comics: ', forceNewTab_comics)
-    }
-    if (typeof forceURL_comics !== 'undefined') {
-      console.log('forceURL_comics: ', forceURL_comics)
-      thisSite_comics = forceURL_comics
-    } else {
-      thisURL_comics = new URL(window.location.href);
-      thisSite_comics = (
-        thisURL_comics.hostname + thisURL_comics.pathname
-      )
-    }
-    console.log("This site: "+thisSite_comics)
-    matchedSiteIndex_comics = (
-      DATA_comics.map(x => x.url).indexOf(thisSite_comics))
-      matchedSite_comics = DATA_comics[matchedSiteIndex_comics];
-    if (matchedSite_comics != null) {
-      console.log("Matched site: "+matchedSite_comics.url)
-      prevSiteIndex_comics = matchedSiteIndex_comics - 1;
-      if (prevSiteIndex_comics === -1) {
-        prevSiteIndex_comics = DATA_comics.length - 1
-      };
-      console.log("Previous site: "+DATA_comics[prevSiteIndex_comics].url)
-      nextSiteIndex_comics = matchedSiteIndex_comics + 1;
-      if (nextSiteIndex_comics === DATA_comics.length) {
-        nextSiteIndex_comics = 0
-      };
-      console.log("Next site: "+DATA_comics[nextSiteIndex_comics].url)
-    } else {
-      console.log("Matched site: Not found.")
-    }
   }
 }
 
@@ -136,6 +107,43 @@ customElements.define('smallweb-subway-comics', Webring_comics);
 // customElements.get('smallweb-subway-comics') || (
 //   customElements.define('smallweb-subway-comics', Webring_comics));
 insertWidget_comics();
+
+function setData_comics() {
+  console.log('-----------')
+  console.log('comics line')
+  console.log('-----------')
+  if (typeof forceNewTab_comics !== 'undefined' && forceNewTab_comics) {
+    console.log('forceNewTab_comics: ', forceNewTab_comics)
+  }
+  if (typeof forceURL_comics !== 'undefined') {
+    console.log('forceURL_comics: ', forceURL_comics)
+    thisSite_comics = forceURL_comics
+  } else {
+    thisURL_comics = new URL(window.location.href);
+    thisSite_comics = (
+      thisURL_comics.hostname + thisURL_comics.pathname
+    )
+  }
+  console.log("This site: "+thisSite_comics)
+  matchedSiteIndex_comics = (
+    DATA_comics.map(x => x.url).indexOf(thisSite_comics))
+    matchedSite_comics = DATA_comics[matchedSiteIndex_comics];
+  if (matchedSite_comics != null) {
+    console.log("Site successfully matched!")
+    prevSiteIndex_comics = matchedSiteIndex_comics - 1;
+    if (prevSiteIndex_comics === -1) {
+      prevSiteIndex_comics = DATA_comics.length - 1
+    };
+    console.log("Previous site: "+DATA_comics[prevSiteIndex_comics].url)
+    nextSiteIndex_comics = matchedSiteIndex_comics + 1;
+    if (nextSiteIndex_comics === DATA_comics.length) {
+      nextSiteIndex_comics = 0
+    };
+    console.log("Next site: "+DATA_comics[nextSiteIndex_comics].url)
+  } else {
+    console.log("Matched site: Not found.")
+  }
+}
 
 function getHostName_comics(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically

@@ -54,53 +54,59 @@ let matchedSite_scifi;
 let prevSiteIndex_scifi;
 let nextSiteIndex_scifi;
 
+// Set site data regardless of widget creation;
+document.addEventListener('DOMContentLoaded', function() {
+  setData_scifi();
+}, false);
+
 class Webring_scifi extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
     this.shadowRoot.appendChild(template_scifi.content.cloneNode(true));
-    console.log('-----------')
-    console.log('scifi line')
-    console.log('-----------')
-    // console.log('Webring JSON data:')
-    // console.log(DATA_scifi)
-    if (typeof forceNewTab_scifi !== 'undefined' && forceNewTab_scifi) {
-      console.log('forceNewTab_scifi: ', forceNewTab_scifi)
-    }
-    if (typeof forceURL_scifi !== 'undefined') {
-      console.log('forceURL_scifi: ', forceURL_scifi)
-      thisSite_scifi = forceURL_scifi
-    } else {
-      thisURL_scifi = new URL(window.location.href);
-      thisSite_scifi = (
-        thisURL_scifi.hostname + thisURL_scifi.pathname)
-    }
-    console.log("This site: "+thisSite_scifi)
-    matchedSiteIndex_scifi = (
-      DATA_scifi.map(x => x.url).indexOf(thisSite_scifi))
-    matchedSite_scifi = (
-      DATA_scifi[matchedSiteIndex_scifi]);
-    if (matchedSite_scifi != null) {
-      console.log("Matched site: "+matchedSite_scifi)
-      prevSiteIndex_scifi = matchedSiteIndex_scifi - 1;
-      if (prevSiteIndex_scifi === -1) {
-        prevSiteIndex_scifi = DATA_scifi.length - 1
-      };
-      console.log("Previous site: "+DATA_scifi[prevSiteIndex_scifi].url)
-      nextSiteIndex_scifi = matchedSiteIndex_scifi + 1;
-      if (nextSiteIndex_scifi === DATA_scifi.length) {
-        nextSiteIndex_scifi = 0
-      };
-      console.log("Next site: "+DATA_scifi[nextSiteIndex_scifi].url)
-    } else {
-      console.log("Matched site: Not found.")
-    }
   }
 }
 
 let template_scifi = document.createElement("template");
 customElements.define('smallweb-subway-scifi', Webring_scifi);
 insertWidget_scifi();
+
+function setData_scifi() {
+  console.log('-----------')
+  console.log('scifi line')
+  console.log('-----------')
+  if (typeof forceNewTab_scifi !== 'undefined' && forceNewTab_scifi) {
+    console.log('forceNewTab_scifi: ', forceNewTab_scifi)
+  }
+  if (typeof forceURL_scifi !== 'undefined') {
+    console.log('forceURL_scifi: ', forceURL_scifi)
+    thisSite_scifi = forceURL_scifi
+  } else {
+    thisURL_scifi = new URL(window.location.href);
+    thisSite_scifi = (
+      thisURL_scifi.hostname + thisURL_scifi.pathname)
+  }
+  console.log("This site: "+thisSite_scifi)
+  matchedSiteIndex_scifi = (
+    DATA_scifi.map(x => x.url).indexOf(thisSite_scifi))
+  matchedSite_scifi = (
+    DATA_scifi[matchedSiteIndex_scifi].url);
+  if (matchedSite_scifi != null) {
+    console.log("Site successfully matched!")
+    prevSiteIndex_scifi = matchedSiteIndex_scifi - 1;
+    if (prevSiteIndex_scifi === -1) {
+      prevSiteIndex_scifi = DATA_scifi.length - 1
+    };
+    console.log("Previous site: "+DATA_scifi[prevSiteIndex_scifi].url)
+    nextSiteIndex_scifi = matchedSiteIndex_scifi + 1;
+    if (nextSiteIndex_scifi === DATA_scifi.length) {
+      nextSiteIndex_scifi = 0
+    };
+    console.log("Next site: "+DATA_scifi[nextSiteIndex_scifi].url)
+  } else {
+    console.log("Matched site: Not found.")
+  }
+}
 
 function getHostName_scifi(url) {
   // this is a bit of a cheat that leverages the URL type to get the hostname automagically
