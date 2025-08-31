@@ -23,6 +23,11 @@ let DATA_zines = [
     "title" : "Ether",
     "url"   : "ethersent.neocities.org/",
     "owner" : "Emil Aisling"
+  },
+  {
+    "title" : "Lunaseeker Press",
+    "url"   : "lunaseeker.com/catalog/",
+    "owner" : "Zachary Kai"
   }
 ]
 
