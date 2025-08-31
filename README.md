@@ -80,6 +80,7 @@ the following information:
 
 ## Change Log
 ### 2025-08-31
+- Add Lunaseeker to Zines Line and map
 - Set webring data after document loading regardless of widget creation (fix for central widget)
 ### 2025-08-30
 - Update colors and add station to central widget

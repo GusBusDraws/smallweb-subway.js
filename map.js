@@ -504,7 +504,7 @@ function addStations() {
     ),
     populateObj(
       DATA_zines,
-      "zines",
+      "Lunaseeker Press",
       getScaledPt([zinesWidth-3, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
     ),
     populateObj(
