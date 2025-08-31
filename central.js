@@ -52,8 +52,12 @@ function insertWidget_central() {
         </div>
       </div>
       <div class="station">
-        <div id="outer-circle">
-          <div id="inner-circle"></div>
+        <div id="outer-black">
+          <div id="outer-white">
+            <div id="inner-black">
+              <div id="inner-white"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -365,7 +369,25 @@ function insertWidget_central() {
         justify-content: center;
       }
 
-      #outer-circle {
+      #outer-black {
+        width: 80px;
+        height: 80px;
+        background: black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #outer-white {
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #inner-black {
         width: 40px;
         height: 40px;
         background: black;
@@ -374,7 +396,7 @@ function insertWidget_central() {
         align-items: center;
         justify-content: center;
       }
-      #inner-circle {
+      #inner-white {
         width: 20px;
         height: 20px;
         background: white;
