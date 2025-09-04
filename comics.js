@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setData_comics();
 }, false);
 
-class webring_comics extends HTMLElement {
+class Webring_comics extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
