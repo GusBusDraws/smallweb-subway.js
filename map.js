@@ -575,6 +575,11 @@ function addStations() {
     ),
     populateObj(
       DATA_comics,
+      "Trailerparkia",
+      getScaledPt([1.5, comicsHeight-1], comicsOffset, comicsScale, [0, -lineWidth/16])
+    ),
+    populateObj(
+      DATA_comics,
       "Redux",
       getScaledPt([0, comicsHeight-3], comicsOffset, comicsScale, [0, -lineWidth/4])
     ),

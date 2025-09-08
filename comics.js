@@ -15,6 +15,11 @@ let DATA_comics = [
     "owner" : "candycanearter07"
   },
   {
+    "title" : "Trailerparkia",
+    "url"   : "trailerparkia.net/",
+    "owner" : "Em"
+  },
+  {
     "title" : "The Iron Ragdoll",
     "url"   : "tofutush.github.io/The-Iron-Ragdoll/misc/links/",
     "owner" : "Tofutush"

@@ -80,6 +80,7 @@ the following information:
 
 ## Change Log
 ### 2025-09-08
+- Add Trailerparkia to Comics Line and map
 - Fix bug that was preventing comics widget from appearing
 ### 2025-08-31
 - Add Lunaseeker to Zines Line and map
