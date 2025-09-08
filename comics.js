@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setData_comics();
 }, false);
 
-class webring_comics extends HTMLElement {
+class Webring_comics extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: "open" })
@@ -104,8 +104,6 @@ class webring_comics extends HTMLElement {
 
 let template_comics = document.createElement("template");
 customElements.define('smallweb-subway-comics', Webring_comics);
-// customElements.get('smallweb-subway-comics') || (
-//   customElements.define('smallweb-subway-comics', Webring_comics));
 insertWidget_comics();
 
 function setData_comics() {

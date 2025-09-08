@@ -79,6 +79,8 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2025-09-08
+- Fix bug that was preventing comics widget from appearing
 ### 2025-08-31
 - Add Lunaseeker to Zines Line and map
 - Set webring data after document loading regardless of widget creation (fix for central widget)
