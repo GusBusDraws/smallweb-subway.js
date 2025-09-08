@@ -142,12 +142,12 @@ function drawAllLines() {
   dcOffset[1] = refPt[1] - (3) * stationDist
   let [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
   // Silver : Scifi Line
-  sfOffset[0] = refPt[0] - (4) * stationDist + lineWidth
+  sfOffset[0] = refPt[0] - (4) * stationDist + lineWidth - lineWidth
   sfOffset[1] = refPt[1] - (sfHeight - 1) * stationDist
   sfScale = [stationDist, stationDist];
   let [sfScaledX, sfScaledY] = drawLine(sfOffset, sfScale, sfPts, '#A1A3A1');
   // Orange : Comics Line
-  comicsOffset[0] = refPt[0] - (comicsWidth - 1 - 4) * stationDist
+  comicsOffset[0] = refPt[0] - (comicsWidth - 1 - 4) * stationDist - lineWidth
   comicsOffset[1] = refPt[1] - (comicsHeight - 1) * stationDist - lineWidth
   comicsScale = [stationDist, stationDist];
   let [comicsScaledX, comicsScaledY] = drawLine(comicsOffset, comicsScale, comicsPts, '#f7941d');
@@ -561,27 +561,27 @@ function addStations() {
     populateObj(
       DATA_comics,
       "The Fuzzy Slug's Webcomic Hub",
-      getScaledPt([6, comicsHeight-1], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/16])
+      getScaledPt([6, comicsHeight-1], comicsOffset, comicsScale, [-lineWidth, 0])
     ),
     populateObj(
       DATA_comics,
       "The Iron Ragdoll",
-      getScaledPt([4.5, comicsHeight-1], comicsOffset, comicsScale, [-lineWidth/4, -lineWidth/16])
+      getScaledPt([4.5, comicsHeight-1], comicsOffset, comicsScale, [0, 0])
     ),
     populateObj(
       DATA_comics,
       "slime pond comics",
-      getScaledPt([3, comicsHeight-1], comicsOffset, comicsScale, [0, -lineWidth/16])
+      getScaledPt([3, comicsHeight-1], comicsOffset, comicsScale, [lineWidth, 0])
     ),
     populateObj(
       DATA_comics,
       "Trailerparkia",
-      getScaledPt([1.5, comicsHeight-1], comicsOffset, comicsScale, [0, -lineWidth/16])
+      getScaledPt([2, comicsHeight-1], comicsOffset, comicsScale, [0, 0])
     ),
     populateObj(
       DATA_comics,
       "Redux",
-      getScaledPt([0, comicsHeight-3], comicsOffset, comicsScale, [0, -lineWidth/4])
+      getScaledPt([0, comicsHeight-3], comicsOffset, comicsScale, [0, 0])
     ),
     populateObj(
       DATA_comics,
