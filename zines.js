@@ -28,6 +28,11 @@ let DATA_zines = [
     "title" : "Ether",
     "url"   : "ethersent.neocities.org/",
     "owner" : "Emil Aisling"
+  },
+  {
+    "title" : "Toa of Cloudbursting",
+    "url" : "toa.nekoweb.org",
+    "owner": "Toa"
   }
 ]
 
