@@ -24,11 +24,11 @@ let DATA_poetry = [
     "url"   : "flowerinbinary.neocities.org/poetry",
     "owner" : "tim flower"
   },
-  {
-    "title" : "greycloak's website",
-    "url"   : "greycloak.neocities.org/writings",
-    "owner" : "greycloak"
-  },
+  // {
+  //   "title" : "greycloak's website",
+  //   "url"   : "greycloak.neocities.org/writings",
+  //   "owner" : "greycloak"
+  // },
   {
     "title" : "delovely's poetry",
     "url"   : "delovely.neocities.org/poetry/",

@@ -686,11 +686,11 @@ function addStations() {
       "flower in binary",
       getScaledPt([0.5, poetryHeight-0.5], poetryOffset, poetryScale, [0, 0])
     ),
-    populateObj(
-      DATA_poetry,
-      "greycloak's website",
-      getScaledPt([0, poetryHeight-2], poetryOffset, poetryScale, [0, 0])
-    ),
+    // populateObj(
+    //   DATA_poetry,
+    //   "greycloak's website",
+    //   getScaledPt([0, poetryHeight-2], poetryOffset, poetryScale, [0, 0])
+    // ),
     populateObj(
       DATA_poetry,
       "delovely's poetry",

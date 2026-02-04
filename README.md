@@ -80,6 +80,7 @@ the following information:
 
 ## Change Log
 ### 2026-02-04
+- Remove Greycloak from Poetry Line and map for missing widget
 - Add Toa of Cloudbursting to map and update position in zines and poetry
 - Add Toa of Cloudbursting to zines and poetry
 ### 2025-09-08
