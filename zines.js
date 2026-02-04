@@ -5,6 +5,11 @@ let DATA_zines = [
     "owner" : "Gus Becker"
   },
   {
+    "title" : "Ether",
+    "url"   : "ethersent.neocities.org/",
+    "owner" : "Emil Aisling"
+  },
+  {
     "title" : "Mythical Type Zines",
     "url"   : "mythicaltype.com/zines/",
     "owner" : "Mythical Type"
@@ -23,11 +28,6 @@ let DATA_zines = [
     "title" : "MyDogStoleThisWebsite",
     "url"   : "metrogoldia.neocities.org/",
     "owner" : "MyDogStoleMyLiver (Devin Spector)"
-  },
-  {
-    "title" : "Ether",
-    "url"   : "ethersent.neocities.org/",
-    "owner" : "Emil Aisling"
   },
   {
     "title" : "Toa of Cloudbursting",

@@ -499,6 +499,11 @@ function addStations() {
     // Blue : Zines Line
     populateObj(
       DATA_zines,
+      "Ether",
+      getScaledPt([zinesWidth-1.5, 0.5], zinesOffset, zinesScale, [0, 0])
+    ),
+    populateObj(
+      DATA_zines,
       "Mythical Type Zines",
       getScaledPt([zinesWidth-1.5, zinesHeight-1.5], zinesOffset, zinesScale, [0, 0])
     ),
@@ -513,9 +518,9 @@ function addStations() {
       getScaledPt([2, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
     ),
     populateObj(
-      DATA_zines,
-      "Ether",
-      getScaledPt([0.5, 0.5], zinesOffset, zinesScale, [0, 0])
+      DATA_poetry,
+      "Toa of Cloudbursting",
+      getScaledPt([0, 1.45], zinesOffset, zinesScale, [0, 0])
     ),
     //////////////////////////////////
     // Yellow : Creatives Club Line //
@@ -668,11 +673,6 @@ function addStations() {
     ///////////////////////
     populateObj(
       DATA_poetry,
-      "Poems",
-      getScaledPt([poetryWidth-3.5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
-    ),
-    populateObj(
-      DATA_poetry,
       "poems",
       getScaledPt([poetryWidth-5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
     ),
@@ -705,6 +705,11 @@ function addStations() {
       DATA_poetry,
       "teeth.dog",
       getScaledPt([2.5, 0.5], poetryOffset, poetryScale, [0, 0])
+    ),
+    populateObj(
+      DATA_poetry,
+      "Poems",
+      getScaledPt([4.25, 2.25], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,

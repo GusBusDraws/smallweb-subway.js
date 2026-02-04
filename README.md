@@ -79,6 +79,9 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-04
+- Add Toa of Cloudbursting to map and update position in zines and poetry
+- Add Toa of Cloudbursting to zines and poetry
 ### 2025-09-08
 - Shift Silver and Orange Lines to avoid awkward placement of Orange turn behind Red
 - Add Trailerparkia to Comics Line and map

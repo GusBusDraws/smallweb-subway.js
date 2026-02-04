@@ -5,9 +5,9 @@ let DATA_poetry = [
     "owner" : "Gus Becker"
   },
   {
-    "title" : "Poems",
-    "url"   : "ololufe-collective.ghost.io/tag/poems/",
-    "owner" : "Olólùfè Collective"
+    "title" : "Toa of Cloudbursting",
+    "url" : "toa.nekoweb.org",
+    "owner": "Toa"
   },
   {
     "title" : "poems",
@@ -45,16 +45,15 @@ let DATA_poetry = [
     "owner" : "Agnes"
   },
   {
+    "title" : "Poems",
+    "url"   : "ololufe-collective.ghost.io/tag/poems/",
+    "owner" : "Olólùfè Collective"
+  },
+  {
     "title" : "Doug's Poetry Shack",
     "url"   : "dsserv.net/poetry/",
     "owner" : "Doug's Shack"
-  },
-  {
-    "title" : "Toa of Cloudbursting",
-    "url" : "toa.nekoweb.org",
-    "owner": "Toa"
   }
-    
 ]
 
 
