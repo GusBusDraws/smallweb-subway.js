@@ -10,8 +10,8 @@ let DATA_doodlecrew = [
     "owner" : "Soho"
   },
   {
-    "title" : "my art 2025",
-    "url"   : "uuupah.neocities.org/art/my-art-2025/",
+    "title" : "my art 2026",
+    "url"   : "uuupah.neocities.org/art/my-art-2026/",
     "owner" : "uuupah"
   },
   {
