@@ -51,7 +51,7 @@ let DATA_poetry = [
   },
   {
     "title" : "Toa of Cloudbursting",
-    "url" : "toa.nekoweb.org",
+    "url" : "toa.nekoweb.org/",
     "owner": "Toa"
   }
     
