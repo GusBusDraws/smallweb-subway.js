@@ -35,6 +35,11 @@ let DATA_doodlecrew = [
     "owner" : "Gus Becker"
   },
   {
+    "title" : "The Magic Pencil",
+    "url"   : "davethedoodler.neocities.org/",
+    "owner" : "Doodledave"
+  },
+  {
     "title" : "DoodleBot",
     "url"   : "gusbus.space/doodlebot/",
     "owner" : "Gus Becker"

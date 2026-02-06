@@ -673,6 +673,12 @@ function addStations() {
     ),
     // slime pond comics (Orange Line)
     // Gus's Scifi Gallery (Silver Line)
+    populateObj(
+      DATA_doodlecrew,
+      "The Magic Pencil",
+      getScaledPt([dcWidth-3, 0], dcOffset, dcScale, [0, 0])
+    ),
+    // DoodleBot (CC Line)
     ///////////////////////
     // Red : Poetry Line //
     ///////////////////////

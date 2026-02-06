@@ -79,6 +79,8 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-06
+- Add Doodledave to Doodle Crew Line
 ### 2026-02-04
 - Add Pigeon/columbidae to Comics Line and map
 - Remove Greycloak from Poetry Line and map for missing widget
