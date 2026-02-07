@@ -1,5 +1,3 @@
-// @ts-check
-/// <reference path="./node_modules/@types/p5/global.d.ts" />
 let lineWidth;
 let refPt;
 let lineColors = [
@@ -151,6 +149,11 @@ function drawAllLines() {
   comicsOffset[1] = refPt[1] - (comicsHeight - 1) * stationDist - lineWidth
   comicsScale = [stationDist, stationDist];
   let [comicsScaledX, comicsScaledY] = drawLine(comicsOffset, comicsScale, comicsPts, '#f7941d');
+  // Yellow : Creatives Club Line
+  ccOffset[0] = refPt[0] + lineWidth;
+  ccOffset[1] = refPt[1] - 3 * stationDist;
+  ccScale = [stationDist, stationDist];
+  let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
   // Blue : Zines Line
   zinesOffset[0] = (
     max(dcScaledX)
@@ -168,11 +171,6 @@ function drawAllLines() {
   let [poetryScaledX, poetryScaledY] = drawLine(poetryOffset, poetryScale, poetryPts, '#e51937');
   // Redraw Green to put it over Blue and Red
   [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
-  // Yellow : Creatives Club Line
-  ccOffset[0] = refPt[0] + lineWidth;
-  ccOffset[1] = refPt[1] - 3 * stationDist;
-  ccScale = [stationDist, stationDist];
-  let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
 }
 
 function drawLine(offsets, scales, linePts, lineColor) {
