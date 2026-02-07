@@ -1,5 +1,3 @@
-// @ts-check
-/// <reference path="./node_modules/@types/p5/global.d.ts" />
 let lineWidth;
 let refPt;
 let lineColors = [
@@ -151,6 +149,11 @@ function drawAllLines() {
   comicsOffset[1] = refPt[1] - (comicsHeight - 1) * stationDist - lineWidth
   comicsScale = [stationDist, stationDist];
   let [comicsScaledX, comicsScaledY] = drawLine(comicsOffset, comicsScale, comicsPts, '#f7941d');
+  // Yellow : Creatives Club Line
+  ccOffset[0] = refPt[0] + lineWidth;
+  ccOffset[1] = refPt[1] - 3 * stationDist;
+  ccScale = [stationDist, stationDist];
+  let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
   // Blue : Zines Line
   zinesOffset[0] = (
     max(dcScaledX)
@@ -168,11 +171,6 @@ function drawAllLines() {
   let [poetryScaledX, poetryScaledY] = drawLine(poetryOffset, poetryScale, poetryPts, '#e51937');
   // Redraw Green to put it over Blue and Red
   [dcScaledX, dcScaledY] = drawLine(dcOffset, dcScale, dcPts, '#25b233');
-  // Yellow : Creatives Club Line
-  ccOffset[0] = refPt[0] + lineWidth;
-  ccOffset[1] = refPt[1] - 3 * stationDist;
-  ccScale = [stationDist, stationDist];
-  let [ccScaledX, ccScaledY] = drawLine(ccOffset, ccScale, ccPts, '#fad447');
 }
 
 function drawLine(offsets, scales, linePts, lineColor) {
@@ -500,6 +498,11 @@ function addStations() {
     populateObj(
       DATA_zines,
       "Ether",
+      getScaledPt([zinesWidth-3, 0], zinesOffset, zinesScale, [0, 0])
+    ),
+    populateObj(
+      DATA_zines,
+      "Sheryl's Momzines",
       getScaledPt([zinesWidth-1.5, 0.5], zinesOffset, zinesScale, [0, 0])
     ),
     populateObj(
@@ -538,28 +541,29 @@ function addStations() {
     populateObj(
       DATA_creativesclub,
       "haystack blog and oddities",
-      getScaledPt([ccWidth-1.5, 0.5], ccOffset, ccScale, [0, 0])
+      // getScaledPt([ccWidth-1.5, 0.5], ccOffset, ccScale, [0, 0])
+      getScaledPt([ccWidth-1, 3.5], ccOffset, ccScale, [0, 0])
     ),
     populateObj(
       DATA_creativesclub,
       "UR LOCAL CYBORG",
-      getScaledPt([ccWidth-1, 1.75], ccOffset, ccScale, [0, 0])
+      getScaledPt([ccWidth-1, 1.5], ccOffset, ccScale, [0, 0])
     ),
-    populateObj(
-      DATA_creativesclub,
-      "marcinek.tech",
-      getScaledPt([ccWidth-1, ccHeight - 2.75], ccOffset, ccScale, [0, 0])
-    ),
-    populateObj(
-      DATA_creativesclub,
-      "community - Justbestvisuals",
-      getScaledPt([ccWidth-1.5, ccHeight-1.5], ccOffset, ccScale, [0, 0])
-    ),
-    populateObj(
-      DATA_creativesclub,
-      "michi.foo",
-      getScaledPt([2, ccHeight-1], ccOffset, ccScale, [-lineWidth/2, 0])
-    ),
+    // populateObj(
+    //   DATA_creativesclub,
+    //   "marcinek.tech",
+    //   getScaledPt([ccWidth-1, ccHeight - 2.75], ccOffset, ccScale, [0, 0])
+    // ),
+    // populateObj(
+    //   DATA_creativesclub,
+    //   "community - Justbestvisuals",
+    //   getScaledPt([ccWidth-1.5, ccHeight-1.5], ccOffset, ccScale, [0, 0])
+    // ),
+    // populateObj(
+    //   DATA_creativesclub,
+    //   "michi.foo",
+    //   getScaledPt([2, ccHeight-1], ccOffset, ccScale, [-lineWidth/2, 0])
+    // ),
     //////////////////////////
     // Orange : Comics Line //
     //////////////////////////

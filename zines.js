@@ -10,6 +10,11 @@ let DATA_zines = [
     "owner" : "Emil Aisling"
   },
   {
+    "title" : "Sheryl's Momzines",
+    "url"   : "sherylvernon.neocities.org/",
+    "owner" : "Sheryl Vernon"
+  },
+  {
     "title" : "Mythical Type Zines",
     "url"   : "mythicaltype.com/zines/",
     "owner" : "Mythical Type"

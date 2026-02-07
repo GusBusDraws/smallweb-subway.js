@@ -80,6 +80,10 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-07
+- Draw Zine Line after CC Line so it shows over
+- Remove missing sites (marcinek, justbestvisuals, michi) from CC Line
+- Add Sheryl's Momzines to Zine Line
 ### 2026-02-06
 - Add Doodledave to Doodle Crew Line
 ### 2026-02-04
