@@ -10,8 +10,8 @@ let DATA_doodlecrew = [
     "owner" : "Soho"
   },
   {
-    "title" : "my art 2025",
-    "url"   : "uuupah.neocities.org/art/my-art-2025/",
+    "title" : "my art 2026",
+    "url"   : "uuupah.neocities.org/art/my-art-2026/",
     "owner" : "uuupah"
   },
   {
@@ -33,6 +33,11 @@ let DATA_doodlecrew = [
     "title" : "Gus's Scifi Gallery",
     "url"   : "gusbus.space/scifi/",
     "owner" : "Gus Becker"
+  },
+  {
+    "title" : "The Magic Pencil",
+    "url"   : "davethedoodler.neocities.org/",
+    "owner" : "Doodledave"
   },
   {
     "title" : "DoodleBot",

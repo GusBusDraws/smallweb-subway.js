@@ -30,6 +30,11 @@ let DATA_comics = [
     "owner" : "TheL3tterM"
   },
   {
+    "title" : "My Comics",
+    "url"   : "columbidaecorner.neocities.org/comics",
+    "owner" : "Pigeon"
+  },
+  {
     "title" : "Long Gone Legend",
     "url"   : "tertiaryapocalypse.neocities.org/lgl/",
     "owner" : "hal"

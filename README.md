@@ -19,7 +19,7 @@ things you'll need to do:
 
 1. Identify which line of the Smallweb Subway is most relevant for you to join.
 Each line has a specific `KEYWORD` which is important for the
-following steps. Right now there are three keywords:
+following steps. Right now there are six keywords:
     - `poetry` (Red Line) : Websites showcasing original poetry.
     - `comics` (Orange Line) : Websites showcasing original comics.
     - `creativesclub` (Yellow Line) : Websites belonging to member of [Creatives Club](https://creativesclub.art).
@@ -27,9 +27,10 @@ following steps. Right now there are three keywords:
     - `zines` (Blue Line) : Websites with zines and zine resources.
     - `scifi` (Silver Line) : Websites with original science fiction work.
 
-2. Substituting `KEYWORD` with one of the keywords above, add the following
+2. Add the following
 lines of code to the `<body>` of your page's .html
-file where you'd like the widget to appear:
+file where you'd like the widget to appear, substituting the text `KEYWORD`
+with one of the keywords listed above:
     ```html
     <script src="https://gusbus.space/smallweb-subway.js/KEYWORD.js"></script>
     <smallweb-subway-KEYWORD></smallweb-subway-KEYWORD>
@@ -79,6 +80,13 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-06
+- Add Doodledave to Doodle Crew Line
+### 2026-02-04
+- Add Pigeon/columbidae to Comics Line and map
+- Remove Greycloak from Poetry Line and map for missing widget
+- Add Toa of Cloudbursting to map and update position in zines and poetry
+- Add Toa of Cloudbursting to zines and poetry
 ### 2025-09-08
 - Shift Silver and Orange Lines to avoid awkward placement of Orange turn behind Red
 - Add Trailerparkia to Comics Line and map

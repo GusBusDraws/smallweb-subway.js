@@ -499,6 +499,11 @@ function addStations() {
     // Blue : Zines Line
     populateObj(
       DATA_zines,
+      "Ether",
+      getScaledPt([zinesWidth-1.5, 0.5], zinesOffset, zinesScale, [0, 0])
+    ),
+    populateObj(
+      DATA_zines,
       "Mythical Type Zines",
       getScaledPt([zinesWidth-1.5, zinesHeight-1.5], zinesOffset, zinesScale, [0, 0])
     ),
@@ -513,9 +518,9 @@ function addStations() {
       getScaledPt([2, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
     ),
     populateObj(
-      DATA_zines,
-      "Ether",
-      getScaledPt([0.5, 0.5], zinesOffset, zinesScale, [0, 0])
+      DATA_poetry,
+      "Toa of Cloudbursting",
+      getScaledPt([0, 1.45], zinesOffset, zinesScale, [0, 0])
     ),
     //////////////////////////////////
     // Yellow : Creatives Club Line //
@@ -587,6 +592,11 @@ function addStations() {
       DATA_comics,
       "Long Gone Legend",
       getScaledPt([0, 2], comicsOffset, comicsScale, [0, 0])
+    ),
+    populateObj(
+      DATA_comics,
+      "My Comics",
+      getScaledPt([0.5, 0.5], comicsOffset, comicsScale, [0, 0])
     ),
     populateObj(
       DATA_comics,
@@ -663,14 +673,15 @@ function addStations() {
     ),
     // slime pond comics (Orange Line)
     // Gus's Scifi Gallery (Silver Line)
+    populateObj(
+      DATA_doodlecrew,
+      "The Magic Pencil",
+      getScaledPt([dcWidth-3, 0], dcOffset, dcScale, [0, 0])
+    ),
+    // DoodleBot (CC Line)
     ///////////////////////
     // Red : Poetry Line //
     ///////////////////////
-    populateObj(
-      DATA_poetry,
-      "Poems",
-      getScaledPt([poetryWidth-3.5, poetryHeight-1], poetryOffset, poetryScale, [0, 0])
-    ),
     populateObj(
       DATA_poetry,
       "poems",
@@ -686,11 +697,11 @@ function addStations() {
       "flower in binary",
       getScaledPt([0.5, poetryHeight-0.5], poetryOffset, poetryScale, [0, 0])
     ),
-    populateObj(
-      DATA_poetry,
-      "greycloak's website",
-      getScaledPt([0, poetryHeight-2], poetryOffset, poetryScale, [0, 0])
-    ),
+    // populateObj(
+    //   DATA_poetry,
+    //   "greycloak's website",
+    //   getScaledPt([0, poetryHeight-2], poetryOffset, poetryScale, [0, 0])
+    // ),
     populateObj(
       DATA_poetry,
       "delovely's poetry",
@@ -705,6 +716,11 @@ function addStations() {
       DATA_poetry,
       "teeth.dog",
       getScaledPt([2.5, 0.5], poetryOffset, poetryScale, [0, 0])
+    ),
+    populateObj(
+      DATA_poetry,
+      "Poems",
+      getScaledPt([4.25, 2.25], poetryOffset, poetryScale, [0, 0])
     ),
     populateObj(
       DATA_poetry,
