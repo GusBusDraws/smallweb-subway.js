@@ -662,7 +662,7 @@ function addStations() {
     ),
     populateObj(
       DATA_doodlecrew,
-      "my art 2025",
+      "my art 2026",
       getScaledPt([dcWidth-6, dcHeight-1], dcOffset, dcScale, [0, 0])
     ),
     populateObj(

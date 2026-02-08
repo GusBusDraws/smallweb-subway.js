@@ -81,6 +81,7 @@ the following information:
 
 ## Change Log
 ### 2026-02-07
+- Update Hollis's site on the map
 - Draw Zine Line after CC Line so it shows over
 - Remove missing sites (marcinek, justbestvisuals, michi) from CC Line
 - Add Sheryl's Momzines to Zine Line
