@@ -16,7 +16,7 @@ let DATA_doodlecrew = [
   },
   {
     "title" : "Honora's web garden",
-    "url"   : "honora.neocities.org/",
+    "url"   : "honora.neocities.org/about",
     "owner" : "Honora"
   },
   {
