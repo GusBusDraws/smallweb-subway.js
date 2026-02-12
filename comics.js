@@ -36,14 +36,14 @@ let DATA_comics = [
   },
   {
     "title" : "Long Gone Legend",
-    "url"   : "tertiaryapocalypse.neocities.org/lgl/",
+    "url"   : "burkespoint.net/lgl/",
     "owner" : "hal"
   },
-  {
-    "title" : "Bruno and Friends",
-    "url"   : "brunoandfriends.nekoweb.org/",
-    "owner" : "Yoylecake420"
-  },
+  // {
+  //   "title" : "Bruno and Friends",
+  //   "url"   : "brunoandfriends.nekoweb.org/",
+  //   "owner" : "Yoylecake420"
+  // },
   {
     "title" : "White Noise",
     "url"   : "www.white-noise-comic.com/",
@@ -59,11 +59,11 @@ let DATA_comics = [
     "url"   : "www.keepingtimecomic.com/links/",
     "owner" : "Kody Okamoto"
   },
-  {
-    "title" : "BrittHub",
-    "url"   : "britthub.co.uk/",
-    "owner" : "Britt Coxon"
-  },
+  // {
+  //   "title" : "BrittHub",
+  //   "url"   : "britthub.co.uk/",
+  //   "owner" : "Britt Coxon"
+  // },
   {
     "title" : "Links",
     "url"   : "diabloafterdark.nekoweb.org/links.html",

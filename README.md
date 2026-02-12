@@ -80,6 +80,9 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-12
+- Remove Bruno and Friends from Comics Line
+- Update URL for Long Gone Legends on Comics Line
 ### 2026-02-07
 - Update Honora's link to their About page
 - Update Hollis's site on the map
