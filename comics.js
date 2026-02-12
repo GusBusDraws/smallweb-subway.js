@@ -45,6 +45,11 @@ let DATA_comics = [
   //   "owner" : "Yoylecake420"
   // },
   {
+    "title" : "Schism",
+    "url"   : "schism.org/",
+    "owner" : "Newbabyfly"
+  },
+  {
     "title" : "White Noise",
     "url"   : "www.white-noise-comic.com/",
     "owner" : "Adrien Lee (thephooka)"

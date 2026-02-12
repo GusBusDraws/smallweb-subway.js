@@ -81,6 +81,7 @@ the following information:
 
 ## Change Log
 ### 2026-02-12
+- Add Schism to Comics Line and map
 - Remove Bruno and Friends from Comics Line
 - Update URL for Long Gone Legends on Comics Line
 ### 2026-02-07
