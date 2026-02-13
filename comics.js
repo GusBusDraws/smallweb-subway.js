@@ -64,11 +64,11 @@ let DATA_comics = [
     "url"   : "www.keepingtimecomic.com/links/",
     "owner" : "Kody Okamoto"
   },
-  // {
-  //   "title" : "BrittHub",
-  //   "url"   : "britthub.co.uk/",
-  //   "owner" : "Britt Coxon"
-  // },
+  {
+    "title" : "BrittHub",
+    "url"   : "britthub.co.uk/",
+    "owner" : "Britt Coxon"
+  },
   {
     "title" : "Links",
     "url"   : "diabloafterdark.nekoweb.org/links.html",

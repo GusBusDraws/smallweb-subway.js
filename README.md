@@ -80,6 +80,8 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-13
+- Re-add BrittHub to the Comics Line
 ### 2026-02-12
 - Add Schism to Comics Line and map
 - Remove Bruno and Friends from Comics Line
