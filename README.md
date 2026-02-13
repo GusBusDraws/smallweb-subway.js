@@ -80,6 +80,10 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-13
+- Remove Doug's Shack from Poetry Line
+- Remove teeth.dog from Poetry Line
+- Re-add BrittHub to the Comics Line
 ### 2026-02-12
 - Add Schism to Comics Line and map
 - Remove Bruno and Friends from Comics Line

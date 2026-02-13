@@ -39,20 +39,20 @@ let DATA_poetry = [
     "url"   : "manyface.neocities.org/",
     "owner" : "Manyface"
   },
-  {
-    "title" : "teeth.dog",
-    "url"   : "teeth.dog/mywork",
-    "owner" : "Agnes"
-  },
+  // {
+  //   "title" : "teeth.dog",
+  //   "url"   : "teeth.dog/mywork",
+  //   "owner" : "Agnes"
+  // },
   {
     "title" : "Poems",
     "url"   : "ololufe-collective.ghost.io/tag/poems/",
     "owner" : "Olólùfè Collective"
-  },
-  {
-    "title" : "Doug's Poetry Shack",
-    "url"   : "dsserv.net/poetry/",
-    "owner" : "Doug's Shack"
+  // },
+  // {
+  //   "title" : "Doug's Poetry Shack",
+  //   "url"   : "dsserv.net/poetry/",
+  //   "owner" : "Doug's Shack"
   }
 ]
 

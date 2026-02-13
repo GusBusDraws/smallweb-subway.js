@@ -716,20 +716,20 @@ function addStations() {
       "manyface world",
       getScaledPt([0.5, 0.5], poetryOffset, poetryScale, [0, 0])
     ),
-    populateObj(
-      DATA_poetry,
-      "teeth.dog",
-      getScaledPt([2.5, 0.5], poetryOffset, poetryScale, [0, 0])
-    ),
+    // populateObj(
+    //   DATA_poetry,
+    //   "teeth.dog",
+    //   getScaledPt([2.5, 0.5], poetryOffset, poetryScale, [0, 0])
+    // ),
     populateObj(
       DATA_poetry,
       "Poems",
       getScaledPt([4.25, 2.25], poetryOffset, poetryScale, [0, 0])
-    ),
-    populateObj(
-      DATA_poetry,
-      "Doug's Poetry Shack",
-      getScaledPt([poetryWidth - 3, poetryHeight - 4], poetryOffset, poetryScale, [0, 0])
+    // ),
+    // populateObj(
+    //   DATA_poetry,
+    //   "Doug's Poetry Shack",
+    //   getScaledPt([poetryWidth - 3, poetryHeight - 4], poetryOffset, poetryScale, [0, 0])
     )
   ];
   return stations
