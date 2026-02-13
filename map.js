@@ -604,7 +604,7 @@ function addStations() {
     ),
     populateObj(
       DATA_comics,
-      "Bruno and Friends",
+      "Schism",
       getScaledPt([2, 0], comicsOffset, comicsScale, [0, 0])
     ),
     populateObj(
