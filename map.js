@@ -559,11 +559,11 @@ function addStations() {
     //   "community - Justbestvisuals",
     //   getScaledPt([ccWidth-1.5, ccHeight-1.5], ccOffset, ccScale, [0, 0])
     // ),
-    // populateObj(
-    //   DATA_creativesclub,
-    //   "michi.foo",
-    //   getScaledPt([2, ccHeight-1], ccOffset, ccScale, [-lineWidth/2, 0])
-    // ),
+    populateObj(
+      DATA_creativesclub,
+      "Art",
+      getScaledPt([2, ccHeight-1], ccOffset, ccScale, [-lineWidth/2, 0])
+    ),
     //////////////////////////
     // Orange : Comics Line //
     //////////////////////////

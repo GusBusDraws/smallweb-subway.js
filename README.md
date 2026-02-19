@@ -80,6 +80,9 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-19
+- Add Stephanie Diederich to CC Line
+- Remove folks from CC Line
 ### 2026-02-13
 - Remove Doug's Shack from Poetry Line
 - Remove teeth.dog from Poetry Line

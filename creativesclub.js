@@ -29,20 +29,25 @@ let DATA_creativesclub = [
     "url"   : "seenby.urlocalcyb.org/",
     "owner" : "Caroline"
   },
+  // {
+  //   "title" : "marcinek.tech",
+  //   "url"   : "marcinek.tech/",
+  //   "owner" : "Kristen"
+  // },
+  // {
+  //   "title" : "community - Justbestvisuals",
+  //   "url"   : "justbestvisuals.com/community/",
+  //   "owner" : "Justin"
+  // },
+  // {
+  //   "title" : "michi.foo",
+  //   "url"   : "michi.foo/0",
+  //   "owner" : "Sara"
+  // }
   {
-    "title" : "marcinek.tech",
-    "url"   : "marcinek.tech/",
-    "owner" : "Kristen"
-  },
-  {
-    "title" : "community - Justbestvisuals",
-    "url"   : "justbestvisuals.com/community/",
-    "owner" : "Justin"
-  },
-  {
-    "title" : "michi.foo",
-    "url"   : "michi.foo/0",
-    "owner" : "Sara"
+    "title" : "Art",
+    "url"   : "www.stephaniediederich.com/",
+    "owner" : "Stephanie Diederich"
   }
 ]
 
