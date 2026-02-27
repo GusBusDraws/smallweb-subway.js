@@ -81,6 +81,7 @@ the following information:
 
 ## Change Log
 ### 2026-02-26
+- Remove Lunaseeker from Zine Line
 - Add Jess/BumbleChub back to Zines Line
 - Add Marcy Chow to DoodleCrew Line!
 ### 2026-02-19

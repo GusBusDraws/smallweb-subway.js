@@ -512,9 +512,15 @@ function addStations() {
       "Mythical Type Zines",
       getScaledPt([zinesWidth-1.5, zinesHeight-1.5], zinesOffset, zinesScale, [0, 0])
     ),
+    // populateObj(
+    //   DATA_zines,
+    //   "Lunaseeker Press",
+    //   getScaledPt([zinesWidth-3, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
+    // ),
     populateObj(
       DATA_zines,
-      "Lunaseeker Press",
+      "zines",
+      // getScaledPt([0.5, 0.5], zinesOffset, zinesScale, [0, 0])
       getScaledPt([zinesWidth-3, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
     ),
     populateObj(
@@ -526,11 +532,6 @@ function addStations() {
       DATA_poetry,
       "Toa of Cloudbursting",
       getScaledPt([0, 1.45], zinesOffset, zinesScale, [0, 0])
-    ),
-    populateObj(
-      DATA_zines,
-      "zines",
-      getScaledPt([0.5, 0.5], zinesOffset, zinesScale, [0, 0])
     ),
     //////////////////////////////////
     // Yellow : Creatives Club Line //

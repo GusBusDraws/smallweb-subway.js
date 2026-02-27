@@ -20,10 +20,15 @@ let DATA_zines = [
     "owner" : "Mythical Type"
   },
   {
-    "title" : "Lunaseeker Press",
-    "url"   : "lunaseeker.com/",
-    "owner" : "Zachary Kai"
+    "title" : "zines",
+    "url"   : "bumblechub.com/zines/",
+    "owner" : "bumblechub"
   },
+  // {
+  //   "title" : "Lunaseeker Press",
+  //   "url"   : "lunaseeker.com/",
+  //   "owner" : "Zachary Kai"
+// },
   {
     "title" : "MyDogStoleThisWebsite",
     "url"   : "metrogoldia.neocities.org/",
