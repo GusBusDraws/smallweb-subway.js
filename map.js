@@ -494,7 +494,9 @@ function addStations() {
       "Stories",
       getScaledPt([5, 0], sfOffset, sfScale, [0, 0])
     ),
-    // Blue : Zines Line
+    //////////////////////////
+    // Blue : Zines Line //
+    ////////////////////////
     populateObj(
       DATA_zines,
       "Ether",
@@ -510,9 +512,15 @@ function addStations() {
       "Mythical Type Zines",
       getScaledPt([zinesWidth-1.5, zinesHeight-1.5], zinesOffset, zinesScale, [0, 0])
     ),
+    // populateObj(
+    //   DATA_zines,
+    //   "Lunaseeker Press",
+    //   getScaledPt([zinesWidth-3, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
+    // ),
     populateObj(
       DATA_zines,
-      "Lunaseeker Press",
+      "zines",
+      // getScaledPt([0.5, 0.5], zinesOffset, zinesScale, [0, 0])
       getScaledPt([zinesWidth-3, zinesHeight-1], zinesOffset, zinesScale, [0, 0])
     ),
     populateObj(
@@ -658,24 +666,29 @@ function addStations() {
     populateObj(
       DATA_doodlecrew,
       "feuer-in-soho.art",
-      getScaledPt([dcWidth-4, dcHeight-1], dcOffset, dcScale, [0, 0])
+      getScaledPt([dcWidth-3.5, dcHeight-1], dcOffset, dcScale, [0, 0])
     ),
     populateObj(
       DATA_doodlecrew,
       "my art 2026",
-      getScaledPt([dcWidth-6, dcHeight-1], dcOffset, dcScale, [0, 0])
+      getScaledPt([dcWidth-5.5, dcHeight-1], dcOffset, dcScale, [0, 0])
     ),
     populateObj(
       DATA_doodlecrew,
       "Honora's web garden",
-      getScaledPt([0, dcHeight-3], dcOffset, dcScale, [0, 0])
+      getScaledPt([0.5, dcHeight-2.5], dcOffset, dcScale, [0, 0])
+    ),
+    // slime pond comics (Orange Line)
+    populateObj(
+      DATA_doodlecrew,
+      "Marcy Chow Doodles",
+      getScaledPt([0, 1.5], dcOffset, dcScale, [0, 0])
     ),
     populateObj(
       DATA_doodlecrew,
       "varve's art gallery",
       getScaledPt([0.5, 0.5], dcOffset, dcScale, [0, 0])
     ),
-    // slime pond comics (Orange Line)
     // Gus's Scifi Gallery (Silver Line)
     populateObj(
       DATA_doodlecrew,

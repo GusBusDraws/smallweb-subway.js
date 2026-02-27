@@ -20,14 +20,19 @@ let DATA_doodlecrew = [
     "owner" : "Honora"
   },
   {
-    "title" : "varve's art gallery",
-    "url"   : "www.write-on.org/art/",
-    "owner" : "varve"
-  },
-  {
     "title" : "slime pond comics",
     "url"   : "abslimeware.neocities.org/comic/",
     "owner" : "candycanearter07"
+  },
+  {
+    "title" : "Marcy Chow Doodles",
+    "url"   : "marcychowdoodles.neocities.org/",
+    "owner" : "Marcy Chow"
+  },
+  {
+    "title" : "varve's art gallery",
+    "url"   : "www.write-on.org/art/",
+    "owner" : "varve"
   },
   {
     "title" : "Gus's Scifi Gallery",
