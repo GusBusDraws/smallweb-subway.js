@@ -80,6 +80,8 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-02-26
+- Add Marcy Chow to DoodleCrew Line!
 ### 2026-02-19
 - Add Stephanie Diederich to CC Line
 - Remove folks from CC Line
