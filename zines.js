@@ -24,11 +24,6 @@ let DATA_zines = [
     "url"   : "lunaseeker.com/",
     "owner" : "Zachary Kai"
   },
-  // {
-  //   "title" : "zines",
-  //   "url"   : "bumblechub.com/zines/",
-  //   "owner" : "bumblechub"
-  // },
   {
     "title" : "MyDogStoleThisWebsite",
     "url"   : "metrogoldia.neocities.org/",
@@ -38,6 +33,11 @@ let DATA_zines = [
     "title" : "Toa of Cloudbursting",
     "url" : "toa.nekoweb.org/",
     "owner": "Toa"
+  },
+  {
+    "title" : "zines",
+    "url"   : "bumblechub.com/zines/",
+    "owner" : "bumblechub"
   }
 ]
 

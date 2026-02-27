@@ -81,6 +81,7 @@ the following information:
 
 ## Change Log
 ### 2026-02-26
+- Add Jess/BumbleChub back to Zines Line
 - Add Marcy Chow to DoodleCrew Line!
 ### 2026-02-19
 - Add Stephanie Diederich to CC Line

@@ -494,7 +494,9 @@ function addStations() {
       "Stories",
       getScaledPt([5, 0], sfOffset, sfScale, [0, 0])
     ),
-    // Blue : Zines Line
+    //////////////////////////
+    // Blue : Zines Line //
+    ////////////////////////
     populateObj(
       DATA_zines,
       "Ether",
@@ -524,6 +526,11 @@ function addStations() {
       DATA_poetry,
       "Toa of Cloudbursting",
       getScaledPt([0, 1.45], zinesOffset, zinesScale, [0, 0])
+    ),
+    populateObj(
+      DATA_zines,
+      "zines",
+      getScaledPt([0.5, 0.5], zinesOffset, zinesScale, [0, 0])
     ),
     //////////////////////////////////
     // Yellow : Creatives Club Line //
