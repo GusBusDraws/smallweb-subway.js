@@ -93,6 +93,11 @@ let DATA_comics = [
     "title" : "Friction Comic",
     "url"   : "frictioncomic.com/home",
     "owner" : "Jack"
+  },
+  {
+    "title" : "The Bog Quest",
+    "url"   : "https://thebogquest.com/",
+    "owner" : "San"
   }
 ]
 
