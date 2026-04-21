@@ -26,7 +26,7 @@ let DATA_poetry = [
   },
   {
     "title" : "girlfreak poetry",
-    "url"   : "jenniferjantzen.com/poetry",
+    "url"   : "jenniferjantzen.com/poetry/",
     "owner" : "Jenny Jantzen"
   },
   // {
