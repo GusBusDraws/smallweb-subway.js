@@ -554,6 +554,11 @@ function addStations() {
     ),
     populateObj(
       DATA_creativesclub,
+      "poetry, music, zines, and more!",
+      getScaledPt([ccWidth-1.5, 0.5], ccOffset, ccScale, [0, 0])
+    ),
+    populateObj(
+      DATA_creativesclub,
       "UR LOCAL CYBORG",
       getScaledPt([ccWidth-1, 1.5], ccOffset, ccScale, [0, 0])
     ),
@@ -719,6 +724,11 @@ function addStations() {
     //   "greycloak's website",
     //   getScaledPt([0, poetryHeight-2], poetryOffset, poetryScale, [0, 0])
     // ),
+    populateObj(
+      DATA_poetry,
+      "girlfreak poetry",
+      getScaledPt([0, poetryHeight-2], poetryOffset, poetryScale, [0, 0])
+    ),
     populateObj(
       DATA_poetry,
       "delovely's poetry",

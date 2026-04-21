@@ -80,6 +80,8 @@ the following information:
   size of the canvas and defined in the `setup()` loop
 
 ## Change Log
+### 2026-04-21
+- Add Jenny to CC and Poetry Lines
 ### 2026-02-26
 - Remove Lunaseeker from Zine Line
 - Add Jess/BumbleChub back to Zines Line
