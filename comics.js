@@ -96,7 +96,7 @@ let DATA_comics = [
   },
   {
     "title" : "The Bog Quest",
-    "url"   : "https://thebogquest.com/",
+    "url"   : "thebogquest.com",
     "owner" : "San"
   }
 ]
