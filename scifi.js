@@ -44,6 +44,11 @@ let DATA_scifi = [
     "url"   : "frictioncomic.com/home",
     "owner" : "Jack"
   }
+  {
+    "title" : "verybluepigeon",
+    "url"   : "verybluepigeon.neocities.org/writing",
+    "owner" : "Sally"
+  }
 ]
 
 
