@@ -46,7 +46,7 @@ let DATA_scifi = [
   },
   {
     "title" : "Fiiral's Project Hub",
-    "url"   : "fiiral.org/index.html",
+    "url"   : "www.fiiral.org/index.html",
     "owner" : "fiiral"
   }
 ]
