@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-10-31
+- Remove broken Bog Quest from the Comics Line while I reach out to the owner
 - Add [Hyper and Stick](https://hyperandstick.com/) to the Comics Line
 - Update [Mythical Type](https://mythicaltype.neocities.org/) on the Zines Line
 - Move Change Log out of the `README` and to a separate file

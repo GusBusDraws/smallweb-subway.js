@@ -94,11 +94,11 @@ let DATA_comics = [
     "url"   : "frictioncomic.com/home",
     "owner" : "Jack"
   },
-  {
-    "title" : "The Bog Quest",
-    "url"   : "https://thebogquest.com/",
-    "owner" : "San"
-  },
+  // {
+  //   "title" : "The Bog Quest",
+  //   "url"   : "https://thebogquest.com/",
+  //   "owner" : "San"
+  // },
   {
     "title" : "Hyper and Stick",
     "url"   : "hyperandstick.com/",
