@@ -109,13 +109,21 @@ function getHostName_zines(url) {
 }
 
 function goToPrev_zines() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_zines[prevSiteIndex_zines].url
+  // The leading '//' treats the link as an external site, even without "https:"
+  if (typeof forceNewTab_zines !== 'undefined' && forceNewTab_zines) {
+    window.open('//' + DATA_zines[prevSiteIndex_zines].url)
+  } else {
+    location.href = '//' + DATA_zines[prevSiteIndex_zines].url
+  }
 }
 
 function goToNext_zines() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_zines[nextSiteIndex_zines].url
+  // The leading '//' treats the link as an external site, even without "https:"
+  if (typeof forceNewTab_zines !== 'undefined' && forceNewTab_zines) {
+    window.open('//' + DATA_zines[nextSiteIndex_zines].url)
+  } else {
+    location.href = '//' + DATA_zines[nextSiteIndex_zines].url
+  }
 }
 
 function insertWidget_zines() {
