@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-10-31
+- Add [Hyper and Stick](https://hyperandstick.com/) to the Comics Line
 - Update [Mythical Type](https://mythicaltype.neocities.org/) on the Zines Line
 - Move Change Log out of the `README` and to a separate file
 
