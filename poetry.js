@@ -29,11 +29,11 @@ let DATA_poetry = [
     "url"   : "jenniferjantzen.com/poetry/",
     "owner" : "Jenny Jantzen"
   },
-  // {
-  //   "title" : "greycloak's website",
-  //   "url"   : "greycloak.neocities.org/writings",
-  //   "owner" : "greycloak"
-  // },
+  {
+    "title" : "greycloak's website",
+    "url"   : "greycloak.neocities.org/writings",
+    "owner" : "greycloak"
+  },
   {
     "title" : "delovely's poetry",
     "url"   : "delovely.neocities.org/poetry/",
@@ -41,7 +41,7 @@ let DATA_poetry = [
   },
   {
     "title" : "manyface world",
-    "url"   : "manyface.neocities.org/",
+    "url"   : "manyface.art/",
     "owner" : "Manyface"
   },
   // {

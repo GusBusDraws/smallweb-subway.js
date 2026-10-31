@@ -16,12 +16,12 @@ let DATA_zines = [
   },
   {
     "title" : "Mythical Type Zines",
-    "url"   : "mythicaltype.com/zines/",
+    "url"   : "mythicaltype.neocities.org/",
     "owner" : "Mythical Type"
   },
   {
     "title" : "zines",
-    "url"   : "bumblechub.com/zines/",
+    "url"   : "bumblechub.com/zines",
     "owner" : "bumblechub"
   },
   // {
@@ -38,11 +38,6 @@ let DATA_zines = [
     "title" : "Toa of Cloudbursting",
     "url" : "toa.nekoweb.org/",
     "owner": "Toa"
-  },
-  {
-    "title" : "zines",
-    "url"   : "bumblechub.com/zines/",
-    "owner" : "bumblechub"
   }
 ]
 
