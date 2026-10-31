@@ -21,7 +21,7 @@ let DATA_zines = [
   },
   {
     "title" : "zines",
-    "url"   : "bumblechub.com/zines/",
+    "url"   : "bumblechub.com/zines",
     "owner" : "bumblechub"
   },
   // {
@@ -38,11 +38,6 @@ let DATA_zines = [
     "title" : "Toa of Cloudbursting",
     "url" : "toa.nekoweb.org/",
     "owner": "Toa"
-  },
-  {
-    "title" : "zines",
-    "url"   : "bumblechub.com/zines/",
-    "owner" : "bumblechub"
   }
 ]
 

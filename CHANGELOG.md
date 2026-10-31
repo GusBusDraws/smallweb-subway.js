@@ -1,6 +1,12 @@
 # Change Log
 
 ## 2026-10-31
+- Remove [Codex Archonic](https://lerariemann.nekoweb.org/index.html) from the Scifi Line
+- Reorder CC Line sites to match map
+- Remove [Jenny](https://jenniferjantzen.com/) from the CC Line
+- Fix link to [bumblechub](https://bumblechub.com/zines) on the Zines Line
+- Re-add [greycloak](https://greycloak.neocities.org/writings) to the Poetry Line
+- Update [Manyface](https://manyface.art) on the Poetry Line
 - Remove broken Bog Quest from the Comics Line while I reach out to the owner
 - Add [Hyper and Stick](https://hyperandstick.com/) to the Comics Line
 - Update [Mythical Type](https://mythicaltype.neocities.org/) on the Zines Line

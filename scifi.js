@@ -9,11 +9,11 @@ let DATA_scifi = [
     "url"   : "gusbus.space/scifi/",
     "owner" : "Gus Becker"
   },
-  {
-    "title" : "Codex Archonic",
-    "url"   : "lerariemann.nekoweb.org/index.html",
-    "owner" : "Lera Riemann"
-  },
+  // {
+  //   "title" : "Codex Archonic",
+  //   "url"   : "lerariemann.nekoweb.org/index.html",
+  //   "owner" : "Lera Riemann"
+  // },
   {
     "title" : "Clockwork's Archive of Tomorrow",
     "url"   : "clockwooork.github.io/future-stop.html",

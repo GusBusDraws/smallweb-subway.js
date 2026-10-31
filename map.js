@@ -476,11 +476,6 @@ function addStations() {
     ),
     populateObj(
       DATA_scifi,
-      "Codex Archonic",
-      getScaledPt([0.5, 0.5], sfOffset, sfScale, [0, 0])
-    ),
-    populateObj(
-      DATA_scifi,
       "Varve's writing bits & pieces",
       getScaledPt([2, 0], sfOffset, sfScale, [0, 0])
     ),
@@ -551,11 +546,6 @@ function addStations() {
       "haystack blog and oddities",
       // getScaledPt([ccWidth-1.5, 0.5], ccOffset, ccScale, [0, 0])
       getScaledPt([ccWidth-1, 3.5], ccOffset, ccScale, [0, 0])
-    ),
-    populateObj(
-      DATA_creativesclub,
-      "poetry, music, zines, and more!",
-      getScaledPt([ccWidth-1.5, 0.5], ccOffset, ccScale, [0, 0])
     ),
     populateObj(
       DATA_creativesclub,
