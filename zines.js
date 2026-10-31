@@ -16,7 +16,7 @@ let DATA_zines = [
   },
   {
     "title" : "Mythical Type Zines",
-    "url"   : "mythicaltype.com/zines/",
+    "url"   : "mythicaltype.neocities.org/",
     "owner" : "Mythical Type"
   },
   {

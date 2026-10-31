@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-10-31
+- Update [Mythical Type](https://mythicaltype.neocities.org/) on the Zines Line
 - Move Change Log out of the `README` and to a separate file
 
 ## 2026-04-21
