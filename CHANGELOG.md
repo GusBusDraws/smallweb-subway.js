@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-10-31
+- Add `map-data.json` for storing station and line locations on the map
 - Fix `forceNewTab` functionality for the Zines Line
 - Remove [Codex Archonic](https://lerariemann.nekoweb.org/index.html) from the Scifi Line
 - Reorder CC Line sites to match map
