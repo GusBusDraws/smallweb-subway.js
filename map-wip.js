@@ -1,7 +1,7 @@
 let data;
 let dataWidth = 1200;
 let dataHeight = 900;
-let editMode = true;
+let editMode = false;
 let lineWidth;
 let fontSize;
 let gridSize;
@@ -376,6 +376,7 @@ function drawNodes() {
     if (is_dragging && selection != null && selection.name == name && selection.type != "legend") {
       nodes[name].x = round(mouseX / gridSize) * gridSize;
       nodes[name].y = round(mouseY / gridSize) * gridSize;
+      applyNodePositionOffsets(name)
       selection.x = nodes[name].x;
       selection.y = nodes[name].y;
     }
