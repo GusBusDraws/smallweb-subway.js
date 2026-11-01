@@ -129,7 +129,7 @@ function checkLegendHover() {
       // If mouse is clicked while hovering, open the corresponding url
       if (mouseIsPressed && touches.length == 0) {
         console.log('Legend clicked')
-        window.open('/smallweb-subway/'+legendItem.code);
+        window.open('//gusbus.space/smallweb-subway/'+legendItem.code);
         // Needed to insure only one page is opened
         mouseIsPressed = false;
       }
@@ -285,12 +285,16 @@ function mouseReleased() {
 
 function setupLegend() {
   legendItems = [];
+  let legendOrder = ['sf', 'zi', 'dc', 'cc', 'cx', 'po']
   legendWidth = 10*lineWidth;
   legendHeight = 2*lineWidth;
   let nLines = Object.keys(lines).length;
   let spacing = width / (2*nLines + 1);
   for (let i = 0; i < nLines; i++) {
-    let [lineShorthand, lineObj] = Object.entries(lines)[i];
+    // let [lineShorthand, lineObj] = Object.entries(lines)[i];
+    // let lineObj = lines[i];
+    let lineObj = lines[legendOrder[i]];
+    console.log(legendOrder[i])
     legendItems.push(
       {
         'x' : (2*i+1.5)*spacing,

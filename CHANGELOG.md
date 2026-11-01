@@ -1,5 +1,6 @@
 # Change Log
 
+- Reorder legend and send clicks to the proper address of each line index
 - Scale the map with the size of the canvas
 - Enable the canvas for the map to dynamically scale with the size of the browser window
 - Replace `map-wip.js` with map that has an `editMode` for moving the lines and stations around
