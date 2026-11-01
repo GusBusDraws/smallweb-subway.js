@@ -30,9 +30,9 @@ function setup() {
     fontSize = width * 0.015;
   } else {
     let mapDivWidth = canvasDiv.offsetWidth;
-    let canvas = createCanvas(mapDivWidth, mapDivWidth * 2/3);
+    let canvas = createCanvas(mapDivWidth, mapDivWidth * 0.75);
     canvas.parent('map')
-    lineWidth = width * 0.01;
+    lineWidth = width * 0.012;
     gridSize = width * 0.03;
     fontSize = width * 0.01;
   }
@@ -263,7 +263,7 @@ function getNodeY(name, lineName) {
 }
 
 function keyPressed() {
-  if (key == "s") {
+  if (key == "s" && editMode) {
     print("Saving data...");
     saveJSON(data);
   }
