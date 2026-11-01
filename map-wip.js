@@ -1,6 +1,9 @@
 let data;
+let dataWidth = 1200;
+let dataHeight = 900;
 let editMode = false;
 let lineWidth;
+let fontSize;
 let gridSize;
 let dragging = null;
 let nodes;
@@ -11,25 +14,40 @@ let legendHeight;
 let legendWidth;
 let legendItems;
 let selection;
+let printMousePosition = false;
 
 function preload() {
   data = loadJSON("https://gusbus.space/smallweb-subway.js/map-data.json");
 }
 
-async function setup() {
-  nodes = await data["nodes"];
-  edges = await data["edges"];
-  lines = await data["lines"];
+function setup() {
   let canvasDiv = document.getElementById('map')
-  // @ts-ignore: Object is possibly 'null'.
-  let mapDivWidth = canvasDiv.offsetWidth;
-	let canvas = createCanvas(1200, 900);
-  canvas.parent('map')
-  lineWidth = 15;
-  gridSize = 25;
-	// let canvas = createCanvas(mapDivWidth, mapDivWidth * 2/3);
-  // lineWidth = width * 0.015;
-  // gridSize = width * 0.030;
+  if (editMode) {
+    let canvas = createCanvas(dataWidth, dataHeight);
+    canvas.parent('map')
+    lineWidth = 15;
+    gridSize = 25;
+    fontSize = width * 0.015;
+  } else {
+    let mapDivWidth = canvasDiv.offsetWidth;
+    let canvas = createCanvas(mapDivWidth, mapDivWidth * 2/3);
+    canvas.parent('map')
+    lineWidth = width * 0.01;
+    gridSize = width * 0.03;
+    fontSize = width * 0.01;
+  }
+
+  // Collect data about line and station position from map-data.json file
+  nodes = data["nodes"];
+  edges = data["edges"];
+  lines = data["lines"];
+
+  // Rescale position data to fit the dynamically-sized canvas
+  for (let name of Object.keys(nodes)) {
+    nodes[name].x = nodes[name].x / dataWidth * width;
+    nodes[name].y = nodes[name].y / dataHeight * height;
+  }
+
   legendItems = setupLegend();
 }
 
@@ -43,8 +61,8 @@ function draw() {
   if (selection != null) {
     drawSelectionInfo();
   }
-  if (editMode) {
-    printMousePosition();
+  if (printMousePosition) {
+    drawMouseCoords();
   }
 }
 
@@ -178,6 +196,7 @@ function drawSelectionInfo() {
     rect(rect_x, rect_y, w, h);
     fill(0);
     textAlign(LEFT, CENTER);
+    textSize(fontSize);
     text(textStr, text_x, text_y)
   }
   else {
@@ -287,7 +306,7 @@ function setupLegend() {
 
 function drawLegend() {
   rectMode(CENTER);
-  textSize(0.015 * width);
+  textSize(fontSize);
   textFont('Consolas');
   textAlign(CENTER, CENTER);
   noStroke();
@@ -301,10 +320,10 @@ function drawLegend() {
   }
 }
 
-function printMousePosition() {
+function drawMouseCoords() {
   let gap = 25;
   fill(0)
   textAlign(RIGHT, CENTER);
-  textSize(20);
+  textSize(fontSize);
   text(`${round(mouseX)}, ${round(mouseY)}`, mouseX - gap, mouseY + gap)
 }

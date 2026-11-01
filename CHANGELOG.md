@@ -1,7 +1,10 @@
 # Change Log
 
-## 2026-10-31
+- Scale the map with the size of the canvas
+- Enable the canvas for the map to dynamically scale with the size of the browser window
 - Replace `map-wip.js` with map that has an `editMode` for moving the lines and stations around
+
+## 2026-10-31
 - Add `map-data.json` for storing station and line locations on the map
 - Fix `forceNewTab` functionality for the Zines Line
 - Remove [Codex Archonic](https://lerariemann.nekoweb.org/index.html) from the Scifi Line
