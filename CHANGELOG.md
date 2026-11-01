@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-10-31
+- Replace `map-wip.js` with map that has an `editMode` for moving the lines and stations around
 - Add `map-data.json` for storing station and line locations on the map
 - Fix `forceNewTab` functionality for the Zines Line
 - Remove [Codex Archonic](https://lerariemann.nekoweb.org/index.html) from the Scifi Line
