@@ -1,7 +1,7 @@
 let data;
 let dataWidth = 1200;
 let dataHeight = 900;
-let editMode = false;
+let editMode = true;
 let lineWidth;
 let fontSize;
 let gridSize;
@@ -28,14 +28,14 @@ function setup() {
     canvas.parent('map')
     lineWidth = 15;
     gridSize = 25;
-    fontSize = width * 0.015;
+    fontSize = lineWidth * 1.2;
   } else {
     let mapDivWidth = canvasDiv.offsetWidth;
     let canvas = createCanvas(mapDivWidth, mapDivWidth * 0.75);
     canvas.parent('map')
     lineWidth = width * 0.012;
     gridSize = width * 0.03;
-    fontSize = width * 0.01;
+    fontSize = lineWidth * 1.2;
   }
 
   // Collect data about line and station position from map-data.json file
@@ -271,49 +271,65 @@ function drawSelection(selection) {
 }
 
 function drawInfoBox(selection) {
-  // let selectedStation = selectedLine.getStationBytitle(stationtitle)
-  // let [x, y] = selectedStation.location
   textAlign(LEFT, TOP);
   rectMode(CORNER);
   strokeWeight(lineWidth / 2);
-  let boxW = 28 * lineWidth;
-  let boxH = 5 * lineWidth;
+  let boxW;
+  let boxH;
   let boxX;
   let boxY;
-  if (selection.x + boxW < width) {
-    boxX = selection.x + 1.5*lineWidth
-  } else if (selection.x - boxW > lineWidth) {
-    boxX = selection.x - boxW - 1.5*lineWidth
-  } else {
-    boxX = selection.x - (boxW / 2)
-  }
-  if (selection.y + 30 + boxH < height) {
-    boxY = selection.y + 2.5*lineWidth
-  } else {
-    boxY = selection.y - boxH - 2.5*lineWidth
-  }
-  selection.boxXMin = boxX;
-  selection.boxYMin = boxY;
-  selection.boxXMax = boxX + boxW;
-  selection.boxYMax = boxY + boxH;
   noStroke();
-  textSize(0.017 * width)
+  textSize(fontSize)
   textFont('Consolas')
   let desc = selection.title + ' by ' + selection.owner;
   if (desc.length < 38) {
+    boxW = max(desc.length, selection.url.length) * fontSize * 0.7;
+    boxH = 5 * lineWidth;
+    boxX = getInfoBoxX(selection.x, boxW)
+    boxY = getInfoBoxY(selection.y, boxH)
     fill(255);
     rect(boxX, boxY, boxW, boxH);
     fill(0);
     text(desc, boxX + lineWidth, boxY + lineWidth)
     text(selection.url, boxX + lineWidth, boxY + 3*lineWidth);
   } else {
+    let desc1 = selection.title
+    let desc2 = "by "+selection.owner
+    boxW = max(desc1.length, desc2.length, selection.url.length) * fontSize * 0.7;
+    boxH = 5 * lineWidth + 2*lineWidth;
+    boxX = getInfoBoxX(selection.x, boxW)
+    boxY = getInfoBoxY(selection.y, boxH)
     fill(255);
-    rect(boxX, boxY, boxW, boxH+2*lineWidth);
+    rect(boxX, boxY, boxW, boxH);
     fill(0);
-    text(selection.title, boxX + lineWidth, boxY + lineWidth)
-    text("by "+selection.owner, boxX + lineWidth, boxY + 3*lineWidth)
+    text(desc1, boxX + lineWidth, boxY + lineWidth)
+    text(desc2, boxX + lineWidth, boxY + 3*lineWidth)
     text(selection.url, boxX + lineWidth, boxY + 5*lineWidth);
   }
+  selection.boxXMin = boxX;
+  selection.boxYMin = boxY;
+  selection.boxXMax = boxX + boxW;
+  selection.boxYMax = boxY + boxH;
+}
+
+function getInfoBoxX(stationX, boxW) {
+  if (stationX + boxW < width) {
+    boxX = stationX + 1.5*lineWidth
+  } else if (stationX - boxW > lineWidth) {
+    boxX = stationX - boxW - 1.5*lineWidth
+  } else {
+    boxX = stationX - (boxW / 2)
+  }
+  return boxX
+}
+
+function getInfoBoxY(stationY, boxH) {
+  if (stationY + 30 + boxH < height) {
+    boxY = stationY + 2.5*lineWidth
+  } else {
+    boxY = stationY - boxH - 2.5*lineWidth
+  }
+  return boxY
 }
 
 function touchStarted() {

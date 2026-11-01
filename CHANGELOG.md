@@ -1,5 +1,6 @@
 # Change Log
 
+- Adjust info boxes to dynamically size with longest line of text
 - Calculate node offsets during `setup()` (except for station-only offsets) to align selection position with nodes/stations
 - Merge new selection behavior with deployed version
 - Only save data file in `editMode`
