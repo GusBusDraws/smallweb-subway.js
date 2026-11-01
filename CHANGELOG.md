@@ -1,6 +1,7 @@
 # Change Log
 
-- Merged new selection behavior with deployed version
+- Calculate node offsets during `setup()` (except for station-only offsets) to align selection position with nodes/stations
+- Merge new selection behavior with deployed version
 - Only save data file in `editMode`
 - Reorder legend and send clicks to the proper address of each line index
 - Scale the map with the size of the canvas

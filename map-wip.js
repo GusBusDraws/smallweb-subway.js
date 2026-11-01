@@ -43,15 +43,19 @@ function setup() {
   edges = data["edges"];
   lines = data["lines"];
 
-  // Rescale position data to fit the dynamically-sized canvas
   for (let name of Object.keys(nodes)) {
+    // Rescale position data to fit the dynamically-sized canvas
     nodes[name].x = nodes[name].x / dataWidth * width;
     nodes[name].y = nodes[name].y / dataHeight * height;
+
+    // Apply line/station offset adjustments
+    applyNodePositionOffsets(name)
+
+    // Collect station nodes into an array
     if (nodes[name].is_station == 1) {
       stations[name] = nodes[name];
     }
   }
-  console.log(Object.keys(stations).length)
 
   legendItems = setupLegend();
 }
@@ -76,39 +80,32 @@ function draw() {
   }
 }
 
-function checkForAdjustments(name) {
-  if (nodes[name].needs_adjusting) {    
-    // Dividing by sqrt(2) accounts for hypotenuse to squeeze adjacent lines together
-    if (nodes[name].x_adjust) {
-      nodes[name].x = nodes[name].x + nodes[name].x_adjust * lineWidth/sqrt(2);
-    }
-    
-    if (nodes[name].y_adjust) {
-      nodes[name].y = nodes[name].y + nodes[name].y_adjust * lineWidth/sqrt(2);
-    }
-
-    // Once adjustments are made, unmark so points don't continuously move
-    nodes[name].needs_adjusting = 0;
+function applyNodePositionOffsets(name) {
+  // Dividing by sqrt(2) accounts for hypotenuse to squeeze adjacent lines together
+  if (nodes[name].x_adjust) {
+    nodes[name].x = nodes[name].x + nodes[name].x_adjust * lineWidth/sqrt(2);
   }
+  if (nodes[name].y_adjust) {
+    nodes[name].y = nodes[name].y + nodes[name].y_adjust * lineWidth/sqrt(2);
+  }
+
+  // Apply line offsets
+  let x_offset = lines[nodes[name].line].x_offset * lineWidth;
+  nodes[name].x = nodes[name].x + x_offset;
+  let y_offset = lines[nodes[name].line].y_offset * lineWidth;
+  nodes[name].y = nodes[name].y + y_offset;
 }
 
 function drawLines() {
   for (let edgeObj of edges) {
     let lineName = Object.keys(edgeObj)[0];
     let edge = Object.values(edgeObj)[0];
-    let lineColor = data.lines[lineName].color;
+    let lineColor = lines[lineName].color;
     stroke(lineColor);
     strokeWeight(lineWidth);
     let node_0 = edge[0];
     let node_1 = edge[1];
-    let x_offset = data.lines[lineName].x_offset * lineWidth;
-    let y_offset = data.lines[lineName].y_offset * lineWidth;
-    line(
-      nodes[node_0].x + x_offset,
-      nodes[node_0].y + y_offset,
-      nodes[node_1].x + x_offset,
-      nodes[node_1].y + y_offset
-    )
+    line(nodes[node_0].x, nodes[node_0].y, nodes[node_1].x, nodes[node_1].y)
   }
 }
 
@@ -116,8 +113,10 @@ function checkNodeHover() {
   if (selection == null) {
     for (let name of Object.keys(nodes)) {
       let lineName = nodes[name].line;
-      let x = getNodeX(name, lineName);
-      let y = getNodeY(name, lineName);
+      // let x = getNodeX(name, lineName);
+      // let y = getNodeY(name, lineName);
+      let x = getStationDisplayX(name);
+      let y = getStationDisplayY(name);
       if (dist(x, y, mouseX, mouseY) < lineWidth) {
         if (nodes[name].is_station) {
           selection = {
@@ -248,7 +247,9 @@ function drawSelection(selection) {
     strokeWeight(lineWidth / 2);
     stroke(255);
     fill(0, 0);
-    circle(selection.x, selection.y, lineWidth * 2.5);
+    let x = getStationDisplayX(selection.name);
+    let y = getStationDisplayY(selection.name);
+    circle(x, y, lineWidth * 2.5);
     drawInfoBox(selection);
   } else if (selection.type == 'legend') {
     rectMode(CENTER)
@@ -363,12 +364,9 @@ function drawNodes() {
       selection.y = nodes[name].y;
     }
 
-    checkForAdjustments(name);
-
     if (nodes[name].is_station) {
-      let lineName = nodes[name].line;
-      let x = getNodeX(name, lineName);
-      let y = getNodeY(name, lineName);
+      let x = getStationDisplayX(name)
+      let y = getStationDisplayY(name)
       fill(0);
       noStroke();
       circle(x, y, lineWidth*2);
@@ -393,20 +391,18 @@ function drawMainStation() {
   circle(x, y, lineWidth);
 }
 
-function getNodeX(name, lineName) {
-  let x_offset = data.lines[lineName].x_offset * lineWidth;
-  let x = nodes[name].x + x_offset;
+function getStationDisplayX(name) {
+  let x = nodes[name].x;
   if (nodes[name].station_offset_x) {
-        x += lineWidth * nodes[name].station_offset_x;
+    x += lineWidth * nodes[name].station_offset_x;
   }
   return x
 }
 
-function getNodeY(name, lineName) {
-  let y_offset = data.lines[lineName].y_offset * lineWidth;
-  let y = nodes[name].y + y_offset;
+function getStationDisplayY(name) {
+  let y = nodes[name].y;
   if (nodes[name].station_offset_y) {
-        y += lineWidth * nodes[name].station_offset_y;
+    y += lineWidth * nodes[name].station_offset_y;
   }
   return y
 }
