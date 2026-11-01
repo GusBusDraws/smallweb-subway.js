@@ -5,10 +5,11 @@ let editMode = false;
 let lineWidth;
 let fontSize;
 let gridSize;
-let dragging = null;
+let is_dragging = false;
 let nodes;
 let edges;
 let lines;
+let stations = {};
 let highlightColor = "#fff";
 let legendHeight;
 let legendWidth;
@@ -46,7 +47,11 @@ function setup() {
   for (let name of Object.keys(nodes)) {
     nodes[name].x = nodes[name].x / dataWidth * width;
     nodes[name].y = nodes[name].y / dataHeight * height;
+    if (nodes[name].is_station == 1) {
+      stations[name] = nodes[name];
+    }
   }
+  console.log(Object.keys(stations).length)
 
   legendItems = setupLegend();
 }
@@ -54,15 +59,20 @@ function setup() {
 function draw() {
   background(100);
   drawLines();
-  checkHover();
+  checkLegendSelect();
+  if (editMode) {
+    checkNodeHover();
+  } else {
+    checkStationSelect();
+  }
   drawNodes();
   drawMainStation();
   drawLegend();
-  if (selection != null) {
-    drawSelectionInfo();
-  }
   if (printMousePosition) {
     drawMouseCoords();
+  }
+  if (selection != null) {
+    drawSelection(selection);
   }
 }
 
@@ -102,120 +112,259 @@ function drawLines() {
   }
 }
 
-function checkHover() {
-  checkLegendHover();
-  checkNodeHover();
+function checkNodeHover() {
+  if (selection == null) {
+    for (let name of Object.keys(nodes)) {
+      let lineName = nodes[name].line;
+      let x = getNodeX(name, lineName);
+      let y = getNodeY(name, lineName);
+      if (dist(x, y, mouseX, mouseY) < lineWidth) {
+        if (nodes[name].is_station) {
+          selection = {
+            'type' : 'station',
+            'title' : nodes[name].title,
+            'owner' : nodes[name].owner,
+            'url' : nodes[name].url,
+            'x' : nodes[name].x,
+            'y' : nodes[name].y,
+            'mode' : "hover",
+            'boxXMin' : null,
+            'boxYMin' : null,
+            'boxXMax' : null,
+            'boxYMax' : null,
+            'name' : nodes[name].name
+          }
+          // hover = name;
+        } else if (!nodes[name].is_station && editMode) {
+          selection = {
+            'type' : 'node',
+            'title' : nodes[name].name,
+            'owner' : "",
+            'url' : "",
+            'x' : nodes[name].x,
+            'y' : nodes[name].y,
+            'mode' : "hover",
+            'boxXMin' : null,
+            'boxYMin' : null,
+            'boxXMax' : null,
+            'boxYMax' : null,
+            'name' : nodes[name].name
+          }
+          // hover = name;
+        }
+        return
+      } else {
+        // hover = null;
+        selection = null;
+      }
+    }
+  }
 }
 
-function checkLegendHover() {
-  for (let legendItem of legendItems) {
-    let x = legendItem.x;
-    let y = legendItem.y;
+function checkStationSelect(mode = 'hover') {
+  let selectRadius;
+  if (mode == 'hover') {
+    selectRadius = 2*lineWidth
+  } else if (mode == 'touch') {
+    selectRadius = 4*lineWidth
+  } else {
+    selectRadius = 0
+  }
+  if (selection == null) {
+    // Check for station hover
+    for (let station of Object.values(stations)) {
+      let mouseDist = dist(mouseX, mouseY, station.x, station.y);
+      if ((mouseDist < selectRadius)) {
+        selection = {
+          'type' : 'station',
+          'title' : station.title,
+          'owner' : station.owner,
+          'url' : station.url,
+          'x' : station.x,
+          'y' : station.y,
+          'mode' : mode,
+          'boxXMin' : null,
+          'boxYMin' : null,
+          'boxXMax' : null,
+          'boxYMax' : null,
+          'name' : station.name
+        }
+        // If mouse is clicked while hovering, open the corresponding url
+        if (mouseIsPressed && touches.length == 0 && !editMode) {
+          console.log('Station clicked')
+          window.open('https://'+station.url);
+          // Needed to insure only one page is opened
+          mouseIsPressed = false;
+        }
+        break;
+      } else {
+        selection = null;
+      }
+    }
+  }
+}
+
+function checkLegendSelect() {
+  // Check for legend hover
+  for (let leg of legendItems) {
+    // Shift by 1/2*height (or width) to account for rectangle center
     if (
-      (mouseX > x - legendWidth/2 && mouseX <= x + legendWidth/2)
-      && (mouseY > y -legendHeight/2 && mouseY <= y + legendHeight/2)
+      (mouseX > leg.x - legendWidth/2 && mouseX <= leg.x + legendWidth/2)
+      && (mouseY > leg.y -legendHeight/2 && mouseY <= leg.y + legendHeight/2)
     ) {
-      rectMode(CENTER)
-      strokeWeight(lineWidth / 2);
-      stroke(highlightColor);
-      fill(highlightColor);
-      rect(
-        x-lineWidth/16,
-        y-lineWidth/16,
-        legendWidth+lineWidth/4,
-        legendHeight+lineWidth/2,
-        lineWidth
-      );
+      selection = {
+        'type' : 'legend',
+        'title' : null,
+        'owner' : null,
+        'url' : null,
+        'x' : null,
+        'y' : null,
+        'mode' : 'hover',
+        'boxXMin' : leg.x,
+        'boxYMin' : leg.y,
+        'boxXMax' : null,
+        'boxYMax' : null,
+        'code' : leg.code
+      }
       // If mouse is clicked while hovering, open the corresponding url
-      if (mouseIsPressed && touches.length == 0) {
+      if (mouseIsPressed && touches.length == 0 && !editMode) {
+      // if (mouseIsPressed) {
         console.log('Legend clicked')
-        window.open('//gusbus.space/smallweb-subway/'+legendItem.code);
+        window.open('/smallweb-subway/'+leg.code);
         // Needed to insure only one page is opened
         mouseIsPressed = false;
       }
-      return
+      break;
     } else {
-      hover = null;
+      if (!is_dragging) {
+        selection = null;
+      }
     }
   }
 }
 
-function checkNodeHover() {
-  for (let name of Object.keys(nodes)) {
-    let lineName = nodes[name].line;
-    let x = getNodeX(name, lineName);
-    let y = getNodeY(name, lineName);
-    if (dist(x, y, mouseX, mouseY) < lineWidth) {
-      if (nodes[name].is_station) {
-        selection = {
-          "name": name,
-          "x": x,
-          "y": y
-        }
-        hover = name;
-        hoverHighlight(x, y);
-      }
-      if (!nodes[name].is_station && editMode) {
-        hover = name;
-        hoverHighlight(x, y);
-      }
-      // If touch detected, also enter dragging mode
-      if (touches.length > 0) {
-        dragging = name;
-      }
-      return
-    } else {
-      hover = null;
-      selection = null;
-    }
-  }
-}
-
-function hoverHighlight(x, y) {
-  fill(highlightColor);
-  noStroke();
-  circle(x, y, 3 * lineWidth);
-}
-
-function drawSelectionInfo() {
-  let name = selection.name;
-  let x = selection.x;
-  let y = selection.y;
-  let gap = 1.5 * lineWidth;
-  let h = 4 * lineWidth;
-  let rect_x = x + gap;
-  let rect_y = y - gap - h;
-  let text_x = rect_x + gap;
-  let text_y = rect_y + h/2;
-  rectMode(CORNER);
-  noStroke();
-  if (nodes[name].is_station) {
-    textStr = `${name}\n${nodes[name].title}`;
-    let w = textStr.length * 10;
+function drawSelection(selection) {
+  if (selection.type == 'station') {
+    strokeWeight(lineWidth / 2);
+    stroke(255);
+    fill(0, 0);
+    circle(selection.x, selection.y, lineWidth * 2.5);
+    drawInfoBox(selection);
+  } else if (selection.type == 'legend') {
+    rectMode(CENTER)
+    strokeWeight(lineWidth / 2);
+    stroke(255);
+    noFill();
+    rect(
+      selection.boxXMin-lineWidth/16,
+      selection.boxYMin-lineWidth/16,
+      legendWidth+lineWidth/4,
+      legendHeight+lineWidth/2,
+      20
+    );
+  } else if (selection.type == 'node') {
+    noStroke();
     fill(255);
-    rect(rect_x, rect_y, w, h);
-    fill(0);
-    textAlign(LEFT, CENTER);
-    textSize(fontSize);
-    text(textStr, text_x, text_y)
-  }
-  else {
-    fill(0);
-    textAlign(LEFT, CENTER);
-    text(hover, text_x, text_y);
+    circle(selection.x, selection.y, lineWidth);
   }
 }
+
+function drawInfoBox(selection) {
+  // let selectedStation = selectedLine.getStationBytitle(stationtitle)
+  // let [x, y] = selectedStation.location
+  textAlign(LEFT, TOP);
+  rectMode(CORNER);
+  strokeWeight(lineWidth / 2);
+  let boxW = 28 * lineWidth;
+  let boxH = 5 * lineWidth;
+  let boxX;
+  let boxY;
+  if (selection.x + boxW < width) {
+    boxX = selection.x + 1.5*lineWidth
+  } else if (selection.x - boxW > lineWidth) {
+    boxX = selection.x - boxW - 1.5*lineWidth
+  } else {
+    boxX = selection.x - (boxW / 2)
+  }
+  if (selection.y + 30 + boxH < height) {
+    boxY = selection.y + 2.5*lineWidth
+  } else {
+    boxY = selection.y - boxH - 2.5*lineWidth
+  }
+  selection.boxXMin = boxX;
+  selection.boxYMin = boxY;
+  selection.boxXMax = boxX + boxW;
+  selection.boxYMax = boxY + boxH;
+  noStroke();
+  textSize(0.017 * width)
+  textFont('Consolas')
+  let desc = selection.title + ' by ' + selection.owner;
+  if (desc.length < 38) {
+    fill(255);
+    rect(boxX, boxY, boxW, boxH);
+    fill(0);
+    text(desc, boxX + lineWidth, boxY + lineWidth)
+    text(selection.url, boxX + lineWidth, boxY + 3*lineWidth);
+  } else {
+    fill(255);
+    rect(boxX, boxY, boxW, boxH+2*lineWidth);
+    fill(0);
+    text(selection.title, boxX + lineWidth, boxY + lineWidth)
+    text("by "+selection.owner, boxX + lineWidth, boxY + 3*lineWidth)
+    text(selection.url, boxX + lineWidth, boxY + 5*lineWidth);
+  }
+}
+
+function touchStarted() {
+  let isFound = false;
+  // Check if legend or station highlighted by touch
+  if (selection != undefined && touches.length > 0) {
+    // If legend highlighted by touch, follow link to index page
+    for (let leg of legendArr) {
+      // Shift by 1/2*height (or width) to account for rectangle center
+      if (
+        (mouseX > leg.x - legendWidth/2 && mouseX <= leg.x + legendWidth/2)
+        && (mouseY > leg.y -legendHeight/2 && mouseY <= leg.y + legendHeight/2)
+        && (selection.code != null && selection.code == leg.code)
+      ) {
+        console.log('Legend clicked')
+        window.open('/smallweb-subway/'+leg.code);
+        isFound = true;
+        // Needed to insure only one page is opened
+        mouseIsPressed = false;
+        break;
+      }
+    }
+    // If station highlighted by touch, follow link to webring site
+    for (let station of Object.values(stations)) {
+      if (
+        (mouseX > selection.boxXMin && mouseX < selection.boxXMax)
+        && (mouseY > selection.boxYMin && mouseY < selection.boxYMax)
+      ) {
+        console.log('Station clicked')
+        window.open('https://'+selection.url);
+        isFound = true;
+        // Needed to insure only one page is opened
+        mouseIsPressed = false;
+        break;
+      }
+    }
+  }
+}
+
 
 function drawNodes() {
   for (let name of Object.keys(nodes)) {
     // If dragging is true, set x, y to mouseX, mouseY
-    if (dragging != null && dragging == name) {
+    if (is_dragging && selection != null && selection.name == name && selection.type != "legend") {
       nodes[name].x = round(mouseX / gridSize) * gridSize;
       nodes[name].y = round(mouseY / gridSize) * gridSize;
+      selection.x = nodes[name].x;
+      selection.y = nodes[name].y;
     }
 
     checkForAdjustments(name);
-    
+
     if (nodes[name].is_station) {
       let lineName = nodes[name].line;
       let x = getNodeX(name, lineName);
@@ -272,15 +421,18 @@ function keyPressed() {
 // Enable dragging if mouse is intersecting w/ a circle
 function mousePressed() {
   // Check if mouse is within a circle
-  if (editMode && hover != null && touches.length == 0) {
-    dragging = hover;
+  if (editMode && selection != null && selection.type != 'legend' && touches.length == 0) {
+    is_dragging = true;
+    console.log("is_dragging =", is_dragging)
+    console.log("selection.name =", selection.name)
     return
   }
 }
 
 function mouseReleased() {
-  hover = null;
-  dragging = null;
+  selection = null;
+  is_dragging = false;
+  console.log("is_dragging =", is_dragging)
 }
 
 function setupLegend() {
@@ -294,7 +446,6 @@ function setupLegend() {
     // let [lineShorthand, lineObj] = Object.entries(lines)[i];
     // let lineObj = lines[i];
     let lineObj = lines[legendOrder[i]];
-    console.log(legendOrder[i])
     legendItems.push(
       {
         'x' : (2*i+1.5)*spacing,

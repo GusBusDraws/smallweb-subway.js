@@ -1,5 +1,6 @@
 # Change Log
 
+- Merged new selection behavior with deployed version
 - Only save data file in `editMode`
 - Reorder legend and send clicks to the proper address of each line index
 - Scale the map with the size of the canvas
