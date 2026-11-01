@@ -1,0 +1,1960 @@
+{
+  "nodes": {
+    "cc00": {
+      "x": 775,
+      "y": 550,
+      "name": "cc00",
+      "line": "cc",
+      "title": "Smallweb Subway",
+      "url": "gusbus.space/smallweb-subway/",
+      "owner": "Gus Becker",
+      "is_station": 0
+    },
+    "cc01": {
+      "x": 775,
+      "y": 450,
+      "name": "cc01",
+      "line": "cc",
+      "title": "DoodleBot",
+      "url": "gusbus.space/doodlebot/",
+      "owner": "Gus Becker",
+      "is_station": 1,
+      "station_offset_x": -0.5
+    },
+    "cc02": {
+      "x": 775,
+      "y": 400,
+      "name": "cc02",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cc03": {
+      "x": 800,
+      "y": 375,
+      "name": "cc03",
+      "line": "cc",
+      "title": "Creatives Club",
+      "url": "creativesclub.art/",
+      "owner": "Gus Becker",
+      "is_station": 1
+    },
+    "cc04": {
+      "x": 825,
+      "y": 350,
+      "name": "cc04",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cc05": {
+      "x": 950,
+      "y": 350,
+      "name": "cc05",
+      "line": "cc",
+      "title": "yukiclarke.com",
+      "url": "www.yukiclarke.com/home/",
+      "owner": "Yuki Clarke",
+      "is_station": 0,
+      "station_offset_x": 1
+    },
+    "cc06": {
+      "x": 1025,
+      "y": 350,
+      "name": "cc06",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cc07": {
+      "x": 1050,
+      "y": 375,
+      "name": "cc07",
+      "line": "cc",
+      "title": "poetry, music, zines, and more!",
+      "url": "jenniferjantzen.com/",
+      "owner": "Jenny Jantzen",
+      "is_station": 1
+    },
+    "cc08": {
+      "x": 1075,
+      "y": 400,
+      "name": "cc08",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cc09": {
+      "x": 1075,
+      "y": 450,
+      "name": "cc09",
+      "line": "cc",
+      "title": "haystack blog and oddities",
+      "url": "thatoddhaystack.neocities.org/",
+      "owner": "vita",
+      "is_station": 1
+    },
+    "cc10": {
+      "x": 1075,
+      "y": 550,
+      "name": "cc10",
+      "line": "cc",
+      "title": "UR LOCAL CYBORG",
+      "url": "seenby.urlocalcyb.org/",
+      "owner": "Caroline",
+      "is_station": 1
+    },
+    "cc11": {
+      "x": 1075,
+      "y": 600,
+      "name": "cc11",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cc12": {
+      "x": 1025,
+      "y": 650,
+      "name": "cc12",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cc13": {
+      "x": 875,
+      "y": 650,
+      "name": "cc13",
+      "line": "cc",
+      "title": "Art",
+      "url": "www.stephaniediederich.com/",
+      "owner": "Stephanie Diederich",
+      "is_station": 1
+    },
+    "cc14": {
+      "x": 825,
+      "y": 650,
+      "name": "cc14",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cc15": {
+      "x": 800,
+      "y": 625,
+      "name": "cc15",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cc16": {
+      "x": 775,
+      "y": 600,
+      "name": "cc16",
+      "line": "cc",
+      "is_station": 0
+    },
+    "cx00": {
+      "x": 775,
+      "y": 550,
+      "name": "cx00",
+      "line": "cx",
+      "title": "Smallweb Subway",
+      "url": "gusbus.space/smallweb-subway/",
+      "owner": "Gus Becker",
+      "is_station": 0
+    },
+    "cx01": {
+      "x": 500,
+      "y": 550,
+      "name": "cx01",
+      "line": "cx",
+      "title": "The Fuzzy Slug's Webcomic Hub",
+      "url": "thefuzzyslug.neocities.org/",
+      "owner": "thefuzzyslug",
+      "is_station": 1
+    },
+    "cx02": {
+      "x": 400,
+      "y": 550,
+      "name": "cx02",
+      "line": "cx",
+      "title": "slime pond comics",
+      "url": "abslimeware.neocities.org/comic/",
+      "owner": "candycanearter07",
+      "is_station": 1,
+      "station_offset_x": 1
+    },
+    "cx03": {
+      "x": 325,
+      "y": 550,
+      "name": "cx03",
+      "line": "cx",
+      "title": "Trailerparkia",
+      "url": "trailerparkia.net/",
+      "owner": "Em",
+      "is_station": 1
+    },
+    "cx04": {
+      "x": 225,
+      "y": 550,
+      "name": "cx04",
+      "line": "cx",
+      "title": "The Iron Ragdoll",
+      "url": "tofutush.github.io/The-Iron-Ragdoll/misc/links/",
+      "owner": "Tofutush",
+      "is_station": 1
+    },
+    "cx05": {
+      "x": 175,
+      "y": 550,
+      "name": "cx05",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx06": {
+      "x": 125,
+      "y": 500,
+      "name": "cx06",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx07": {
+      "x": 125,
+      "y": 425,
+      "name": "cx07",
+      "line": "cx",
+      "title": "The Bog Quest",
+      "url": "https://thebogquest.com/",
+      "owner": "San",
+      "is_station": 1
+    },
+    "cx08": {
+      "x": 125,
+      "y": 350,
+      "name": "cx08",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx09": {
+      "x": 175,
+      "y": 300,
+      "name": "cx09",
+      "line": "cx",
+      "title": "Redux",
+      "url": "thel3tterm.com/redux/about",
+      "owner": "TheL3tterM",
+      "is_station": 1
+    },
+    "cx10": {
+      "x": 250,
+      "y": 225,
+      "name": "cx10",
+      "line": "cx",
+      "title": "My Comics",
+      "url": "columbidaecorner.neocities.org/comics",
+      "owner": "Pigeon",
+      "is_station": 1
+    },
+    "cx11": {
+      "x": 275,
+      "y": 200,
+      "name": "cx11",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx12": {
+      "x": 300,
+      "y": 175,
+      "name": "cx12",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx13": {
+      "x": 350,
+      "y": 175,
+      "name": "cx13",
+      "line": "cx",
+      "title": "Long Gone Legend",
+      "url": "burkespoint.net/lgl/",
+      "owner": "hal",
+      "is_station": 1
+    },
+    "cx14": {
+      "x": 425,
+      "y": 175,
+      "name": "cx14",
+      "line": "cx",
+      "title": "Schism",
+      "url": "schism.org/",
+      "owner": "Newbabyfly",
+      "is_station": 1
+    },
+    "cx15": {
+      "x": 500,
+      "y": 175,
+      "name": "cx15",
+      "line": "cx",
+      "title": "White Noise",
+      "url": "www.white-noise-comic.com/",
+      "owner": "Adrien Lee (thephooka)",
+      "is_station": 1
+    },
+    "cx16": {
+      "x": 575,
+      "y": 175,
+      "name": "cx16",
+      "line": "cx",
+      "title": "Neat Hobby!",
+      "url": "neathobby.com/",
+      "owner": "Scott Andrew",
+      "is_station": 1
+    },
+    "cx17": {
+      "x": 650,
+      "y": 175,
+      "name": "cx17",
+      "line": "cx",
+      "title": "Keeping Time",
+      "url": "www.keepingtimecomic.com/links/",
+      "owner": "Kody Okamoto",
+      "is_station": 1
+    },
+    "cx18": {
+      "x": 725,
+      "y": 175,
+      "name": "cx18",
+      "line": "cx",
+      "title": "BrittHub",
+      "url": "britthub.co.uk/",
+      "owner": "Britt Coxon",
+      "is_station": 1
+    },
+    "cx19": {
+      "x": 800,
+      "y": 175,
+      "name": "cx19",
+      "line": "cx",
+      "title": "Links",
+      "url": "diabloafterdark.nekoweb.org/links.html",
+      "owner": "DiabloAfterDark",
+      "is_station": 1
+    },
+    "cx20": {
+      "x": 850,
+      "y": 175,
+      "name": "cx20",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx21": {
+      "x": 875,
+      "y": 150,
+      "name": "cx21",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx22": {
+      "x": 900,
+      "y": 125,
+      "name": "cx22",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx23": {
+      "x": 950,
+      "y": 125,
+      "name": "cx23",
+      "line": "cx",
+      "title": "Ultraviolents",
+      "url": "uv.itsnero.com/about/",
+      "owner": "Nero Villagallos O'Reilly",
+      "is_station": 1
+    },
+    "cx24": {
+      "x": 1000,
+      "y": 125,
+      "name": "cx24",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx25": {
+      "x": 1025,
+      "y": 150,
+      "name": "cx25",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx26": {
+      "x": 1050,
+      "y": 175,
+      "name": "cx26",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx27": {
+      "x": 1050,
+      "y": 225,
+      "name": "cx27",
+      "line": "cx",
+      "title": "Beyond the End",
+      "url": "beyondtheend.gay/",
+      "owner": "Dusk Pendragon (DuskDragonXIII)",
+      "is_station": 1
+    },
+    "cx28": {
+      "x": 1050,
+      "y": 275,
+      "name": "cx28",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx29": {
+      "x": 1025,
+      "y": 300,
+      "name": "cx29",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx30": {
+      "x": 975,
+      "y": 350,
+      "name": "cx30",
+      "line": "cx",
+      "title": "yukiclarke.com",
+      "url": "www.yukiclarke.com/home/",
+      "owner": "Yuki Clarke",
+      "is_station": 1,
+      "station_offset_x": 0.5,
+      "station_offset_y": 1
+    },
+    "cx31": {
+      "x": 975,
+      "y": 400,
+      "name": "cx31",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx32": {
+      "x": 975,
+      "y": 425,
+      "name": "cx32",
+      "line": "cx",
+      "is_station": 0
+    },
+    "cx33": {
+      "x": 900,
+      "y": 500,
+      "name": "cx33",
+      "line": "cx",
+      "title": "Friction Comic",
+      "url": "frictioncomic.com/home",
+      "owner": "Jack",
+      "is_station": 1,
+      "station_offset_y": 0.707
+    },
+    "cx34": {
+      "x": 850,
+      "y": 550,
+      "name": "cx34",
+      "line": "cx",
+      "is_station": 0
+    },
+    "dc00": {
+      "x": 775,
+      "y": 550,
+      "name": "dc00",
+      "line": "dc",
+      "title": "Smallweb Subway",
+      "url": "gusbus.space/smallweb-subway/",
+      "owner": "Gus Becker",
+      "is_station": 1
+    },
+    "dc01": {
+      "x": 775,
+      "y": 625,
+      "name": "dc01",
+      "line": "dc",
+      "is_station": 0,
+      "needs_adjusting": 1,
+      "y_adjust": -1
+    },
+    "dc02": {
+      "x": 725,
+      "y": 675,
+      "name": "dc02",
+      "line": "dc",
+      "is_station": 0,
+      "needs_adjusting": 1,
+      "x_adjust": -0.5,
+      "y_adjust": -0.5
+    },
+    "dc03": {
+      "x": 650,
+      "y": 750,
+      "name": "dc03",
+      "line": "dc",
+      "is_station": 0,
+      "needs_adjusting": 1,
+      "x_adjust": -1
+    },
+    "dc04": {
+      "x": 625,
+      "y": 750,
+      "name": "dc04",
+      "line": "dc",
+      "title": "feuer-in-soho.art",
+      "url": "feuer-in-soho.art/",
+      "owner": "Soho",
+      "is_station": 1
+    },
+    "dc05": {
+      "x": 550,
+      "y": 750,
+      "name": "dc05",
+      "line": "dc",
+      "title": "my art 2026",
+      "url": "uuupah.neocities.org/art/my-art-2026/",
+      "owner": "uuupah",
+      "is_station": 1
+    },
+    "dc06": {
+      "x": 525,
+      "y": 750,
+      "name": "dc06",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc07": {
+      "x": 425,
+      "y": 650,
+      "name": "dc07",
+      "line": "dc",
+      "title": "Honora's web garden",
+      "url": "honora.neocities.org/about",
+      "owner": "Honora",
+      "is_station": 1
+    },
+    "dc08": {
+      "x": 400,
+      "y": 625,
+      "name": "dc08",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc09": {
+      "x": 400,
+      "y": 550,
+      "name": "dc09",
+      "line": "dc",
+      "title": "slime pond comics",
+      "url": "abslimeware.neocities.org/comic/",
+      "owner": "candycanearter07",
+      "is_station": 1,
+      "station_offset_y": -1
+    },
+    "dc10": {
+      "x": 400,
+      "y": 425,
+      "name": "dc10",
+      "line": "dc",
+      "title": "Marcy Chow Doodles",
+      "url": "marcychowdoodles.neocities.org/",
+      "owner": "Marcy Chow",
+      "is_station": 1
+    },
+    "dc11": {
+      "x": 400,
+      "y": 400,
+      "name": "dc11",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc12": {
+      "x": 425,
+      "y": 375,
+      "name": "dc12",
+      "line": "dc",
+      "title": "varve's art gallery",
+      "url": "www.write-on.org/art/",
+      "owner": "varve",
+      "is_station": 1
+    },
+    "dc13": {
+      "x": 450,
+      "y": 350,
+      "name": "dc13",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc14": {
+      "x": 550,
+      "y": 350,
+      "name": "dc14",
+      "line": "dc",
+      "title": "Gus's Scifi Gallery",
+      "url": "gusbus.space/scifi/",
+      "owner": "Gus Becker",
+      "is_station": 1
+    },
+    "dc15": {
+      "x": 650,
+      "y": 350,
+      "name": "dc15",
+      "line": "dc",
+      "title": "The Magic Pencil",
+      "url": "davethedoodler.neocities.org/",
+      "owner": "Doodledave",
+      "is_station": 1
+    },
+    "dc16": {
+      "x": 725,
+      "y": 350,
+      "name": "dc16",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc17": {
+      "x": 750,
+      "y": 375,
+      "name": "dc17",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc18": {
+      "x": 775,
+      "y": 400,
+      "name": "dc18",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc19": {
+      "x": 775,
+      "y": 450,
+      "name": "dc19",
+      "line": "dc",
+      "title": "DoodleBot",
+      "url": "gusbus.space/doodlebot/",
+      "owner": "Gus Becker",
+      "is_station": 1,
+      "station_offset_x": 0.5
+    },
+    "po00": {
+      "x": 775,
+      "y": 550,
+      "name": "po00",
+      "line": "po",
+      "title": "Smallweb Subway",
+      "url": "gusbus.space/smallweb-subway/",
+      "owner": "Gus Becker",
+      "is_station": 0
+    },
+    "po01": {
+      "x": 775,
+      "y": 625,
+      "name": "po01",
+      "line": "po",
+      "is_station": 0
+    },
+    "po02": {
+      "x": 725,
+      "y": 675,
+      "name": "po03",
+      "line": "po",
+      "is_station": 0
+    },
+    "po03": {
+      "x": 675,
+      "y": 675,
+      "name": "po02",
+      "line": "po",
+      "title": "Toa of Cloudbursting",
+      "url": "toa.nekoweb.org/",
+      "owner": "Toa",
+      "is_station": 1,
+      "station_offset_x": 1
+    },
+    "po04": {
+      "x": 600,
+      "y": 675,
+      "name": "po04",
+      "line": "po",
+      "title": "poems",
+      "url": "dead.garden/poetry/",
+      "owner": "jo",
+      "is_station": 1
+    },
+    "po05": {
+      "x": 500,
+      "y": 675,
+      "name": "po05",
+      "line": "po",
+      "is_station": 0
+    },
+    "po06": {
+      "x": 450,
+      "y": 725,
+      "name": "po06",
+      "line": "po",
+      "is_station": 0
+    },
+    "po07": {
+      "x": 300,
+      "y": 725,
+      "name": "po07",
+      "line": "po",
+      "title": "poetry!",
+      "url": "columbidaecorner.neocities.org/poetry",
+      "owner": "columbidaecorner",
+      "is_station": 1
+    },
+    "po08": {
+      "x": 225,
+      "y": 725,
+      "name": "po08",
+      "line": "po",
+      "is_station": 0
+    },
+    "po09": {
+      "x": 200,
+      "y": 700,
+      "name": "po09",
+      "line": "po",
+      "title": "flower in binary",
+      "url": "flowerinbinary.neocities.org/poetry",
+      "owner": "tim flower",
+      "is_station": 1
+    },
+    "po10": {
+      "x": 175,
+      "y": 675,
+      "name": "po10",
+      "line": "po",
+      "is_station": 0
+    },
+    "po11": {
+      "x": 175,
+      "y": 625,
+      "name": "po11",
+      "line": "po",
+      "title": "girlfreak poetry",
+      "url": "jenniferjantzen.com/poetry/",
+      "owner": "Jenny Jantzen",
+      "is_station": 1
+    },
+    "po12": {
+      "x": 175,
+      "y": 475,
+      "name": "po12",
+      "line": "po",
+      "title": "delovely's poetry",
+      "url": "delovely.neocities.org/poetry/",
+      "owner": "delovely",
+      "is_station": 1
+    },
+    "po13": {
+      "x": 175,
+      "y": 425,
+      "name": "po13",
+      "line": "po",
+      "is_station": 0
+    },
+    "po14": {
+      "x": 200,
+      "y": 400,
+      "name": "po14",
+      "line": "po",
+      "title": "manyface world",
+      "url": "manyface.neocities.org/",
+      "owner": "Manyface",
+      "is_station": 1
+    },
+    "po15": {
+      "x": 225,
+      "y": 375,
+      "name": "po15",
+      "line": "po",
+      "is_station": 0
+    },
+    "po16": {
+      "x": 275,
+      "y": 375,
+      "name": "po16",
+      "line": "po",
+      "is_station": 0
+    },
+    "po17": {
+      "x": 325,
+      "y": 425,
+      "name": "po17",
+      "line": "po",
+      "is_station": 0
+    },
+    "po18": {
+      "x": 375,
+      "y": 475,
+      "name": "po18",
+      "line": "po",
+      "is_station": 0
+    },
+    "po19": {
+      "x": 650,
+      "y": 475,
+      "name": "po19",
+      "line": "po",
+      "title": "Poems",
+      "url": "ololufe-collective.ghost.io/tag/poems/",
+      "owner": "Ololufe Collective",
+      "is_station": 1
+    },
+    "po20": {
+      "x": 700,
+      "y": 475,
+      "name": "po20",
+      "line": "po",
+      "is_station": 0
+    },
+    "sf00": {
+      "x": 767.9289321881346,
+      "y": 550,
+      "name": "sf00",
+      "line": "sf",
+      "title": "Smallweb Subway",
+      "url": "gusbus.space/smallweb-subway/",
+      "owner": "Gus Becker",
+      "is_station": 0,
+      "needs_adjusting": 0,
+      "x_adjust": -1
+    },
+    "sf01": {
+      "x": 600,
+      "y": 550,
+      "name": "sf01",
+      "line": "sf",
+      "is_station": 0
+    },
+    "sf02": {
+      "x": 550,
+      "y": 500,
+      "name": "sf02",
+      "line": "sf",
+      "is_station": 0
+    },
+    "sf03": {
+      "x": 550,
+      "y": 425,
+      "name": "sf03",
+      "line": "sf",
+      "title": "Fiiral's Project Hub",
+      "url": "www.fiiral.org/index.html",
+      "owner": "fiiral",
+      "is_station": 1
+    },
+    "sf04": {
+      "x": 550,
+      "y": 350,
+      "name": "sf04",
+      "line": "sf",
+      "title": "Gus's Scifi Gallery",
+      "url": "gusbus.space/scifi/",
+      "owner": "Gus Becker",
+      "is_station": 1
+    },
+    "sf05": {
+      "x": 550,
+      "y": 300,
+      "name": "sf05",
+      "line": "sf",
+      "is_station": 0
+    },
+    "sf06": {
+      "x": 575,
+      "y": 275,
+      "name": "sf06",
+      "line": "sf",
+      "title": "Codex Archonic",
+      "url": "lerariemann.nekoweb.org/index.html",
+      "owner": "Lera Riemann",
+      "is_station": 1
+    },
+    "sf07": {
+      "x": 600,
+      "y": 250,
+      "name": "sf07",
+      "line": "sf",
+      "is_station": 0
+    },
+    "sf08": {
+      "x": 650,
+      "y": 250,
+      "name": "sf08",
+      "line": "sf",
+      "title": "Clockwork's Archive of Tomorrow",
+      "url": "clockwooork.github.io/future-stop.html",
+      "owner": "Clockwork",
+      "is_station": 1
+    },
+    "sf09": {
+      "x": 725,
+      "y": 250,
+      "name": "sf09",
+      "line": "sf",
+      "title": "The Stardustverse",
+      "url": "stardustverse.neocities.org/",
+      "owner": "MaxTheFox",
+      "is_station": 1
+    },
+    "sf10": {
+      "x": 800,
+      "y": 250,
+      "name": "sf10",
+      "line": "sf",
+      "title": "Varve's writing bits & pieces",
+      "url": "www.write-on.org/writing/",
+      "owner": "Varve",
+      "is_station": 1
+    },
+    "sf11": {
+      "x": 825,
+      "y": 250,
+      "name": "sf11",
+      "line": "sf",
+      "is_station": 0
+    },
+    "sf12": {
+      "x": 875,
+      "y": 250,
+      "name": "sf12",
+      "line": "sf",
+      "title": "Stories",
+      "url": "dionra.com/stories.php",
+      "owner": "Dion Ra",
+      "is_station": 1
+    },
+    "sf13": {
+      "x": 925,
+      "y": 250,
+      "name": "sf13",
+      "line": "sf",
+      "is_station": 0
+    },
+    "sf14": {
+      "x": 950,
+      "y": 275,
+      "name": "sf14",
+      "line": "sf",
+      "title": "yukiclarke.com",
+      "url": "www.yukiclarke.com/home/",
+      "owner": "Yuki Clarke",
+      "is_station": 1,
+      "station_offset_x": 0,
+      "station_offset_y": 0
+    },
+    "sf15": {
+      "x": 975,
+      "y": 300,
+      "name": "sf15",
+      "line": "sf",
+      "is_station": 0
+    },
+    "sf16": {
+      "x": 975,
+      "y": 375,
+      "name": "sf16",
+      "line": "sf",
+      "is_station": 0
+    },
+    "sf17": {
+      "x": 975,
+      "y": 425,
+      "name": "sf17",
+      "line": "sf",
+      "is_station": 0,
+      "needs_adjusting": 1,
+      "y_adjust": -1
+    },
+    "sf18": {
+      "x": 900,
+      "y": 500,
+      "name": "sf18",
+      "line": "sf",
+      "title": "Friction Comic",
+      "url": "frictioncomic.com/home",
+      "owner": "Jack",
+      "is_station": 1,
+      "needs_adjusting": 1,
+      "x_adjust": -0.5,
+      "y_adjust": -0.5,
+      "station_offset_x": -0.707
+    },
+    "sf19": {
+      "x": 850,
+      "y": 550,
+      "name": "sf19",
+      "line": "sf",
+      "is_station": 0,
+      "needs_adjusting": 1,
+      "x_adjust": -1
+    },
+    "zi00": {
+      "x": 775,
+      "y": 550,
+      "name": "zi00",
+      "line": "zi",
+      "title": "Smallweb Subway",
+      "url": "gusbus.space/smallweb-subway/",
+      "owner": "Gus Becker",
+      "is_station": 0
+    },
+    "zi01": {
+      "x": 900,
+      "y": 550,
+      "name": "zi01",
+      "line": "zi",
+      "title": "Ether",
+      "url": "ethersent.neocities.org/",
+      "owner": "Emil Aisling",
+      "is_station": 1
+    },
+    "zi02": {
+      "x": 925,
+      "y": 550,
+      "name": "zi02",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi03": {
+      "x": 950,
+      "y": 575,
+      "name": "zi03",
+      "line": "zi",
+      "title": "Sheryl's Momzines",
+      "url": "sherylvernon.neocities.org/",
+      "owner": "Sheryl Vernon",
+      "is_station": 1
+    },
+    "zi04": {
+      "x": 975,
+      "y": 600,
+      "name": "zi04",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi05": {
+      "x": 975,
+      "y": 675,
+      "name": "zi05",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi06": {
+      "x": 950,
+      "y": 700,
+      "name": "zi06",
+      "line": "zi",
+      "title": "Mythical Type Zines",
+      "url": "mythicaltype.com/zines/",
+      "owner": "Mythical Type",
+      "is_station": 1
+    },
+    "zi07": {
+      "x": 925,
+      "y": 725,
+      "name": "zi07",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi08": {
+      "x": 875,
+      "y": 725,
+      "name": "zi08",
+      "line": "zi",
+      "title": "zines",
+      "url": "bumblechub.com/zines/",
+      "owner": "bumblechub",
+      "is_station": 1
+    },
+    "zi09": {
+      "x": 775,
+      "y": 725,
+      "name": "zi09",
+      "line": "zi",
+      "title": "MyDogStoleThisWebsite",
+      "url": "metrogoldia.neocities.org/",
+      "owner": "MyDogStoleMyLiver (Devin Spector)",
+      "is_station": 1
+    },
+    "zi10": {
+      "x": 750,
+      "y": 725,
+      "name": "zi10",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi11": {
+      "x": 725,
+      "y": 725,
+      "name": "zi11",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi12": {
+      "x": 675,
+      "y": 675,
+      "name": "zi12",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi13": {
+      "x": 675,
+      "y": 650,
+      "name": "zi13",
+      "line": "zi",
+      "title": "Toa of Cloudbursting",
+      "url": "toa.nekoweb.org/",
+      "owner": "Toa",
+      "is_station": 0
+    },
+    "zi14": {
+      "x": 675,
+      "y": 600,
+      "name": "zi14",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi15": {
+      "x": 700,
+      "y": 575,
+      "name": "zi15",
+      "line": "zi",
+      "title": "zines",
+      "url": "bumblechub.com/zines/",
+      "owner": "bumblechub",
+      "is_station": 1
+    },
+    "zi16": {
+      "x": 725,
+      "y": 550,
+      "name": "zi16",
+      "line": "zi",
+      "is_station": 0
+    }
+  },
+  "lines": {
+    "cc": {
+      "color": "#fad447",
+      "name": "Creatives Club",
+      "code": "creatives-club",
+      "x_offset": 1,
+      "y_offset": 0
+    },
+    "cx": {
+      "color": "#f7941d",
+      "name": "Comics",
+      "code": "comics",
+      "x_offset": -1,
+      "y_offset": -1
+    },
+    "dc": {
+      "color": "#25b233",
+      "name": "Doodle Crew",
+      "code": "doodle-crew",
+      "x_offset": 0,
+      "y_offset": 0
+    },
+    "po": {
+      "color": "#e51937",
+      "name": "Poetry",
+      "code": "poetry",
+      "x_offset": -1,
+      "y_offset": -1
+    },
+    "sf": {
+      "color": "#a1a3a1",
+      "name": "Scifi",
+      "code": "scifi",
+      "x_offset": 0,
+      "y_offset": 0
+    },
+    "zi": {
+      "color": "#0077c0",
+      "name": "Zines",
+      "code": "Zines",
+      "x_offset": 0,
+      "y_offset": 1
+    }
+  },
+  "edges": [
+    {
+      "cc": [
+        "cc00",
+        "cc01"
+      ]
+    },
+    {
+      "cc": [
+        "cc01",
+        "cc02"
+      ]
+    },
+    {
+      "cc": [
+        "cc02",
+        "cc03"
+      ]
+    },
+    {
+      "cc": [
+        "cc03",
+        "cc04"
+      ]
+    },
+    {
+      "cc": [
+        "cc04",
+        "cc05"
+      ]
+    },
+    {
+      "cc": [
+        "cc05",
+        "cc06"
+      ]
+    },
+    {
+      "cc": [
+        "cc06",
+        "cc07"
+      ]
+    },
+    {
+      "cc": [
+        "cc07",
+        "cc08"
+      ]
+    },
+    {
+      "cc": [
+        "cc08",
+        "cc09"
+      ]
+    },
+    {
+      "cc": [
+        "cc09",
+        "cc10"
+      ]
+    },
+    {
+      "cc": [
+        "cc10",
+        "cc11"
+      ]
+    },
+    {
+      "cc": [
+        "cc11",
+        "cc12"
+      ]
+    },
+    {
+      "cc": [
+        "cc12",
+        "cc13"
+      ]
+    },
+    {
+      "cc": [
+        "cc13",
+        "cc14"
+      ]
+    },
+    {
+      "cc": [
+        "cc14",
+        "cc15"
+      ]
+    },
+    {
+      "cc": [
+        "cc15",
+        "cc16"
+      ]
+    },
+    {
+      "cc": [
+        "cc16",
+        "cc00"
+      ]
+    },
+    {
+      "cx": [
+        "cx00",
+        "cx01"
+      ]
+    },
+    {
+      "cx": [
+        "cx01",
+        "cx02"
+      ]
+    },
+    {
+      "cx": [
+        "cx02",
+        "cx03"
+      ]
+    },
+    {
+      "cx": [
+        "cx03",
+        "cx04"
+      ]
+    },
+    {
+      "cx": [
+        "cx04",
+        "cx05"
+      ]
+    },
+    {
+      "cx": [
+        "cx05",
+        "cx06"
+      ]
+    },
+    {
+      "cx": [
+        "cx06",
+        "cx07"
+      ]
+    },
+    {
+      "cx": [
+        "cx07",
+        "cx08"
+      ]
+    },
+    {
+      "cx": [
+        "cx08",
+        "cx09"
+      ]
+    },
+    {
+      "cx": [
+        "cx09",
+        "cx10"
+      ]
+    },
+    {
+      "cx": [
+        "cx10",
+        "cx11"
+      ]
+    },
+    {
+      "cx": [
+        "cx11",
+        "cx12"
+      ]
+    },
+    {
+      "cx": [
+        "cx12",
+        "cx13"
+      ]
+    },
+    {
+      "cx": [
+        "cx13",
+        "cx14"
+      ]
+    },
+    {
+      "cx": [
+        "cx14",
+        "cx15"
+      ]
+    },
+    {
+      "cx": [
+        "cx15",
+        "cx16"
+      ]
+    },
+    {
+      "cx": [
+        "cx16",
+        "cx17"
+      ]
+    },
+    {
+      "cx": [
+        "cx17",
+        "cx18"
+      ]
+    },
+    {
+      "cx": [
+        "cx18",
+        "cx19"
+      ]
+    },
+    {
+      "cx": [
+        "cx19",
+        "cx20"
+      ]
+    },
+    {
+      "cx": [
+        "cx20",
+        "cx21"
+      ]
+    },
+    {
+      "cx": [
+        "cx21",
+        "cx22"
+      ]
+    },
+    {
+      "cx": [
+        "cx22",
+        "cx23"
+      ]
+    },
+    {
+      "cx": [
+        "cx23",
+        "cx24"
+      ]
+    },
+    {
+      "cx": [
+        "cx24",
+        "cx25"
+      ]
+    },
+    {
+      "cx": [
+        "cx25",
+        "cx26"
+      ]
+    },
+    {
+      "cx": [
+        "cx26",
+        "cx27"
+      ]
+    },
+    {
+      "cx": [
+        "cx27",
+        "cx28"
+      ]
+    },
+    {
+      "cx": [
+        "cx28",
+        "cx29"
+      ]
+    },
+    {
+      "cx": [
+        "cx29",
+        "cx30"
+      ]
+    },
+    {
+      "cx": [
+        "cx30",
+        "cx31"
+      ]
+    },
+    {
+      "cx": [
+        "cx31",
+        "cx32"
+      ]
+    },
+    {
+      "cx": [
+        "cx32",
+        "cx33"
+      ]
+    },
+    {
+      "cx": [
+        "cx33",
+        "cx34"
+      ]
+    },
+    {
+      "cx": [
+        "cx34",
+        "cx00"
+      ]
+    },
+    {
+      "dc": [
+        "dc00",
+        "dc01"
+      ]
+    },
+    {
+      "dc": [
+        "dc01",
+        "dc02"
+      ]
+    },
+    {
+      "dc": [
+        "dc02",
+        "dc03"
+      ]
+    },
+    {
+      "dc": [
+        "dc03",
+        "dc04"
+      ]
+    },
+    {
+      "dc": [
+        "dc04",
+        "dc05"
+      ]
+    },
+    {
+      "dc": [
+        "dc05",
+        "dc06"
+      ]
+    },
+    {
+      "dc": [
+        "dc06",
+        "dc07"
+      ]
+    },
+    {
+      "dc": [
+        "dc07",
+        "dc08"
+      ]
+    },
+    {
+      "dc": [
+        "dc08",
+        "dc09"
+      ]
+    },
+    {
+      "dc": [
+        "dc09",
+        "dc10"
+      ]
+    },
+    {
+      "dc": [
+        "dc10",
+        "dc11"
+      ]
+    },
+    {
+      "dc": [
+        "dc11",
+        "dc12"
+      ]
+    },
+    {
+      "dc": [
+        "dc12",
+        "dc13"
+      ]
+    },
+    {
+      "dc": [
+        "dc13",
+        "dc14"
+      ]
+    },
+    {
+      "dc": [
+        "dc14",
+        "dc15"
+      ]
+    },
+    {
+      "dc": [
+        "dc15",
+        "dc16"
+      ]
+    },
+    {
+      "dc": [
+        "dc16",
+        "dc17"
+      ]
+    },
+    {
+      "dc": [
+        "dc17",
+        "dc18"
+      ]
+    },
+    {
+      "dc": [
+        "dc18",
+        "dc19"
+      ]
+    },
+    {
+      "dc": [
+        "dc19",
+        "dc00"
+      ]
+    },
+    {
+      "po": [
+        "po00",
+        "po01"
+      ]
+    },
+    {
+      "po": [
+        "po01",
+        "po02"
+      ]
+    },
+    {
+      "po": [
+        "po02",
+        "po03"
+      ]
+    },
+    {
+      "po": [
+        "po03",
+        "po04"
+      ]
+    },
+    {
+      "po": [
+        "po04",
+        "po05"
+      ]
+    },
+    {
+      "po": [
+        "po05",
+        "po06"
+      ]
+    },
+    {
+      "po": [
+        "po06",
+        "po07"
+      ]
+    },
+    {
+      "po": [
+        "po07",
+        "po08"
+      ]
+    },
+    {
+      "po": [
+        "po08",
+        "po09"
+      ]
+    },
+    {
+      "po": [
+        "po09",
+        "po10"
+      ]
+    },
+    {
+      "po": [
+        "po10",
+        "po11"
+      ]
+    },
+    {
+      "po": [
+        "po11",
+        "po12"
+      ]
+    },
+    {
+      "po": [
+        "po12",
+        "po13"
+      ]
+    },
+    {
+      "po": [
+        "po13",
+        "po14"
+      ]
+    },
+    {
+      "po": [
+        "po14",
+        "po15"
+      ]
+    },
+    {
+      "po": [
+        "po15",
+        "po16"
+      ]
+    },
+    {
+      "po": [
+        "po16",
+        "po17"
+      ]
+    },
+    {
+      "po": [
+        "po17",
+        "po18"
+      ]
+    },
+    {
+      "po": [
+        "po18",
+        "po19"
+      ]
+    },
+    {
+      "po": [
+        "po19",
+        "po20"
+      ]
+    },
+    {
+      "po": [
+        "po20",
+        "po00"
+      ]
+    },
+    {
+      "sf": [
+        "sf00",
+        "sf01"
+      ]
+    },
+    {
+      "sf": [
+        "sf01",
+        "sf02"
+      ]
+    },
+    {
+      "sf": [
+        "sf02",
+        "sf03"
+      ]
+    },
+    {
+      "sf": [
+        "sf03",
+        "sf04"
+      ]
+    },
+    {
+      "sf": [
+        "sf04",
+        "sf05"
+      ]
+    },
+    {
+      "sf": [
+        "sf05",
+        "sf06"
+      ]
+    },
+    {
+      "sf": [
+        "sf06",
+        "sf07"
+      ]
+    },
+    {
+      "sf": [
+        "sf07",
+        "sf08"
+      ]
+    },
+    {
+      "sf": [
+        "sf08",
+        "sf09"
+      ]
+    },
+    {
+      "sf": [
+        "sf09",
+        "sf10"
+      ]
+    },
+    {
+      "sf": [
+        "sf10",
+        "sf11"
+      ]
+    },
+    {
+      "sf": [
+        "sf11",
+        "sf12"
+      ]
+    },
+    {
+      "sf": [
+        "sf12",
+        "sf13"
+      ]
+    },
+    {
+      "sf": [
+        "sf13",
+        "sf14"
+      ]
+    },
+    {
+      "sf": [
+        "sf14",
+        "sf15"
+      ]
+    },
+    {
+      "sf": [
+        "sf15",
+        "sf16"
+      ]
+    },
+    {
+      "sf": [
+        "sf16",
+        "sf17"
+      ]
+    },
+    {
+      "sf": [
+        "sf17",
+        "sf18"
+      ]
+    },
+    {
+      "sf": [
+        "sf18",
+        "sf19"
+      ]
+    },
+    {
+      "sf": [
+        "sf19",
+        "sf00"
+      ]
+    },
+    {
+      "zi": [
+        "zi00",
+        "zi01"
+      ]
+    },
+    {
+      "zi": [
+        "zi01",
+        "zi02"
+      ]
+    },
+    {
+      "zi": [
+        "zi02",
+        "zi03"
+      ]
+    },
+    {
+      "zi": [
+        "zi03",
+        "zi04"
+      ]
+    },
+    {
+      "zi": [
+        "zi04",
+        "zi05"
+      ]
+    },
+    {
+      "zi": [
+        "zi05",
+        "zi06"
+      ]
+    },
+    {
+      "zi": [
+        "zi06",
+        "zi07"
+      ]
+    },
+    {
+      "zi": [
+        "zi07",
+        "zi08"
+      ]
+    },
+    {
+      "zi": [
+        "zi08",
+        "zi09"
+      ]
+    },
+    {
+      "zi": [
+        "zi09",
+        "zi10"
+      ]
+    },
+    {
+      "zi": [
+        "zi10",
+        "zi11"
+      ]
+    },
+    {
+      "zi": [
+        "zi11",
+        "zi12"
+      ]
+    },
+    {
+      "zi": [
+        "zi12",
+        "zi13"
+      ]
+    },
+    {
+      "zi": [
+        "zi13",
+        "zi14"
+      ]
+    },
+    {
+      "zi": [
+        "zi14",
+        "zi15"
+      ]
+    },
+    {
+      "zi": [
+        "zi15",
+        "zi16"
+      ]
+    },
+    {
+      "zi": [
+        "zi16",
+        "zi00"
+      ]
+    }
+  ]
+}
