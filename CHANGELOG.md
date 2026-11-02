@@ -1,5 +1,6 @@
 # Change Log
 
+- Shift all map nodes down by 50 pixels
 - Add [greycloak](https://greycloak.neocities.org/writings) back to the map
 - Add [Hyper and Stick](https://hyperandstick.com/) to the map
 - Rename `map-wip.js` -> `map.js`
