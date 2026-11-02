@@ -1,5 +1,6 @@
 # Change Log
 
+- Rename `map-wip.js` -> `map.js`
 - Rename `map.js` -> `map-legacy.js`
 - Remove `owner` and `url` attributes from `nodes` in `map-data.json`
 - Load website owner and URL from each line's JS file
