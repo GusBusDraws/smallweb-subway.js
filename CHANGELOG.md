@@ -1,5 +1,6 @@
 # Change Log
 
+- Add [greycloak](https://greycloak.neocities.org/writings) back to the map
 - Add [Hyper and Stick](https://hyperandstick.com/) to the map
 - Rename `map-wip.js` -> `map.js`
 - Rename `map.js` -> `map-legacy.js`

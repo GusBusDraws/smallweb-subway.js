@@ -690,7 +690,8 @@
       "y": 425,
       "name": "po17",
       "line": "po",
-      "is_station": 0
+      "title" : "greycloak's website",
+      "is_station": 1
     },
     "po18": {
       "x": 375,
