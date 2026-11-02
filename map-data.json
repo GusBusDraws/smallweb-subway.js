@@ -6,8 +6,6 @@
       "name": "cc00",
       "line": "cc",
       "title": "Smallweb Subway",
-      "url": "gusbus.space/smallweb-subway/",
-      "owner": "Gus Becker",
       "is_station": 0
     },
     "cc01": {
@@ -16,8 +14,6 @@
       "name": "cc01",
       "line": "cc",
       "title": "DoodleBot",
-      "url": "gusbus.space/doodlebot/",
-      "owner": "Gus Becker",
       "is_station": 1,
       "station_offset_x": -0.5
     },
@@ -34,8 +30,6 @@
       "name": "cc03",
       "line": "cc",
       "title": "Creatives Club",
-      "url": "creativesclub.art/",
-      "owner": "Gus Becker",
       "is_station": 1
     },
     "cc04": {
@@ -51,8 +45,6 @@
       "name": "cc05",
       "line": "cc",
       "title": "yukiclarke.com",
-      "url": "www.yukiclarke.com/home/",
-      "owner": "Yuki Clarke",
       "is_station": 0,
       "station_offset_x": 1
     },
@@ -69,8 +61,6 @@
       "name": "cc07",
       "line": "cc",
       "title": "poetry, music, zines, and more!",
-      "url": "jenniferjantzen.com/",
-      "owner": "Jenny Jantzen",
       "is_station": 0
     },
     "cc08": {
@@ -86,8 +76,6 @@
       "name": "cc09",
       "line": "cc",
       "title": "haystack blog and oddities",
-      "url": "thatoddhaystack.neocities.org/",
-      "owner": "vita",
       "is_station": 1
     },
     "cc10": {
@@ -96,8 +84,6 @@
       "name": "cc10",
       "line": "cc",
       "title": "UR LOCAL CYBORG",
-      "url": "seenby.urlocalcyb.org/",
-      "owner": "Caroline",
       "is_station": 1
     },
     "cc11": {
@@ -120,8 +106,6 @@
       "name": "cc13",
       "line": "cc",
       "title": "Art",
-      "url": "www.stephaniediederich.com/",
-      "owner": "Stephanie Diederich",
       "is_station": 1
     },
     "cc14": {
@@ -151,8 +135,6 @@
       "name": "cx00",
       "line": "cx",
       "title": "Smallweb Subway",
-      "url": "gusbus.space/smallweb-subway/",
-      "owner": "Gus Becker",
       "is_station": 0
     },
     "cx01": {
@@ -161,8 +143,6 @@
       "name": "cx01",
       "line": "cx",
       "title": "The Fuzzy Slug's Webcomic Hub",
-      "url": "thefuzzyslug.neocities.org/",
-      "owner": "thefuzzyslug",
       "is_station": 1
     },
     "cx02": {
@@ -171,8 +151,6 @@
       "name": "cx02",
       "line": "cx",
       "title": "slime pond comics",
-      "url": "abslimeware.neocities.org/comic/",
-      "owner": "candycanearter07",
       "is_station": 1,
       "station_offset_x": 1
     },
@@ -182,8 +160,6 @@
       "name": "cx03",
       "line": "cx",
       "title": "Trailerparkia",
-      "url": "trailerparkia.net/",
-      "owner": "Em",
       "is_station": 1
     },
     "cx04": {
@@ -192,8 +168,6 @@
       "name": "cx04",
       "line": "cx",
       "title": "The Iron Ragdoll",
-      "url": "tofutush.github.io/The-Iron-Ragdoll/misc/links/",
-      "owner": "Tofutush",
       "is_station": 1
     },
     "cx05": {
@@ -216,8 +190,6 @@
       "name": "cx07",
       "line": "cx",
       "title": "The Bog Quest",
-      "url": "https://thebogquest.com/",
-      "owner": "San",
       "is_station": 0
     },
     "cx08": {
@@ -233,8 +205,6 @@
       "name": "cx09",
       "line": "cx",
       "title": "Redux",
-      "url": "thel3tterm.com/redux/about",
-      "owner": "TheL3tterM",
       "is_station": 1
     },
     "cx10": {
@@ -243,8 +213,6 @@
       "name": "cx10",
       "line": "cx",
       "title": "My Comics",
-      "url": "columbidaecorner.neocities.org/comics",
-      "owner": "Pigeon",
       "is_station": 1
     },
     "cx11": {
@@ -267,8 +235,6 @@
       "name": "cx13",
       "line": "cx",
       "title": "Long Gone Legend",
-      "url": "burkespoint.net/lgl/",
-      "owner": "hal",
       "is_station": 1
     },
     "cx14": {
@@ -277,8 +243,6 @@
       "name": "cx14",
       "line": "cx",
       "title": "Schism",
-      "url": "schism.org/",
-      "owner": "Newbabyfly",
       "is_station": 1
     },
     "cx15": {
@@ -287,8 +251,6 @@
       "name": "cx15",
       "line": "cx",
       "title": "White Noise",
-      "url": "www.white-noise-comic.com/",
-      "owner": "Adrien Lee (thephooka)",
       "is_station": 1
     },
     "cx16": {
@@ -297,8 +259,6 @@
       "name": "cx16",
       "line": "cx",
       "title": "Neat Hobby!",
-      "url": "neathobby.com/",
-      "owner": "Scott Andrew",
       "is_station": 1
     },
     "cx17": {
@@ -307,8 +267,6 @@
       "name": "cx17",
       "line": "cx",
       "title": "Keeping Time",
-      "url": "www.keepingtimecomic.com/links/",
-      "owner": "Kody Okamoto",
       "is_station": 1
     },
     "cx18": {
@@ -317,8 +275,6 @@
       "name": "cx18",
       "line": "cx",
       "title": "BrittHub",
-      "url": "britthub.co.uk/",
-      "owner": "Britt Coxon",
       "is_station": 1
     },
     "cx19": {
@@ -327,8 +283,6 @@
       "name": "cx19",
       "line": "cx",
       "title": "Links",
-      "url": "diabloafterdark.nekoweb.org/links.html",
-      "owner": "DiabloAfterDark",
       "is_station": 1
     },
     "cx20": {
@@ -358,8 +312,6 @@
       "name": "cx23",
       "line": "cx",
       "title": "Ultraviolents",
-      "url": "uv.itsnero.com/about/",
-      "owner": "Nero Villagallos O'Reilly",
       "is_station": 1
     },
     "cx24": {
@@ -389,8 +341,6 @@
       "name": "cx27",
       "line": "cx",
       "title": "Beyond the End",
-      "url": "beyondtheend.gay/",
-      "owner": "Dusk Pendragon (DuskDragonXIII)",
       "is_station": 1
     },
     "cx28": {
@@ -413,8 +363,6 @@
       "name": "cx30",
       "line": "cx",
       "title": "yukiclarke.com",
-      "url": "www.yukiclarke.com/home/",
-      "owner": "Yuki Clarke",
       "is_station": 1,
       "station_offset_x": 0.5,
       "station_offset_y": 1
@@ -439,8 +387,6 @@
       "name": "cx33",
       "line": "cx",
       "title": "Friction Comic",
-      "url": "frictioncomic.com/home",
-      "owner": "Jack",
       "is_station": 1,
       "station_offset_y": 0.707
     },
@@ -457,8 +403,6 @@
       "name": "dc00",
       "line": "dc",
       "title": "Smallweb Subway",
-      "url": "gusbus.space/smallweb-subway/",
-      "owner": "Gus Becker",
       "is_station": 1
     },
     "dc01": {
@@ -495,8 +439,6 @@
       "name": "dc04",
       "line": "dc",
       "title": "feuer-in-soho.art",
-      "url": "feuer-in-soho.art/",
-      "owner": "Soho",
       "is_station": 1
     },
     "dc05": {
@@ -505,8 +447,6 @@
       "name": "dc05",
       "line": "dc",
       "title": "my art 2026",
-      "url": "uuupah.neocities.org/art/my-art-2026/",
-      "owner": "uuupah",
       "is_station": 1
     },
     "dc06": {
@@ -522,8 +462,6 @@
       "name": "dc07",
       "line": "dc",
       "title": "Honora's web garden",
-      "url": "honora.neocities.org/about",
-      "owner": "Honora",
       "is_station": 1
     },
     "dc08": {
@@ -539,8 +477,6 @@
       "name": "dc09",
       "line": "dc",
       "title": "slime pond comics",
-      "url": "abslimeware.neocities.org/comic/",
-      "owner": "candycanearter07",
       "is_station": 1,
       "station_offset_y": -1
     },
@@ -550,8 +486,6 @@
       "name": "dc10",
       "line": "dc",
       "title": "Marcy Chow Doodles",
-      "url": "marcychowdoodles.neocities.org/",
-      "owner": "Marcy Chow",
       "is_station": 1
     },
     "dc11": {
@@ -567,8 +501,6 @@
       "name": "dc12",
       "line": "dc",
       "title": "varve's art gallery",
-      "url": "www.write-on.org/art/",
-      "owner": "varve",
       "is_station": 1
     },
     "dc13": {
@@ -584,8 +516,6 @@
       "name": "dc14",
       "line": "dc",
       "title": "Gus's Scifi Gallery",
-      "url": "gusbus.space/scifi/",
-      "owner": "Gus Becker",
       "is_station": 1
     },
     "dc15": {
@@ -594,8 +524,6 @@
       "name": "dc15",
       "line": "dc",
       "title": "The Magic Pencil",
-      "url": "davethedoodler.neocities.org/",
-      "owner": "Doodledave",
       "is_station": 1
     },
     "dc16": {
@@ -625,8 +553,6 @@
       "name": "dc19",
       "line": "dc",
       "title": "DoodleBot",
-      "url": "gusbus.space/doodlebot/",
-      "owner": "Gus Becker",
       "is_station": 1,
       "station_offset_x": 0.5
     },
@@ -636,8 +562,6 @@
       "name": "po00",
       "line": "po",
       "title": "Smallweb Subway",
-      "url": "gusbus.space/smallweb-subway/",
-      "owner": "Gus Becker",
       "is_station": 0
     },
     "po01": {
@@ -660,8 +584,6 @@
       "name": "po03",
       "line": "po",
       "title": "Toa of Cloudbursting",
-      "url": "toa.nekoweb.org/",
-      "owner": "Toa",
       "is_station": 1,
       "station_offset_x": 1
     },
@@ -671,8 +593,6 @@
       "name": "po04",
       "line": "po",
       "title": "poems",
-      "url": "dead.garden/poetry/",
-      "owner": "jo",
       "is_station": 1
     },
     "po05": {
@@ -695,8 +615,6 @@
       "name": "po07",
       "line": "po",
       "title": "poetry!",
-      "url": "columbidaecorner.neocities.org/poetry",
-      "owner": "columbidaecorner",
       "is_station": 1
     },
     "po08": {
@@ -712,8 +630,6 @@
       "name": "po09",
       "line": "po",
       "title": "flower in binary",
-      "url": "flowerinbinary.neocities.org/poetry",
-      "owner": "tim flower",
       "is_station": 1
     },
     "po10": {
@@ -729,8 +645,6 @@
       "name": "po11",
       "line": "po",
       "title": "girlfreak poetry",
-      "url": "jenniferjantzen.com/poetry/",
-      "owner": "Jenny Jantzen",
       "is_station": 1
     },
     "po12": {
@@ -739,8 +653,6 @@
       "name": "po12",
       "line": "po",
       "title": "delovely's poetry",
-      "url": "delovely.neocities.org/poetry/",
-      "owner": "delovely",
       "is_station": 1
     },
     "po13": {
@@ -756,8 +668,6 @@
       "name": "po14",
       "line": "po",
       "title": "manyface world",
-      "url": "manyface.neocities.org/",
-      "owner": "Manyface",
       "is_station": 1
     },
     "po15": {
@@ -794,8 +704,6 @@
       "name": "po19",
       "line": "po",
       "title": "Poems",
-      "url": "ololufe-collective.ghost.io/tag/poems/",
-      "owner": "Ololufe Collective",
       "is_station": 1
     },
     "po20": {
@@ -811,8 +719,6 @@
       "name": "sf00",
       "line": "sf",
       "title": "Smallweb Subway",
-      "url": "gusbus.space/smallweb-subway/",
-      "owner": "Gus Becker",
       "is_station": 0,
       "needs_adjusting": 0,
       "x_adjust": -1
@@ -837,8 +743,6 @@
       "name": "sf03",
       "line": "sf",
       "title": "Fiiral's Project Hub",
-      "url": "www.fiiral.org/index.html",
-      "owner": "fiiral",
       "is_station": 1
     },
     "sf04": {
@@ -847,8 +751,6 @@
       "name": "sf04",
       "line": "sf",
       "title": "Gus's Scifi Gallery",
-      "url": "gusbus.space/scifi/",
-      "owner": "Gus Becker",
       "is_station": 1
     },
     "sf05": {
@@ -864,8 +766,6 @@
       "name": "sf06",
       "line": "sf",
       "title": "Codex Archonic",
-      "url": "lerariemann.nekoweb.org/index.html",
-      "owner": "Lera Riemann",
       "is_station": 0
     },
     "sf07": {
@@ -881,8 +781,6 @@
       "name": "sf08",
       "line": "sf",
       "title": "Clockwork's Archive of Tomorrow",
-      "url": "clockwooork.github.io/future-stop.html",
-      "owner": "Clockwork",
       "is_station": 1
     },
     "sf09": {
@@ -891,8 +789,6 @@
       "name": "sf09",
       "line": "sf",
       "title": "The Stardustverse",
-      "url": "stardustverse.neocities.org/",
-      "owner": "MaxTheFox",
       "is_station": 1
     },
     "sf10": {
@@ -901,8 +797,6 @@
       "name": "sf10",
       "line": "sf",
       "title": "Varve's writing bits & pieces",
-      "url": "www.write-on.org/writing/",
-      "owner": "Varve",
       "is_station": 1
     },
     "sf11": {
@@ -918,8 +812,6 @@
       "name": "sf12",
       "line": "sf",
       "title": "Stories",
-      "url": "dionra.com/stories.php",
-      "owner": "Dion Ra",
       "is_station": 1
     },
     "sf13": {
@@ -935,8 +827,6 @@
       "name": "sf14",
       "line": "sf",
       "title": "yukiclarke.com",
-      "url": "www.yukiclarke.com/home/",
-      "owner": "Yuki Clarke",
       "is_station": 1,
       "station_offset_x": 0,
       "station_offset_y": 0
@@ -970,8 +860,6 @@
       "name": "sf18",
       "line": "sf",
       "title": "Friction Comic",
-      "url": "frictioncomic.com/home",
-      "owner": "Jack",
       "is_station": 1,
       "needs_adjusting": 1,
       "x_adjust": -0.5,
@@ -993,8 +881,6 @@
       "name": "zi00",
       "line": "zi",
       "title": "Smallweb Subway",
-      "url": "gusbus.space/smallweb-subway/",
-      "owner": "Gus Becker",
       "is_station": 0
     },
     "zi01": {
@@ -1003,8 +889,6 @@
       "name": "zi01",
       "line": "zi",
       "title": "Ether",
-      "url": "ethersent.neocities.org/",
-      "owner": "Emil Aisling",
       "is_station": 1
     },
     "zi02": {
@@ -1020,8 +904,6 @@
       "name": "zi03",
       "line": "zi",
       "title": "Sheryl's Momzines",
-      "url": "sherylvernon.neocities.org/",
-      "owner": "Sheryl Vernon",
       "is_station": 1
     },
     "zi04": {
@@ -1044,8 +926,6 @@
       "name": "zi06",
       "line": "zi",
       "title": "Mythical Type Zines",
-      "url": "mythicaltype.com/zines/",
-      "owner": "Mythical Type",
       "is_station": 1
     },
     "zi07": {
@@ -1061,8 +941,6 @@
       "name": "zi08",
       "line": "zi",
       "title": "zines",
-      "url": "bumblechub.com/zines/",
-      "owner": "bumblechub",
       "is_station": 1
     },
     "zi09": {
@@ -1071,8 +949,6 @@
       "name": "zi09",
       "line": "zi",
       "title": "MyDogStoleThisWebsite",
-      "url": "metrogoldia.neocities.org/",
-      "owner": "MyDogStoleMyLiver (Devin Spector)",
       "is_station": 1
     },
     "zi10": {
@@ -1102,8 +978,6 @@
       "name": "zi13",
       "line": "zi",
       "title": "Toa of Cloudbursting",
-      "url": "toa.nekoweb.org/",
-      "owner": "Toa",
       "is_station": 0
     },
     "zi14": {
@@ -1119,8 +993,6 @@
       "name": "zi15",
       "line": "zi",
       "title": "zines",
-      "url": "bumblechub.com/zines/",
-      "owner": "bumblechub",
       "is_station": 1
     },
     "zi16": {

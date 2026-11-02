@@ -1,5 +1,6 @@
 # Change Log
 
+- Remove `owner` and `url` attributes from `nodes` in `map-data.json`
 - Load website owner and URL from each line's JS file
 - Adjust info boxes to dynamically size with longest line of text
 - Calculate node offsets during `setup()` (except for station-only offsets) to align selection position with nodes/stations
