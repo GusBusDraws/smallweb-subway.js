@@ -337,14 +337,14 @@ function touchStarted() {
   // Check if legend or station highlighted by touch
   if (selection != undefined && touches.length > 0) {
     // If legend highlighted by touch, follow link to index page
-    for (let leg of legendArr) {
+    for (let leg of legendItems) {
       // Shift by 1/2*height (or width) to account for rectangle center
       if (
         (mouseX > leg.x - legendWidth/2 && mouseX <= leg.x + legendWidth/2)
         && (mouseY > leg.y -legendHeight/2 && mouseY <= leg.y + legendHeight/2)
         && (selection.code != null && selection.code == leg.code)
       ) {
-        console.log('Legend clicked')
+        console.log('Legend touched')
         window.open('/smallweb-subway/'+leg.code);
         isFound = true;
         // Needed to insure only one page is opened
@@ -358,7 +358,7 @@ function touchStarted() {
         (mouseX > selection.boxXMin && mouseX < selection.boxXMax)
         && (mouseY > selection.boxYMin && mouseY < selection.boxYMax)
       ) {
-        console.log('Station clicked')
+        console.log('Station touched')
         window.open('https://'+selection.url);
         isFound = true;
         // Needed to insure only one page is opened
@@ -444,8 +444,10 @@ function mousePressed() {
 
 function mouseReleased() {
   selection = null;
-  is_dragging = false;
-  console.log("is_dragging =", is_dragging)
+  if (is_dragging) {
+    is_dragging = false;
+    console.log("is_dragging =", is_dragging)
+  }
 }
 
 function setupLegend() {
