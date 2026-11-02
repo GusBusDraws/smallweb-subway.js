@@ -216,7 +216,7 @@ function checkStationSelect(mode = 'hover') {
         // If mouse is clicked while hovering, open the corresponding url
         if (mouseIsPressed && touches.length == 0 && !editMode) {
           console.log('Station clicked')
-          window.open('https://'+station.url);
+          window.open('https://'+info[station.line][station.title].url);
           // Needed to insure only one page is opened
           mouseIsPressed = false;
         }
