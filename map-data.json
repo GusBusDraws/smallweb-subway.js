@@ -890,8 +890,7 @@
       "y": 550,
       "name": "zi01",
       "line": "zi",
-      "title": "Ether",
-      "is_station": 1
+      "is_station": 0
     },
     "zi02": {
       "x": 925,
@@ -994,7 +993,7 @@
       "y": 575,
       "name": "zi15",
       "line": "zi",
-      "title": "zines",
+      "title": "Ether",
       "is_station": 1
     },
     "zi16": {
