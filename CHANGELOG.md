@@ -1,5 +1,7 @@
 # Change Log
 
+## 2026-11-01
+- Add `data_editor.py` for automating data manipulations like shifting all stations and/or adding nodes
 - Shift all map nodes down by 50 pixels
 - Add [greycloak](https://greycloak.neocities.org/writings) back to the map
 - Add [Hyper and Stick](https://hyperandstick.com/) to the map
