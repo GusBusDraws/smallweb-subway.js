@@ -5,6 +5,11 @@ let DATA_scifi = [
     "owner" : "Gus Becker"
   },
   {
+    "title" : "Fiiral's Project Hub",
+    "url"   : "www.fiiral.org/index.html",
+    "owner" : "fiiral"
+  },
+  {
     "title" : "Gus's Scifi Gallery",
     "url"   : "gusbus.space/scifi/",
     "owner" : "Gus Becker"
@@ -43,11 +48,6 @@ let DATA_scifi = [
     "title" : "Friction Comic",
     "url"   : "frictioncomic.com/home",
     "owner" : "Jack"
-  },
-  {
-    "title" : "Fiiral's Project Hub",
-    "url"   : "www.fiiral.org/index.html",
-    "owner" : "fiiral"
   }
 ]
 

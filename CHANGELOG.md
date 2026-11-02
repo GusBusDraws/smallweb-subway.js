@@ -1,5 +1,23 @@
 # Change Log
 
+## 2026-11-01
+- Add `data_editor.py` for automating data manipulations like shifting all stations and/or adding nodes
+- Shift all map nodes down by 50 pixels
+- Add [greycloak](https://greycloak.neocities.org/writings) back to the map
+- Add [Hyper and Stick](https://hyperandstick.com/) to the map
+- Rename `map-wip.js` -> `map.js`
+- Rename `map.js` -> `map-legacy.js`
+- Remove `owner` and `url` attributes from `nodes` in `map-data.json`
+- Load website owner and URL from each line's JS file
+- Adjust info boxes to dynamically size with longest line of text
+- Calculate node offsets during `setup()` (except for station-only offsets) to align selection position with nodes/stations
+- Merge new selection behavior with deployed version
+- Only save data file in `editMode`
+- Reorder legend and send clicks to the proper address of each line index
+- Scale the map with the size of the canvas
+- Enable the canvas for the map to dynamically scale with the size of the browser window
+- Replace `map-wip.js` with map that has an `editMode` for moving the lines and stations around
+
 ## 2026-10-31
 - Add `map-data.json` for storing station and line locations on the map
 - Fix `forceNewTab` functionality for the Zines Line

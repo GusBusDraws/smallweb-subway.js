@@ -5,11 +5,6 @@ let DATA_zines = [
     "owner" : "Gus Becker"
   },
   {
-    "title" : "Ether",
-    "url"   : "ethersent.neocities.org/",
-    "owner" : "Emil Aisling"
-  },
-  {
     "title" : "Sheryl's Momzines",
     "url"   : "sherylvernon.neocities.org/",
     "owner" : "Sheryl Vernon"
@@ -38,6 +33,11 @@ let DATA_zines = [
     "title" : "Toa of Cloudbursting",
     "url" : "toa.nekoweb.org/",
     "owner": "Toa"
+  },
+  {
+    "title" : "Ether",
+    "url"   : "ethersent.neocities.org/",
+    "owner" : "Emil Aisling"
   }
 ]
 

@@ -79,6 +79,16 @@ let DATA_comics = [
     "url"   : "uv.itsnero.com/about/",
     "owner" : "Nero Villagallos O'Reilly"
   },
+  // {
+  //   "title" : "The Bog Quest",
+  //   "url"   : "https://thebogquest.com/",
+  //   "owner" : "San"
+  // },
+  {
+    "title" : "Hyper and Stick",
+    "url"   : "hyperandstick.com/",
+    "owner" : "Paul Tye"
+  },
   {
     "title" : "Beyond the End",
     "url"   : "beyondtheend.gay/",
@@ -93,16 +103,6 @@ let DATA_comics = [
     "title" : "Friction Comic",
     "url"   : "frictioncomic.com/home",
     "owner" : "Jack"
-  },
-  // {
-  //   "title" : "The Bog Quest",
-  //   "url"   : "https://thebogquest.com/",
-  //   "owner" : "San"
-  // },
-  {
-    "title" : "Hyper and Stick",
-    "url"   : "hyperandstick.com/",
-    "owner" : "Paul Tye"
   }
 ]
 
