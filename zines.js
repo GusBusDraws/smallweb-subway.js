@@ -5,23 +5,18 @@ let DATA_zines = [
     "owner" : "Gus Becker"
   },
   {
-    "title" : "Ether",
-    "url"   : "ethersent.neocities.org/",
-    "owner" : "Emil Aisling"
-  },
-  {
     "title" : "Sheryl's Momzines",
     "url"   : "sherylvernon.neocities.org/",
     "owner" : "Sheryl Vernon"
   },
   {
     "title" : "Mythical Type Zines",
-    "url"   : "mythicaltype.com/zines/",
+    "url"   : "mythicaltype.neocities.org/",
     "owner" : "Mythical Type"
   },
   {
     "title" : "zines",
-    "url"   : "bumblechub.com/zines/",
+    "url"   : "bumblechub.com/zines",
     "owner" : "bumblechub"
   },
   // {
@@ -40,9 +35,9 @@ let DATA_zines = [
     "owner": "Toa"
   },
   {
-    "title" : "zines",
-    "url"   : "bumblechub.com/zines/",
-    "owner" : "bumblechub"
+    "title" : "Ether",
+    "url"   : "ethersent.neocities.org/",
+    "owner" : "Emil Aisling"
   }
 ]
 
@@ -114,13 +109,21 @@ function getHostName_zines(url) {
 }
 
 function goToPrev_zines() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_zines[prevSiteIndex_zines].url
+  // The leading '//' treats the link as an external site, even without "https:"
+  if (typeof forceNewTab_zines !== 'undefined' && forceNewTab_zines) {
+    window.open('//' + DATA_zines[prevSiteIndex_zines].url)
+  } else {
+    location.href = '//' + DATA_zines[prevSiteIndex_zines].url
+  }
 }
 
 function goToNext_zines() {
-  // Adding '//' treats the link as an external site, even without "https:"
-  location.href = '//' + DATA_zines[nextSiteIndex_zines].url
+  // The leading '//' treats the link as an external site, even without "https:"
+  if (typeof forceNewTab_zines !== 'undefined' && forceNewTab_zines) {
+    window.open('//' + DATA_zines[nextSiteIndex_zines].url)
+  } else {
+    location.href = '//' + DATA_zines[nextSiteIndex_zines].url
+  }
 }
 
 function insertWidget_zines() {

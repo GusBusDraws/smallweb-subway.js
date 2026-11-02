@@ -19,11 +19,11 @@ let DATA_creativesclub = [
     "url"   : "www.yukiclarke.com/home/",
     "owner" : "Yuki Clarke"
   },
-  {
-    "title" : "poetry, music, zines, and more!",
-    "url"   : "jenniferjantzen.com/",
-    "owner" : "Jenny Jantzen"
-  },
+  // {
+  //   "title" : "poetry, music, zines, and more!",
+  //   "url"   : "jenniferjantzen.com/",
+  //   "owner" : "Jenny Jantzen"
+  // },
   {
     "title" : "haystack blog and oddities",
     "url"   : "thatoddhaystack.neocities.org/",
