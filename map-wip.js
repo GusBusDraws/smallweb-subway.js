@@ -16,6 +16,28 @@ let legendWidth;
 let legendItems;
 let selection;
 let printMousePosition = false;
+// let scifiInfo = formatInfoFromLineJS(DATA_scifi)
+// let zinesInfo = formatInfoFromLineJS(DATA_zines)
+// let doodlecrewInfo = formatInfoFromLineJS(DATA_doodlecrew)
+// let creativesclubInfo = formatInfoFromLineJS(DATA_creativesclub)
+// let comicsInfo = formatInfoFromLineJS(DATA_comics)
+// let poetryInfo = formatInfoFromLineJS(DATA_poetry)
+let info = {
+  "sf": formatInfoFromLineJS(DATA_scifi),
+  "zi": formatInfoFromLineJS(DATA_zines),
+  "dc": formatInfoFromLineJS(DATA_doodlecrew),
+  "cc": formatInfoFromLineJS(DATA_creativesclub),
+  "cx": formatInfoFromLineJS(DATA_comics),
+  "po": formatInfoFromLineJS(DATA_poetry)
+}
+
+function formatInfoFromLineJS(infoArr) {
+  let lineInfo = {};
+  for (let station of infoArr) {
+    lineInfo[station.title] = {"url": station.url, "owner": station.owner}
+  }
+  return lineInfo
+}
 
 function preload() {
   data = loadJSON("https://gusbus.space/smallweb-subway.js/map-data.json");
@@ -42,6 +64,9 @@ function setup() {
   nodes = data["nodes"];
   edges = data["edges"];
   lines = data["lines"];
+
+  let name = "po14"
+  console.log(info[nodes[name].line][nodes[name].title].owner)
 
   for (let name of Object.keys(nodes)) {
     // Rescale position data to fit the dynamically-sized canvas
@@ -122,8 +147,8 @@ function checkNodeHover() {
           selection = {
             'type' : 'station',
             'title' : nodes[name].title,
-            'owner' : nodes[name].owner,
-            'url' : nodes[name].url,
+            'owner' : info[nodes[name].line][nodes[name]].owner,
+            'url' : info[nodes[name].line][nodes[name]].url,
             'x' : nodes[name].x,
             'y' : nodes[name].y,
             'mode' : "hover",
@@ -177,8 +202,8 @@ function checkStationSelect(mode = 'hover') {
         selection = {
           'type' : 'station',
           'title' : station.title,
-          'owner' : station.owner,
-          'url' : station.url,
+          'owner' : info[station.line][station.title].owner,
+          'url' : info[station.line][station.title].url,
           'x' : station.x,
           'y' : station.y,
           'mode' : mode,

@@ -71,7 +71,7 @@
       "title": "poetry, music, zines, and more!",
       "url": "jenniferjantzen.com/",
       "owner": "Jenny Jantzen",
-      "is_station": 1
+      "is_station": 0
     },
     "cc08": {
       "x": 1075,
@@ -218,7 +218,7 @@
       "title": "The Bog Quest",
       "url": "https://thebogquest.com/",
       "owner": "San",
-      "is_station": 1
+      "is_station": 0
     },
     "cx08": {
       "x": 125,
@@ -866,7 +866,7 @@
       "title": "Codex Archonic",
       "url": "lerariemann.nekoweb.org/index.html",
       "owner": "Lera Riemann",
-      "is_station": 1
+      "is_station": 0
     },
     "sf07": {
       "x": 600,
