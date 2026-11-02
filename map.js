@@ -1,7 +1,7 @@
+let editMode = false;
 let data;
 let dataWidth = 1200;
 let dataHeight = 900;
-let editMode = false;
 let lineWidth;
 let fontSize;
 let gridSize;
@@ -16,12 +16,6 @@ let legendWidth;
 let legendItems;
 let selection;
 let printMousePosition = false;
-// let scifiInfo = formatInfoFromLineJS(DATA_scifi)
-// let zinesInfo = formatInfoFromLineJS(DATA_zines)
-// let doodlecrewInfo = formatInfoFromLineJS(DATA_doodlecrew)
-// let creativesclubInfo = formatInfoFromLineJS(DATA_creativesclub)
-// let comicsInfo = formatInfoFromLineJS(DATA_comics)
-// let poetryInfo = formatInfoFromLineJS(DATA_poetry)
 let info = {
   "sf": formatInfoFromLineJS(DATA_scifi),
   "zi": formatInfoFromLineJS(DATA_zines),
@@ -65,9 +59,6 @@ function setup() {
   edges = data["edges"];
   lines = data["lines"];
 
-  let name = "po14"
-  console.log(info[nodes[name].line][nodes[name].title].owner)
-
   for (let name of Object.keys(nodes)) {
     // Rescale position data to fit the dynamically-sized canvas
     nodes[name].x = nodes[name].x / dataWidth * width;
@@ -86,7 +77,7 @@ function setup() {
 }
 
 function draw() {
-  background(100);
+  background(225);
   drawLines();
   checkLegendSelect();
   if (editMode) {
