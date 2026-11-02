@@ -25,14 +25,14 @@ let DATA_creativesclub = [
   //   "owner" : "Jenny Jantzen"
   // },
   {
-    "title" : "UR LOCAL CYBORG",
-    "url"   : "seenby.urlocalcyb.org/",
-    "owner" : "Caroline"
-  },
-  {
     "title" : "haystack blog and oddities",
     "url"   : "thatoddhaystack.neocities.org/",
     "owner" : "vita"
+  },
+  {
+    "title" : "UR LOCAL CYBORG",
+    "url"   : "seenby.urlocalcyb.org/",
+    "owner" : "Caroline"
   },
   // {
   //   "title" : "marcinek.tech",
