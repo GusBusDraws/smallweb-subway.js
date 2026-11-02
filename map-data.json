@@ -828,10 +828,7 @@
       "y": 275,
       "name": "sf14",
       "line": "sf",
-      "title": "yukiclarke.com",
-      "is_station": 1,
-      "station_offset_x": 0,
-      "station_offset_y": 0
+      "is_station": 0
     },
     "sf15": {
       "x": 975,
