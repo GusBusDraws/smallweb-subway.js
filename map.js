@@ -147,8 +147,8 @@ function checkNodeHover() {
           selection = {
             'type' : 'station',
             'title' : nodes[name].title,
-            'owner' : info[nodes[name].line][nodes[name]].owner,
-            'url' : info[nodes[name].line][nodes[name]].url,
+            'owner' : info[nodes[name].line][nodes[name].title].owner,
+            'url' : info[nodes[name].line][nodes[name].title].url,
             'x' : nodes[name].x,
             'y' : nodes[name].y,
             'mode' : "hover",
