@@ -1,5 +1,6 @@
 # Change Log
 
+- Add [Hyper and Stick](https://hyperandstick.com/) to the map
 - Rename `map-wip.js` -> `map.js`
 - Rename `map.js` -> `map-legacy.js`
 - Remove `owner` and `url` attributes from `nodes` in `map-data.json`

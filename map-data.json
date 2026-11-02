@@ -326,7 +326,8 @@
       "y": 150,
       "name": "cx25",
       "line": "cx",
-      "is_station": 0
+      "title": "Hyper and Stick",
+      "is_station": 1
     },
     "cx26": {
       "x": 1050,
