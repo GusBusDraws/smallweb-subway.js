@@ -1,6 +1,8 @@
 # Change Log
 
 ## 2026-11-02
+- Add [s0mewhy.neocities.org/](https://s0mewhy.neocities.org/) to the Doodle Crew Line
+- Move [iondrive.co](https://iondrive.co/) on the Scifi Line
 - Add argument to set path for loaded data in `data_editor.py`
 - Node offsets are now saved to the data file, meaning `applyNodePositionOffsets()` is no longer called during setup
 

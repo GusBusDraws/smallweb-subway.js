@@ -15,9 +15,9 @@ let DATA_doodlecrew = [
     "owner" : "uuupah"
   },
   {
-    "title" : "Honora's web garden",
-    "url"   : "honora.neocities.org/about",
-    "owner" : "Honora"
+    "title" : "s0mewhy/art",
+    "url"   : "s0mewhy.neocities.org/",
+    "owner" : "s0mewhy"
   },
   {
     "title" : "slime pond comics",
@@ -33,6 +33,11 @@ let DATA_doodlecrew = [
     "title" : "varve's art gallery",
     "url"   : "www.write-on.org/art/",
     "owner" : "varve"
+  },
+  {
+    "title" : "Honora's web garden",
+    "url"   : "honora.neocities.org/about",
+    "owner" : "Honora"
   },
   {
     "title" : "Gus's Scifi Gallery",
