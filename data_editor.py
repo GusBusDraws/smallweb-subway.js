@@ -6,7 +6,7 @@ import data_backup
 
 
 class NewData():
-    def __init__(self, target=None, save_data=True, use_backup_data=False):
+    def __init__(self, target=None, data_path=None, save_path=True, use_backup_data=False):
         self.new_data = {}
         self.target = target
         if self.target is not None:
@@ -15,8 +15,10 @@ class NewData():
         else:
             self.target_line = None
             self.target_index = None
+        if data_path is not None:
+            self.load_data(path=data_path)
 
-        self.get_ref_data(use_backup=use_backup_data)
+        self.load_data(path=data_path, use_backup=use_backup_data)
         self.remake_nodes()
         self.new_data["lines"] = copy.deepcopy(self.data["lines"])
         self.remake_edges()
@@ -39,10 +41,11 @@ class NewData():
             print(f"Updated node '{self.this_name}' to '{new_name}'")
 
 
-    def get_ref_data(self, use_backup=False):
+    def load_data(self, path="data.json", use_backup=False):
         if not use_backup:
-            with open("data.json", "r") as file:
+            with open(path, "r") as file:
                 self.data = json.load(file)
+                print(f"{path} loaded.")
         else:
             self.data = data_backup.load()
             print("Backup data loaded.")
@@ -109,18 +112,20 @@ class NewData():
             self.data["nodes"][self.this_name]["y"] = y0 + y
 
 
-    def save_json(self, save_path="data.json"):
-        with open(save_path, "w") as file:
+    def save_json(self, path="data.json"):
+        with open(path, "w") as file:
             json.dump(self.new_data, file, indent=2)
 
 
 def main():
     data = NewData(
-        # target="sf03",
-        use_backup_data=True
+        target="dc12",
+        data_path="map-data.json",
+        # use_backup_data=True,
     )
-    data.shift(y=50)
-    data.save_json()
+    data.add_nonstation_node(x=450, y=325)
+    # data.shift(y=50)
+    data.save_json(path="data.json")
     # data.print_json()
 
 

@@ -1,5 +1,8 @@
 # Change Log
 
+## 2026-11-02
+- Add argument to set path for loaded data in `data_editor.py`
+
 ## 2026-11-01
 - Add `data_editor.py` for automating data manipulations like shifting all stations and/or adding nodes
 - Shift all map nodes down by 50 pixels
