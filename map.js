@@ -1,4 +1,4 @@
-let editMode = true;
+let editMode = false;
 let data;
 let dataWidth = 1200;
 let dataHeight = 900;
