@@ -1,4 +1,4 @@
-let editMode = false;
+let editMode = true;
 let data;
 let dataWidth = 1200;
 let dataHeight = 900;
@@ -65,7 +65,8 @@ function setup() {
     nodes[name].y = nodes[name].y / dataHeight * height;
 
     // Apply line/station offset adjustments
-    applyNodePositionOffsets(name)
+    // No longer needed after saved with offsets
+    // applyNodePositionOffsets(name)
 
     // Collect station nodes into an array
     if (nodes[name].is_station == 1) {

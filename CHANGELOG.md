@@ -2,6 +2,7 @@
 
 ## 2026-11-02
 - Add argument to set path for loaded data in `data_editor.py`
+- Node offsets are now saved to the data file, meaning `applyNodePositionOffsets()` is no longer called during setup
 
 ## 2026-11-01
 - Add `data_editor.py` for automating data manipulations like shifting all stations and/or adding nodes
