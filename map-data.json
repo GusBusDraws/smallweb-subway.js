@@ -1,7 +1,7 @@
 {
   "nodes": {
     "cc00": {
-      "x": 775,
+      "x": 790,
       "y": 600,
       "name": "cc00",
       "line": "cc",
@@ -9,7 +9,7 @@
       "is_station": 0
     },
     "cc01": {
-      "x": 775,
+      "x": 790,
       "y": 500,
       "name": "cc01",
       "line": "cc",
@@ -18,14 +18,14 @@
       "station_offset_x": -0.5
     },
     "cc02": {
-      "x": 775,
+      "x": 790,
       "y": 450,
       "name": "cc02",
       "line": "cc",
       "is_station": 0
     },
     "cc03": {
-      "x": 800,
+      "x": 815,
       "y": 425,
       "name": "cc03",
       "line": "cc",
@@ -33,14 +33,14 @@
       "is_station": 1
     },
     "cc04": {
-      "x": 825,
+      "x": 840,
       "y": 400,
       "name": "cc04",
       "line": "cc",
       "is_station": 0
     },
     "cc05": {
-      "x": 950,
+      "x": 965,
       "y": 400,
       "name": "cc05",
       "line": "cc",
@@ -49,14 +49,14 @@
       "station_offset_x": 1
     },
     "cc06": {
-      "x": 1025,
+      "x": 1040,
       "y": 400,
       "name": "cc06",
       "line": "cc",
       "is_station": 0
     },
     "cc07": {
-      "x": 1050,
+      "x": 1065,
       "y": 425,
       "name": "cc07",
       "line": "cc",
@@ -64,14 +64,14 @@
       "is_station": 0
     },
     "cc08": {
-      "x": 1075,
+      "x": 1090,
       "y": 450,
       "name": "cc08",
       "line": "cc",
       "is_station": 0
     },
     "cc09": {
-      "x": 1075,
+      "x": 1090,
       "y": 500,
       "name": "cc09",
       "line": "cc",
@@ -79,7 +79,7 @@
       "is_station": 1
     },
     "cc10": {
-      "x": 1075,
+      "x": 1090,
       "y": 600,
       "name": "cc10",
       "line": "cc",
@@ -87,21 +87,21 @@
       "is_station": 1
     },
     "cc11": {
-      "x": 1075,
+      "x": 1090,
       "y": 650,
       "name": "cc11",
       "line": "cc",
       "is_station": 0
     },
     "cc12": {
-      "x": 1025,
+      "x": 1040,
       "y": 700,
       "name": "cc12",
       "line": "cc",
       "is_station": 0
     },
     "cc13": {
-      "x": 875,
+      "x": 890,
       "y": 700,
       "name": "cc13",
       "line": "cc",
@@ -109,45 +109,45 @@
       "is_station": 1
     },
     "cc14": {
-      "x": 825,
+      "x": 840,
       "y": 700,
       "name": "cc14",
       "line": "cc",
       "is_station": 0
     },
     "cc15": {
-      "x": 800,
+      "x": 815,
       "y": 675,
       "name": "cc15",
       "line": "cc",
       "is_station": 0
     },
     "cc16": {
-      "x": 775,
+      "x": 790,
       "y": 650,
       "name": "cc16",
       "line": "cc",
       "is_station": 0
     },
     "cx00": {
-      "x": 775,
-      "y": 600,
+      "x": 760,
+      "y": 585,
       "name": "cx00",
       "line": "cx",
       "title": "Smallweb Subway",
       "is_station": 0
     },
     "cx01": {
-      "x": 500,
-      "y": 600,
+      "x": 485,
+      "y": 585,
       "name": "cx01",
       "line": "cx",
       "title": "The Fuzzy Slug's Webcomic Hub",
       "is_station": 1
     },
     "cx02": {
-      "x": 400,
-      "y": 600,
+      "x": 335,
+      "y": 585,
       "name": "cx02",
       "line": "cx",
       "title": "slime pond comics",
@@ -155,212 +155,212 @@
       "station_offset_x": 1
     },
     "cx03": {
-      "x": 325,
-      "y": 600,
+      "x": 285,
+      "y": 585,
       "name": "cx03",
       "line": "cx",
       "title": "Trailerparkia",
       "is_station": 1
     },
     "cx04": {
-      "x": 225,
-      "y": 600,
+      "x": 210,
+      "y": 585,
       "name": "cx04",
       "line": "cx",
       "title": "The Iron Ragdoll",
       "is_station": 1
     },
     "cx05": {
-      "x": 175,
-      "y": 600,
+      "x": 160,
+      "y": 585,
       "name": "cx05",
       "line": "cx",
       "is_station": 0
     },
     "cx06": {
-      "x": 125,
-      "y": 550,
+      "x": 109.99999999999999,
+      "y": 535,
       "name": "cx06",
       "line": "cx",
       "is_station": 0
     },
     "cx07": {
-      "x": 125,
-      "y": 475,
+      "x": 109.99999999999999,
+      "y": 459.99999999999994,
       "name": "cx07",
       "line": "cx",
       "title": "The Bog Quest",
       "is_station": 0
     },
     "cx08": {
-      "x": 125,
-      "y": 400,
+      "x": 109.99999999999999,
+      "y": 385,
       "name": "cx08",
       "line": "cx",
       "is_station": 0
     },
     "cx09": {
-      "x": 175,
-      "y": 350,
+      "x": 160,
+      "y": 335,
       "name": "cx09",
       "line": "cx",
       "title": "Redux",
       "is_station": 1
     },
     "cx10": {
-      "x": 250,
-      "y": 275,
+      "x": 235,
+      "y": 260,
       "name": "cx10",
       "line": "cx",
       "title": "My Comics",
       "is_station": 1
     },
     "cx11": {
-      "x": 275,
-      "y": 250,
+      "x": 260,
+      "y": 235.00000000000003,
       "name": "cx11",
       "line": "cx",
       "is_station": 0
     },
     "cx12": {
-      "x": 300,
-      "y": 225,
+      "x": 285,
+      "y": 210,
       "name": "cx12",
       "line": "cx",
       "is_station": 0
     },
     "cx13": {
-      "x": 350,
-      "y": 225,
+      "x": 335,
+      "y": 210,
       "name": "cx13",
       "line": "cx",
       "title": "Long Gone Legend",
       "is_station": 1
     },
     "cx14": {
-      "x": 425,
-      "y": 225,
+      "x": 410,
+      "y": 210,
       "name": "cx14",
       "line": "cx",
       "title": "Schism",
       "is_station": 1
     },
     "cx15": {
-      "x": 500,
-      "y": 225,
+      "x": 485,
+      "y": 210,
       "name": "cx15",
       "line": "cx",
       "title": "White Noise",
       "is_station": 1
     },
     "cx16": {
-      "x": 575,
-      "y": 225,
+      "x": 560,
+      "y": 210,
       "name": "cx16",
       "line": "cx",
       "title": "Neat Hobby!",
       "is_station": 1
     },
     "cx17": {
-      "x": 650,
-      "y": 225,
+      "x": 635,
+      "y": 210,
       "name": "cx17",
       "line": "cx",
       "title": "Keeping Time",
       "is_station": 1
     },
     "cx18": {
-      "x": 725,
-      "y": 225,
+      "x": 710,
+      "y": 210,
       "name": "cx18",
       "line": "cx",
       "title": "BrittHub",
       "is_station": 1
     },
     "cx19": {
-      "x": 800,
-      "y": 225,
+      "x": 785,
+      "y": 210,
       "name": "cx19",
       "line": "cx",
       "title": "Links",
       "is_station": 1
     },
     "cx20": {
-      "x": 850,
-      "y": 225,
+      "x": 835,
+      "y": 210,
       "name": "cx20",
       "line": "cx",
       "is_station": 0
     },
     "cx21": {
-      "x": 875,
-      "y": 200,
+      "x": 860,
+      "y": 185,
       "name": "cx21",
       "line": "cx",
       "is_station": 0
     },
     "cx22": {
-      "x": 900,
-      "y": 175,
+      "x": 885,
+      "y": 160,
       "name": "cx22",
       "line": "cx",
       "is_station": 0
     },
     "cx23": {
-      "x": 950,
-      "y": 175,
+      "x": 935,
+      "y": 160,
       "name": "cx23",
       "line": "cx",
       "title": "Ultraviolents",
       "is_station": 1
     },
     "cx24": {
-      "x": 1000,
-      "y": 175,
+      "x": 985,
+      "y": 160,
       "name": "cx24",
       "line": "cx",
       "is_station": 0
     },
     "cx25": {
-      "x": 1025,
-      "y": 200,
+      "x": 1010,
+      "y": 185,
       "name": "cx25",
       "line": "cx",
       "title": "Hyper and Stick",
       "is_station": 1
     },
     "cx26": {
-      "x": 1050,
-      "y": 225,
+      "x": 1035,
+      "y": 210,
       "name": "cx26",
       "line": "cx",
       "is_station": 0
     },
     "cx27": {
-      "x": 1050,
-      "y": 275,
+      "x": 1035,
+      "y": 260,
       "name": "cx27",
       "line": "cx",
       "title": "Beyond the End",
       "is_station": 1
     },
     "cx28": {
-      "x": 1050,
-      "y": 325,
+      "x": 1035,
+      "y": 310,
       "name": "cx28",
       "line": "cx",
       "is_station": 0
     },
     "cx29": {
-      "x": 1025,
-      "y": 350,
+      "x": 1010,
+      "y": 335,
       "name": "cx29",
       "line": "cx",
       "is_station": 0
     },
     "cx30": {
-      "x": 975,
-      "y": 400,
+      "x": 960,
+      "y": 385,
       "name": "cx30",
       "line": "cx",
       "title": "yukiclarke.com",
@@ -369,22 +369,22 @@
       "station_offset_y": 1
     },
     "cx31": {
-      "x": 975,
-      "y": 450,
+      "x": 960,
+      "y": 435,
       "name": "cx31",
       "line": "cx",
       "is_station": 0
     },
     "cx32": {
-      "x": 975,
-      "y": 475,
+      "x": 960,
+      "y": 459.99999999999994,
       "name": "cx32",
       "line": "cx",
       "is_station": 0
     },
     "cx33": {
-      "x": 900,
-      "y": 550,
+      "x": 885,
+      "y": 535,
       "name": "cx33",
       "line": "cx",
       "title": "Friction Comic",
@@ -392,8 +392,8 @@
       "station_offset_y": 0.707
     },
     "cx34": {
-      "x": 850,
-      "y": 600,
+      "x": 835,
+      "y": 585,
       "name": "cx34",
       "line": "cx",
       "is_station": 0
@@ -408,7 +408,7 @@
     },
     "dc01": {
       "x": 775,
-      "y": 675,
+      "y": 664.3933982822018,
       "name": "dc01",
       "line": "dc",
       "is_station": 0,
@@ -416,8 +416,8 @@
       "y_adjust": -1
     },
     "dc02": {
-      "x": 725,
-      "y": 725,
+      "x": 719.6966991411009,
+      "y": 719.6966991411009,
       "name": "dc02",
       "line": "dc",
       "is_station": 0,
@@ -426,7 +426,7 @@
       "y_adjust": -0.5
     },
     "dc03": {
-      "x": 650,
+      "x": 639.3933982822018,
       "y": 800,
       "name": "dc03",
       "line": "dc",
@@ -435,7 +435,7 @@
       "x_adjust": -1
     },
     "dc04": {
-      "x": 625,
+      "x": 600,
       "y": 800,
       "name": "dc04",
       "line": "dc",
@@ -443,7 +443,7 @@
       "is_station": 1
     },
     "dc05": {
-      "x": 550,
+      "x": 525,
       "y": 800,
       "name": "dc05",
       "line": "dc",
@@ -451,29 +451,29 @@
       "is_station": 1
     },
     "dc06": {
-      "x": 525,
+      "x": 475,
       "y": 800,
       "name": "dc06",
       "line": "dc",
       "is_station": 0
     },
     "dc07": {
-      "x": 425,
-      "y": 700,
+      "x": 400,
+      "y": 725,
       "name": "dc07",
       "line": "dc",
       "title": "Honora's web garden",
       "is_station": 1
     },
     "dc08": {
-      "x": 400,
+      "x": 350,
       "y": 675,
       "name": "dc08",
       "line": "dc",
       "is_station": 0
     },
     "dc09": {
-      "x": 400,
+      "x": 350,
       "y": 600,
       "name": "dc09",
       "line": "dc",
@@ -482,106 +482,113 @@
       "station_offset_y": -1
     },
     "dc10": {
-      "x": 400,
-      "y": 475,
+      "x": 350,
+      "y": 425,
       "name": "dc10",
       "line": "dc",
       "title": "Marcy Chow Doodles",
       "is_station": 1
     },
     "dc11": {
-      "x": 400,
-      "y": 450,
+      "x": 350,
+      "y": 375,
       "name": "dc11",
       "line": "dc",
       "is_station": 0
     },
     "dc12": {
-      "x": 425,
-      "y": 425,
+      "x": 375,
+      "y": 350,
       "name": "dc12",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc13": {
+      "x": 400,
+      "y": 325,
+      "name": "dc13",
       "line": "dc",
       "title": "varve's art gallery",
       "is_station": 1
     },
-    "dc13": {
-      "x": 450,
-      "y": 400,
-      "name": "dc13",
+    "dc14": {
+      "x": 475,
+      "y": 325,
+      "name": "dc14",
       "line": "dc",
       "is_station": 0
     },
-    "dc14": {
+    "dc15": {
       "x": 550,
-      "y": 400,
-      "name": "dc14",
+      "y": 325,
+      "name": "dc15",
       "line": "dc",
       "title": "Gus's Scifi Gallery",
       "is_station": 1
     },
-    "dc15": {
-      "x": 650,
-      "y": 400,
-      "name": "dc15",
-      "line": "dc",
-      "title": "The Magic Pencil",
-      "is_station": 1
-    },
     "dc16": {
-      "x": 725,
+      "x": 625,
       "y": 400,
       "name": "dc16",
       "line": "dc",
       "is_station": 0
     },
     "dc17": {
-      "x": 750,
-      "y": 425,
+      "x": 675,
+      "y": 400,
       "name": "dc17",
       "line": "dc",
-      "is_station": 0
+      "title": "The Magic Pencil",
+      "is_station": 1
     },
     "dc18": {
-      "x": 775,
-      "y": 450,
+      "x": 725,
+      "y": 400,
       "name": "dc18",
       "line": "dc",
       "is_station": 0
     },
     "dc19": {
       "x": 775,
-      "y": 500,
+      "y": 450,
       "name": "dc19",
+      "line": "dc",
+      "is_station": 0
+    },
+    "dc20": {
+      "x": 775,
+      "y": 500,
+      "name": "dc20",
       "line": "dc",
       "title": "DoodleBot",
       "is_station": 1,
       "station_offset_x": 0.5
     },
     "po00": {
-      "x": 775,
-      "y": 600,
+      "x": 760,
+      "y": 585,
       "name": "po00",
       "line": "po",
       "title": "Smallweb Subway",
       "is_station": 0
     },
     "po01": {
-      "x": 775,
-      "y": 675,
+      "x": 760,
+      "y": 660,
       "name": "po01",
       "line": "po",
       "is_station": 0
     },
     "po02": {
-      "x": 725,
-      "y": 725,
+      "x": 710,
+      "y": 710,
       "name": "po03",
       "line": "po",
       "is_station": 0
     },
     "po03": {
-      "x": 675,
-      "y": 725,
+      "x": 660,
+      "y": 710,
       "name": "po03",
       "line": "po",
       "title": "Toa of Cloudbursting",
@@ -589,134 +596,134 @@
       "station_offset_x": 1
     },
     "po04": {
-      "x": 600,
-      "y": 725,
+      "x": 585,
+      "y": 710,
       "name": "po04",
       "line": "po",
       "title": "poems",
       "is_station": 1
     },
     "po05": {
-      "x": 500,
-      "y": 725,
+      "x": 485,
+      "y": 710,
       "name": "po05",
       "line": "po",
       "is_station": 0
     },
     "po06": {
-      "x": 450,
-      "y": 775,
+      "x": 435,
+      "y": 760,
       "name": "po06",
       "line": "po",
       "is_station": 0
     },
     "po07": {
-      "x": 300,
-      "y": 775,
+      "x": 285,
+      "y": 760,
       "name": "po07",
       "line": "po",
       "title": "poetry!",
       "is_station": 1
     },
     "po08": {
-      "x": 225,
-      "y": 775,
+      "x": 210,
+      "y": 760,
       "name": "po08",
       "line": "po",
       "is_station": 0
     },
     "po09": {
-      "x": 200,
-      "y": 750,
+      "x": 185,
+      "y": 735,
       "name": "po09",
       "line": "po",
       "title": "flower in binary",
       "is_station": 1
     },
     "po10": {
-      "x": 175,
-      "y": 725,
+      "x": 160,
+      "y": 710,
       "name": "po10",
       "line": "po",
       "is_station": 0
     },
     "po11": {
-      "x": 175,
-      "y": 675,
+      "x": 160,
+      "y": 660,
       "name": "po11",
       "line": "po",
       "title": "girlfreak poetry",
       "is_station": 1
     },
     "po12": {
-      "x": 175,
-      "y": 525,
+      "x": 160,
+      "y": 510,
       "name": "po12",
       "line": "po",
       "title": "delovely's poetry",
       "is_station": 1
     },
     "po13": {
-      "x": 175,
-      "y": 475,
+      "x": 160,
+      "y": 459.99999999999994,
       "name": "po13",
       "line": "po",
       "is_station": 0
     },
     "po14": {
-      "x": 200,
-      "y": 450,
+      "x": 185,
+      "y": 435,
       "name": "po14",
       "line": "po",
       "title": "manyface world",
       "is_station": 1
     },
     "po15": {
-      "x": 225,
-      "y": 425,
+      "x": 210,
+      "y": 410,
       "name": "po15",
       "line": "po",
       "is_station": 0
     },
     "po16": {
-      "x": 275,
-      "y": 425,
+      "x": 260,
+      "y": 410,
       "name": "po16",
       "line": "po",
       "is_station": 0
     },
     "po17": {
-      "x": 325,
-      "y": 475,
+      "x": 310.00000000000006,
+      "y": 459.99999999999994,
       "name": "po17",
       "line": "po",
       "title": "greycloak's website",
       "is_station": 1
     },
     "po18": {
-      "x": 375,
-      "y": 525,
+      "x": 360,
+      "y": 510,
       "name": "po18",
       "line": "po",
       "is_station": 0
     },
     "po19": {
-      "x": 650,
-      "y": 525,
+      "x": 635,
+      "y": 510,
       "name": "po19",
       "line": "po",
       "title": "Poems",
       "is_station": 1
     },
     "po20": {
-      "x": 700,
-      "y": 525,
+      "x": 685,
+      "y": 510,
       "name": "po20",
       "line": "po",
       "is_station": 0
     },
     "sf00": {
-      "x": 767.9289321881346,
+      "x": 757.3223304703364,
       "y": 600,
       "name": "sf00",
       "line": "sf",
@@ -741,7 +748,7 @@
     },
     "sf03": {
       "x": 550,
-      "y": 475,
+      "y": 425,
       "name": "sf03",
       "line": "sf",
       "title": "Fiiral's Project Hub",
@@ -749,7 +756,7 @@
     },
     "sf04": {
       "x": 550,
-      "y": 400,
+      "y": 325,
       "name": "sf04",
       "line": "sf",
       "title": "Gus's Scifi Gallery",
@@ -757,14 +764,14 @@
     },
     "sf05": {
       "x": 550,
-      "y": 350,
+      "y": 325,
       "name": "sf05",
       "line": "sf",
       "is_station": 0
     },
     "sf06": {
       "x": 575,
-      "y": 325,
+      "y": 300,
       "name": "sf06",
       "line": "sf",
       "title": "Codex Archonic",
@@ -772,14 +779,14 @@
     },
     "sf07": {
       "x": 600,
-      "y": 300,
+      "y": 275,
       "name": "sf07",
       "line": "sf",
       "is_station": 0
     },
     "sf08": {
       "x": 650,
-      "y": 300,
+      "y": 275,
       "name": "sf08",
       "line": "sf",
       "title": "Clockwork's Archive of Tomorrow",
@@ -787,7 +794,7 @@
     },
     "sf09": {
       "x": 725,
-      "y": 300,
+      "y": 275,
       "name": "sf09",
       "line": "sf",
       "title": "The Stardustverse",
@@ -795,22 +802,22 @@
     },
     "sf10": {
       "x": 800,
-      "y": 300,
+      "y": 275,
       "name": "sf10",
       "line": "sf",
       "title": "Varve's writing bits & pieces",
       "is_station": 1
     },
     "sf11": {
-      "x": 825,
-      "y": 300,
+      "x": 850,
+      "y": 275,
       "name": "sf11",
       "line": "sf",
       "is_station": 0
     },
     "sf12": {
       "x": 875,
-      "y": 300,
+      "y": 275,
       "name": "sf12",
       "line": "sf",
       "title": "Stories",
@@ -818,21 +825,21 @@
     },
     "sf13": {
       "x": 925,
-      "y": 300,
+      "y": 275,
       "name": "sf13",
       "line": "sf",
       "is_station": 0
     },
     "sf14": {
       "x": 950,
-      "y": 325,
+      "y": 300,
       "name": "sf14",
       "line": "sf",
       "is_station": 0
     },
     "sf15": {
       "x": 975,
-      "y": 350,
+      "y": 325,
       "name": "sf15",
       "line": "sf",
       "is_station": 0
@@ -846,7 +853,7 @@
     },
     "sf17": {
       "x": 975,
-      "y": 475,
+      "y": 464.39339828220176,
       "name": "sf17",
       "line": "sf",
       "is_station": 0,
@@ -854,8 +861,8 @@
       "y_adjust": -1
     },
     "sf18": {
-      "x": 900,
-      "y": 550,
+      "x": 894.6966991411009,
+      "y": 544.6966991411009,
       "name": "sf18",
       "line": "sf",
       "title": "Friction Comic",
@@ -866,7 +873,7 @@
       "station_offset_x": -0.707
     },
     "sf19": {
-      "x": 850,
+      "x": 839.3933982822018,
       "y": 600,
       "name": "sf19",
       "line": "sf",
@@ -876,7 +883,7 @@
     },
     "zi00": {
       "x": 775,
-      "y": 600,
+      "y": 615,
       "name": "zi00",
       "line": "zi",
       "title": "Smallweb Subway",
@@ -884,21 +891,21 @@
     },
     "zi01": {
       "x": 900,
-      "y": 600,
+      "y": 615,
       "name": "zi01",
       "line": "zi",
       "is_station": 0
     },
     "zi02": {
       "x": 925,
-      "y": 600,
+      "y": 615,
       "name": "zi02",
       "line": "zi",
       "is_station": 0
     },
     "zi03": {
       "x": 950,
-      "y": 625,
+      "y": 640,
       "name": "zi03",
       "line": "zi",
       "title": "Sheryl's Momzines",
@@ -906,21 +913,21 @@
     },
     "zi04": {
       "x": 975,
-      "y": 650,
+      "y": 665,
       "name": "zi04",
       "line": "zi",
       "is_station": 0
     },
     "zi05": {
       "x": 975,
-      "y": 725,
+      "y": 740,
       "name": "zi05",
       "line": "zi",
       "is_station": 0
     },
     "zi06": {
       "x": 950,
-      "y": 750,
+      "y": 765,
       "name": "zi06",
       "line": "zi",
       "title": "Mythical Type Zines",
@@ -928,14 +935,14 @@
     },
     "zi07": {
       "x": 925,
-      "y": 775,
+      "y": 790,
       "name": "zi07",
       "line": "zi",
       "is_station": 0
     },
     "zi08": {
       "x": 875,
-      "y": 775,
+      "y": 790,
       "name": "zi08",
       "line": "zi",
       "title": "zines",
@@ -943,7 +950,7 @@
     },
     "zi09": {
       "x": 775,
-      "y": 775,
+      "y": 790,
       "name": "zi09",
       "line": "zi",
       "title": "MyDogStoleThisWebsite",
@@ -951,28 +958,28 @@
     },
     "zi10": {
       "x": 750,
-      "y": 775,
+      "y": 790,
       "name": "zi10",
       "line": "zi",
       "is_station": 0
     },
     "zi11": {
       "x": 725,
-      "y": 775,
+      "y": 790,
       "name": "zi11",
       "line": "zi",
       "is_station": 0
     },
     "zi12": {
       "x": 675,
-      "y": 725,
+      "y": 740,
       "name": "zi12",
       "line": "zi",
       "is_station": 0
     },
     "zi13": {
       "x": 675,
-      "y": 700,
+      "y": 715,
       "name": "zi13",
       "line": "zi",
       "title": "Toa of Cloudbursting",
@@ -980,14 +987,14 @@
     },
     "zi14": {
       "x": 675,
-      "y": 650,
+      "y": 665,
       "name": "zi14",
       "line": "zi",
       "is_station": 0
     },
     "zi15": {
       "x": 700,
-      "y": 625,
+      "y": 640,
       "name": "zi15",
       "line": "zi",
       "title": "Ether",
@@ -995,8 +1002,15 @@
     },
     "zi16": {
       "x": 725,
-      "y": 600,
-      "name": "zi16",
+      "y": 615,
+      "name": "zi17",
+      "line": "zi",
+      "is_station": 0
+    },
+    "zi17": {
+      "x": 725,
+      "y": 615,
+      "name": "zi17",
       "line": "zi",
       "is_station": 0
     }
@@ -1475,6 +1489,12 @@
     {
       "dc": [
         "dc19",
+        "dc20"
+      ]
+    },
+    {
+      "dc": [
+        "dc20",
         "dc00"
       ]
     },

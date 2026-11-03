@@ -25,6 +25,11 @@ let DATA_scifi = [
     "owner" : "Clockwork"
   },
   {
+    "title" : "iondrive",
+    "url"   : "iondrive.co/",
+    "owner" : "Miles"
+  },
+  {
     "title" : "The Stardustverse",
     "url"   : "stardustverse.neocities.org/",
     "owner" : "MaxTheFox"
@@ -48,11 +53,6 @@ let DATA_scifi = [
     "title" : "Friction Comic",
     "url"   : "frictioncomic.com/home",
     "owner" : "Jack"
-  },
-  {
-    "title" : "iondrive",
-    "url"   : "iondrive.co/",
-    "owner" : "Miles"
   }
 ]
 

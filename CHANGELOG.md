@@ -1,5 +1,12 @@
 # Change Log
 
+## 2026-11-02
+- Add [Thunderbird Cafe](https://thunderbird.cafe/webtiles/station/) to the Creatives Club Line
+- Add [s0mewhy.neocities.org/](https://s0mewhy.neocities.org/) to the Doodle Crew Line
+- Move [iondrive.co](https://iondrive.co/) on the Scifi Line
+- Add argument to set path for loaded data in `data_editor.py`
+- Node offsets are now saved to the data file, meaning `applyNodePositionOffsets()` is no longer called during setup
+
 ## 2026-11-01
 - Add `data_editor.py` for automating data manipulations like shifting all stations and/or adding nodes
 - Shift all map nodes down by 50 pixels
