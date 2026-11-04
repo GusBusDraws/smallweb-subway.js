@@ -60,8 +60,8 @@
       "y": 425,
       "name": "cc07",
       "line": "cc",
-      "title": "poetry, music, zines, and more!",
-      "is_station": 0
+      "title": "Thunderbird Café Station",
+      "is_station": 1
     },
     "cc08": {
       "x": 1090,
@@ -462,7 +462,7 @@
       "y": 725,
       "name": "dc07",
       "line": "dc",
-      "title": "Honora's web garden",
+      "title": "s0mewhy/art",
       "is_station": 1
     },
     "dc08": {
@@ -501,22 +501,23 @@
       "y": 350,
       "name": "dc12",
       "line": "dc",
-      "is_station": 0
+      "title": "varve's art gallery",
+      "is_station": 1
     },
     "dc13": {
       "x": 400,
       "y": 325,
       "name": "dc13",
       "line": "dc",
-      "title": "varve's art gallery",
-      "is_station": 1
+      "is_station": 0
     },
     "dc14": {
       "x": 475,
       "y": 325,
       "name": "dc14",
       "line": "dc",
-      "is_station": 0
+      "title": "Honora's web garden",
+      "is_station": 1
     },
     "dc15": {
       "x": 550,
@@ -797,7 +798,7 @@
       "y": 275,
       "name": "sf09",
       "line": "sf",
-      "title": "The Stardustverse",
+      "title": "iondrive",
       "is_station": 1
     },
     "sf10": {
@@ -805,7 +806,7 @@
       "y": 275,
       "name": "sf10",
       "line": "sf",
-      "title": "Varve's writing bits & pieces",
+      "title": "The Stardustverse",
       "is_station": 1
     },
     "sf11": {
@@ -820,7 +821,7 @@
       "y": 275,
       "name": "sf12",
       "line": "sf",
-      "title": "Stories",
+      "title": "Varve's writing bits & pieces",
       "is_station": 1
     },
     "sf13": {
@@ -835,7 +836,8 @@
       "y": 300,
       "name": "sf14",
       "line": "sf",
-      "is_station": 0
+      "title": "Stories",
+      "is_station": 1
     },
     "sf15": {
       "x": 975,
