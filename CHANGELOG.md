@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-11-03
+- Add [Thunderbird Cafe](https://thunderbird.cafe/webtiles/station/) to the map
+- Add [s0mewhy.neocities.org/](https://s0mewhy.neocities.org/) to the map
+- Add [iondrive.co](https://iondrive.co/) to the map
+
 ## 2026-11-02
 - Add [Thunderbird Cafe](https://thunderbird.cafe/webtiles/station/) to the Creatives Club Line
 - Add [s0mewhy.neocities.org/](https://s0mewhy.neocities.org/) to the Doodle Crew Line
