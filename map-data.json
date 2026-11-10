@@ -896,7 +896,8 @@
       "y": 615,
       "name": "zi01",
       "line": "zi",
-      "is_station": 0
+      "title": "Cushbomb Zines",
+      "is_station": 2
     },
     "zi02": {
       "x": 975,

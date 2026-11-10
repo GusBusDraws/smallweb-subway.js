@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2026-11-09
+- Add [Cushbomb Zines](www.cushbomb.com/julio/?page_id=49) to the Zines Line and map
 - Change map `lineWidth` and add `rescaleAdjustments()` function to account for new value when using old data
 
 ## 2026-11-03

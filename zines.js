@@ -5,6 +5,11 @@ let DATA_zines = [
     "owner" : "Gus Becker"
   },
   {
+    "title" : "Cushbomb Zines",
+    "url"   : "www.cushbomb.com/julio/?page_id=49",
+    "owner" : "Julio Dominguez"
+  },
+  {
     "title" : "Sheryl's Momzines",
     "url"   : "sherylvernon.neocities.org/",
     "owner" : "Sheryl Vernon"
