@@ -1,5 +1,8 @@
 # Change Log
 
+## 2026-11-09
+- Change map `lineWidth` and add `rescaleAdjustments()` function to account for new value when using old data
+
 ## 2026-11-03
 - Add [Thunderbird Cafe](https://thunderbird.cafe/webtiles/station/) to the map
 - Add [s0mewhy.neocities.org/](https://s0mewhy.neocities.org/) to the map
