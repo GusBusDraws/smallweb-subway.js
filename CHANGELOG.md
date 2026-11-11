@@ -1,5 +1,9 @@
 # Change Log
 
+## 2026-11-10
+- Temporarily remove one overlapping station while slight offset is investigated
+- Fix bug preventing Cushbomb Zines from appearing on map upon hover
+
 ## 2026-11-09
 - Fix Zines Line code so legend click goes to the correct index page
 - Add [Cushbomb Zines](www.cushbomb.com/julio/?page_id=49) to the Zines Line and map

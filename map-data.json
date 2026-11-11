@@ -14,7 +14,7 @@
       "name": "cc01",
       "line": "cc",
       "title": "DoodleBot",
-      "is_station": 1,
+      "is_station": 0,
       "station_offset_x": -0.5
     },
     "cc02": {
@@ -388,7 +388,7 @@
       "name": "cx33",
       "line": "cx",
       "title": "Friction Comic",
-      "is_station": 1,
+      "is_station": 0,
       "station_offset_y": 0.707
     },
     "cx34": {
@@ -897,7 +897,7 @@
       "name": "zi01",
       "line": "zi",
       "title": "Cushbomb Zines",
-      "is_station": 2
+      "is_station": 1
     },
     "zi02": {
       "x": 975,
