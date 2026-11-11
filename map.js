@@ -1,4 +1,5 @@
 let editMode = false;
+let printMousePosition = editMode;
 let data;
 let dataWidth = 1200;
 let dataHeight = 900;
@@ -15,7 +16,6 @@ let legendHeight;
 let legendWidth;
 let legendItems;
 let selection;
-let printMousePosition = false;
 let info = {
   "sf": formatInfoFromLineJS(DATA_scifi),
   "zi": formatInfoFromLineJS(DATA_zines),
@@ -49,9 +49,9 @@ function setup() {
     let mapDivWidth = canvasDiv.offsetWidth;
     let canvas = createCanvas(mapDivWidth, mapDivWidth * 0.75);
     canvas.parent('map')
-    lineWidth = width * 0.012;
+    lineWidth = width * 0.016;
     gridSize = width * 0.03;
-    fontSize = lineWidth * 1.2;
+    fontSize = lineWidth;
   }
 
   // Collect data about line and station position from map-data.json file
@@ -67,6 +67,9 @@ function setup() {
     // Apply line/station offset adjustments
     // No longer needed after saved with offsets
     // applyNodePositionOffsets(name)
+
+    // Used to change the lineWidth with a map-data.json using a different value
+    // rescaleAdjustments(name, width * 0.012);
 
     // Collect station nodes into an array
     if (nodes[name].is_station == 1) {
@@ -95,6 +98,28 @@ function draw() {
   if (selection != null) {
     drawSelection(selection);
   }
+}
+
+function rescaleAdjustments(name, oldLineWidth) {
+  // Dividing by sqrt(2) accounts for hypotenuse to squeeze adjacent lines together
+  if (nodes[name].x_adjust) {
+    let oldXAdjust = nodes[name].x_adjust * oldLineWidth/sqrt(2);
+    let newXAdjust = nodes[name].x_adjust * lineWidth/sqrt(2);
+    nodes[name].x = nodes[name].x - oldXAdjust + newXAdjust
+  }
+  if (nodes[name].y_adjust) {
+    let oldYAdjust = nodes[name].y_adjust * oldLineWidth/sqrt(2);
+    let newYAdjust = nodes[name].y_adjust * lineWidth/sqrt(2);
+    nodes[name].y = nodes[name].y - oldYAdjust + newYAdjust;
+  }
+
+  // Apply line offsets
+  let oldXOffset = lines[nodes[name].line].x_offset * oldLineWidth;
+  let newXOffset = lines[nodes[name].line].x_offset * lineWidth;
+  nodes[name].x = nodes[name].x - oldXOffset + newXOffset;
+  let oldYOffset = lines[nodes[name].line].y_offset * oldLineWidth;
+  let newYOffset = lines[nodes[name].line].y_offset * lineWidth;
+  nodes[name].y = nodes[name].y - oldYOffset + newYOffset;
 }
 
 function applyNodePositionOffsets(name) {
@@ -469,10 +494,10 @@ function mouseReleased() {
 
 function setupLegend() {
   legendItems = [];
-  let legendOrder = ['sf', 'zi', 'dc', 'cc', 'cx', 'po']
-  legendWidth = 10*lineWidth;
-  legendHeight = 2*lineWidth;
+  let legendOrder = ['sf', 'zi', 'dc', 'cc', 'cx', 'po'];
   let nLines = Object.keys(lines).length;
+  legendWidth = width / (nLines + 1);
+  legendHeight = 2*lineWidth;
   let spacing = width / (2*nLines + 1);
   for (let i = 0; i < nLines; i++) {
     // let [lineShorthand, lineObj] = Object.entries(lines)[i];
